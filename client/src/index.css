@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* Ensure smooth vertical scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on your fixed header height */
+  /* Prevent horizontal scroll */
+}
+
+/* Remove horizontal scrollbar from all elements */
+body {
+  overflow-x: hidden;
+}
+
+/* Custom vertical scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Hides horizontal scrollbar */
+}
+/* 
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+} */
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #E64A19 0%, #BF360C 100%);
+}
+/* Add to global CSS if needed */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Page transition animations */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
