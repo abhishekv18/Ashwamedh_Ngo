@@ -41,6 +41,23 @@
   color: #888;
 }
 
+.Toastify__toast--success {
+  background-color: #0f5132;
+  color: white;
+  border-left: 6px solid #198754;
+  font-weight: bold;
+}
 
+.Toastify__toast--error {
+  background-color: #842029;
+  color: white;
+  border-left: 6px solid #dc3545;
+}
+.Toastify__toast {
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 14px;
+  width: 320px;
+}
 
 // CSS for custom animations (add to your CSS file)
