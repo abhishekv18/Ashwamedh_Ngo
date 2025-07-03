@@ -27,7 +27,7 @@ const ScrollToTopButton = () => {
        >
      
     
-      <span className="block transition-transform duration-300 group-hover:rotate-12 font-bold">↑</span>
+      <span className="block transition-transform duration-300 group-hover:-rotate-1 font-bold">↑</span>
     </button>
   );
 };
