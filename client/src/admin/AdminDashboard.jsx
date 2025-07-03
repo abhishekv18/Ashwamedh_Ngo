@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, PieChart, Pie, Cell, LineChart, Line, ResponsiveContainer } from 'recharts';
-import { Users, UserPlus, Mail, Shield, LogOut, Trash2, Plus, Eye, TrendingUp, Activity, UserCheck, X, Menu } from 'lucide-react';
+import { Users, UserPlus, Mail, Shield, LogOut, Trash2, Plus, Eye, TrendingUp, Activity, UserCheck, X, Menu, GalleryThumbnails, ImageIcon, Image } from 'lucide-react';
 import axios from 'axios';
 import { setAllContacts, setLoad } from '../redux/contactSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,6 +9,7 @@ import { setAllVolunteers, setLoadin } from '../redux/volunteerSlice';
 import { useNavigate } from 'react-router-dom';
 import {  setAllUsers, setLoading, setUser } from '../redux/authSlice';
 import { toast } from 'react-toastify';
+import AdminGallerySection from './AdminGallerySection';
 const AdminPanel = () => {
 const isLoading = useSelector((state) => state.auth.loading);
 
@@ -458,7 +459,8 @@ const Sidebar = () => (
           { id: 'contacts', label: 'Contact Details', icon: Users },
           { id: 'volunteers', label: 'Volunteer Details', icon: UserCheck },
           { id: 'subscribers', label: 'Subscriber Details', icon: Mail },
-          { id: 'admins', label: 'Admin Management', icon: Shield }
+          { id: 'admins', label: 'Admin Management', icon: Shield },
+            { id: 'gallery', label: 'Gallery', icon: Image },
         ].map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
@@ -492,6 +494,7 @@ const Sidebar = () => (
     </div>
   </>
 );
+ 
 
 
 //   const Header = () => (
@@ -1113,197 +1116,487 @@ const ChartCard = ({ title, children, className = "" }) => (
         );
 
       case 'admins':
-        return (
-          <div className="space-y-6">
-            <div className="flex justify-between items-center">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800">Admin Management ({allUsers.length})</h3>
-                <p className="text-gray-500">Manage administrative users and permissions</p>
-              </div>
-              <button
-                onClick={() => setShowModal(true)}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center transition-colors"
-              >
-                <Plus className="w-4 h-4 mr-2" />
-                Add New Admin
-              </button>
-            </div>
+//         return (
+//           <div className="space-y-6">
+//             <div className="flex justify-between items-center">
+//               <div>
+//                 <h3 className="text-lg font-semibold text-gray-800">Admin Management ({allUsers.length})</h3>
+//                 <p className="text-gray-500">Manage administrative users and permissions</p>
+//               </div>
+//               <button
+//                 onClick={() => setShowModal(true)}
+//                 className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center transition-colors"
+//               >
+//                 <Plus className="w-4 h-4 mr-2" />
+//                 Add New Admin
+//               </button>
+//             </div>
 
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-              <table className="w-full">
-                <thead className="bg-gray-50 border-b border-gray-100">
-                  <tr>
-                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Email</th>
-                    <th className="px-6 py-4 text-right text-xs font-semibold text-gray-500 uppercase tracking-wider">Actions</th>
-                  </tr>
-                </thead>
+//             <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+//               <table className="w-full">
+//                 <thead className="bg-gray-50 border-b border-gray-100">
+//                   <tr>
+//                     <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Email</th>
+//                     <th className="px-6 py-4 text-right text-xs font-semibold text-gray-500 uppercase tracking-wider">Actions</th>
+//                   </tr>
+//                 </thead>
                
-                <tbody className="divide-y divide-gray-100">
-   {allUsers.map((admin) => (
-          <tr key={admin._id} className="hover:bg-gray-50 transition-colors">
-            <td className="px-6 py-4 text-sm text-gray-900">{admin.email}</td>
-            <td className="px-6 py-4 text-right">
-              {admin.role !== 'super-admin' ? (
-                <button
-                  onClick={() => handleDeleteClick(admin)}
-                  className="text-red-600 hover:text-red-800 hover:bg-red-50 p-2 rounded-lg transition-colors"
-                >
-                  <Trash2 className="w-4 h-4" />
-                </button>
-              ) : (
-                <span className="text-gray-400 text-xs px-2 py-1 bg-gray-100 rounded">
-                  Protected
-                </span>
-              )}
-            </td>
-          </tr>
-        ))}
-</tbody>
- {showModale && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg p-4 lg:p-6 max-w-md w-full shadow-xl">
-            {/* Modal Header */}
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900">
-                Confirm Deletion
-              </h3>
-              <button
-                onClick={cancelDelete}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+//                 <tbody className="divide-y divide-gray-100">
+//    {allUsers.map((admin) => (
+//           <tr key={admin._id} className="hover:bg-gray-50 transition-colors">
+//             <td className="px-6 py-4 text-sm text-gray-900">{admin.email}</td>
+//             <td className="px-6 py-4 text-right">
+//               {admin.role !== 'super-admin' ? (
+//                 <button
+//                   onClick={() => handleDeleteClick(admin)}
+//                   className="text-red-600 hover:text-red-800 hover:bg-red-50 p-2 rounded-lg transition-colors"
+//                 >
+//                   <Trash2 className="w-4 h-4" />
+//                 </button>
+//               ) : (
+//                 <span className="text-gray-400 text-xs px-2 py-1 bg-gray-100 rounded">
+//                   Protected
+//                 </span>
+//               )}
+//             </td>
+//           </tr>
+//         ))}
+// </tbody>
+//  {showModale && (
+//         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+//           <div className="bg-white rounded-lg p-4 lg:p-6 max-w-md w-full shadow-xl">
+//             {/* Modal Header */}
+//             <div className="flex items-center justify-between mb-4">
+//               <h3 className="text-lg font-semibold text-gray-900">
+//                 Confirm Deletion
+//               </h3>
+//               <button
+//                 onClick={cancelDelete}
+//                 className="text-gray-400 hover:text-gray-600 transition-colors"
+//               >
+//                 <X className="w-5 h-5" />
+//               </button>
+//             </div>
 
-            {/* Modal Content */}
-            <div className="mb-6">
-              <p className="text-gray-700 mb-2">
-                Are you sure you want to delete this admin?
-              </p>
-              <div className="bg-gray-50 p-3 rounded-lg">
-                <p className="text-sm text-gray-600">
-                  <strong>Email:</strong> {selectedAdmin?.email}
-                </p>
+//             {/* Modal Content */}
+//             <div className="mb-6">
+//               <p className="text-gray-700 mb-2">
+//                 Are you sure you want to delete this admin?
+//               </p>
+//               <div className="bg-gray-50 p-3 rounded-lg">
+//                 <p className="text-sm text-gray-600">
+//                   <strong>Email:</strong> {selectedAdmin?.email}
+//                 </p>
+//               </div>
+//               <p className="text-sm text-red-600 mt-3">
+//                 This action cannot be undone.
+//               </p>
+//             </div>
+
+//             {/* Modal Actions */}
+//             <div className="flex gap-3 justify-end">
+//               <button
+//                 onClick={cancelDelete}
+//                 className="px-4 py-2 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+//               >
+//                 Cancel
+//               </button>
+//               <button
+//                 onClick={confirmDelete}
+//                 className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+//               >
+//                 Delete Admin
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//               </table>
+//             </div>
+
+//             {showModal && (
+//               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+//                 <div className="bg-white rounded-lg p-4 lg:p-6 max-w-md w-full shadow-xl">
+//                   <h3 className="text-xl font-bold text-gray-800 mb-4">Add New Admin</h3>
+//                   <form className="space-y-4" onSubmit={handleSubmit}>
+//                     <div>
+//                       <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+//                       <input
+//                         type="email"
+//                         name='email'
+//                         value={formData.email}
+//                         onChange={handleValueChange}
+//                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+//                         placeholder="admin@ashwamedh.org"
+//                       />
+//                     </div>
+//                     <div>
+//                       <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+//                       <input
+//                         type="password"
+//                         name='password'
+//                         value={formData.password}
+//                         onChange={handleValueChange}
+//                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+//                         placeholder="Enter secure password"
+//                       />
+//                     </div>
+                  
+//                   <div className="flex justify-end space-x-3 mt-6">
+//                     <button
+//                       onClick={() => setShowModal(false)}
+//                       className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+//                     >
+//                       Cancel
+//                     </button>
+                   
+//                     <button
+//   type="submit"
+//   disabled={isLoading}
+//   className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+// >
+//   {isLoading ? (
+//     <>
+//       <svg
+//         className="animate-spin h-4 w-4 text-white"
+//         xmlns="http://www.w3.org/2000/svg"
+//         fill="none"
+//         viewBox="0 0 24 24"
+//       >
+//         <circle
+//           className="opacity-25"
+//           cx="12"
+//           cy="12"
+//           r="10"
+//           stroke="currentColor"
+//           strokeWidth="4"
+//         />
+//         <path
+//           className="opacity-75"
+//           fill="currentColor"
+//           d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+//         />
+//       </svg>
+//       Adding...
+//     </>
+//   ) : (
+//     'Add Admin'
+//   )}
+// </button>
+
+//                   </div>
+//                   </form>
+//                 </div>
+//               </div>
+//             )}
+//           </div>
+//         );
+return (
+  <div className="space-y-6 p-4 sm:p-6">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+      <div>
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Admin Management ({allUsers.length})</h3>
+        <p className="text-sm sm:text-base text-gray-500">Manage administrative users and permissions</p>
+      </div>
+      <button
+        onClick={() => setShowModal(true)}
+        className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center justify-center transition-colors w-full sm:w-auto"
+      >
+        <Plus className="w-4 h-4 mr-2" />
+        Add New Admin
+      </button>
+    </div>
+
+    <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+      {/* Mobile Card View */}
+      <div className="block sm:hidden">
+        <div className="divide-y divide-gray-100">
+          {allUsers.map((admin) => (
+            <div key={admin._id} className="p-4 hover:bg-gray-50 transition-colors">
+              <div className="flex justify-between items-center">
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-gray-900 truncate">{admin.email}</p>
+                </div>
+                <div className="ml-4 flex-shrink-0">
+                  {admin.role !== 'super-admin' ? (
+                    <button
+                      onClick={() => handleDeleteClick(admin)}
+                      className="text-red-600 hover:text-red-800 hover:bg-red-50 p-2 rounded-lg transition-colors"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  ) : (
+                    <span className="text-gray-400 text-xs px-2 py-1 bg-gray-100 rounded">
+                      Protected
+                    </span>
+                  )}
+                </div>
               </div>
-              <p className="text-sm text-red-600 mt-3">
-                This action cannot be undone.
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Table View */}
+      <div className="hidden sm:block">
+        <table className="w-full">
+          <thead className="bg-gray-50 border-b border-gray-100">
+            <tr>
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">Email</th>
+              <th className="px-6 py-4 text-right text-xs font-semibold text-gray-500 uppercase tracking-wider">Actions</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-100">
+            {allUsers.map((admin) => (
+              <tr key={admin._id} className="hover:bg-gray-50 transition-colors">
+                <td className="px-6 py-4 text-sm text-gray-900">{admin.email}</td>
+                <td className="px-6 py-4 text-right">
+                  {admin.role !== 'super-admin' ? (
+                    <button
+                      onClick={() => handleDeleteClick(admin)}
+                      className="text-red-600 hover:text-red-800 hover:bg-red-50 p-2 rounded-lg transition-colors"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  ) : (
+                    <span className="text-gray-400 text-xs px-2 py-1 bg-gray-100 rounded">
+                      Protected
+                    </span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {/* Delete Confirmation Modal */}
+    {showModale && (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="bg-white rounded-lg p-4 lg:p-6 max-w-md w-full shadow-xl mx-4">
+          {/* Modal Header */}
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-gray-900">
+              Confirm Deletion
+            </h3>
+            <button
+              onClick={cancelDelete}
+              className="text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Modal Content */}
+          <div className="mb-6">
+            <p className="text-gray-700 mb-2">
+              Are you sure you want to delete this admin?
+            </p>
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <p className="text-sm text-gray-600 break-all">
+                <strong>Email:</strong> {selectedAdmin?.email}
               </p>
             </div>
+            <p className="text-sm text-red-600 mt-3">
+              This action cannot be undone.
+            </p>
+          </div>
 
-            {/* Modal Actions */}
-            <div className="flex gap-3 justify-end">
+          {/* Modal Actions */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-end">
+            <button
+              onClick={cancelDelete}
+              className="px-4 py-2 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors order-2 sm:order-1"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={confirmDelete}
+              className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors order-1 sm:order-2"
+            >
+              Delete Admin
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+
+    {/* {showModal && (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="bg-white rounded-lg p-4 lg:p-6 max-w-md w-full shadow-xl mx-4">
+          <h3 className="text-xl font-bold text-gray-800 mb-4">Add New Admin</h3>
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input
+                type="email"
+                name='email'
+                value={formData.email}
+                onChange={handleValueChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
+                placeholder="admin@ashwamedh.org"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+              <input
+                type="password"
+                name='password'
+                value={formData.password}
+                onChange={handleValueChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
+                placeholder="Enter secure password"
+              />
+            </div>
+          
+            <div className="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3 mt-6">
               <button
-                onClick={cancelDelete}
-                className="px-4 py-2 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                type="button"
+                onClick={() => setShowModal(false)}
+                className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors order-2 sm:order-1"
               >
                 Cancel
               </button>
+             
               <button
-                onClick={confirmDelete}
-                className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+                type="submit"
+                disabled={isLoading}
+                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed order-1 sm:order-2"
               >
-                Delete Admin
+                {isLoading ? (
+                  <>
+                    <svg
+                      className="animate-spin h-4 w-4 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      />
+                    </svg>
+                    Adding...
+                  </>
+                ) : (
+                  'Add Admin'
+                )}
               </button>
             </div>
-          </div>
+          </form>
         </div>
-      )}
-              </table>
-            </div>
+      </div>
+    )} */}
 
-            {showModal && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-                <div className="bg-white rounded-lg p-4 lg:p-6 max-w-md w-full shadow-xl">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Add New Admin</h3>
-                  <form className="space-y-4" onSubmit={handleSubmit}>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                      <input
-                        type="email"
-                        name='email'
-                        value={formData.email}
-                        onChange={handleValueChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                        placeholder="admin@ashwamedh.org"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
-                      <input
-                        type="password"
-                        name='password'
-                        value={formData.password}
-                        onChange={handleValueChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                        placeholder="Enter secure password"
-                      />
-                    </div>
-                  
-                  <div className="flex justify-end space-x-3 mt-6">
-                    <button
-                      onClick={() => setShowModal(false)}
-                      className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
-                    >
-                      Cancel
-                    </button>
-                   
-                    <button
-  type="submit"
-  disabled={isLoading}
-  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
->
-  {isLoading ? (
-    <>
-      <svg
-        className="animate-spin h-4 w-4 text-white"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
+{showModal && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div className="relative bg-white rounded-lg p-4 lg:p-6 max-w-md w-full shadow-xl mx-4">
+      
+      {/* Close Button */}
+      <button
+        onClick={() => setShowModal(false)}
+        className="absolute top-1 right-3 text-gray-500 hover:text-gray-700 text-xl font-semibold focus:outline-none"
       >
-        <circle
-          className="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="4"
-        />
-        <path
-          className="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-        />
-      </svg>
-      Adding...
-    </>
-  ) : (
-    'Add Admin'
-  )}
-</button>
+        &times;
+      </button>
 
-                  </div>
-                  </form>
-                </div>
-              </div>
+      <h3 className="text-xl font-bold text-gray-800 mb-4">Add New Admin</h3>
+      <form className="space-y-4" onSubmit={handleSubmit}>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleValueChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
+            placeholder="admin@ashwamedh.org"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleValueChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
+            placeholder="Enter secure password"
+          />
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-3 mt-6">
+          <button
+            type="button"
+            onClick={() => setShowModal(false)}
+            className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors order-2 sm:order-1"
+          >
+            Cancel
+          </button>
+
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed order-1 sm:order-2"
+          >
+            {isLoading ? (
+              <>
+                <svg
+                  className="animate-spin h-4 w-4 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                  />
+                </svg>
+                Adding...
+              </>
+            ) : (
+              'Add Admin'
             )}
-          </div>
-        );
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+)}
 
+
+
+  </div>
+);
+case 'gallery':
+  return <AdminGallerySection/>
       default:
         return <div>Section not found</div>;
     }
   };
 
   return (
-    // <div className="min-h-screen bg-gray-50">
-    //   <Sidebar />
-    //   <div className="ml-64">
-    //     <Header />
-    //     <main className="p-6">
-    //       {renderContent()}
-    //     </main>
-    //   </div>
-    // </div>
+ 
 
  <div className="min-h-screen bg-gray-50">
     <Sidebar />

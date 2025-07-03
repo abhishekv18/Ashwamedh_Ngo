@@ -1310,24 +1310,22 @@ export default function VolunteerPage() {
     onClick={() => setShowSocialMediaPopup(false)}
   >
     <div
-      className="relative rounded-xl shadow-xl w-full max-w-sm overflow-hidden text-white"
+      className="relative rounded-xl shadow-xl w-full max-w-sm overflow-hidden text-white bg-white"
       onClick={(e) => e.stopPropagation()}
     >
-      {/* Background Image with Gradient Overlay */}
-      <div className="absolute inset-0">
+      {/* Header Section with Image + Gradient */}
+      <div className="relative">
         <div
-          className="w-full h-full bg-cover bg-center"
+          className="w-full h-40 bg-cover bg-center"
           style={{
-            backgroundImage: `url('/public/images/logo/istockphoto-947216378-612x612.jpg')`
+            backgroundImage: `url('/images/logo/istockphoto-947216378-612x612.jpg')`,
           }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-90"></div>
-      </div>
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-90 rounded-t-xl"></div>
+        </div>
 
-      {/* Content */}
-      <div className="relative z-10 p-2 sm:p-4">
-        {/* Header */}
-        <div className="relative px-4 py-3 text-center">
+        {/* Header Content */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 py-3 text-white">
           {/* Close Button */}
           <button
             onClick={() => setShowSocialMediaPopup(false)}
@@ -1336,15 +1334,17 @@ export default function VolunteerPage() {
             <span className="text-xl">×</span>
           </button>
 
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-white bg-opacity-20 rounded-full mb-3">
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-white bg-opacity-20 rounded-full mb-2">
             <Heart className="h-6 w-6 text-white" />
           </div>
 
-          <h3 className="text-xl font-bold mb-1">Stay Connected!</h3>
+          <h3 className="text-xl font-bold">Stay Connected!</h3>
           <p className="text-sm opacity-90">Follow us for updates & opportunities</p>
         </div>
+      </div>
 
+      {/* Content Section - White Background */}
+      <div className="relative z-10 p-4 bg-white text-gray-800">
         {/* Social Buttons */}
         <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
           {/* Facebook */}
@@ -1352,12 +1352,12 @@ export default function VolunteerPage() {
             href="https://facebook.com/yourpage"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center p-3 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg hover:shadow-md transition transform hover:scale-105"
+            className="group flex items-center justify-center p-3 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg hover:shadow-md transition transform hover:scale-105 text-white"
           >
-            <svg className="w-5 h-5 text-white mr-1" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
             </svg>
-            <span className="text-white font-medium">Facebook</span>
+            Facebook
           </a>
 
           {/* Instagram */}
@@ -1365,12 +1365,12 @@ export default function VolunteerPage() {
             href="https://instagram.com/yourpage"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center p-3 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg hover:shadow-md transition transform hover:scale-105"
+            className="group flex items-center justify-center p-3 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg hover:shadow-md transition transform hover:scale-105 text-white"
           >
-            <svg className="w-5 h-5 text-white mr-1" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.553 3.708 13.402 3.708 12.017c0-1.297.49-2.448 1.297-3.323C5.932 7.766 7.083 7.276 8.449 7.276c1.297 0 2.448.49 3.323 1.297.928.928 1.418 2.079 1.418 3.444 0 1.297-.49 2.448-1.297 3.323-.928.928-2.079 1.418-3.444 1.418zm7.718 0c-1.297 0-2.448-.49-3.323-1.297C11.916 14.553 11.426 13.402 11.426 12.017c0-1.297.49-2.448 1.297-3.323C13.65 7.766 14.801 7.276 16.167 7.276c1.297 0 2.448.49 3.323 1.297.928.928 1.418 2.079 1.418 3.444 0 1.297-.49 2.448-1.297 3.323-.928.928-2.079 1.418-3.444 1.418z" />
             </svg>
-            <span className="text-white font-medium">Instagram</span>
+            Instagram
           </a>
         </div>
 
@@ -1378,7 +1378,7 @@ export default function VolunteerPage() {
         <div className="space-y-2">
           <button
             onClick={() => setShowSocialMediaPopup(false)}
-            className="w-full px-5 py-2.5 bg-white/20 text-white text-sm font-bold rounded-lg hover:bg-white/30 transition shadow-md flex items-center justify-center"
+            className="w-full px-5 py-2.5 bg-teal-600 text-white text-sm font-bold rounded-lg hover:bg-teal-700 transition shadow-md flex items-center justify-center"
           >
             <CheckCircle className="mr-2 h-4 w-4" />
             Continue to Volunteer
@@ -1386,19 +1386,20 @@ export default function VolunteerPage() {
 
           <button
             onClick={() => setShowSocialMediaPopup(false)}
-            className="w-full px-5 py-2.5 border border-white/30 text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition"
+            className="w-full px-5 py-2.5 border border-gray-300 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-100 transition"
           >
             Maybe Later
           </button>
         </div>
 
-        <p className="text-[10px] text-white text-center mt-3">
+        <p className="text-[10px] text-gray-500 text-center mt-3">
           Stay updated with our volunteer stories
         </p>
       </div>
     </div>
   </div>
 )}
+
     </div>
   );
 }
