@@ -472,7 +472,7 @@ const[formData, setFormData] = useState({
   return (
     <footer className="bg-[#212121] text-white">
       {/* Impact Stats Section */}
-      <div className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 py-8 sm:py-10">
+      <div className="bg-gradient-to-t from-orange-600 via-orange-500 to-orange-600 py-8 sm:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {impactStats.map((stat, index) => (
@@ -664,7 +664,7 @@ const[formData, setFormData] = useState({
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700 bg-[#1a1a1a]">
+      <div className="bg-[#212121]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             
