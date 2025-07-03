@@ -399,7 +399,7 @@ const[formData, setFormData] = useState({
       // Add new client to state
       dispatch(setSubscribe(res.data.subscribe));
     //  toast.success("Subscribed Successfully")
-    toast.success('Subscribed Successfully', {
+    toast.success('Subscribed successfully', {
   icon: '✅',
   style: {
     border: '1px solid #28a745',
@@ -423,7 +423,7 @@ const[formData, setFormData] = useState({
     }
   } catch (error) {
     console.error(error);
-    toast.error(error.response?.data?.message || 'Failed to Subscribe');
+    toast.error(error.response?.data?.message || 'Failed to subscribe');
   } finally {
     dispatch(setLoadi(false));
   }
