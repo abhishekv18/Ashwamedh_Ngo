@@ -747,10 +747,10 @@ const AdminLoginPage = () => {
               <div className="inline-flex items-center justify-center w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mb-3 xs:mb-4 sm:mb-6">
                 <Shield className="h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">Admin Portal</h2>
+              {/* <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">Admin Portal</h2>
               <p className="text-xs xs:text-sm sm:text-base text-gray-600 px-2">
                 Secure access to manage Ashwamedh Foundation
-              </p>
+              </p> */}
             </div>
 
             <div className="text-center mb-4 xs:mb-6 sm:mb-8">
