@@ -743,18 +743,10 @@ const AdminLoginPage = () => {
         <div className="w-full lg:w-1/2 flex items-center justify-center p-3 xs:p-4 sm:p-6 md:p-8 bg-white min-h-[calc(100vh-3.5rem)] xs:min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-4.5rem)] lg:min-h-auto">
           <div className="w-full max-w-xs xs:max-w-sm sm:max-w-md">
             {/* Mobile Header for smaller screens */}
-            <div className="lg:hidden text-center mb-4 xs:mb-6 sm:mb-8 pt-2 xs:pt-4">
-              <div className="inline-flex items-center justify-center w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mb-3 xs:mb-4 sm:mb-6">
-                <Shield className="h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8 text-white" />
-              </div>
-              {/* <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">Admin Portal</h2>
-              <p className="text-xs xs:text-sm sm:text-base text-gray-600 px-2">
-                Secure access to manage Ashwamedh Foundation
-              </p> */}
-            </div>
+          
 
             <div className="text-center mb-4 xs:mb-6 sm:mb-8">
-              <div className="lg:inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mb-4 sm:mb-6 hidden">
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mb-4 sm:mb-6">
                 <Lock className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
               <h2 className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Admin Login</h2>
