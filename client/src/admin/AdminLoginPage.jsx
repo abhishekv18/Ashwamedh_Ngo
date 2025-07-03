@@ -636,7 +636,7 @@ const AdminLoginPage = () => {
       if (res.data.success) {
       //  toast.success(`Welcome ${res.data.user.fullname}`);
         dispatch(setUser(res.data.user));
-        toast.success("Login successfully")
+       toast.success('Login successfully');
        setFormData({
         email:"",
         password:""
