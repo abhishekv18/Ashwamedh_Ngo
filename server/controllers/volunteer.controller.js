@@ -79,6 +79,55 @@ await volunteer.save();
         //         <p>Regards,<br/>Team Ashwamedh Foundation</p>
         //     `
         // };
+// const userMail = {
+//   from: 'admin@ashwamedhfoundation.org',
+//   to: email,
+//   subject: 'Thank You for Volunteering!',
+//   html: `
+//     <div style="background-color: #f9f9f9; padding: 30px; font-family: Arial, sans-serif; color: #333;">
+//       <div style="max-width: 600px; margin: auto; background: #ffffff; padding: 25px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+//         <h2 style="color: #2C3E50;">Hi ${name},</h2>
+
+//         <p style="font-size: 15px;">
+//           Thank you for applying as a volunteer at <strong style="color: #e67e22;">Ashwamedh Foundation</strong>.
+//         </p>
+
+//         <p style="font-size: 15px;">
+//           We’ve successfully received your details and our team will be reaching out to you shortly with the next steps.
+//         </p>
+
+//         <p style="font-size: 15px;">
+//           Your willingness to support our cause is deeply appreciated. Together, we can create meaningful change.
+//         </p>
+
+//         <hr style="margin: 25px 0; border: none; border-top: 1px solid #ddd;" />
+
+//         <p style="font-weight: bold; color: #34495e;">Stay connected with us:</p>
+
+//         <div style="margin-top: 15px;">
+//           <a href="https://facebook.com/ashwamedhfoundation" target="_blank" style="text-decoration: none; margin-right: 15px;">
+//             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32" style="display: inline-block;" />
+//           </a>
+//           <a href="https://instagram.com/ashwamedhfoundation" target="_blank" style="text-decoration: none; margin-right: 15px;">
+//             <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="32" height="32" style="display: inline-block;" />
+//           </a>
+//           <a href="https://linkedin.com/company/ashwamedhfoundation" target="_blank" style="text-decoration: none;">
+//             <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" width="32" height="32" style="display: inline-block;" />
+//           </a>
+//         </div>
+
+//         <p style="font-size: 13px; color: #888; margin-top: 25px;">
+//           We regularly post updates, volunteer stories, and events – don’t miss out!
+//         </p>
+
+//         <p style="margin-top: 30px; font-size: 14px; color: #555;">
+//           Warm regards,<br/>
+//           <strong>Team Ashwamedh Foundation</strong>
+//         </p>
+//       </div>
+//     </div>
+//   `
+// };
 const userMail = {
   from: 'admin@ashwamedhfoundation.org',
   to: email,
@@ -98,6 +147,13 @@ const userMail = {
 
         <p style="font-size: 15px;">
           Your willingness to support our cause is deeply appreciated. Together, we can create meaningful change.
+        </p>
+
+        <p style="font-size: 14px; color: #555; margin-top: 20px;">
+           📧 If you have any questions or ideas you'd like to share, feel free to reach out to us at
+          <a href="mailto:contact@ashwamedhfoundation.org" style="color: #e67e22; text-decoration: none;">
+            contact@ashwamedhfoundation.org
+          </a>.
         </p>
 
         <hr style="margin: 25px 0; border: none; border-top: 1px solid #ddd;" />
