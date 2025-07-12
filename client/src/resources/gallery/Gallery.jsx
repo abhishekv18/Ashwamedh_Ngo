@@ -318,7 +318,7 @@ const team=[
   {/* </div> */}
 
   {/* Bottom Gradient Fade - Responsive height */}
-  <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 lg:h-20 bg-gradient-to-t from-white to-transparent z-10"></div>
+ <div className="absolute bottom-0 left-0 right-0 h-10 md:h-16 bg-gradient-to-t from-white to-transparent"></div>
 </section>
 
 

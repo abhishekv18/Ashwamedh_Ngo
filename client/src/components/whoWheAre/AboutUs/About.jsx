@@ -582,7 +582,7 @@ const AboutUs = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-0 left-0 right-0 h-16 md:h-20 bg-gradient-to-t from-white to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-10 md:h-16 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
       {/* History Section */}
