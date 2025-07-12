@@ -266,7 +266,7 @@ const team=[
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Enhanced Hero Section */}
-<section className="relative text-white py-1 sm:py-8 md:py-10 lg:py-14 xl:py-18 overflow-hidden">
+<section className="relative text-white py-3 sm:py-8 md:py-10 lg:py-14 xl:py-18 overflow-hidden">
   {/* 🔳 Background Image */}
   <div className="absolute inset-0 z-0">
     <img
@@ -299,7 +299,7 @@ const team=[
       </p>
 
       {/* 🔸 Stats */}
-      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-xs xs:max-w-lg sm:max-w-2xl mx-auto px-2 sm:px-0">
+      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-xs xs:max-w-lg sm:max-w-2xl mx-auto px-2 sm:px-0 mb-1">
         <div className="flex items-center justify-center gap-1.5 sm:gap-2 bg-white/10 text-orange-100 backdrop-blur rounded-lg py-2.5 sm:py-3 px-3 sm:px-4 shadow transition-transform hover:scale-105 duration-300">
           <Sparkles size={16} className="sm:w-[18px] sm:h-[18px] text-white flex-shrink-0" />
           <span className="font-medium text-white text-sm sm:text-base whitespace-nowrap">100+ Photos</span>
