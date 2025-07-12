@@ -1107,13 +1107,13 @@ const DonatePage = () => {
   ];
 
   const bankDetails = {
-    accountName: "Helping Hands Foundation",
-    accountNumber: "123456789012",
-    bankName: "State Bank of India",
-    branch: "Main Branch, New Delhi",
-    ifsc: "SBIN0001234",
-    upiId: "helpinghands@upi",
-    qrCodeImage: "/public/images/qr-code.png"
+    accountName: "Ashwamedh Foundation",
+    accountNumber: "2571101004533",
+    bankName: "Canara Bank",
+    branch: "Kalina, Mumbai",
+    ifsc: "CNRB0000116",
+    upiId: "102773700004533@cnrb",
+    qrCodeImage: "/public/images/projects/WhatsApp Image 2025-07-12 at 4.57.53 PM.jpeg"
   };
 
   const handleAmountSelect = (amount) => {
@@ -1296,7 +1296,7 @@ const DonatePage = () => {
                   <img 
                     src={bankDetails.qrCodeImage} 
                     alt="UPI QR Code" 
-                    className="w-48 h-48 md:w-64 md:h-64 object-contain"
+                    className="w-56 h-56 md:w-80 md:h-80 object-contain"
                   />
                 </div>
                 <p className="text-sm text-gray-600">Amount: ₹{getCurrentAmount().toLocaleString('en-IN')}</p>
