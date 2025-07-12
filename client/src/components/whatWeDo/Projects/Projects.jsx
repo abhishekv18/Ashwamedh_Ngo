@@ -791,7 +791,7 @@ const ProjectAnkur = () => {
             </div>
             <div className="inline-flex items-center bg-white/80 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg border border-white/50 mb-4 sm:mb-6">
               <Calendar className="w-4 sm:w-5 h-4 sm:h-5 mr-2 sm:mr-3 text-gray-600" />
-              <span className="text-sm sm:text-base font-bold text-gray-700">Coming Soon in 2025</span>
+              <span className="text-sm sm:text-base font-bold text-gray-700">Coming Soon in 2026</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">{project.title}</h2>
             <p className="text-xl sm:text-2xl text-gray-600 font-medium mb-4 sm:mb-6">{project.subtitle}</p>

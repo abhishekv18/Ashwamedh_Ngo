@@ -589,6 +589,7 @@ const ApproachMethodology = () => {
 
   {/* Bottom Fade */}
   <div className="absolute bottom-0 left-0 right-0 h-10 md:h-16 z-20 bg-gradient-to-t from-white to-transparent"></div>
+ 
 </div>
 
 
@@ -798,7 +799,7 @@ const ApproachMethodology = () => {
     <img 
       src="/public/images/logo/istockphoto-1555696380-612x612.webp" // 🔁 Replace with your actual image path
       alt="Helping children background"
-      className="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
+      className="absolute inset-0 w-full h-full object-cover opacity-15 z-0"
     />
 
     <div className="relative z-10">

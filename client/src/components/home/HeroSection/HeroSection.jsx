@@ -324,7 +324,7 @@ const HeroSection = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12">
+            {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12">
               <button className="group relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 <span className="relative flex items-center justify-center">
                   <span className="hidden sm:inline">Start Your Impact Journey</span>
@@ -336,7 +336,23 @@ const HeroSection = () => {
               <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-200 text-orange-600 font-semibold text-sm sm:text-base lg:text-lg rounded-xl sm:rounded-2xl hover:bg-orange-50 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            </div> */}
+<div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12">
+  <button className="w-64 sm:w-auto group relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+    <span className="relative flex items-center justify-center">
+      <span className="hidden sm:inline">Start Your Impact Journey</span>
+      <span className="sm:hidden">Start Journey</span>
+      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+    </span>
+  </button>
+
+  <button className="w-64 sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-200 text-orange-600 font-semibold text-sm sm:text-base lg:text-lg rounded-xl sm:rounded-2xl hover:bg-orange-50 transition-all duration-300">
+    Learn More
+  </button>
+</div>
+
+
+
           </div>
 
           {/* Right Image Section */}

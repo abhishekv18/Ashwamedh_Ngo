@@ -242,7 +242,7 @@ const CallToAction = () => {
         </div>
 
         {/* CTA Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-20">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16 lg:mb-20">
           {/* Donate Card */}
           <div className="group relative bg-white rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden border border-gray-100">
             <div 
@@ -271,7 +271,7 @@ const CallToAction = () => {
 
               {/* Impact Stats */}
               <div 
-                className="grid grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10 p-4 sm:p-6 rounded-xl sm:rounded-2xl border-2"
+                className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 p-4 sm:p-6 rounded-xl sm:rounded-2xl border-2"
                 style={{ backgroundColor: '#FFF8F5', borderColor: '#FFE0B2' }}
               >
                 <div className="text-center">
@@ -282,6 +282,19 @@ const CallToAction = () => {
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2" style={{ color: '#FF5722' }}>₹2000</div>
                   <div className="text-xs sm:text-sm font-medium" style={{ color: '#757575' }}>School supplies for a year</div>
                 </div>
+              </div>
+
+              {/* Donation Options */}
+              <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
+                <div 
+                  className="flex items-center p-3 sm:p-4 rounded-lg sm:rounded-xl border-l-4 transition-all duration-300 hover:shadow-md"
+                  style={{ backgroundColor: '#FFF8F5', borderLeftColor: '#FF5722' }}
+                >
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full mr-3 sm:mr-4" style={{ backgroundColor: '#FF5722' }}></div>
+                  <span className="font-medium text-sm sm:text-base" style={{ color: '#424242' }}>Support a Child</span>
+                </div>
+               
+              
               </div>
 
               <button 

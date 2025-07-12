@@ -888,7 +888,7 @@ const AboutUs = () => {
       {/* News & PR */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 text-white relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 hidden md:block">
           <div className="absolute top-8 left-8 md:top-10 md:left-10 w-24 h-24 md:w-32 md:h-32 bg-white bg-opacity-10 rounded-full animate-pulse"></div>
           <div className="absolute bottom-16 right-16 md:bottom-20 md:right-20 w-20 h-20 md:w-24 md:h-24 bg-orange-400 bg-opacity-20 rounded-full animate-pulse delay-700"></div>
           <div className="absolute top-1/2 left-1/4 w-12 h-12 md:w-16 md:h-16 bg-white bg-opacity-10 rounded-full animate-pulse delay-1000"></div>

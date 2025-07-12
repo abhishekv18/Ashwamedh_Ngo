@@ -651,7 +651,7 @@
 //           strokeWidth="4"
 //         />
 import { useEffect, useState } from 'react';
-import { Heart, Users, Globe, Award, UserPlus, Shield, Mail, Phone, MapPin, User, Calendar, Briefcase, GraduationCap, Target, Handshake, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { Heart, Users, Globe, Award, UserPlus, Shield, Mail, Phone, MapPin, User, Calendar, Briefcase, GraduationCap, Target, Handshake, CheckCircle, Star, ArrowRight, Instagram } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoadin, setVolunteer } from '../../redux/volunteerSlice';
@@ -1361,17 +1361,16 @@ export default function VolunteerPage() {
           </a>
 
           {/* Instagram */}
-          <a
-            href="https://instagram.com/yourpage"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center justify-center p-3 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg hover:shadow-md transition transform hover:scale-105 text-white"
-          >
-            <svg className="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.553 3.708 13.402 3.708 12.017c0-1.297.49-2.448 1.297-3.323C5.932 7.766 7.083 7.276 8.449 7.276c1.297 0 2.448.49 3.323 1.297.928.928 1.418 2.079 1.418 3.444 0 1.297-.49 2.448-1.297 3.323-.928.928-2.079 1.418-3.444 1.418zm7.718 0c-1.297 0-2.448-.49-3.323-1.297C11.916 14.553 11.426 13.402 11.426 12.017c0-1.297.49-2.448 1.297-3.323C13.65 7.766 14.801 7.276 16.167 7.276c1.297 0 2.448.49 3.323 1.297.928.928 1.418 2.079 1.418 3.444 0 1.297-.49 2.448-1.297 3.323-.928.928-2.079 1.418-3.444 1.418z" />
-            </svg>
-            Instagram
-          </a>
+        <a
+  href="https://instagram.com/yourpage"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group flex items-center justify-center p-3 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg hover:shadow-md transition transform hover:scale-105 text-white"
+>
+  <Instagram className="w-5 h-5 mr-2" />
+  Instagram
+</a>
+
         </div>
 
         {/* Action Buttons */}
