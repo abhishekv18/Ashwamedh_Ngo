@@ -490,18 +490,19 @@
 
 import React, { useEffect } from 'react';
 import { Heart, Users, TrendingUp, Shield, BookOpen, Smile, AlertTriangle, Home, Droplets, Utensils } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const WhyChildren = () => {
   // Mock navigation and user for demo
-  const navigate = () => {};
-  const user = null;
-  
-  useEffect(() => {
-    if (user) {
-      navigate("/admin-dashboard");
-    }
-  }, [user]);
-
+   const navigate=useNavigate();
+   const user = useSelector((state) => state.auth.user);
+     useEffect(() => {
+     if (user) {
+       navigate("/admin-dashboard");
+     }
+   }, [user]);
+ 
   const globalStats = [
     {
       number: "900M",

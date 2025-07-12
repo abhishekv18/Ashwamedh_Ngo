@@ -1559,8 +1559,24 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, X, Calendar, MapPin, Users, Heart, ArrowRight, Star, Award, Target, Sparkles, ExternalLink, Grid, List, Download, Share2, Info } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const GalleryPage = () => {
+
+
+
+
+  const navigate=useNavigate();
+  const user = useSelector((state) => state.auth.user);
+    useEffect(() => {
+    if (user) {
+      navigate("/admin-dashboard");
+    }
+  }, [user]);
+
+
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -452,8 +452,23 @@
 
 import React, { useState, useEffect } from 'react';
 import { Star, Quote, Users, GraduationCap, Heart, BookOpen, Award, TrendingUp, Calendar, MapPin, User, ChevronLeft, ChevronRight, Play, Home, Shield, Globe } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const ImpactStories = () => {
+
+
+  const navigate=useNavigate();
+  const user = useSelector((state) => state.auth.user);
+    useEffect(() => {
+    if (user) {
+      navigate("/admin-dashboard");
+    }
+  }, [user]);
+
+
+
+
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
 
