@@ -1183,7 +1183,7 @@ export default function VolunteerPage() {
                             onChange={handleInputChange}
                             required
                             className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
-                            placeholder="123-456-7890"
+                            placeholder="9876543210"
                           />
                         </div>
                       </div>

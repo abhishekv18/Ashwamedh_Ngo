@@ -810,7 +810,7 @@ const handleInputChange = (e) => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full pl-9 sm:pl-10 pr-4 py-2.5 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors text-sm sm:text-base"
-                        placeholder="123-456-7890"
+                        placeholder="9876543210"
                       />
                     </div>
                   </div>
