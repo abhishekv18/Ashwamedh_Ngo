@@ -1,21 +1,3 @@
-// // components/FloatingWhatsAppButton.jsx
-// import { FaWhatsapp } from "react-icons/fa";
-
-// const FloatingWhatsAppButton = () => {
-//   return (
-//     <a
-//       href="https://wa.me/919999999999" // Replace with your actual WhatsApp number
-//       className="fixed bottom-6 left-1/2 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform duration-300 z-50"
-//       target="_blank"
-//       rel="noopener noreferrer"
-//       title="Chat on WhatsApp"
-//     >
-//       <FaWhatsapp size={24} />
-//     </a>
-//   );
-// };
-
-// export default FloatingWhatsAppButton;
 
 
 import { useState, useEffect } from 'react';
@@ -54,12 +36,12 @@ const WhatsAppDrawer = () => {
               max-h-[240px] sm:max-h-none overflow-y-auto
               bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90 text-white`}
 >
-  <p className="font-semibold text-[15px] sm:text-base mb-2 text-teal-100">
-    Need Help?
-  </p>
-  <p className="text-sm sm:text-[15px] text-teal-50 mb-4 leading-relaxed">
-    Chat with us on WhatsApp. Our team is ready to answer your queries and support you.
-  </p>
+<p className="font-semibold text-[15px] sm:text-base mb-2 text-teal-100">
+  Let's make a difference
+</p>
+<p className="text-sm sm:text-[15px] text-teal-50 mb-4 leading-relaxed">
+  Curious about how we support children's education? Message us on WhatsApp and learn how you can help.
+</p>
   <a
     href="https://wa.me/919999999999"
     target="_blank"
