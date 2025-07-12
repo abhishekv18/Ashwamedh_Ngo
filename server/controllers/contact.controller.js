@@ -19,7 +19,7 @@ export const addContact = async (req, res) => {
                 success: false
             });
         }
-        const phoneRegex = /^\d{10}$/; // Assuming phone number is 10 digits
+        const phoneRegex = /^[6-9]\d{9}$/; // Assuming phone number is 10 digits
         if (!phoneRegex.test(phone)) {
             return res.status(400).json({
                 message: "Invalid phone number format",
@@ -43,7 +43,7 @@ export const addContact = async (req, res) => {
             preferredContact
 
         });
-await contact.save();
+            await contact.save();
 
         // Send email to CLIENT via Zoho SMTP
         const transporter = nodemailer.createTransport({

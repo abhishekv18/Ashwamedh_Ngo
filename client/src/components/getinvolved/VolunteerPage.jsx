@@ -1,6 +1,6 @@
 
 // import { useEffect, useState } from 'react';
-// import { Heart, Users, Globe, Award, UserPlus, Shield, Mail, Phone, MapPin, User, Calendar, Briefcase, GraduationCap, Target, Handshake, CheckCircle, Star, ArrowRight } from 'lucide-react';
+// import { Heart, Users, Globe, Award, UserPlus, Shield, Mail, Phone, MapPin, User, Calendar, Briefcase, GraduationCap, Target, Handshake, CheckCircle, Star, ArrowRight, Instagram } from 'lucide-react';
 // import { Link, useNavigate } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { setLoadin, setVolunteer } from '../../redux/volunteerSlice';
@@ -8,25 +8,26 @@
 // import { toast } from 'react-toastify';
 
 // export default function VolunteerPage() {
-
-// const isLoading = useSelector((state) => state.volunteer.loadin);
-// const dispatch=useDispatch();
-// const navigate=useNavigate();
+//   const isLoading = useSelector((state) => state.volunteer.loadin);
+//   const dispatch = useDispatch();
+//   const navigate = useNavigate();
 //   const user = useSelector((state) => state.auth.user);
-//     useEffect(() => {
+  
+//   useEffect(() => {
 //     if (user) {
 //       navigate("/admin-dashboard");
 //     }
 //   }, [user]);
-// const [showSocialMediaPopup, setShowSocialMediaPopup] = useState(false);
-// {/* Social Media Popup */}
-// useEffect(() => {
-//   const timer = setTimeout(() => {
-//     setShowSocialMediaPopup(true);
-//   }, 2000);
 
-//   return () => clearTimeout(timer);
-// }, []);
+//   const [showSocialMediaPopup, setShowSocialMediaPopup] = useState(false);
+  
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setShowSocialMediaPopup(true);
+//     }, 2000);
+
+//     return () => clearTimeout(timer);
+//   }, []);
 
 //   const [formData, setFormData] = useState({
 //     name: '',
@@ -37,82 +38,72 @@
 //     phone: '',
 //     pinCode: '',
 //     occupation: '',
-//      customOccupation: ''
+//     customOccupation: ''
 //   });
 
 //   const [showVolunteerForm, setShowVolunteerForm] = useState(false);
 //   const [showAdminLogin, setShowAdminLogin] = useState(false);
 
-
 //   const handleInputChange = (e) => {
-//   const { name, value } = e.target;
-  
-//   if (name === 'dateOfBirth') {
-//     // Calculate age from date of birth
-//     const today = new Date();
-//     const birthDate = new Date(value);
-//     let age = today.getFullYear() - birthDate.getFullYear();
-//     const monthDiff = today.getMonth() - birthDate.getMonth();
+//     const { name, value } = e.target;
     
-//     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-//       age--;
+//     if (name === 'dateOfBirth') {
+//       const today = new Date();
+//       const birthDate = new Date(value);
+//       let age = today.getFullYear() - birthDate.getFullYear();
+//       const monthDiff = today.getMonth() - birthDate.getMonth();
+      
+//       if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+//         age--;
+//       }
+      
+//       setFormData({ 
+//         ...formData, 
+//         [name]: value,
+//         age: age.toString()
+//       });
+//     } else {
+//       setFormData({ ...formData, [name]: value });
 //     }
-    
-//     setFormData({ 
-//       ...formData, 
-//       [name]: value,
-//       age: age.toString() // Update age automatically
-//     });
-//   } else {
-//     setFormData({ ...formData, [name]: value });
-//   }
-// };
-
+//   };
   
-  
-//     const handleSubmit = async (e) => {
-//            e.preventDefault();
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
 //     try {
-//       dispatch(setLoadin(true)); // Correct spelling
+//       dispatch(setLoadin(true));
 
-//  const submitData = {
-//       ...formData,
-//       occupation: formData.occupation === 'Other' ? formData.customOccupation : formData.occupation
-//     };
+//       const submitData = {
+//         ...formData,
+//         occupation: formData.occupation === 'Other' ? formData.customOccupation : formData.occupation
+//       };
 
-//       const res = await axios.post('http://localhost:5000/api/volunteer/add',submitData, {
+//       const res = await axios.post('http://localhost:5000/api/volunteer/add', submitData, {
 //         headers: { 'Content-Type': 'application/json' },
 //         withCredentials: true,
 //       });
   
-//      if (res.data.success) {
-//         // Add new client to state
+//       if (res.data.success) {
 //         dispatch(setVolunteer(res.data.volunteer));
 //         toast.success("Details send successfully", {
-//   icon: '✅',
-//   style: {
-//     border: '1px solid #28a745',
-//     padding: '16px',
-//     color: '#fff',
-//     background: 'linear-gradient(135deg, #28a745, #218838)',
-//     fontWeight: '600',
-//   },
-// })
-//         // Reset input fields
-//     setFormData({
-//     name: '',
-//     age: '',
-//     gender: '',
-//     email: '',
-//     phone: '',
-//     city: '',
-//     occupation: '',
-//     customOccupation:''  
+//           icon: '✅',
+//           style: {
+//             border: '1px solid #28a745',
+//             padding: '16px',
+//             color: '#fff',
+//             background: 'linear-gradient(135deg, #28a745, #218838)',
+//             fontWeight: '600',
+//           },
 //         });
-  
-//         // Go to clients tab
-     
-//        // toast.success('Client added successfully');
+//         setFormData({
+//           name: '',
+//           age: '',
+//           gender: '',
+//           email: '',
+//           phone: '',
+//           city: '',
+//           occupation: '',
+//           customOccupation:''  
+//         });
 //       }
 //     } catch (error) {
 //       console.error(error);
@@ -120,536 +111,8 @@
 //     } finally {
 //       dispatch(setLoadin(false));
 //     }
-//     };
-  
+//   };
 
-
-//   const stats = [
-//     { number: '50K+', label: 'Active Volunteers', icon: Users },
-//     { number: '80+', label: 'Countries', icon: Globe },
-//     { number: '1M+', label: 'Lives Impacted', icon: Heart },
-//     { number: '500+', label: 'Projects Completed', icon: Award }
-//   ];
-
-//   const testimonials = [
-//     {
-//       name: "Sarah Johnson",
-//       role: "Education Volunteer",
-//       text: "Volunteering has been the most rewarding experience of my life. Seeing children's faces light up when they learn something new is priceless.",
-//       rating: 5
-//     },
-//     {
-//       name: "Michael Chen",
-//       role: "Healthcare Assistant",
-//       text: "The impact we make together is incredible. Every day brings new challenges and opportunities to help others.",
-//       rating: 5
-//     },
-//     {
-//       name: "Emma Davis",
-//       role: "Community Developer",
-//       text: "I've grown personally and professionally while making a real difference in communities. Highly recommend joining!",
-//       rating: 5
-//     }
-//   ];
-
-//   return (
-//     <div className="min-h-screen bg-gradient-to-r from-orange-50 to-white">
-//       {/* Hero Section with Background Image */}
-//      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-//   {/* Background Image Layer */}
-//   <div className="absolute inset-0">
-//     <img
-//       src="/images/stories/istockphoto-477224026-612x612.webp"  // ✅ Make sure the path is correct (no /public prefix)
-//       alt="Volunteer Background"
-//       className="w-full h-full object-cover"
-//     />
-//     {/* Gradient Overlay */}
-//     <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-90"></div>
-//   </div>
-
-//   {/* Foreground Content */}
-//   <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-//     <div className="mb-8">
-//       <div className="inline-flex items-center justify-center w-20 h-20 bg-white bg-opacity-20 rounded-full mb-6 backdrop-blur-sm">
-//         <Heart className="h-10 w-10 text-white" />
-//       </div>
-//       <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-//         Transform Lives,<br />
-//         <span className="text-orange-200">Including Your Own</span>
-//       </h1>
-//       <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-95">
-//         Join a global community of changemakers dedicated to creating lasting impact through meaningful volunteer work
-//       </p>
-//       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-//         <button 
-//           onClick={() => setShowVolunteerForm(true)}
-//           className="group px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-2xl transform hover:scale-105 flex items-center"
-//         >
-//           <UserPlus className="mr-2 h-5 w-5" />
-//           Start Your Journey
-//           <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-//         </button>
-//         <div className="flex items-center space-x-4 text-sm">
-//           <div className="flex -space-x-2">
-//             {[1, 2, 3, 4].map(i => (
-//               <div key={i} className="w-8 h-8 bg-yellow-400 rounded-full border-2 border-white flex items-center justify-center">
-//                 <Star className="w-4 h-4 text-white" />
-//               </div>
-//             ))}
-//           </div>
-//           <span className="opacity-90">Join 50,000+ volunteers</span>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-//     <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
-// </div>
-
-
-//       {/* Stats Section */}
-//       <div className="py-16 bg-gradient-to-r from-orange-50 to-white">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-//             {stats.map((stat, index) => (
-//               <div key={index} className="text-center group">
-//                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-//                   <stat.icon className="h-8 w-8 text-white" />
-//                 </div>
-//                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-//                 <div className="text-gray-600 font-medium">{stat.label}</div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Why Volunteer Section */}
-//       <div className="py-20 bg-gradient-to-r from-orange-50 to-white">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-16">
-//             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Choose Us?</h2>
-//             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-//               Experience meaningful volunteer work with comprehensive support and global impact
-//             </p>
-//           </div>
-
-//           <div className="grid md:grid-cols-3 gap-8">
-//             <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 via-white to-orange-50 p-8 hover:shadow-2xl transition-all duration-500 border border-orange-100">
-//               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-full -translate-y-16 translate-x-16 opacity-10 group-hover:scale-150 transition-transform duration-500"></div>
-//               <div className="relative z-10">
-//                 <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-//                   <Globe className="h-8 w-8 text-white" />
-//                 </div>
-//                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Global Network</h3>
-//                 <p className="text-gray-600 leading-relaxed">
-//                   Connect with volunteers worldwide and contribute to projects that create sustainable change across communities, cultures, and continents.
-//                 </p>
-//               </div>
-//             </div>
-
-//             <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-50 via-white to-teal-50 p-8 hover:shadow-2xl transition-all duration-500 border border-teal-100">
-//               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full -translate-y-16 translate-x-16 opacity-10 group-hover:scale-150 transition-transform duration-500"></div>
-//               <div className="relative z-10">
-//                 <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-//                   <Target className="h-8 w-8 text-white" />
-//                 </div>
-//                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Skill Development</h3>
-//                 <p className="text-gray-600 leading-relaxed">
-//                   Gain valuable experience, develop leadership skills, and earn certifications while making a meaningful impact in your chosen field.
-//                 </p>
-//               </div>
-//             </div>
-
-//             <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-50 via-white to-orange-50 p-8 hover:shadow-2xl transition-all duration-500 border border-orange-100">
-//               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-full -translate-y-16 translate-x-16 opacity-10 group-hover:scale-150 transition-transform duration-500"></div>
-//               <div className="relative z-10">
-//                 <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-//                   <Handshake className="h-8 w-8 text-white" />
-//                 </div>
-//                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Lifelong Connections</h3>
-//                 <p className="text-gray-600 leading-relaxed">
-//                   Build meaningful relationships with like-minded individuals and become part of a supportive community that lasts beyond your volunteer experience.
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Volunteer Opportunities */}
-//       <div className="py-20 bg-gradient-to-r from-orange-50 to-white">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-16">
-//             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Impact Areas</h2>
-//             <p className="text-xl text-gray-600">Choose from diverse programs that match your passion and expertise</p>
-//           </div>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-//             {[
-//               { title: "Education & Literacy", desc: "Empower through knowledge and learning opportunities", icon: GraduationCap, color: "from-teal-500 to-teal-700", bg: "from-teal-50 to-teal-100" },
-//               { title: "Healthcare & Wellness", desc: "Support medical missions and health awareness programs", icon: Heart, color: "from-orange-500 to-red-700", bg: "from-orange-100 to-red-50" },
-//               { title: "Community Building", desc: "Strengthen communities through infrastructure and support", icon: Users, color: "from-orange-500 to-red-700", bg: "from-orange-100 to-red-50" },
-//               { title: "Environmental Action", desc: "Protect and preserve our planet for future generations", icon: Globe, color: "from-teal-500 to-teal-700", bg: "from-teal-50 to-teal-100" }
-//             ].map((opportunity, index) => (
-//               <div key={index} className={`group relative overflow-hidden bg-gradient-to-br ${opportunity.bg} p-6 rounded-2xl hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-white`}>
-//                 <div className="relative z-10">
-//                   <div className={`w-14 h-14 bg-gradient-to-br ${opportunity.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-//                     <opportunity.icon className="h-7 w-7 text-white" />
-//                   </div>
-//                   <h3 className="text-xl font-bold text-gray-900 mb-3">{opportunity.title}</h3>
-//                   <p className="text-gray-700 text-sm leading-relaxed">{opportunity.desc}</p>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Testimonials */}
-//       <div className="py-20 bg-gradient-to-r from-orange-50 to-white">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-16">
-//             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Volunteer Stories</h2>
-//             <p className="text-xl text-gray-600">Hear from our community of changemakers</p>
-//           </div>
-
-//           <div className="grid md:grid-cols-3 gap-8">
-//             {testimonials.map((testimonial, index) => (
-//               <div key={index} className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-//                 <div className="flex mb-4">
-//                   {[...Array(testimonial.rating)].map((_, i) => (
-//                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-//                   ))}
-//                 </div>
-//                 <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
-//                 <div className="flex items-center">
-//                   <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-600 rounded-full flex items-center justify-center mr-4">
-//                     <User className="h-6 w-6 text-white" />
-//                   </div>
-//                   <div>
-//                     <div className="font-bold text-gray-900">{testimonial.name}</div>
-//                     <div className="text-sm text-gray-600">{testimonial.role}</div>
-//                   </div>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-// <div className="relative h-[60vh]  flex items-center justify-center overflow-hidden">
-//   {/* ✅ Background Image + Teal Gradient Overlay */}
-//   <div 
-//     className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-//     style={{
-//       backgroundImage: `linear-gradient(to right, rgba(0, 105, 92, 0.95), rgba(0, 77, 64, 0.9)), url('/public/images/logo/istockphoto-2193713844-612x612.webp')`, // 🔁 Replace with your image path
-//     }}
-//   ></div>
-
-//   {/* ✅ Foreground Content */}
-//   <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 text-white">
-//     <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Create Impact?</h2>
-//     <p className="text-xl mb-8 opacity-95 leading-relaxed">
-//       Your journey as a volunteer starts today. Join thousands of others making a real difference in the world.
-//     </p>
-//     <button 
-//       onClick={() => setShowVolunteerForm(true)}
-//       className="group px-10 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-orange-300 transition-all duration-300 shadow-2xl transform hover:scale-105 inline-flex items-center"
-//     >
-//       <Heart className="mr-2 h-5 w-5" />
-//       Begin Your Journey
-//       <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-//     </button>
-//   </div>
-// </div>
-
-//       {/* Admin Login - Repositioned to top-left */}
-//       <div className="fixed bottom-4 left-4 z-40">
-//         <div className="relative">
-//           <button
-//             onClick={() => setShowAdminLogin(!showAdminLogin)}
-//             className="w-12 h-12 bg-white bg-opacity-20 backdrop-blur-sm hover:bg-opacity-30 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 border border-white border-opacity-20"
-//             title="Admin Access"
-//           >
-//             <Shield className="h-5 w-5 text-orange-400" />
-//           </button>
-          
-//           {showAdminLogin && (
-//             <div className="absolute bottom-16 left-0 bg-white rounded-xl shadow-2xl border p-4 w-64 z-50">
-//               <h3 className="font-bold text-gray-900 mb-3 flex items-center">
-//                 <Shield className="h-4 w-4 mr-2 text-orange-500" />
-//                 Admin Access
-//               </h3>
-//               <Link to="/admin-login">
-//                 <button
-               
-//                 className="w-full px-4 py-2 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 font-medium"
-//               >
-//                 Admin Login
-//               </button>
-//               </Link>
-            
-//             </div>
-//           )}
-//         </div>
-//       </div>
-
-//       {/* Enhanced Volunteer Form Modal */}
-//       {showVolunteerForm && (
-//         <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-//           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden">
-           
-         
-// <div 
-//   className="relative px-8 py-6 text-white"
-//   style={{
-//     backgroundImage: `
-//       linear-gradient(to right, #F97316, #DC2626), /* Orange to Red gradient */
-//       url('/public/images/stories/istockphoto-1094582626-612x612.jpg'), /* 🔁 Replace with your image path */
-//       url("data:image/svg+xml,${encodeURIComponent(`
-//         <svg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'>
-//           <defs>
-//             <pattern id='form-pattern' x='0' y='0' width='20' height='20' patternUnits='userSpaceOnUse'>
-//               <circle cx='10' cy='10' r='1' fill='white' opacity='0.1'/>
-//             </pattern>
-//           </defs>
-//           <rect width='40' height='40' fill='url(%23form-pattern)'/>
-//         </svg>
-//       `)}")
-//     `,
-//     backgroundSize: 'cover, cover, auto',
-//     backgroundBlendMode: 'overlay, multiply, normal'
-//   }}
-// >
-//   <div className="flex justify-between items-center">
-//     <div>
-//       <h2 className="text-3xl font-bold mb-2">Join Our Mission</h2>
-//       <p className="opacity-90 font-semibold">Start your volunteer journey today</p>
-//     </div>
-//     <button
-//       onClick={() => setShowVolunteerForm(false)}
-//       className="w-10 h-10 bg-white bg-opacity-40 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all duration-300"
-//     >
-//       <span className="text-2xl">×</span>
-//     </button>
-//   </div>
-// </div>
-
-//             {/* Form Content */}
-//             <form onSubmit={handleSubmit}>
-//                  <div className="p-8 overflow-y-auto max-h-[calc(90vh-120px)]">
-//               <div className="space-y-6">
-//                 {/* Personal Information Section */}
-//                 <div className="mb-8">
-//                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-//                     <User className="h-5 w-5 mr-2 text-orange-500" />
-//                     Personal Information
-//                   </h3>
-                  
-//                   <div className="grid gap-6">
-//                     {/* Full Name */}
-//                     <div>
-//                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-//                         Full Name *
-//                       </label>
-//                       <input
-//                         type="text"
-//                         name="name"
-//                         value={formData.name}
-//                         onChange={handleInputChange}
-//                         required
-//                         className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-//                         placeholder="Enter your full name"
-//                       />
-//                     </div>
-
-//                     {/* Age and Gender */}
-//                     <div className="grid md:grid-cols-2 gap-4">
-                   
-//  <div>
-//     <label className="block text-sm font-semibold text-gray-700 mb-2">
-//       <Calendar className="inline-block h-4 w-4 mr-1" />
-//       Date of Birth *
-//     </label>
-//     <input
-//       type="date"
-//       name="dateOfBirth"
-//       value={formData.dateOfBirth}
-//       onChange={handleInputChange}
-//       required
-//       max={new Date().toISOString().split('T')[0]} // Prevent future dates
-//       className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-//     />
-//   </div>
-
-//   {/* Age (Auto-calculated and readonly) */}
-//   <div>
-//     <label className="block text-sm font-semibold text-gray-700 mb-2">
-//       Age (Auto-calculated)
-//     </label>
-//     <input
-//       type="number"
-//       name="age"
-//       value={formData.age}
-//       readOnly
-//       className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-gray-50 cursor-not-allowed transition-all duration-300"
-//       placeholder="Calculated from DOB"
-//     />
-//   </div>
-//                       <div>
-//                         <label className="block text-sm font-semibold text-gray-700 mb-2">
-//                           Gender *
-//                         </label>
-//                         <select
-//                           name="gender"
-//                           value={formData.gender}
-//                           onChange={handleInputChange}
-//                           required
-//                           className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-//                         >
-//                           <option value="">Select Gender</option>
-//                           <option value="Male">Male</option>
-//                           <option value="Female">Female</option>
-//                           <option value="Other">Other</option>
-//                         </select>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-
-//                 {/* Contact Information Section */}
-//                 <div className="mb-8">
-//                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-//                     <Mail className="h-5 w-5 mr-2 text-orange-500" />
-//                     Contact Information
-//                   </h3>
-                  
-//                   <div className="grid gap-6">
-//                     {/* Email and Phone */}
-//                     <div className="grid md:grid-cols-2 gap-4">
-//                       <div>
-//                         <label className="block text-sm font-semibold text-gray-700 mb-2">
-//                           Email Address *
-//                         </label>
-//                         <input
-//                           type="email"
-//                           name="email"
-//                           value={formData.email}
-//                           onChange={handleInputChange}
-//                           required
-//                           className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-//                           placeholder="your.email@example.com"
-//                         />
-//                       </div>
-
-//                       <div>
-//                         <label className="block text-sm font-semibold text-gray-700 mb-2">
-//                           <Phone className="inline-block h-4 w-4 mr-1" />
-//                           Phone Number *
-//                         </label>
-//                         <input
-//                           type="tel"
-//                           name="phone"
-//                           value={formData.phone}
-//                           onChange={handleInputChange}
-//                           required
-//                           className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-//                           placeholder="123-456-7890"
-//                         />
-//                       </div>
-//                     </div>
-
-//                     {/* City */}
-//                     <div>
-//                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-//                         <MapPin className="inline-block h-4 w-4 mr-1" />
-//                         Pin Code *
-//                       </label>
-//                       <input
-//                         type="number"
-//                         name="pinCode"
-//                         value={formData.pinCode}
-//                         onChange={handleInputChange}
-//                         required
-//                         className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-//                         placeholder="Your current city"
-//                       />
-//                     </div>
-//                   </div>
-//                 </div>
-
-//                 {/* Professional Information Section */}
-//                 <div className="mb-8">
-//                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-//                     <Briefcase className="h-5 w-5 mr-2 text-orange-500" />
-//                     Professional Information
-//                   </h3>
-                  
-//                   <div>
-//                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-//                       Current Occupation *
-//                     </label>
-//                     <select
-//                       name="occupation"
-//                       value={formData.occupation}
-//                       onChange={handleInputChange}
-//                       required
-//                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-//                     >
-//                       <option value="">Select your occupation</option>
-//                       <option value="School Student">School Student</option>
-//                       <option value="College Student">College Student</option>
-//                       <option value="Working Professional">Working Professional</option>
-//                       <option value="Retired">Retired</option>
-//                       <option value="Home Maker">Home Maker</option>
-//                       <option value="Business">Business</option>
-//                       <option value="Self Employed">Self Employed</option>
-//                       <option value="Other">Other</option>
-//                     </select>
-
-//                       {formData.occupation === 'Other' && (
-//     <div className="mt-4">
-//       <label className="block text-sm font-semibold text-gray-700 mb-2">
-//         Please specify your occupation *
-//       </label>
-//       <input
-//         type="text"
-//         name="customOccupation"
-//         value={formData.customOccupation}
-//         onChange={handleInputChange}
-//         required
-//         className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-//         placeholder="Enter your occupation"
-//       />
-//     </div>
-//   )}
-//                   </div>
-//                 </div>
-
-              
-//                 <div className="pt-6 border-t border-gray-200">
-                 
-//                   <button
-//   type="submit"
-//   disabled={isLoading}
-//   className="w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-// >
-//   {isLoading ? (
-//     <>
-//       <svg
-//         className="animate-spin h-5 w-5 text-white"
-//         xmlns="http://www.w3.org/2000/svg"
-//         fill="none"
-//         viewBox="0 0 24 24"
-//       >
-//         <circle
-//           className="opacity-25"
-//           cx="12"
-//           cy="12"
-//           r="10"
-//           stroke="currentColor"
-//           strokeWidth="4"
-//         />
 import { useEffect, useState } from 'react';
 import { Heart, Users, Globe, Award, UserPlus, Shield, Mail, Phone, MapPin, User, Calendar, Briefcase, GraduationCap, Target, Handshake, CheckCircle, Star, ArrowRight, Instagram } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -671,14 +134,25 @@ export default function VolunteerPage() {
   }, [user]);
 
   const [showSocialMediaPopup, setShowSocialMediaPopup] = useState(false);
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSocialMediaPopup(true);
-    }, 2000);
+  const [errors, setErrors] = useState({
+    email: '',
+    phone: ''
+  });
 
-    return () => clearTimeout(timer);
-  }, []);
+  // Validation functions
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    // Allows international phone numbers with + prefix
+    const re = /^[6-9]\d{9}$/;
+    return re.test(phone);
+  };
+
+  const [showVolunteerForm, setShowVolunteerForm] = useState(false);
+  const [showAdminLogin, setShowAdminLogin] = useState(false);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -692,10 +166,7 @@ export default function VolunteerPage() {
     customOccupation: ''
   });
 
-  const [showVolunteerForm, setShowVolunteerForm] = useState(false);
-  const [showAdminLogin, setShowAdminLogin] = useState(false);
-
-  const handleInputChange = (e) => {
+ const handleInputChange = (e) => {
     const { name, value } = e.target;
     
     if (name === 'dateOfBirth') {
@@ -716,10 +187,51 @@ export default function VolunteerPage() {
     } else {
       setFormData({ ...formData, [name]: value });
     }
+
+    // Real-time validation
+    if (name === 'email') {
+      setErrors({
+        ...errors,
+        email: value && !validateEmail(value) 
+          ? 'Please enter a valid email address.' 
+          : ''
+      });
+    }
+
+    if (name === 'phone') {
+      const cleanedValue = value.replace(/[^0-9]/g, '');
+      setErrors({
+        ...errors,
+        phone: value && !validatePhone(cleanedValue)
+          ? 'Please enter a valid phone number.'
+          : ''
+      });
+    }
   };
   
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Final validation before submit
+    let valid = true;
+    const newErrors = { ...errors };
+
+    if (formData.email && !validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+      valid = false;
+    }
+
+    if (formData.phone && !validatePhone(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+      valid = false;
+    }
+
+    setErrors(newErrors);
+
+    if (!valid) {
+      return;
+    }
+
     try {
       dispatch(setLoadin(true));
 
@@ -747,13 +259,18 @@ export default function VolunteerPage() {
         });
         setFormData({
           name: '',
+          dateOfBirth: '',
           age: '',
           gender: '',
           email: '',
           phone: '',
-          city: '',
+          pinCode: '',
           occupation: '',
           customOccupation:''  
+        });
+        setErrors({
+          email: '',
+          phone: ''
         });
       }
     } catch (error) {
@@ -762,8 +279,7 @@ export default function VolunteerPage() {
     } finally {
       dispatch(setLoadin(false));
     }
-  };
-
+  }
   const stats = [
     { number: '50K+', label: 'Active Volunteers', icon: Users },
     { number: '80+', label: 'Countries', icon: Globe },
@@ -1156,7 +672,7 @@ export default function VolunteerPage() {
                     <div className="grid gap-4 sm:gap-6">
                       {/* Email and Phone */}
                       <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
-                        <div>
+                        {/* <div>
                           <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
                             Email Address *
                           </label>
@@ -1169,9 +685,9 @@ export default function VolunteerPage() {
                             className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                             placeholder="your.email@example.com"
                           />
-                        </div>
+                        </div> */}
 
-                        <div>
+                        {/* <div>
                           <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
                             <Phone className="inline-block h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                             Phone Number *
@@ -1185,7 +701,51 @@ export default function VolunteerPage() {
                             className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
                             placeholder="9876543210"
                           />
-                        </div>
+                        </div> */}
+
+                         <div>
+    <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+      Email Address *
+    </label>
+    <input
+      type="email"
+      name="email"
+      value={formData.email}
+      onChange={handleInputChange}
+      required
+      className={`w-full px-3 py-2 sm:px-4 sm:py-3 border-2 ${
+        errors.email ? 'border-red-500' : 'border-gray-200'
+      } rounded-lg sm:rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base`}
+      placeholder="your.email@example.com"
+    />
+    {errors.email && (
+      <p className="mt-1 text-xs text-red-600">{errors.email}</p>
+    )}
+  </div>
+
+  {/* Phone Field */}
+  <div>
+    <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+      <Phone className="inline-block h-3 w-3 sm:h-4 sm:w-4 mr-1" />
+      Phone Number *
+    </label>
+    <input
+      type="tel"
+      name="phone"
+      maxLength={10}
+      value={formData.phone}
+      onChange={handleInputChange}
+      required
+      className={`w-full px-3 py-2 sm:px-4 sm:py-3 border-2 ${
+        errors.phone ? 'border-red-500' : 'border-gray-200'
+      } rounded-lg sm:rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base`}
+      placeholder="9876543210"
+    />
+    {errors.phone && (
+      <p className="mt-1 text-xs text-red-600">{errors.phone}</p>
+    )}
+  </div>
+
                       </div>
 
                       {/* City */}

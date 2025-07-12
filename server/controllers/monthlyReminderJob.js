@@ -27,7 +27,7 @@ const mail = {
   to: sub.email,
   subject: 'Support Our Cause – Monthly Donation Reminder',
   html: `
-    <div style="background-color: #f4f4f4; padding: 25px; font-family: Arial, sans-serif;">
+    <div style="background-color: #f4f4f4; padding: 30px; font-family: Arial, sans-serif;">
       <div style="max-width: 600px; margin: auto; background-color: #fff; padding: 20px 30px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.05);">
         <h3 style="color: #2c3e50;">Hello ${sub.name},</h3>
 

@@ -1044,7 +1044,7 @@ const DonatePage = () => {
     panNumber: ''
   });
 
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
 
   const predefinedAmounts = [500, 1000, 2500, 5000, 10000];
 
@@ -1136,16 +1136,57 @@ const DonatePage = () => {
     return !specialCharRegex.test(name);
   };
 
+
+  const [errors, setErrors] = useState({
+    email: '',
+    mobile: ''
+  });
+
+  // Validation functions
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const re = /^[6-9]\d{9}$/;
+    return re.test(phone);
+  };
+
   const handleInputChange = async (field, value) => {
+    // Existing full name validation
     if (field === 'fullName' && !validateFullName(value)) {
-      setErrors({ ...errors, fullName: 'Special characters not allowed in full name field' });
+      setErrors({ ...errors, fullName: 'Special characters not allowed in full name field.' });
       return;
     } else if (field === 'fullName') {
       setErrors({ ...errors, fullName: '' });
     }
 
+    // Email validation
+    if (field === 'email') {
+      setErrors({
+        ...errors,
+        email: value && !validateEmail(value) 
+          ? 'Please enter a valid email address.' 
+          : ''
+      });
+    }
+
+    // Phone validation
+    if (field === 'mobile') {
+      const cleanedValue = value.replace(/[^0-9]/g, '');
+      setErrors({
+        ...errors,
+        mobile: cleanedValue && !validatePhone(cleanedValue)
+          ? 'Please enter a valid 10-digit mobile number.' 
+          : ''
+      });
+    }
+
+    // Update form data
     setFormData(prev => ({ ...prev, [field]: value }));
 
+    // Existing pincode logic
     if (field === 'pincode' && value.length < 6) {
       setFormData(prev => ({
         ...prev,
@@ -1193,17 +1234,91 @@ const DonatePage = () => {
     if (!formData.address.trim()) newErrors.address = 'Address is required';
     if (!formData.pincode.trim()) newErrors.pincode = 'Pincode is required';
     
-    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
+    // Email validation
+    if (formData.email && !validateEmail(formData.email)) {
       newErrors.email = 'Please enter a valid email';
     }
     
-    if (formData.mobile && !/^[6-9]\d{9}$/.test(formData.mobile)) {
+    // Phone validation
+    if (formData.mobile && !validatePhone(formData.mobile)) {
       newErrors.mobile = 'Please enter a valid 10-digit mobile number';
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
+
+
+
+
+  // const handleInputChange = async (field, value) => {
+  //   if (field === 'fullName' && !validateFullName(value)) {
+  //     setErrors({ ...errors, fullName: 'Special characters not allowed in full name field' });
+  //     return;
+  //   } else if (field === 'fullName') {
+  //     setErrors({ ...errors, fullName: '' });
+  //   }
+
+  //   setFormData(prev => ({ ...prev, [field]: value }));
+
+  //   if (field === 'pincode' && value.length < 6) {
+  //     setFormData(prev => ({
+  //       ...prev,
+  //       city: '',
+  //       state: ''
+  //     }));
+  //     return;
+  //   }
+
+  //   if (field === 'pincode' && value.length === 6) {
+  //     try {
+  //       const response = await fetch(`https://api.postalpincode.in/pincode/${value}`);
+  //       const data = await response.json();
+
+  //       if (data[0].Status === 'Success' && data[0].PostOffice?.length > 0) {
+  //         const postOffice = data[0].PostOffice[0];
+  //         const city = postOffice.District;
+  //         const state = postOffice.State;
+
+  //         setFormData(prev => ({
+  //           ...prev,
+  //           city,
+  //           state
+  //         }));
+  //       } else {
+  //         setFormData(prev => ({
+  //           ...prev,
+  //           city: '',
+  //           state: ''
+  //         }));
+  //         console.error('Invalid or unrecognized pincode');
+  //       }
+  //     } catch (error) {
+  //       console.error('Error fetching pincode data:', error);
+  //     }
+  //   }
+  // };
+
+  // const validateStep2 = () => {
+  //   const newErrors = {};
+    
+  //   if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
+  //   if (!formData.email.trim()) newErrors.email = 'Email is required';
+  //   if (!formData.mobile.trim()) newErrors.mobile = 'Mobile number is required';
+  //   if (!formData.address.trim()) newErrors.address = 'Address is required';
+  //   if (!formData.pincode.trim()) newErrors.pincode = 'Pincode is required';
+    
+  //   if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+  //     newErrors.email = 'Please enter a valid email';
+  //   }
+    
+  //   if (formData.mobile && !/^[6-9]\d{9}$/.test(formData.mobile)) {
+  //     newErrors.mobile = 'Please enter a valid 10-digit mobile number';
+  //   }
+
+  //   setErrors(newErrors);
+  //   return Object.keys(newErrors).length === 0;
+  // };
 
   const handleProceedToPayment = () => {
     if (validateStep2()) {
@@ -1747,7 +1862,7 @@ const DonatePage = () => {
                           className="w-full px-3 md:px-4 py-2 md:py-3 border-2 border-gray-300 rounded-lg text-sm md:text-base focus:outline-none focus:ring-3 focus:border-orange-500 transition-all bg-white/90 backdrop-blur-sm"
                         />
                       </div>
-                      <div>
+                      {/* <div>
                         <label className="flex items-center gap-2 text-sm md:text-base font-semibold mb-1 md:mb-2" style={{ color: '#424242' }}>
                           <Mail size={14} />
                           Email *
@@ -1764,11 +1879,49 @@ const DonatePage = () => {
                         {errors.email && (
                           <p className="text-red-500 text-xs md:text-sm mt-1">{errors.email}</p>
                         )}
-                      </div>
+                      </div> */}
+
+                       <div>
+    <label className="flex items-center gap-2 text-sm md:text-base font-semibold mb-1 md:mb-2" style={{ color: '#424242' }}>
+      <Mail size={14} />
+      Email *
+    </label>
+    <input
+      type="email"
+      value={formData.email}
+      onChange={(e) => handleInputChange('email', e.target.value)}
+      className={`w-full px-3 md:px-4 py-2 md:py-3 border-2 rounded-lg text-sm md:text-base focus:outline-none focus:ring-3 transition-all bg-white/90 backdrop-blur-sm ${
+        errors.email ? 'border-red-500' : 'border-gray-300 focus:border-orange-500'
+      }`}
+      placeholder="your.email@example.com"
+    />
+    {errors.email && (
+      <p className="text-red-500 text-xs md:text-sm mt-1">{errors.email}</p>
+    )}
+  </div>
                     </div>
+  <div>
+    <label className="flex items-center gap-2 text-sm md:text-base font-semibold mb-1 md:mb-2" style={{ color: '#424242' }}>
+      <Phone size={14} />
+      Mobile Number *
+    </label>
+    <input
+      type="tel"
+      value={formData.mobile}
+      onChange={(e) => handleInputChange('mobile', e.target.value.replace(/[^0-9]/g, '').slice(0, 10))}
+      className={`w-full px-3 md:px-4 py-2 md:py-3 border-2 rounded-lg text-sm md:text-base focus:outline-none focus:ring-3 transition-all bg-white/90 backdrop-blur-sm ${
+        errors.mobile ? 'border-red-500' : 'border-gray-300 focus:border-orange-500'
+      }`}
+      placeholder="9876543210"
+      maxLength={10}
+    />
+    {errors.mobile && (
+      <p className="text-red-500 text-xs md:text-sm mt-1">{errors.mobile}</p>
+    )}
+  </div>
 
                     {/* Mobile Number */}
-                    <div>
+                    {/* <div>
                       <label className="flex items-center gap-2 text-sm md:text-base font-semibold mb-1 md:mb-2" style={{ color: '#424242' }}>
                         <Phone size={14} />
                         Mobile Number *
@@ -1785,7 +1938,7 @@ const DonatePage = () => {
                       {errors.mobile && (
                         <p className="text-red-500 text-xs md:text-sm mt-1">{errors.mobile}</p>
                       )}
-                    </div>
+                    </div> */}
 
                     {/* Address */}
                     <div>
