@@ -1294,7 +1294,7 @@ export default function VolunteerPage() {
 </button>
 
                   <p className="text-sm text-gray-600 text-center mt-3">
-                    By registering, you agree to our terms and conditions
+                    By registering, you agree to our terms and conditions.
                   </p>
                 </div>
               </div>
@@ -1393,7 +1393,7 @@ export default function VolunteerPage() {
         </div>
 
         <p className="text-[10px] text-gray-500 text-center mt-3">
-          Stay updated with our volunteer stories
+          Stay updated with our volunteer stories.
         </p>
       </div>
     </div>
