@@ -1527,6 +1527,7 @@ return (
           <input
             type="email"
             name="email"
+            required
             value={formData.email}
             onChange={handleValueChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
@@ -1538,6 +1539,7 @@ return (
           <input
             type="password"
             name="password"
+            required
             value={formData.password}
             onChange={handleValueChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
