@@ -255,10 +255,10 @@ const HeroSection = () => {
   }, []);
 
   const impactStats = [
-    { icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "10,000+", label: "Children Reached", gradient: "from-orange-200 to-orange-300", iconColor: "text-orange-700" },
-    { icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "50+", label: "Schools Supported", gradient: "from-teal-200 to-teal-300", iconColor: "text-teal-700" },
-    { icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "25+", label: "Communities Served", gradient: "from-teal-200 to-teal-300", iconColor: "text-teal-700" },
-    { icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "15+", label: "Active Programs", gradient: "from-orange-300 to orange-400", iconColor: "text-orange-700" }
+    { icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "10,000+", label: "Children Reached", gradient: "from-[#FF8A65] to-[#FF7043]", iconColor: "text-white" },
+    { icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "50+", label: "Schools Supported", gradient: "from-[#26A69A] to-[#00695C]", iconColor: "text-white" },
+    { icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "25+", label: "Communities Served", gradient: "from-[#26A69A] to-[#00695C]", iconColor: "text-white" },
+    { icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "15+", label: "Active Programs", gradient: "from-[#FF8A65] to-[#FF7043]", iconColor: "text-white" }
   ];
 
   const achievements = [

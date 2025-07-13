@@ -378,7 +378,7 @@ const AboutSection = () => {
       number: "15+",
       label: "Years of Service",
       description: "Dedicated to children's welfare",
-      gradient: "from-teal-200 to-teal-300",
+      gradient: "from-teal-300 to-teal-400",
       iconColor: "text-teal-700"
     },
     {
@@ -386,7 +386,7 @@ const AboutSection = () => {
       number: "50+",
       label: "Partner Schools",
       description: "Quality education network",
-      gradient: "from-teal-200 to-teal-300",
+      gradient: "from-teal-300 to-teal-400",
       iconColor: "text-teal-700"
     },
     {
