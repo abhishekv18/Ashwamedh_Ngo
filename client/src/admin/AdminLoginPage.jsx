@@ -711,7 +711,7 @@ const AdminLoginPage = () => {
                 </div>
                 <h2 className="hidden lg:block text-2xl lg:text-3xl xl:text-4xl font-bold mb-3 lg:mb-4">Admin Portal</h2>
                 <p className="hidden lg:block text-lg lg:text-xl text-orange-100 mb-6 lg:mb-8">
-                  Secure access to manage Ashwamedh Foundation operations
+                  Secure access to manage Ashwamedh Foundation operations.
                 </p>
               </div>
               
