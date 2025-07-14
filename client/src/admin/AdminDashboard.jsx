@@ -1326,7 +1326,7 @@ return (
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-gray-900 truncate">{admin.email}</p>
                 </div>
-                <div className="ml-4 flex-shrink-0">
+                {/* <div className="ml-4 flex-shrink-0">
                   {admin.role !== 'super-admin' ? (
                     <button
                       onClick={() => handleDeleteClick(admin)}
@@ -1339,7 +1339,29 @@ return (
                       Protected
                     </span>
                   )}
-                </div>
+                </div> */}
+                <div className="ml-4 flex-shrink-0">
+  {admin.role !== 'super-admin' ? (
+    <button
+      onClick={() => handleDeleteClick(admin)}
+      className="text-red-600 hover:text-red-800 hover:bg-red-50 p-2 rounded-lg transition-colors"
+      title="Delete Admin"
+    >
+      <Trash2 className="w-4 h-4" />
+    </button>
+  ) : (
+    <div
+      className="relative p-2 text-gray-400 cursor-not-allowed bg-gray-100 rounded-lg border border-gray-200 group"
+      title="Super Admin cannot be deleted"
+    >
+      <Trash2 className="w-4 h-4 opacity-50" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <span className="text-red-500 text-xl font-bold">×</span>
+      </div>
+    </div>
+  )}
+</div>
+
               </div>
             </div>
           ))}
