@@ -163,7 +163,7 @@ const DonationPopup = () => {
         setIsVisible(true);
         setIsAnimating(true);
         sessionStorage.setItem('donation-popup-shown', 'true');
-      }, 15000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, []);

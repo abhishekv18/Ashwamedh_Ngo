@@ -40,7 +40,7 @@
 .read-the-docs {
   color: #888;
 }
-
+/* 
 .Toastify__toast--success {
   background-color: #0f5132;
   color: white;
@@ -58,6 +58,39 @@
   padding: 16px;
   font-size: 14px;
   width: 320px;
+} */
+ .Toastify__toast--success {
+  background-color: #0f5132;
+  color: white;
+  border-left: 6px solid #198754;
+  font-weight: 600;
 }
 
+.Toastify__toast--error {
+  background-color: #842029;
+  color: white;
+  border-left: 6px solid #dc3545;
+  font-weight: 600;
+}
+
+.Toastify__toast {
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 14px;
+  width: 320px;
+  max-width: 90%;
+  margin: 16px auto 0 auto; /* Top margin added for spacing from top */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* ✅ Adjust for small screens */
+@media (max-width: 640px) {
+  .Toastify__toast {
+    width: 90%;
+    max-width: 280px;
+    font-size: 13px;
+    margin-top: 12px; /* Slightly smaller top margin for mobile */
+  }
+}
 // CSS for custom animations (add to your CSS file)
