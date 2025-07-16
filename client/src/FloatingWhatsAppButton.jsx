@@ -42,14 +42,23 @@ const WhatsAppDrawer = () => {
 <p className="text-sm sm:text-[15px] text-teal-50 mb-4 leading-relaxed">
   Curious about how we support children's education? Message us on WhatsApp and learn how you can help.
 </p>
-  <a
+  {/* <a
     href="https://wa.me/919999999999"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-green-500 hover:bg-green-600 text-white text-sm sm:text-[15px] font-medium px-4 py-2 rounded-md block text-center shadow-md transition duration-300"
   >
     Open WhatsApp
-  </a>
+  </a> */}
+  <a
+  href="https://wa.me/919999999999?text=Namaste%20%F0%9F%99%8F%2C%20I%20visited%20your%20website%20and%20would%20love%20to%20know%20more%20about%20how%20you%27re%20supporting%20children%20through%20your%20temple%20initiatives."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-green-500 hover:bg-green-600 text-white text-sm sm:text-[15px] font-medium px-4 py-2 rounded-md block text-center shadow-md transition duration-300"
+>
+  Open WhatsApp
+</a>
+
 </div>
 
     </>
