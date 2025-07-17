@@ -407,7 +407,7 @@ const CallToAction = () => {
             </div>
             <div className="w-px h-12 sm:h-14 lg:h-16 bg-gray-300 hidden sm:block"></div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3" style={{ color: '#00695C' }}>200+</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3" style={{ color: '#00695C' }}>20+</div>
               <div className="font-semibold text-sm sm:text-base lg:text-lg" style={{ color: '#757575' }}>Active Volunteers</div>
             </div>
             <div className="w-px h-12 sm:h-14 lg:h-16 bg-gray-300 hidden sm:block"></div>

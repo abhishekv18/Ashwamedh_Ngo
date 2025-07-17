@@ -291,10 +291,10 @@ export default function VolunteerPage() {
     }
   }
   const stats = [
-    { number: '50K+', label: 'Active Volunteers', icon: Users },
-    { number: '80+', label: 'Countries', icon: Globe },
-    { number: '1M+', label: 'Lives Impacted', icon: Heart },
-    { number: '500+', label: 'Projects Completed', icon: Award }
+    { number: '20+', label: 'Active Volunteers', icon: Users },
+    { number: '4+', label: 'Active Programs', icon: Globe },
+    { number: '5000+', label: 'Lives Impacted', icon: Heart },
+    { number: '4+', label: 'Active Projects', icon: Award }
   ];
 
 const testimonials = [

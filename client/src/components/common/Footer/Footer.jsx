@@ -574,10 +574,10 @@ const Footer = () => {
   ];
 
   const impactStats = [
-    { icon: Users, number: '10,000+', label: 'Children Impacted' },
-    { icon: Heart, number: '500+', label: 'Volunteers' },
-    { icon: Award, number: '50+', label: 'Projects Completed' },
-    { icon: Globe, number: '25+', label: 'Communities Served' }
+    { icon: Users, number: '5,000+', label: 'Children Impacted' },
+    { icon: Heart, number: '20+', label: 'Volunteers' },
+    { icon: Award, number: '4+', label: 'Projects Completed' },
+    { icon: Globe, number: '10+', label: 'Communities Served' }
   ];
 
   return (

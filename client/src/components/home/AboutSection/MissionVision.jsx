@@ -395,9 +395,9 @@ const MissionVision = () => {
 
   const achievements = [
     { number: "15+", label: "Years of Impact", color: "text-[#FF5722]" },
-    { number: "100K+", label: "Children Supported", color: "text-[#00695C]" },
-    { number: "500+", label: "Communities Reached", color: "text-[#26A69A]" },
-    { number: "1000+", label: "Volunteers Engaged", color: "text-[#FFC107]" }
+    { number: "5K+", label: "Children Supported", color: "text-[#00695C]" },
+    { number: "10+", label: "Communities Reached", color: "text-[#26A69A]" },
+    { number: "20+", label: "Volunteers Engaged", color: "text-[#FFC107]" }
   ];
 
   return (

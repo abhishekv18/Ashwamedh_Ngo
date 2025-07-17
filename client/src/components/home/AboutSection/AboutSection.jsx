@@ -368,7 +368,7 @@ const AboutSection = () => {
   const achievements = [
     {
       icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />,
-      number: "10,000+",
+      number: "5,000+",
       label: "Children Impacted",
       description: "Across 25+ communities",
       gradient: "from-orange-200 to-orange-300",
@@ -392,7 +392,7 @@ const AboutSection = () => {
     },
     {
       icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />,
-      number: "500+",
+      number: "20+",
       label: "Active Volunteers",
       description: "Passionate changemakers",
       gradient: "from-orange-200 to-orange-300",
@@ -530,8 +530,8 @@ const AboutSection = () => {
                 </p>
                 <p>
                   What started as a small initiative to support 50 children in rural Maharashtra has now 
-                  grown into a comprehensive movement reaching over <strong className="text-orange-600">10,000 children</strong> 
-                  across 25+ communities in India.
+                  grown into a comprehensive movement reaching over <strong className="text-orange-600">5,000 children </strong> 
+                  across 10+ communities in India.
                 </p>
                 <p>
                   Our holistic approach combines education, healthcare, nutrition, and community development 
@@ -575,12 +575,12 @@ const AboutSection = () => {
               
               {/* Overlay Stats */}
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg sm:rounded-xl">
-                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-600">15+</div>
+                <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-orange-200 to-orange-300 rounded-lg sm:rounded-xl">
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-700">15+</div>
                   <div className="text-xs sm:text-sm text-gray-600">Years Experience</div>
                 </div>
-                <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-teal-100 to-teal-200 rounded-lg sm:rounded-xl">
-                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-teal-600">25+</div>
+                <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-teal-200 to-teal-300 rounded-lg sm:rounded-xl">
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-teal-700">10+</div>
                   <div className="text-xs sm:text-sm text-gray-600">Communities</div>
                 </div>
               </div>

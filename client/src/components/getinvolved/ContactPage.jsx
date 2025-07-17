@@ -1023,7 +1023,7 @@ const handleInputChange = (e) => {
            <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
   <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Visit Our Office</h3>
 
-  <div className="bg-gray-100 rounded-xl h-40 sm:h-48 mb-4 overflow-hidden">
+  {/* <div className="bg-gray-100 rounded-xl h-40 sm:h-48 mb-4 overflow-hidden">
     <iframe
       title="Our Location"
       className="w-full h-full rounded-xl"
@@ -1032,7 +1032,21 @@ const handleInputChange = (e) => {
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
     ></iframe>
+  </div> */}
+<div className="bg-white rounded-xl shadow-sm overflow-hidden mb-6 border border-gray-200">
+  <div className="relative h-40 sm:h-52 w-full">
+    <iframe
+      title="Our Location"
+      className="absolute inset-0 w-full h-full"
+      style={{ border: 0 }}
+      loading="lazy"
+      allowFullScreen
+      referrerPolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1956793172967!2d72.91120747496377!3d19.437560542184733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b017295fc08d%3A0xd6d3a07ad70ab4e8!2sPelhar%2C%20Vasai%20East%2C%20Vasai-Virar%2C%20Maharashtra%20401208!5e0!3m2!1sen!2sin!4v1721204462332!5m2!1sen!2sin"
+    ></iframe>
   </div>
+</div>
+
 
   <div className="text-xs sm:text-sm text-gray-600">
     <p className="mb-1"><strong>Address:</strong> Gala No. 7161/1-2, Vasai Rd E, near Manicha Pada</p>

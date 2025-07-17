@@ -575,7 +575,7 @@ const AboutUs = () => {
             <div className="bg-white bg-opacity-15 backdrop-blur-lg rounded-3xl p-6 md:p-8 flex items-center space-x-4 md:space-x-6 shadow-2xl border border-white border-opacity-20 transform hover:scale-105 transition-transform duration-300">
               <Heart className="h-8 w-8 md:h-10 md:w-10 text-orange-200 animate-pulse" />
               <div className="text-left">
-                <span className="text-xl md:text-2xl font-bold block">10+ Years</span>
+                <span className="text-xl md:text-2xl font-bold block">15+ Years</span>
                 <span className="text-orange-200 opacity-90">of Impact</span>
               </div>
             </div>

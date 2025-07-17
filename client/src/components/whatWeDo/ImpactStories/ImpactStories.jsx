@@ -473,14 +473,14 @@ const ImpactStories = () => {
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
 
   const impactStats = [
-    { icon: Users, number: "2500+", label: "Children Impacted", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
-    { icon: BookOpen, number: "12", label: "Years of Service", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },
+    { icon: Users, number: "5000+", label: "Children Impacted", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
+    { icon: BookOpen, number: "15", label: "Years of Service", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },
     { icon: GraduationCap, number: "85%", label: "Academic Improvement", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
-    { icon: Award, number: "50+", label: "Programs Conducted", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },
-    { icon: Home, number: "15", label: "Community Centers", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
+    { icon: Award, number: "4+", label: "Programs Conducted", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },
+    { icon: Home, number: "15+", label: "Community Centers", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
     { icon: Shield, number: "95%", label: "Retention Rate", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },
-    { icon: Globe, number: "8", label: "Partner Organizations", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
-    { icon: Heart, number: "100+", label: "Active Volunteers", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" }
+    { icon: Globe, number: "4", label: "Partner Organizations", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
+    { icon: Heart, number: "20+", label: "Active Volunteers", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" }
   ];
 
   // Student Testimonials/Reviews

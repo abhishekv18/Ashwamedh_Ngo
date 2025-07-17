@@ -1073,9 +1073,9 @@ const DonatePage = () => {
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Children Helped', icon: Users },
+    { number: '5,000+', label: 'Children Helped', icon: Users },
     { number: '95%', label: 'Funds to Programs', icon: Target },
-    { number: '50+', label: 'Countries Reached', icon: Globe }
+    { number: '4+', label: 'Active Programs', icon: Heart },
   ];
 
   const trustIndicators = [

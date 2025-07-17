@@ -605,11 +605,11 @@ const activities = [
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-base sm:text-lg mb-8 sm:mb-12">
               <div className="flex items-center">
                 <Users className="mr-2" size={20} />
-                <span>1000+ Lives Impacted</span>
+                <span>5000+ Lives Impacted</span>
               </div>
               <div className="flex items-center">
                 <Award className="mr-2" size={20} />
-                <span>50+ Programs Running</span>
+                <span>4+ Programs Running</span>
               </div>
             </div>
 
@@ -691,7 +691,7 @@ const activities = [
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-orange-300 mb-2">1000+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-orange-300 mb-2">5000+</div>
               <div className="text-sm sm:text-lg">Children Educated</div>
             </div>
             <div className="text-center">
@@ -703,7 +703,7 @@ const activities = [
               <div className="text-sm sm:text-lg">Trees Planted</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-orange-300 mb-2">50+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-orange-300 mb-2">10+</div>
               <div className="text-sm sm:text-lg">Communities Served</div>
             </div>
           </div>

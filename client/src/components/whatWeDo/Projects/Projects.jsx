@@ -932,7 +932,7 @@ const ProjectAnkur = () => {
           {/* Stats Section */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold">500+</div>
+              <div className="text-3xl sm:text-4xl font-bold">5000+</div>
               <div className="text-white/90 text-sm sm:text-base">Students Impacted</div>
             </div>
             <div className="w-px h-10 sm:h-12 md:h-16 bg-white/30"></div>

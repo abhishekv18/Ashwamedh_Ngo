@@ -318,17 +318,17 @@ const ProgramsOverview = () => {
       borderColor: 'border-[#FF5722]/20',
       targetGroup: 'Students up to 7th Standard',
       stats: [
-        { number: '50K+', label: 'Students Educated' },
-        { number: '200+', label: 'Schools Supported' },
-        { number: '1000+', label: 'Teachers Trained' }
+        { number: '5K+', label: 'Students Educated' },
+        // { number: '200+', label: 'Schools Supported' },
+        // { number: '1000+', label: 'Teachers Trained' }
       ],
       features: [
-        'English Reading & Writing Skills',
-        'Mathematics Foundation',
-        'Core Subject Strengthening',
+        'Part of Flagship Program',
+        'Focuses on Education and Literacy',
+        'Age Group: 6 to 15 Years',
         'School & NGO Partnerships',
-        'Early Intervention Focus',
-        'Dropout Prevention'
+        // 'Early Intervention Focus',
+        // 'Dropout Prevention'
       ],
       methodology: 'Partnership-based approach with schools, NGOs, and local bodies to ensure comprehensive coverage and sustainable impact.'
     },
@@ -344,17 +344,17 @@ const ProgramsOverview = () => {
       borderColor: 'border-[#00695C]/20',
       targetGroup: '8th to 10th Standard Students',
       stats: [
-        { number: '30K+', label: 'Students Trained' },
-        { number: '15K+', label: 'Certificates Issued' },
-        { number: '100+', label: 'Schools Reached' }
+        { number: '4K+', label: 'Students Trained' },
+        // { number: '15K+', label: 'Certificates Issued' },
+        // { number: '100+', label: 'Schools Reached' }
       ],
       features: [
-        'Value Education Focus',
+        'Focuses on overall Personality Development',
         'Communication Skills Development',
-        'Time Management Training',
+        'Age Group: 10 to 17 Years',
         'Stress Management Techniques',
-        'Yoga & Wellness',
-        'Certificate Course Completion'
+        // 'Yoga & Wellness',
+        // 'Certificate Course Completion'
       ],
       methodology: 'Structured curriculum combining theoretical knowledge with practical application to ensure comprehensive personality development.'
     }
@@ -396,10 +396,10 @@ const ProgramsOverview = () => {
   ];
 
   const impactMetrics = [
-    { number: '100K+', label: 'Lives Impacted', icon: <Users className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'text-[#FF5722]' },
-    { number: '300+', label: 'Partner Schools', icon: <Globe className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'text-[#00695C]' },
-    { number: '15+', label: 'Years of Service', icon: <Award className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'text-[#00695C]' },
-    { number: '1000+', label: 'Active Volunteers', icon: <Target className="w-4 h-4 sm:w-5 sm:h-5" />, color: 'text-[#FF5722]' }
+    { number: '5K+', label: 'Lives Impacted', icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'text-[#FF5722]' },
+    { number: '50+', label: 'Partner Schools', icon: <Globe className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'text-[#00695C]' },
+    { number: '15+', label: 'Years of Service', icon: <Award className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'text-[#00695C]' },
+    { number: '20+', label: 'Active Volunteers', icon: <Target className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'text-[#FF5722]' }
   ];
 
   return (
@@ -426,7 +426,7 @@ const ProgramsOverview = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-12 sm:mb-16 lg:mb-20">
           {impactMetrics.map((metric, index) => (
             <div key={index} className="bg-[#FFFFFF] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-[#E0E0E0] text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-[#FFE0B2] rounded-lg sm:rounded-xl mb-3 sm:mb-4">
+              <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 		bg-[#FFFAF0] rounded-lg sm:rounded-xl mb-3 sm:mb-4">
                 <div className={metric.color}>
                   {metric.icon}
                 </div>
@@ -443,7 +443,7 @@ const ProgramsOverview = () => {
             <div key={program.id} className={`${program.bgColor} rounded-2xl sm:rounded-3xl overflow-hidden border-2 ${program.borderColor} shadow-xl hover:shadow-2xl transition-all duration-300`}>
               <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                 
-                {/* Content Side */}
+               
                 <div className="lg:w-1/2 p-4 sm:p-6 lg:p-8 xl:p-12">
                   <div className="mb-4 sm:mb-6">
                     <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br ${program.color} rounded-xl sm:rounded-2xl mb-3 sm:mb-4 shadow-lg`}>
@@ -468,7 +468,7 @@ const ProgramsOverview = () => {
                     </p>
                   </div>
 
-                  {/* Key Features */}
+               
                   <div className="mb-4 sm:mb-6">
                     <h4 className="text-base sm:text-lg font-bold text-[#212121] mb-3 sm:mb-4">Key Features & Focus Areas</h4>
                     <div className="grid grid-cols-1 gap-2 sm:gap-3">
@@ -481,13 +481,12 @@ const ProgramsOverview = () => {
                     </div>
                   </div>
 
-                  {/* Methodology */}
                   <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-[#FFFFFF]/80 rounded-xl border border-[#E0E0E0]">
                     <h4 className="text-sm sm:text-base font-bold text-[#212121] mb-2">Our Approach</h4>
                     <p className="text-[#616161] leading-relaxed text-xs sm:text-sm">{program.methodology}</p>
                   </div>
 
-                  {/* CTA Button */}
+                 
                   <Link to='/what-we-do/projects'>
                     <button className={`inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r ${program.color} text-white font-semibold rounded-lg sm:rounded-xl hover:shadow-lg transition-all duration-300 group hover:scale-105 text-sm sm:text-base`}>
                     <span className="hidden sm:inline">Learn More About {program.title}</span>
@@ -498,7 +497,7 @@ const ProgramsOverview = () => {
                 
                 </div>
 
-                {/* Image Side */}
+         
                 <div className="lg:w-1/2 relative order-first lg:order-none">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#212121]/30 to-transparent z-10"></div>
                   <img 
@@ -507,7 +506,7 @@ const ProgramsOverview = () => {
                     className="w-full h-full object-cover min-h-[200px] sm:min-h-[250px] lg:min-h-[400px] xl:min-h-[500px]"
                   />
                   
-                  {/* Floating Achievement Card */}
+                
                   <div className="absolute bottom-3 sm:bottom-4 lg:bottom-6 left-3 sm:left-4 lg:left-6 right-3 sm:right-4 lg:right-6 bg-[#FFFFFF]/95 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 shadow-xl z-20 border border-[#E0E0E0]">
                     <div className="flex items-center justify-between">
                       <div>
@@ -534,36 +533,7 @@ const ProgramsOverview = () => {
         </div>
 
         {/* Focus Areas */}
-        {/* <div className="mb-12 sm:mb-16 lg:mb-20 bg-gradient-to-t from-white to-orange-50">
-          <div className="text-center mb-12 sm:mb-16 bg-gradient-to-t from-orange-50 to-white">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#212121] mb-4 sm:mb-6 px-2">
-              Our Core Focus Areas
-            </h3>
-            <p className="text-base sm:text-lg text-[#616161] max-w-3xl mx-auto px-4">
-              We work across multiple educational domains to ensure comprehensive development and create lasting impact in students' lives.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {focusAreas.map((area, index) => (
-              <div key={index} className="group">
-                <div className={`bg-gradient-to-br ${area.gradient} rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-2 border border-[#E0E0E0] text-center h-full`}>
-                  <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 ${area.bgColor} rounded-xl sm:rounded-2xl mb-4 sm:mb-6`}>
-                    <div className={area.color}>
-                      {area.icon}
-                    </div>
-                  </div>
-                  <h4 className="text-lg sm:text-xl font-bold text-[#212121] mb-3 sm:mb-4">
-                    {area.title}
-                  </h4>
-                  <p className="text-sm sm:text-base text-[#616161] leading-relaxed">
-                    {area.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
+   
 
         {/* Call to Action */}
         <div className="bg-gradient-to-br from-[#212121] to-[#424242] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 xl:p-16 text-white text-center relative overflow-hidden shadow-2xl">
