@@ -155,7 +155,7 @@ const AboutUs = () => {
             </div>
             
             <div className="relative mt-8 lg:mt-0">
-              <div className="relative group bg-gradient-to-br from-orange-100 via-orange-200 to-teal-100 rounded-3xl p-6 md:p-12 h-[400px] md:h-[500px] overflow-hidden shadow-2xl">
+              <div className="relative group bg-gradient-to-br from-orange-100 via-orange-100 to-teal-100 rounded-3xl p-6 md:p-12 h-[400px] md:h-[500px] overflow-hidden shadow-2xl">
                 <img 
                   src="/public/images/logo/1740195950066.jpg" 
                   alt="Deepak Doddamani - Founder"
