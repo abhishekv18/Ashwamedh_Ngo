@@ -857,14 +857,14 @@ const AdminLoginPage = () => {
               <p className="text-xs sm:text-sm text-gray-600 px-2">
                 Need help? Contact{' '}
                 <a href="mailto:support@ashwamedhfoundation.org" className="font-medium text-orange-600 hover:text-orange-500 break-all">
-                  support@ashwamedhfoundation.org
+                  contact@ashwamedhfoundation.org
                 </a>
               </p>
             </div>
           </div>
         </div>
       </div>
-
+      
       <footer className="bg-[#212121] text-white">
         <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 md:px-6 lg:px-8 py-3 xs:py-4 sm:py-6">
           <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 md:flex-row md:justify-between md:space-y-0 md:text-left">

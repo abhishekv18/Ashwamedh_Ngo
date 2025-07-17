@@ -40,7 +40,7 @@ const WhatsAppDrawer = () => {
   Let's make a difference
 </p>
 <p className="text-sm sm:text-[15px] text-teal-50 mb-4 leading-relaxed">
-  Curious about how we support children's education? Message us on WhatsApp and learn how you can help.
+  Support children's education message us on WhatsApp to get involved.
 </p>
   {/* <a
     href="https://wa.me/919999999999"

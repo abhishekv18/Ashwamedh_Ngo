@@ -674,20 +674,20 @@ const handleInputChange = (e) => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@company.com',
+      details: 'contact@ashwamedhfoundation.org',
       subtext: 'We respond within 24 hours'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
+      details: '+91 8482969631',
       subtext: 'Mon-Fri 9AM-6PM EST'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: '123 Business Avenue',
-      subtext: 'New York, NY 10001'
+      details: 'Gala No. 7161/1-2, Vasai Rd E, near Manicha Pada, Pelhar',
+      subtext: 'Maharashtra 401208'
     },
     {
       icon: Clock,
@@ -752,14 +752,26 @@ const handleInputChange = (e) => {
           {contactInfo.map((info, index) => {
             const IconComponent = info.icon;
             return (
-              <div key={index} className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                </div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
-                <p className="text-orange-600 font-medium mb-1 text-sm sm:text-base">{info.details}</p>
-                <p className="text-gray-500 text-xs sm:text-sm">{info.subtext}</p>
-              </div>
+              // <div key={index} className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              //   <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              //     <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              //   </div>
+              //   <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
+              //   <p className="text-orange-600 font-medium mb-1 text-sm sm:text-base">{info.details}</p>
+              //   <p className="text-gray-500 text-xs sm:text-sm">{info.subtext}</p>
+              // </div>
+              <div
+  key={index}
+  className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto"
+>
+  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+    <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+  </div>
+  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
+  <p className="text-orange-600 font-medium mb-1 text-sm sm:text-base break-all">{info.details}</p>
+  <p className="text-gray-500 text-xs sm:text-sm">{info.subtext}</p>
+</div>
+
             );
           })}
         </div>
@@ -987,14 +999,14 @@ const handleInputChange = (e) => {
               <h3 className="text-lg sm:text-xl font-bold mb-4">Need Immediate Help?</h3>
               <div className="space-y-3">
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+918482969631"
                   className="flex items-center justify-between bg-white bg-opacity-20 rounded-xl p-3 hover:bg-opacity-30 transition-all duration-300 text-sm sm:text-base"
                 >
                   <span>Call Now</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href="mailto:hello@company.com"
+                  href="mailto:contact@ashwamedhfoundation.org"
                   className="flex items-center justify-between bg-white bg-opacity-20 rounded-xl p-3 hover:bg-opacity-30 transition-all duration-300 text-sm sm:text-base"
                 >
                   <span>Email Us</span>
@@ -1008,24 +1020,27 @@ const handleInputChange = (e) => {
             </div>
 
             {/* Location Map */}
-            <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Visit Our Office</h3>
-              <div className="bg-gray-100 rounded-xl h-40 sm:h-48 mb-4 overflow-hidden">
-                <iframe
-                  title="Our Location"
-                  className="w-full h-full rounded-xl"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.6127852534976!2d-74.0060156845944!3d40.71277597933186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjIuMCJX!5e0!3m2!1sen!2sus!4v1611234567890!5m2!1sen!2sus"
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-              <div className="text-xs sm:text-sm text-gray-600">
-                <p className="mb-1"><strong>Address:</strong> 123 Business Avenue</p>
-                <p className="mb-1"><strong>City:</strong> New York, NY 10001</p>
-                <p><strong>Parking:</strong> Available on-site</p>
-              </div>
-            </div>
+           <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6">
+  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Visit Our Office</h3>
+
+  <div className="bg-gray-100 rounded-xl h-40 sm:h-48 mb-4 overflow-hidden">
+    <iframe
+      title="Our Location"
+      className="w-full h-full rounded-xl"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1956793172967!2d72.91120747496377!3d19.437560542184733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b017295fc08d%3A0xd6d3a07ad70ab4e8!2sPelhar%2C%20Vasai%20East%2C%20Vasai-Virar%2C%20Maharashtra%20401208!5e0!3m2!1sen!2sin!4v1721204462332!5m2!1sen!2sin"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <div className="text-xs sm:text-sm text-gray-600">
+    <p className="mb-1"><strong>Address:</strong> Gala No. 7161/1-2, Vasai Rd E, near Manicha Pada</p>
+    <p className="mb-1"><strong>City:</strong> Pelhar, Vasai-Virar, Maharashtra 401208</p>
+    <p><strong>Parking:</strong> Available nearby</p>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
