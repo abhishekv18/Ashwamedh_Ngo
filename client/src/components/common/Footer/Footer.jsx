@@ -813,7 +813,7 @@ const Footer = () => {
           </div>
 
           {/* Certifications/Trust Badges */}
-          <div className="mt-4 pt-4 border-t border-gray-700">
+          {/* <div className="mt-4 pt-4 border-t border-gray-700">
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-1 sm:space-y-0 sm:space-x-3 text-xs text-gray-500">
               <div className="flex items-center space-x-1">
                 <Award className="h-4 w-4 text-orange-500 flex-shrink-0" />
@@ -828,7 +828,24 @@ const Footer = () => {
                 <span>Credibility Alliance Member</span>
               </div>
             </div>
-          </div>
+          </div> */}
+          <div className="mt-4 pt-4 border-t border-gray-700">
+  <div className="flex flex-wrap justify-center items-center gap-2 text-xs text-gray-500">
+    <div className="flex items-center space-x-1">
+      <Award className="h-4 w-4 text-orange-500 flex-shrink-0" />
+      <span>GuideStar India Verified</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <Globe className="h-4 w-4 text-orange-500 flex-shrink-0" />
+      <span>UN SDG Partner</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <Heart className="h-4 w-4 text-orange-500 flex-shrink-0" />
+      <span>Credibility Alliance Member</span>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </footer>
