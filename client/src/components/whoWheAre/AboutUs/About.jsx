@@ -493,6 +493,7 @@ import {
   Compass,
   UserCheck
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -501,16 +502,15 @@ const AboutUs = () => {
       setIsVisible(true);
     }, []);
   const teamMembers = [
-    'Deepak Doddamani',
-    'Sumit Mane', 
-    'Shailesh Humbre',
-    'Rajendra Balsara',
-    'Abdul Hakim Ansari',
-    'Jitendra Patel',
-    'Praful Rane',
-    'Govind Dodamani',
-    'Monika Singh',
-    'Sneha Sharma'
+    'Deepak Doddamani',//
+    'Kiran Jitendra Patel ', 
+    'Mohammed d Shakil Ansari',
+    'Abdul Hakim Ansari',//
+    'Jitendra Patel',//
+    'Praful Rane',//
+    'Govind Dodamani',//
+    'Monika Singh',//
+    'Sneha Sharma'//
   ];
 
   const workStatements = [
@@ -582,7 +582,7 @@ const AboutUs = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-0 left-0 right-0 h-10 md:h-16 bg-gradient-to-t from-white to-transparent"></div>
+      
       </section>
 
       {/* History Section */}
@@ -932,12 +932,18 @@ const AboutUs = () => {
             regardless of their background.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+            <Link to='/get-involved/donate'>
             <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-3 px-6 md:py-5 md:px-10 rounded-full text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl">
               Support Our Cause
             </button>
-            <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold py-3 px-6 md:py-5 md:px-10 rounded-full text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+            </Link>
+            
+            <Link to='/get-involved/volunteer'>
+             <button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold py-3 px-6 md:py-5 md:px-10 rounded-full text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
               Become a Volunteer
             </button>
+            </Link>
+           
           </div>
         </div>
       </section>

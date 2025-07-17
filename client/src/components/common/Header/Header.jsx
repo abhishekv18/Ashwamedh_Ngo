@@ -492,44 +492,79 @@ const Header = () => {
                 <div className="p-1 sm:p-1.5 bg-white/20 rounded-lg group-hover:bg-white/30 transition-all duration-300">
                   <Mail className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-orange-500" />
                 </div>
-                <div>
-                  <div className="font-medium text-orange-600 text-xs sm:text-sm">info@ashwamedhfoundation.org</div>
-                </div>
+              <div>
+  <a 
+    href="mailto:contact@ashwamedhfoundation.org" 
+    className="font-medium text-orange-600 text-xs sm:text-sm hover:text-orange-700 transition-colors duration-300"
+  >
+    contact@ashwamedhfoundation.org
+  </a>
+</div>
+
               </div>
               
               <div className="flex items-center space-x-1.5 sm:space-x-2 text-orange-100 hover:text-white transition-all duration-300 group cursor-pointer">
                 <div className="p-1 sm:p-1.5 bg-white/20 rounded-lg group-hover:bg-white/30 transition-all duration-300">
                   <Phone className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-orange-500" />
                 </div>
-                <div>
-                  <div className="font-medium text-orange-600 text-xs sm:text-sm">+91 9115 9115 00</div>
-                </div>
+              <div>
+  <a 
+    href="tel:+918482969631" 
+    className="font-medium text-orange-600 text-xs sm:text-sm hover:text-orange-700 transition-colors duration-300"
+  >
+    +91 8482969631
+  </a>
+</div>
+
               </div>
             </div>
             
             {/* Right Side - Social Media */}
-            <div className="flex items-center space-x-2 sm:space-x-4">
-              <span className="text-orange-400 font-medium text-xs sm:text-sm hidden lg:inline">Follow Us:</span>
-              <div className="flex space-x-1 sm:space-x-2">
-                {[
-                  { name: 'facebook', icon: Facebook, color: 'hover:bg-orange-600 hover:text-white' },
-                    { name: 'twitter', icon: Twitter, color: 'hover:bg-orange-600 hover:text-white' },
-                    { name: 'instagram', icon: Instagram, color: 'hover:bg-orange-600 hover:text-white' },
-                    { name: 'linkedin', icon: Linkedin, color: 'hover:bg-orange-600 hover:text-white' }
-                ].map((social) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={`#${social.name}`}
-                      className={`w-6 h-6 sm:w-7 sm:h-7 ${social.color} rounded-full flex items-center justify-center text-orange-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/20 group`}
-                    >
-                      <IconComponent className="h-3 w-3 sm:h-3.5 sm:w-3.5 group-hover:scale-110 transition-transform duration-300" />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
+           <div className="flex items-center space-x-2 sm:space-x-4">
+  <span className="text-orange-400 font-medium text-xs sm:text-sm hidden lg:inline">Follow Us:</span>
+  <div className="flex space-x-1 sm:space-x-2">
+    {[
+      {
+        name: 'facebook',
+        icon: Facebook,
+        link: 'https://www.facebook.com/ashwamedhfoundation',
+        color: 'hover:bg-orange-600 hover:text-white'
+      },
+      {
+        name: 'twitter',
+        icon: Twitter,
+        link: 'https://x.com/AshwamedhNGO', // or "X" link if rebranded
+        color: 'hover:bg-orange-600 hover:text-white'
+      },
+      {
+        name: 'instagram',
+        icon: Instagram,
+        link: ' https://www.instagram.com/ashwamedhfoundation',
+        color: 'hover:bg-orange-600 hover:text-white'
+      },
+      {
+        name: 'linkedin',
+        icon: Linkedin,
+        link: 'https://www.linkedin.com/company/ashwamedh-foundation/',
+        color: 'hover:bg-orange-600 hover:text-white'
+      }
+    ].map((social) => {
+      const IconComponent = social.icon;
+      return (
+        <a
+          key={social.name}
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`w-6 h-6 sm:w-7 sm:h-7 ${social.color} rounded-full flex items-center justify-center text-orange-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/20 group`}
+        >
+          <IconComponent className="h-3 w-3 sm:h-3.5 sm:w-3.5 group-hover:scale-110 transition-transform duration-300" />
+        </a>
+      );
+    })}
+  </div>
+</div>
+
           </div>
         </div>
       </div>
@@ -621,7 +656,7 @@ const Header = () => {
             {/* Desktop Action Buttons - Hidden below lg */}
             <div className="hidden lg:flex items-center space-x-2">
               <Link
-                to="/donate"
+                to="get-involved/donate"
                 className="relative bg-gradient-to-r flex items-center from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 lg:px-5 py-2 lg:py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -632,7 +667,7 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/join-us"
+                to="get-involved/volunteer"
                 className="relative bg-gradient-to-r flex items-center from-[#00695C]/95 to-[#004D40]/90 hover:from-teal-800 hover:to-teal-900 text-white px-4 lg:px-5 py-2 lg:py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

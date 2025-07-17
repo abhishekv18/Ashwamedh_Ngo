@@ -1621,8 +1621,9 @@ return (
 
   </div>
 );
-case 'gallery':
-  return <AdminGallerySection/>
+   case 'gallery':
+        return <AdminGallerySection />;
+      // Add other cases as needed
       default:
         return <div>Section not found</div>;
     }

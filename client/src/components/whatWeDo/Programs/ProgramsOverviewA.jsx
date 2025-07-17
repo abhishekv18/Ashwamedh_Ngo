@@ -170,7 +170,7 @@ const ProgramsOverviewA = () => {
         </div>
 
         {/* Fade Bottom Gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-10 md:h-16 bg-gradient-to-t from-white to-transparent"></div>
+       
       </section>
 
       {/* Stats Section */}

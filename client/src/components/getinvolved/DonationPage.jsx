@@ -1084,20 +1084,36 @@ const DonatePage = () => {
     { icon: Clock, title: 'Instant Receipt', desc: 'Immediate confirmation' }
   ];
 
-  const testimonials = [
-    {
-      name: 'Priya Sharma',
-      location: 'Mumbai',
-      quote: 'Seeing the impact of my donation has been incredibly rewarding. The transparency is exceptional.',
-      amount: '₹2,500'
-    },
-    {
-      name: 'Rajesh Kumar',
-      location: 'Delhi',
-      quote: 'Simple process, secure payment, and real change. This is how donations should work.',
-      amount: '₹5,000'
-    }
-  ];
+ const testimonials = [
+  {
+    name: 'Priya Sharma',
+    location: 'Mumbai',
+    quote: 'Knowing my contribution helped a child get access to education brings me immense joy. Every child deserves a chance.',
+    amount: '₹2,500'
+  },
+  {
+    name: 'Rajesh Kumar',
+    location: 'Delhi',
+    quote: 'Supporting this NGO has been a heartwarming experience. Seeing smiling children grow and learn is priceless.',
+    amount: '₹4,000'
+  },
+  {
+    name: 'Anjali Mehta',
+    location: 'Bengaluru',
+    quote: 'This organization truly cares. My donation helped provide books and food to underprivileged kids. I feel proud to be a part of it.',
+    amount: '₹5,500'
+  }
+];
+
+ const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(bankDetails.upiId);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000); // reset after 2 seconds
+  };
 
   const paymentMethods = [
     { id: 'gateway', label: 'Payment Gateway' },
@@ -1113,7 +1129,7 @@ const DonatePage = () => {
     branch: "Kalina, Mumbai",
     ifsc: "CNRB0000116",
     upiId: "102773700004533@cnrb",
-    qrCodeImage: "/public/images/projects/WhatsApp Image 2025-07-12 at 4.57.53 PM.jpeg"
+    qrCodeImage: "/public/images/logo/WhatsApp Image 2025-07-17 at 4.15.21 PM.jpeg"
   };
 
   const handleAmountSelect = (amount) => {
@@ -1362,21 +1378,41 @@ const DonatePage = () => {
               <h3 className="text-lg md:text-xl font-bold mb-4">Direct UPI Transfer</h3>
               <p className="mb-4 text-sm md:text-base">You can transfer your donation directly to our UPI ID:</p>
               
-              <div className="bg-orange-50 p-3 md:p-4 rounded-lg mb-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-xs md:text-sm text-gray-600">UPI ID</p>
-                    <p className="text-lg md:text-xl font-bold text-orange-700">{bankDetails.upiId}</p>
-                  </div>
-                  <button 
-                    className="px-3 md:px-4 py-1 md:py-2 bg-orange-600 text-white rounded-lg text-xs md:text-sm font-medium"
-                    onClick={() => navigator.clipboard.writeText(bankDetails.upiId)}
-                  >
-                    Copy
-                  </button>
-                </div>
-              </div>
-              
+            <div className="bg-orange-50 p-3 md:p-4 rounded-lg mb-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-xs md:text-sm text-gray-600">UPI ID</p>
+          <p className="text-lg md:text-xl font-bold text-orange-700">{bankDetails.upiId}</p>
+        </div>
+        <button
+          className="flex items-center gap-2 px-3 md:px-4 py-1 md:py-2 bg-orange-600 text-white rounded-lg text-xs md:text-sm font-medium transition-all duration-200"
+          onClick={handleCopy}
+        >
+          {copied ? (
+            <>
+              <Check className="w-4 h-4" />
+              Copied
+            </>
+          ) : (
+            'Copy'
+          )}
+        </button>
+      </div>
+    </div>
+               {/* <div className="bg-orange-50 p-3 md:p-4 rounded-lg mb-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-xs md:text-sm text-gray-600">UPI ID</p>
+          <p className="text-lg md:text-xl font-bold text-orange-700">{bankDetails.upiId}</p>
+        </div>
+        <button
+          className="px-3 md:px-4 py-1 md:py-2 bg-orange-600 text-white rounded-lg text-xs md:text-sm font-medium"
+          onClick={handleCopy}
+        >
+          {copied ? 'Copied!' : 'Copy'}
+        </button>
+      </div>
+    </div> */}
               <div className="space-y-4 text-sm md:text-base">
                 <div>
                   <h4 className="font-bold mb-2">Steps to donate via UPI:</h4>
@@ -1411,7 +1447,7 @@ const DonatePage = () => {
                   <img 
                     src={bankDetails.qrCodeImage} 
                     alt="UPI QR Code" 
-                    className="w-56 h-56 md:w-80 md:h-80 object-contain"
+                    className="w-52 h-52 md:w-64 md:h-64 object-contain"
                   />
                 </div>
                 <p className="text-sm text-gray-600">Amount: ₹{getCurrentAmount().toLocaleString('en-IN')}</p>
@@ -1550,7 +1586,7 @@ const DonatePage = () => {
             ))}
           </div>
         </div>
-   <div className="absolute bottom-0 left-0 right-0 h-10 sm:h-10 md:h-16 bg-gradient-to-t from-white to-transparent"></div>
+  
       </div>
 
       {/* Main Content */}

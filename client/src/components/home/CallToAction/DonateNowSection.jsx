@@ -212,6 +212,7 @@
 
 import React from 'react';
 import { Heart, Users, ArrowRight, HandHeart, Gift } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CallToAction = () => {
   return (
@@ -296,8 +297,8 @@ const CallToAction = () => {
                
               
               </div>
-
-              <button 
+<Link to='/get-involved/donate'>
+  <button 
                 className="w-full font-bold py-3 sm:py-4 lg:py-4 px-5 sm:px-8 rounded-xl sm:rounded-2xl transition-all duration-300 flex items-center justify-center group-hover:shadow-xl text-white text-sm sm:text-base lg:text-lg hover:scale-105 transform"
                 style={{ 
                   background: 'linear-gradient(135deg, #FF5722 0%, #E64A19 100%)',
@@ -314,6 +315,8 @@ const CallToAction = () => {
                 Donate Now
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 transition-transform duration-300" />
               </button>
+</Link>
+            
             </div>
           </div>
 
@@ -367,8 +370,8 @@ const CallToAction = () => {
                   <span className="font-medium text-sm sm:text-base" style={{ color: '#424242' }}>Skill Development Programs</span>
                 </div>
               </div>
-
-              <button 
+<Link to='/get-involved/volunteer'>
+ <button 
                 className="w-full font-bold py-3 sm:py-4 lg:py-5 px-6 sm:px-8 rounded-xl sm:rounded-2xl transition-all duration-300 flex items-center justify-center group-hover:shadow-xl text-white text-sm sm:text-base lg:text-lg hover:scale-105 transform"
                 style={{ 
                   background: 'linear-gradient(135deg, #00695C 0%, #004D40 100%)',
@@ -386,6 +389,8 @@ const CallToAction = () => {
                 <span className="sm:hidden">Join Volunteer</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2 sm:ml-3 group-hover:translate-x-2 transition-transform duration-300" />
               </button>
+</Link>
+             
             </div>
           </div>
         </div>

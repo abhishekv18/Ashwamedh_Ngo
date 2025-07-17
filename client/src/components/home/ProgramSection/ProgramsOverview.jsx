@@ -302,6 +302,7 @@
 
 import React from 'react';
 import { BookOpen, Heart, Users, Sprout, ArrowRight, CheckCircle, Target, Award, Globe, GraduationCap, UserCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ProgramsOverview = () => {
   const mainPrograms = [
@@ -487,11 +488,14 @@ const ProgramsOverview = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <button className={`inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r ${program.color} text-white font-semibold rounded-lg sm:rounded-xl hover:shadow-lg transition-all duration-300 group hover:scale-105 text-sm sm:text-base`}>
+                  <Link to='/what-we-do/projects'>
+                    <button className={`inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r ${program.color} text-white font-semibold rounded-lg sm:rounded-xl hover:shadow-lg transition-all duration-300 group hover:scale-105 text-sm sm:text-base`}>
                     <span className="hidden sm:inline">Learn More About {program.title}</span>
                     <span className="sm:hidden">Learn More</span>
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
+                  </Link>
+                
                 </div>
 
                 {/* Image Side */}
@@ -578,16 +582,22 @@ const ProgramsOverview = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2">
-              <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#FF5722] to-[#FF7043] text-white font-semibold rounded-xl sm:rounded-2xl hover:shadow-lg transition-all duration-300 group hover:scale-105 text-sm sm:text-base">
+              <Link to='/get-involved/donate'>
+                <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#FF5722] to-[#FF7043] text-white font-semibold rounded-xl sm:rounded-2xl hover:shadow-lg transition-all duration-300 group hover:scale-105 text-sm sm:text-base">
                 <span className="hidden sm:inline">Support Our Programs</span>
                 <span className="sm:hidden">Support Programs</span>
                 <Heart className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2 group-hover:scale-110 transition-transform" />
               </button>
-              <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-[#FFFFFF]/10 backdrop-blur-sm border-2 border-[#FFFFFF]/20 text-white font-semibold rounded-xl sm:rounded-2xl hover:bg-[#FFFFFF]/20 transition-all duration-300 group text-sm sm:text-base">
-                <span className="hidden sm:inline">Become a Partner School</span>
-                <span className="sm:hidden">Partner School</span>
+              </Link>
+            
+              <Link to='/get-involved/volunteer'>
+               <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-[#FFFFFF]/10 backdrop-blur-sm border-2 border-[#FFFFFF]/20 text-white font-semibold rounded-xl sm:rounded-2xl hover:bg-[#FFFFFF]/20 transition-all duration-300 group text-sm sm:text-base">
+                <span className="hidden sm:inline">Join Us as a Volunteer</span>
+                <span className="sm:hidden">Join Us</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
+              </Link>
+             
             </div>
           </div>
         </div>

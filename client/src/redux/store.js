@@ -3,6 +3,7 @@ import authSlice from "./authSlice";
 import contactSlice from "./contactSlice";
 import subscibeSlice from "./subscribeSlice";
 import volunteerSlice from "./volunteerSlice";
+import gallerySlice from "./gallerySlice";
 import {
     persistStore,
     persistReducer,
@@ -25,7 +26,9 @@ const rootReducer = combineReducers({
       auth:authSlice,
       contact:contactSlice,
       subscribe:subscibeSlice,
-      volunteer:volunteerSlice
+      volunteer:volunteerSlice,
+      gallery:gallerySlice,
+      
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

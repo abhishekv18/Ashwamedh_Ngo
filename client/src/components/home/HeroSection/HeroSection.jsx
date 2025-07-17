@@ -222,6 +222,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Heart, Users, BookOpen, Shield, ArrowRight, Star, Award, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -338,17 +339,27 @@ const HeroSection = () => {
               </button>
             </div> */}
 <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-12">
+      <Link to='/get-involved/volunteer'>
   <button className="w-64 sm:w-auto group relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+
     <span className="relative flex items-center justify-center">
-      <span className="hidden sm:inline">Start Your Impact Journey</span>
+    
+       <span className="hidden sm:inline">Start Your Impact Journey</span>
+      
+    
       <span className="sm:hidden">Start Journey</span>
+    
+     
       <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
     </span>
   </button>
-
-  <button className="w-64 sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-200 text-orange-600 font-semibold text-sm sm:text-base lg:text-lg rounded-xl sm:rounded-2xl hover:bg-orange-50 transition-all duration-300">
+ </Link>
+ <Link to='/who-we-are/about-us'>
+   <button className="w-64 sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-200 text-orange-600 font-semibold text-sm sm:text-base lg:text-lg rounded-xl sm:rounded-2xl hover:bg-orange-50 transition-all duration-300">
     Learn More
   </button>
+ </Link>
+
 </div>
 
 
@@ -387,7 +398,7 @@ const HeroSection = () => {
                     <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-orange-600" />
                   </div>
                   <div>
-                    <div className="font-bold text-sm sm:text-base lg:text-lg text-gray-900">500+</div>
+                    <div className="font-bold text-sm sm:text-base lg:text-lg text-gray-900">15+</div>
                     <div className="text-xs sm:text-sm text-gray-600">Volunteers</div>
                   </div>
                 </div>
@@ -399,7 +410,7 @@ const HeroSection = () => {
                     <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-teal-700" />
                   </div>
                   <div>
-                    <div className="font-bold text-sm sm:text-base lg:text-lg text-gray-900">25+</div>
+                    <div className="font-bold text-sm sm:text-base lg:text-lg text-gray-900">10+</div>
                     <div className="text-xs sm:text-sm text-gray-600">Communities</div>
                   </div>
                 </div>

@@ -333,6 +333,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Heart, Users, Award, Globe, ArrowRight, CheckCircle, BookOpen, Scale, Zap, Target, ShieldCheck, Lightbulb } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -641,15 +642,20 @@ const AboutSection = () => {
                 Every contribution creates lasting impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-lg mx-auto">
-                <button className="bg-white text-orange-600 hover:bg-gray-50 px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex-1 sm:flex-none">
+                <Link to='/get-involved/donate'>
+                 <button className="bg-white text-orange-600 hover:bg-gray-50 px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex-1 sm:flex-none">
                   <span className="flex items-center justify-center">
                     Support Our Cause
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                   </span>
                 </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 flex-1 sm:flex-none">
+                </Link>
+               <Link to='/who-we-are/about-us'>
+               <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 flex-1 sm:flex-none">
                   Learn More About Us
                 </button>
+               </Link>
+                
               </div>
             </div>
           </div>

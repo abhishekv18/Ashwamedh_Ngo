@@ -134,6 +134,16 @@ export default function VolunteerPage() {
   }, [user]);
 
   const [showSocialMediaPopup, setShowSocialMediaPopup] = useState(false);
+
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSocialMediaPopup(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const [errors, setErrors] = useState({
     email: '',
     phone: ''
@@ -287,26 +297,27 @@ export default function VolunteerPage() {
     { number: '500+', label: 'Projects Completed', icon: Award }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Education Volunteer",
-      text: "Volunteering has been the most rewarding experience of my life. Seeing children's faces light up when they learn something new is priceless.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Healthcare Assistant",
-      text: "The impact we make together is incredible. Every day brings new challenges and opportunities to help others.",
-      rating: 5
-    },
-    {
-      name: "Emma Davis",
-      role: "Community Developer",
-      text: "I've grown personally and professionally while making a real difference in communities. Highly recommend joining!",
-      rating: 5
-    }
-  ];
+const testimonials = [
+  {
+    name: "Anita Verma",
+    role: "Education Volunteer",
+    text: "Volunteering here has truly touched my heart. Teaching children and watching them learn with such excitement is something I will always cherish.",
+    rating: 5
+  },
+  {
+    name: "Ravi Mehra",
+    role: "Healthcare Assistant",
+    text: "Every day, I feel grateful to be part of a team that is bringing real change. The joy of helping someone in need is unmatched.",
+    rating: 5
+  },
+  {
+    name: "Neha Kapoor",
+    role: "Community Developer",
+    text: "Being a part of this NGO has been a life-changing journey. I've learned so much while helping build stronger, happier communities.",
+    rating: 5
+  }
+];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-orange-50 to-white">
@@ -355,7 +366,7 @@ export default function VolunteerPage() {
             </div>
           </div>
         </div>
-<div className="absolute bottom-0 left-0 right-0 h-10 md:h-16 bg-gradient-to-t from-white to-transparent"></div>
+
       </div>
 
       {/* Stats Section */}
@@ -940,7 +951,7 @@ export default function VolunteerPage() {
             className="w-full px-5 py-2.5 bg-teal-600 text-white text-sm font-bold rounded-lg hover:bg-teal-700 transition shadow-md flex items-center justify-center"
           >
             <CheckCircle className="mr-2 h-4 w-4" />
-            Continue to Volunteer
+            Continue to Website
           </button>
 
           <button
