@@ -452,7 +452,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Star, Quote, Users, GraduationCap, Heart, BookOpen, Award, TrendingUp, Calendar, MapPin, User, ChevronLeft, ChevronRight, Play, Home, Shield, Globe } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const ImpactStories = () => {
@@ -870,18 +870,25 @@ const ImpactStories = () => {
             Your support can transform lives and create lasting impact in communities across Maharashtra
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-6">
-            <button className="bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-orange-300 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
+            <Link to='/get-involved/donate'>
+               <button className="bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-orange-300 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
               <Heart className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Donate Today
             </button>
-            <button className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
+            </Link>
+         <Link to='/get-involved/volunteer'>
+          <button className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
               <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Become a Volunteer
             </button>
+         </Link>
+           <Link to='/get-involved/contact'>
             <button className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
               <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Learn More
             </button>
+           </Link>
+           
           </div>
         </div>
       </section>

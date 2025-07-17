@@ -377,6 +377,7 @@
 
 import React, { useState } from 'react';
 import { MapPin, Users, Heart, BookOpen, Home, TreePine, Shield, Utensils, GraduationCap, Stethoscope, CheckCircle, ChevronDown, Star, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const WorkingAreas = () => {
   const [selectedState, setSelectedState] = useState('Maharashtra');
@@ -480,9 +481,9 @@ const WorkingAreas = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-stretch">
           {/* Controls Panel */}
-          <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm h-full">
             <p className="text-gray-600 mb-4 sm:mb-6 lg:mb-8 text-sm sm:text-base lg:text-lg">
               Toggle the options to see our project locations and their areas of focus.
             </p>
@@ -576,8 +577,8 @@ const WorkingAreas = () => {
           </div>
 
           {/* Map Section */}
-          <div className="relative">
-            <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
+          <div className="relative h-full">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm h-full">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 sm:mb-6 gap-3 sm:gap-4">
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
                   {selectedState} Operations
@@ -694,9 +695,12 @@ const WorkingAreas = () => {
             <p className="text-orange-100 mb-3 sm:mb-4 text-xs sm:text-sm lg:text-base">
               "Catch them young" - Our early childhood development program focusing on foundational education, nutrition, and holistic child development.
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-200 text-xs sm:text-sm lg:text-base">
+            <Link to='/what-we-do/projects'>
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-200 text-xs sm:text-sm lg:text-base">
               Learn More About Ankur
             </button>
+            </Link>
+          
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 hover:scale-105 transition-transform duration-200">
@@ -709,9 +713,12 @@ const WorkingAreas = () => {
             <p className="text-orange-100 mb-3 sm:mb-4 text-xs sm:text-sm lg:text-base">
               Our comprehensive personality development course designed to build confidence, life skills, and character among children and youth.
             </p>
-            <button className="bg-teal-500 hover:bg-teal-600 text-white px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-200 text-xs sm:text-sm lg:text-base">
+              <Link to='/what-we-do/projects'>
+               <button className="bg-teal-500 hover:bg-teal-600 text-white px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-200 text-xs sm:text-sm lg:text-base">
               Learn More About Aakaar
             </button>
+            </Link>
+           
           </div>
         </div>
 
@@ -722,12 +729,17 @@ const WorkingAreas = () => {
             Help us expand Project Ankur and Project Aakaar to reach more children across Mumbai, Pune, Thane, Navi Mumbai, and Solapur
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <button className="bg-white text-orange-600 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors duration-200 shadow-lg text-sm sm:text-base">
+            <Link to='/get-involved/donate'>
+              <button className="bg-white text-orange-600 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors duration-200 shadow-lg text-sm sm:text-base">
               Support Our Projects
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-200 text-sm sm:text-base">
+            </button> 
+            </Link>
+         <Link to='/get-involved/volunteer'>
+           <button className="bg-transparent border-2 border-white text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-200 text-sm sm:text-base">
               Become a Volunteer
             </button>
+         </Link>
+          
           </div>
         </div>
       </div>

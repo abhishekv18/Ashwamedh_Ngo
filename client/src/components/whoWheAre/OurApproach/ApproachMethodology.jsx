@@ -430,6 +430,7 @@ import {
   ArrowRight,
   Star
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ApproachMethodology = () => {
   const methodologyCards = [
@@ -631,10 +632,13 @@ const ApproachMethodology = () => {
                   <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                     {card.description}
                   </p>
-                  <div className="flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors cursor-pointer">
+                  <Link to='/get-involved/contact'>
+                      <div className="flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors cursor-pointer">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform hover:translate-x-1" />
                   </div>
+                  </Link>
+              
                 </div>
               </div>
             ))}
@@ -810,12 +814,17 @@ const ApproachMethodology = () => {
         Join us in our mission to create lasting positive change in children's lives through our proven methodology and compassionate approach.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-        <button className="bg-white text-orange-600 px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-cream transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        <Link to='/what-we-do/programs'>
+           <button className="bg-white text-orange-600 px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-cream transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
           Learn More About Our Programs
         </button>
-        <button className="border-2 sm:border-3 border-white text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        </Link>
+     <Link to='/get-involved/contact'>
+      <button className="border-2 sm:border-3 border-white text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
           Get Involved Today
         </button>
+     </Link>
+       
       </div>
     </div>
   </div>

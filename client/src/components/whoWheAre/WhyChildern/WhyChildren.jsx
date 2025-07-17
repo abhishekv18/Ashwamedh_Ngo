@@ -490,7 +490,7 @@
 
 import React, { useEffect } from 'react';
 import { Heart, Users, TrendingUp, Shield, BookOpen, Smile, AlertTriangle, Home, Droplets, Utensils } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const WhyChildren = () => {
@@ -976,13 +976,16 @@ const WhyChildren = () => {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button 
+                <Link to='/get-involved/donate'>
+                  <button 
                   className="px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                   style={{ backgroundColor: '#FFFFFF', color: '#FF5722' }}
                 >
                   Support a Child Today
                 </button>
-                <button 
+                </Link>
+              <Link to='/get-involved/volunteer'>
+              <button 
                   className="px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 border-2 border-white text-white hover:shadow-lg"
                   style={{ backgroundColor: 'transparent' }}
                   onMouseEnter={(e) => {
@@ -996,6 +999,8 @@ const WhyChildren = () => {
                 >
                   Learn More About Our Work
                 </button>
+              </Link>
+                
               </div>
             </div>
           </div>

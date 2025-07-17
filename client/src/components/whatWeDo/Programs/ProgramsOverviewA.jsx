@@ -17,6 +17,7 @@ import {
   Star,
   TrendingUp
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ProgramsOverviewA = () => {
   const programs = [
@@ -248,11 +249,13 @@ const ProgramsOverviewA = () => {
                         ))}
                       </ul>
                     </div>
-
-                    <button className={`inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r ${program.color} text-white font-semibold rounded-lg sm:rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base`}>
+<Link to='/get-involved/contact'>
+  <button className={`inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r mt-1 ${program.color} text-white font-semibold rounded-lg sm:rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base`}>
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
+</Link>
+                  
                   </div>
 
                   {/* Image Section - Responsive container with full image */}
@@ -334,12 +337,16 @@ const ProgramsOverviewA = () => {
             Every child deserves a chance to dream, learn, and succeed. Be part of the change that transforms lives and builds stronger communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+            <Link to='/get-involved/donate'>
             <button className="w-full sm:w-auto bg-white text-orange-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl hover:bg-orange-50 transition-all duration-300 transform hover:-translate-y-1 shadow-lg text-sm sm:text-base">
               Donate Now
             </button>
+            </Link>
+            <Link to='/get-involved/volunteer'>
             <button className="w-full sm:w-auto border-2 border-white text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl hover:bg-white hover:text-orange-600 transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base">
               Volunteer With Us
             </button>
+            </Link>
           </div>
         </div>
       </div>

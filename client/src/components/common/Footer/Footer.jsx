@@ -581,7 +581,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#212121] text-white">
+    <footer id='footer' className="bg-[#212121] text-white">
       {/* Impact Stats Section */}
       <div className="bg-gradient-to-t from-orange-600 via-orange-500 to-orange-600 py-5 sm:py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -388,7 +388,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, BookOpen, Users, Award, MapPin, Wrench, Heart, Leaf, Droplets, Bird, Gift, User } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const ImageCarousel = ({ images, title }) => {
@@ -479,9 +479,11 @@ const ActivityCard = ({ icon: Icon, title, description, activities, images }) =>
         </div>
         
         <div className="mt-4 sm:mt-6 pt-4 border-t border-gray-100">
+          <Link to='/get-involved/contact'>
           <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-6 py-2 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 font-medium text-sm sm:text-base w-full sm:w-auto">
             Learn More
           </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -717,12 +719,17 @@ const activities = [
               Every contribution, no matter how small, makes a significant difference. Be part of our journey to create positive change and build stronger, more sustainable communities.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 font-medium w-full sm:w-auto">
+              <Link to='/get-involved/volunteer'>
+               <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 font-medium w-full sm:w-auto">
                 Volunteer With Us
               </button>
+              </Link>
+             <Link to='/get-involved/donate'>
               <button className="bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 sm:px-8 py-3 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all duration-200 font-medium w-full sm:w-auto">
                 Make a Donation
               </button>
+             </Link>
+             
             </div>
           </div>
         </div>

@@ -507,7 +507,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { BookOpen, Users, Target, Award, Lightbulb, Briefcase, Heart, Star, ChevronRight, Calendar, MapPin, TrendingUp, ChevronLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const ProjectAnkur = () => {
@@ -757,9 +757,12 @@ const ProjectAnkur = () => {
               </div>
 
               {/* CTA Button */}
-              <button className={`bg-gradient-to-r ${project.color} text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
+              <Link to='/get-involved/contact'>
+                <button className={`bg-gradient-to-r ${project.color} mt-6 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
                 Learn More & Get Involved
               </button>
+              </Link>
+            
             </div>
 
             {/* Image Carousel Section */}
@@ -865,12 +868,19 @@ const ProjectAnkur = () => {
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <button className={`bg-gradient-to-r ${project.color} text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
-                  Get Updates
-                </button>
-                <button className="bg-white/80 backdrop-blur-sm border-2 border-gray-300 text-gray-700 hover:border-gray-400 px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-1">
+            <a href="#footer">
+  <button className={`bg-gradient-to-r ${project.color} text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
+    Get Updates
+  </button>
+</a>
+
+              
+                <Link to='/get-involved/contact'>
+                  <button className="bg-white/80 backdrop-blur-sm border-2 border-gray-300 text-gray-700 hover:border-gray-400 px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-1">
                   Partner With Us
                 </button>
+                </Link>
+              
               </div>
             </div>
 
@@ -1005,12 +1015,18 @@ const ProjectAnkur = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-6 sm:pt-8">
-            <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 text-white px-8 sm:px-10 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl">
+            <Link to='/get-involved/volunteer'>
+             <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl">
               Volunteer With Us
             </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-orange-500 hover:text-secondary px-8 sm:px-10 py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl">
+            </Link>
+           
+            <Link to='/get-involved/donate'>
+            <button className="bg-transparent border-2 border-white text-white hover:bg-orange-500 hover:text-secondary px-8 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl">
               Support Our Cause
             </button>
+            </Link>
+            
           </div>
         </div>
       </div>
