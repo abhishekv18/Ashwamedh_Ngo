@@ -69,7 +69,7 @@ const imageMail = {
         </p>
 
         <div style="text-align: center; margin: 30px 0;">
-          <a href="https://ashwamedhfoundation.org/gallery" 
+          <a href="https://ashwamedhfoundation.org/" 
              style="background-color: #e67e22; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">
             View Full Gallery
           </a>
