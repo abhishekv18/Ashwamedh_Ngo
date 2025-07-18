@@ -250,7 +250,7 @@ export default function VolunteerPage() {
         occupation: formData.occupation === 'Other' ? formData.customOccupation : formData.occupation
       };
 
-      const res = await axios.post('http://localhost:5000/api/volunteer/add', submitData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/volunteer/add`, submitData, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });

@@ -516,7 +516,7 @@ const Footer = () => {
     try {
       dispatch(setLoadi(true));
 
-      const res = await axios.post('http://localhost:5000/api/subscribe/add', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/subscribe/add`, formData, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });

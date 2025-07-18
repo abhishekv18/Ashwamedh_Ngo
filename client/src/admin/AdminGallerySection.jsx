@@ -759,7 +759,7 @@ const AdminGallerySection = () => {
     
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/gallery/upload-image',
+        `${import.meta.env.VITE_API_URL}/api/gallery/upload-image`,
         data, {
           headers: {
             "Content-Type": "multipart/form-data",
@@ -856,7 +856,7 @@ const AdminGallerySection = () => {
         imageUrl: uploadImageUrl
       };
 
-      const res = await axios.post('http://localhost:5000/api/gallery/add', blogData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/gallery/add`, blogData, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });
@@ -888,7 +888,7 @@ const AdminGallerySection = () => {
 
   const fetchAllBlogs = useCallback(async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/gallery/get', {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/gallery/get`, {
         withCredentials: true,
       });
       if (res.data.success) {
@@ -915,7 +915,7 @@ const AdminGallerySection = () => {
     
     dispatch(setLoa(true));
     try {
-      const res = await axios.delete(`http://localhost:5000/api/gallery/delete/${imageToDelete._id}`, {
+      const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/gallery/delete/${imageToDelete._id}`, {
         withCredentials: true,
       });
       if (res.data.success) {

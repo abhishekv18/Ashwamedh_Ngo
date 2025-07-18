@@ -39,7 +39,7 @@ const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
         const fetchAllAdmins = async () => {
   try {
-    const res = await axios.get('http://localhost:5000/api/admin/getAllUsers', {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/admin/getAllUsers`, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -63,7 +63,7 @@ console.log(allUsers);
 
         const fetchAllContacts = async () => {
   try {
-    const res = await axios.get('http://localhost:5000/api/contact/get', {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/contact/get`, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -104,7 +104,7 @@ const contactsData = groupByMonth(allContacts, 'contacts');
 
         const fetchAllSubscribers = async () => {
   try {
-    const res = await axios.get('http://localhost:5000/api/subscribe/get', {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/subscribe/get`, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -133,7 +133,7 @@ const subscribeData = groupByMonth(allSubscribers, 'subscribers');
 
         const fetchAllVolunteer = async () => {
   try {
-    const res = await axios.get('http://localhost:5000/api/volunteer/get', {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/volunteer/get`, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -180,7 +180,7 @@ const volunteersData = countByGender(allVolunteers);
 
 const handleLogout = async () => {
   try {
-    const res = await axios.post("http://localhost:5000/api/admin/logout", {}, {
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/admin/logout`, {}, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -208,7 +208,7 @@ const handleLogout = async () => {
 const removeContact = async (id) => {
   dispatch(setLoad(true)); // Use dispatch for consistency
   try {
-    const res = await axios.delete(`http://localhost:5000/api/contact/delete/${id}`, {
+    const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/contact/delete/${id}`, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -233,7 +233,7 @@ const removeContact = async (id) => {
 const removeVolunteer = async (id) => {
   dispatch(setLoadin(true)); // Use dispatch for consistency
   try {
-    const res = await axios.delete(`http://localhost:5000/api/volunteer/delete/${id}`, {
+    const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/volunteer/delete/${id}`, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -259,7 +259,7 @@ const removeVolunteer = async (id) => {
 const removeSubscriber = async (id) => {
   dispatch(setLoadi(true)); // Use dispatch for consistency
   try {
-    const res = await axios.delete(`http://localhost:5000/api/subscribe/delete/${id}`, {
+    const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/subscribe/delete/${id}`, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -304,7 +304,7 @@ const removeAdmin = async (id) => {
   dispatch(setLoading(true)); // Use dispatch for consistency
   try {
 
-      const res = await axios.delete(`http://localhost:5000/api/admin/deleteUser/${id}`, {
+      const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/admin/deleteUser/${id}`, {
       withCredentials: true,
     });
     if (res.data.success) {
@@ -329,7 +329,7 @@ const removeAdmin = async (id) => {
   try {
     dispatch(setLoading(true)); // Correct spelling
 
-    const res = await axios.post('http://localhost:5000/api/admin/admin-register', formData, {
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/admin/admin-register`, formData, {
       headers: { 'Content-Type': 'application/json' },
       withCredentials: true,
     });

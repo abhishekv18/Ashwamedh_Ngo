@@ -689,7 +689,7 @@ const GalleryPage = () => {
       category: photo.category || 'Other',
       // First image in each category is featured
       date: new Date(photo.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }),
-      location: 'Mumbai, India' // Default location, can be updated if you have location data
+      
     }));
   };
 
@@ -945,7 +945,7 @@ const GalleryPage = () => {
                       <p className="text-xs text-gray-600 mb-2 line-clamp-2">{image.description}</p>
                       <div className="flex items-center justify-between text-xs text-gray-500">
                         <span>{image.date}</span>
-                        <span>{image.location}</span>
+                      
                       </div>
                     </div>
                   </div>
@@ -1041,10 +1041,7 @@ const GalleryPage = () => {
                         <Calendar size={12} />
                         {selectedImage.date}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <MapPin size={12} />
-                        {selectedImage.location}
-                      </span>
+                    
                     </div>
                   </div>
                   <div className="ml-4 flex-shrink-0">

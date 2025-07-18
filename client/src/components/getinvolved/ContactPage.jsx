@@ -632,7 +632,7 @@ const handleInputChange = (e) => {
 
     try {
       dispatch(setLoad(true));
-      const res = await axios.post('http://localhost:5000/api/contact/add', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/contact/add`, formData, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });

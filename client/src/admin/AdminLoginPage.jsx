@@ -629,7 +629,7 @@ const AdminLoginPage = () => {
   e.preventDefault();
     try {
       dispatch(setLoading(true));
-      const res = await axios.post('http://localhost:5000/api/admin/login', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/admin/login`, formData, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });
