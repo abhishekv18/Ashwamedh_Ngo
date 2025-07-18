@@ -544,17 +544,17 @@ const AboutUs = () => {
     setSelectedDocument(null);
   };
 
-  const teamMembers = [
-    'Deepak Doddamani',
-    'Kiran Jitendra Patel', 
-    'Mohammed d Shakil Ansari',
-    'Abdul Hakim Ansari',
-    'Jitendra Patel',
-    'Praful Rane',
-    'Govind Dodamani',
-    'Monika Singh',
-    'Sneha Sharma'
-  ];
+  // const teamMembers = [
+  //   'Deepak Doddamani',
+  //   'Kiran Jitendra Patel', 
+  //   'Mohammed d Shakil Ansari',
+  //   'Abdul Hakim Ansari',
+  //   'Jitendra Patel',
+  //   'Praful Rane',
+  //   'Govind Dodamani',
+  //   'Monika Singh',
+  //   'Sneha Sharma'
+  // ];
 
   const workStatements = [
     "To run, conduct, maintain and manage knowledge centres.",
@@ -980,47 +980,47 @@ const AboutUs = () => {
   {[
     {
       name: "Deepak Doddamani",
-      position: "Founder & President",
+      position: "Founder & Life Member",
       image: "/images/team/deepak.jpg"
     },
     {
       name: "Kiran Jitendra Patel",
-      position: "Vice President",
+      position: "Member",
       image: "/images/team/kiran.jpg"
     },
     {
       name: "Mohammed Shakil Ansari",
-      position: "Secretary",
+      position: "Member",
       image: "/images/team/shakil.jpg"
     },
     {
       name: "Abdul Hakim Ansari",
-      position: "Treasurer",
+      position: "Life Member",
       image: "/images/team/hakim.jpg"
     },
     {
       name: "Jitendra Patel",
-      position: "Executive Member",
+      position: "Life Member",
       image: "/images/team/jitendra.jpg"
     },
     {
       name: "Praful Rane",
-      position: "Executive Member",
+      position: "Life Member",
       image: "/images/team/praful.jpg"
     },
     {
       name: "Govind Dodamani",
-      position: "Executive Member",
+      position: "Life Member",
       image: "/images/team/govind.jpg"
     },
     {
       name: "Monika Singh",
-      position: "Education Coordinator",
+      position: "Life Member",
       image: "/images/team/monika.jpg"
     },
     {
       name: "Sneha Sharma",
-      position: "Program Manager",
+      position: "President",
       image: "/images/team/sneha.jpg"
     }
   ].map((member, index) => (
