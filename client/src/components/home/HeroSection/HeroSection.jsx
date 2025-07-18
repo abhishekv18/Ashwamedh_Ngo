@@ -244,7 +244,7 @@ const HeroSection = () => {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % imageList.length);
         setFade(true); // fade-in new image
-      }, 400); // wait 0.5s for fade-out before switching
+      }, 300); // wait 0.5s for fade-out before switching
     }, 4000); // every 3 seconds
 
     return () => clearInterval(interval);
@@ -355,7 +355,7 @@ const HeroSection = () => {
   </button>
  </Link>
  <Link to='/who-we-are/about-us'>
-   <button className="w-64 sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-200 text-orange-600 font-semibold text-sm sm:text-base lg:text-lg rounded-xl sm:rounded-2xl hover:bg-orange-50 transition-all duration-300">
+   <button className="w-64 sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-200 text-orange-600 font-semibold text-sm sm:text-base lg:text-lg rounded-xl sm:rounded-2xl  hover:bg-orange-50 transition-all duration-300">
     Learn More
   </button>
  </Link>
@@ -367,8 +367,8 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image Section */}
-          <div className={`flex-1 w-full mt-6 sm:mt-8 lg:mt-0 max-w-2xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="relative px-4 sm:px-0">
+          <div className={`flex-1 w-full sm:mt-8 lg:mt-0 max-w-2xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="relative px-2 sm:px-0">
               {/* Main Image Container */}
            <div className="relative bg-white rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-2xl">
           <div className="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden">

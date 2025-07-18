@@ -682,7 +682,7 @@ const Header = () => {
             <div className="lg:hidden flex items-center space-x-1 sm:space-x-2">
               {/* Mobile Donate Button */}
               <Link
-                to="/donate"
+                to="/get-involved/donate"
                 className="relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold shadow-md transition-all duration-300 flex items-center gap-1"
               >
                 <Heart className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:hidden" />
@@ -691,7 +691,7 @@ const Header = () => {
               
               {/* Mobile Join Us Button - Visible on all screen sizes */}
               <Link
-                to="/join-us"
+                to="/get-involved/volunteer"
                 className="relative bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90 hover:from-teal-800 hover:to-teal-900 text-white px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold shadow-md transition-all duration-300 flex items-center gap-1"
               >
                 <Users className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:hidden" />
