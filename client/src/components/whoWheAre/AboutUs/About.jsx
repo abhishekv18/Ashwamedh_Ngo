@@ -1102,42 +1102,49 @@ const AboutUs = () => {
       </section>
 
       {/* Document Modal */}
-   {isModalOpen && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+ {isModalOpen && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/80">
+    
+    {/* Click-outside overlay */}
     <div 
-      className="fixed inset-0 bg-black bg-opacity-75 transition-opacity duration-300"
+      className="fixed inset-0"
       onClick={closeDocumentModal}
     ></div>
-    
-    <div className="relative z-50 max-w-6xl w-full max-h-[90vh]">
-      {/* Close Button - Only visible element on the modal background */}
-      <button 
-        onClick={closeDocumentModal}
-        className="absolute -top-12 right-0 z-50 p-2 rounded-full bg-white bg-opacity-90 hover:bg-white transition-all duration-300 shadow-lg hover:scale-110"
-      >
-        <X className="h-6 w-6 text-gray-800" />
-      </button>
-      
-      {/* Image Container */}
+
+    {/* Modal Content */}
+    <div className="relative z-50 max-w-5xl w-full max-h-[90vh]">
       <div className="flex justify-center items-center h-full">
-        <div className="relative group">
+        <div className="relative group border border-white/20 rounded-lg overflow-hidden shadow-2xl">
+
+          {/* Close Button INSIDE image, top-right corner */}
+          <button 
+            onClick={closeDocumentModal}
+            className="absolute top-2 right-2 z-50 p-1.5 rounded-full bg-white/90 hover:bg-white transition-all shadow-md"
+          >
+            <X className="h-4 w-4 text-gray-800" />
+          </button>
+
+          {/* Image */}
           <img 
             src={selectedDocument?.image} 
             alt={selectedDocument?.title}
-            className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl transform transition-all duration-300 group-hover:scale-105"
+            className="max-w-full max-h-[80vh] object-contain transition-transform duration-300 group-hover:scale-105"
           />
           
-          {/* Document title overlay (appears on hover) */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-lg">
-            <h3 className="text-white text-lg font-semibold text-center">
-              {selectedDocument?.title}
-            </h3>
-          </div>
+          {/* Title overlay (optional) */}
+          {/* {selectedDocument?.title && (
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 className="text-white text-lg font-semibold text-center">
+                {selectedDocument.title}
+              </h3>
+            </div>
+          )} */}
         </div>
       </div>
     </div>
   </div>
 )}
+
     </div>
   );
 };
