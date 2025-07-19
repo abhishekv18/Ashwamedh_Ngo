@@ -1033,7 +1033,7 @@ const AboutUs = () => {
         alt={member.name}
         className="w-full h-48 object-cover"
       />
-      <div className="p-4 text-center">
+      <div className="p-3 text-center">
         <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
         <p className="text-sm text-gray-600 mt-1">{member.position}</p>
       </div>
