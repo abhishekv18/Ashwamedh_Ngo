@@ -1089,7 +1089,9 @@ import { useSelector } from 'react-redux';
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
 
+
 const DonatePage = () => {
+
   const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user);
    const headerRef = useRef(null);
@@ -1133,21 +1135,21 @@ const causes = [
     title: 'Education for All',
     description: 'Provide quality education and learning materials to underprivileged children.',
     impact: 'Your donation can provide school supplies for children for a month',
-    image: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=400&h=300&fit=crop&crop=faces'
+    image: '/public/images/projects/photo-1569173675610-42c361a86e37.avif'
   },
   {
     id: 'healthcare',
     title: 'Child Healthcare',
     description: 'Ensure access to essential healthcare services and medical support.',
     impact: 'Your support can cover medical checkups for children',
-    image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop&crop=faces'
+    image: '/public/images/projects/photo-1571847560189-8c2985584bee.avif'
   },
   {
     id: 'nutrition',
     title: 'Nutrition Program',
     description: 'Combat malnutrition by providing healthy meals and nutritional support.',
     impact: 'Your contribution can feed children nutritious meals',
-    image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop&crop=faces'
+    image: '/public/images/projects/premium_photo-1682097863874-ae40dd878665.avif'
   },
   // {
   //   id: 'women-empowerment',
@@ -1222,6 +1224,7 @@ const causes = [
   //   window.location.href = 'https://rzp.io/rzp/i0UTs7e';
   // };
   const handleProceedToPayment = () => {
+
 toast.info('Redirecting to secure Razorpay payment...', {
   position: 'top-center',
   autoClose: 1500,
@@ -1231,11 +1234,22 @@ toast.info('Redirecting to secure Razorpay payment...', {
   draggable: true,
   progress: undefined,
   toastStyle: {
-    backgroundColor: '#FFE0B2', // light orange
-    color: '#4E342E',           // dark text
+    backgroundColor: '#FFE0B2',   // light orange
+    color: '#4E342E',             // dark text
     fontWeight: 'bold',
+    fontSize: '14px',
+    padding: '12px 16px',
+    borderRadius: '8px',
+    width: 'auto',
+    maxWidth: '90vw',             // prevents overflow on small screens
+    wordBreak: 'break-word',      // wraps long text
+    boxSizing: 'border-box',
   },
 });
+
+
+
+
 
 
   setTimeout(() => {
