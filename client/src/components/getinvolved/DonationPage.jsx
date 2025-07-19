@@ -1265,7 +1265,7 @@ const DonatePage = () => {
   };
 
 
-
+console.log("Form Data:", formData);
 
   // const handleInputChange = async (field, value) => {
   //   if (field === 'fullName' && !validateFullName(value)) {
