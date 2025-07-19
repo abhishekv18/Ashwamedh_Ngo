@@ -701,6 +701,7 @@ const Footer = () => {
                   <input
                     type="text"
                     name='name'
+                    required
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Enter your name"
@@ -711,6 +712,7 @@ const Footer = () => {
                     <input
                       type="email"
                       name='email'
+                      required
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="Enter your email"

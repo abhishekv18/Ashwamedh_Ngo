@@ -864,6 +864,7 @@ const handleInputChange = (e) => {
                         type="tel"
                         name="phone"
                         maxLength={10}
+                        required
                         value={formData.phone}
                         onChange={handleInputChange}
                         className={`w-full pl-9 sm:pl-10 pr-4 py-2.5 sm:py-3 border ${
@@ -891,6 +892,7 @@ const handleInputChange = (e) => {
                       onChange={handleInputChange}
                       required
                       rows="5"
+                      
                       className="w-full pl-9 sm:pl-10 pr-4 py-2.5 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none text-sm sm:text-base min-h-[120px] sm:min-h-[140px]"
                       placeholder="Tell us about your project, goals, and how we can help you..."
                     ></textarea>
