@@ -1248,10 +1248,6 @@ toast.info('Redirecting to secure Razorpay payment...', {
 });
 
 
-
-
-
-
   setTimeout(() => {
     window.location.href = 'https://rzp.io/rzp/i0UTs7e';
   }, 1600); // delay slightly longer than autoClose
