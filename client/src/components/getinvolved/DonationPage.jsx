@@ -1011,7 +1011,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Heart, Users, Target, Globe, ChevronRight, Check, ArrowLeft, User, Mail, Phone, MapPin, CreditCard, Calendar, Home, Shield, Award, Clock } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useNavigation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const DonatePage = () => {
@@ -1337,9 +1337,11 @@ console.log("Form Data:", formData);
   // };
 
   const handleProceedToPayment = () => {
-    if (validateStep2()) {
-      alert('Payment integration will be implemented with Razorpay');
-    }
+   if (validateStep2()) {
+  alert('Redirecting to secure Razorpay payment...');
+  window.location.href = 'https://rzp.io/rzp/i0UTs7e';
+}
+
     console.log(formData);
   };
 
