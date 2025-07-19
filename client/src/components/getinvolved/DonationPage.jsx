@@ -1225,6 +1225,27 @@ const causes = [
   // };
   const handleProceedToPayment = () => {
 
+// toast.info('Redirecting to secure Razorpay payment...', {
+//   position: 'top-center',
+//   autoClose: 1500,
+//   hideProgressBar: false,
+//   closeOnClick: true,
+//   pauseOnHover: false,
+//   draggable: true,
+//   progress: undefined,
+//   toastStyle: {
+//     backgroundColor: '#FFE0B2',   // light orange
+//     color: '#4E342E',             // dark text
+//     fontWeight: 'bold',
+//     fontSize: '14px',
+//     padding: '12px 16px',
+//     borderRadius: '8px',
+//     width: 'auto',
+//     maxWidth: '90vw',             // prevents overflow on small screens
+//     wordBreak: 'break-word',      // wraps long text
+//     boxSizing: 'border-box',
+//   },
+// });
 toast.info('Redirecting to secure Razorpay payment...', {
   position: 'top-center',
   autoClose: 1500,
@@ -1233,20 +1254,25 @@ toast.info('Redirecting to secure Razorpay payment...', {
   pauseOnHover: false,
   draggable: true,
   progress: undefined,
-  toastStyle: {
+  style: {
     backgroundColor: '#FFE0B2',   // light orange
     color: '#4E342E',             // dark text
     fontWeight: 'bold',
-    fontSize: '14px',
-    padding: '12px 16px',
+    fontSize: 'clamp(12px, 3vw, 14px)', // responsive font scaling
+    padding: 'clamp(8px, 2vw, 12px) clamp(10px, 3vw, 16px)', // responsive padding
     borderRadius: '8px',
-    width: 'auto',
-    maxWidth: '90vw',             // prevents overflow on small screens
-    wordBreak: 'break-word',      // wraps long text
+    width: 'fit-content',
+    maxWidth: 'min(90vw, 400px)', // responsive max width
+    wordBreak: 'break-word',
     boxSizing: 'border-box',
+    margin: 'clamp(8px, 2vw, 16px)', // responsive margin
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    textAlign: 'center',
   },
+  bodyStyle: {
+    margin: 0, // removes default margin
+  }
 });
-
 
   setTimeout(() => {
     window.location.href = 'https://rzp.io/rzp/i0UTs7e';
