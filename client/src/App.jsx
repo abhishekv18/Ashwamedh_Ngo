@@ -53,6 +53,7 @@ import AdminLoginPage from './admin/AdminLoginPage';
 import ProtectedRoute from './ProtectedRoute';
 import AdminDashboard from './admin/AdminDashboard';
 import GalleryPage from './resources/gallery/Gallery';
+import Success from './Success';
 
 
 function App() {
@@ -87,6 +88,7 @@ function App() {
                   </ProtectedRoute>
                  } />
                  <Route path="/resources/gallery" element={<GalleryPage/>} />
+                  <Route path="/success" element={<Success/>} />
 {/*          
           <Route path="/what-we-do" element={<WhatWeDoPage />} />
           <Route path="/what-we-do/programs" element={<Programs />} />

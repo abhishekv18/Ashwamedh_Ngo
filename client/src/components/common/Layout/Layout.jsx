@@ -3,15 +3,16 @@ import { motion } from 'framer-motion';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ScrollToTopButton from '../../../ScrollToTopButton';
-import DonationPopup from '../../../DonationPopUp';
+
 import FloatingContactButton from '../../../FloatingContactButton';
 import FloatingWhatsAppButton from '../../../FloatingWhatsAppButton';
 import { useLocation } from 'react-router-dom';
+import DonationPopup from '../../../DonationPopup';
 
 const Layout = ({ children }) => {
   const location = useLocation();
 
-  const hideLayoutRoutes = ['/admin-login' , '/admin-dashboard']; // pages where we hide header & footer
+  const hideLayoutRoutes = ['/admin-login' , '/admin-dashboard','/success']; // pages where we hide header & footer
 
   const shouldHideLayout = hideLayoutRoutes.includes(location.pathname);
 
