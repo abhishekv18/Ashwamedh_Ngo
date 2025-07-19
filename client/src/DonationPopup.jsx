@@ -149,14 +149,17 @@
 
 // export default DonationPopup;
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { X, Heart, Users, BookOpen } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const DonationPopup = () => {
+  const navigate=useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
+
     const hasShownPopup = sessionStorage.getItem('donation-popup-shown');
     if (!hasShownPopup) {
       const timer = setTimeout(() => {
@@ -176,7 +179,7 @@ const DonationPopup = () => {
   };
 
   const handleDonate = () => {
-    console.log('Redirecting to donation page...');
+   navigate('/get-involved/donate');
     handleClose();
   };
 

@@ -1103,7 +1103,7 @@ const AboutUs = () => {
 
       {/* Document Modal */}
  {isModalOpen && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/80">
+  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/60">
     
     {/* Click-outside overlay */}
     <div 
