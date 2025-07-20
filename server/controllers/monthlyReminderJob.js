@@ -38,7 +38,7 @@ const mail = {
         <p style="font-size: 15px; color: #333;">If you’d like to contribute this month, click below:</p>
 
         <p style="margin: 20px 0;">
-          <a href=" www.ashwamedhfoundation.org/" 
+          <a href=" www.ashwamedhfoundation.org/get-involved/donate" 
              style="background-color: #28a745; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px;">
             Donate Now
           </a>
