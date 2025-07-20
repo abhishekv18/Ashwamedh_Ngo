@@ -60,7 +60,7 @@ const HomePage = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-orange-200 to-transparent opacity-50"></div>
           <MissionVision />
           {/* Heart icon for compassion */}
-          <div className="absolute top-8 left-8 text-2xl opacity-25" style={{color: '#00695C'}}>❤️</div>
+        
         </div>
         
         {/* Programs Section */}
@@ -68,7 +68,7 @@ const HomePage = () => {
           {/* <div className="h-px bg-gradient-to-r from-transparent via-gray-100 to-transparent"></div> */}
           <ProgramsOverview />
           {/* Hands icon for helping */}
-          <div className="absolute top-8 right-8 text-2xl opacity-30" style={{color: '#FF5722'}}>🤝</div>
+         
         </div>
         
         {/* Donate Section with subtle border */}
@@ -76,7 +76,7 @@ const HomePage = () => {
           <div className="h-2 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 opacity-60"></div>
           <DonateNowSection />
           {/* Hope icon */}
-          <div className="absolute top-12 left-8 text-2xl opacity-25 text-white">🌟</div>
+         
         </div>
         
         {/* Clean footer separator */}
