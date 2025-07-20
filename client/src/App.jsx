@@ -56,7 +56,10 @@ import GalleryPage from './resources/gallery/Gallery';
 import Success from './Success';
 
 
+
 function App() {
+ 
+
   return (
     <Router>
       <Layout>
