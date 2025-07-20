@@ -1219,33 +1219,9 @@ const causes = [
     qrCodeImage: "/public/images/logo/WhatsApp Image 2025-07-17 at 4.15.21 PM.jpeg"
   };
 
-  // const handleProceedToPayment = () => {
-  //   alert('Redirecting to secure Razorpay payment...');
-  //   window.location.href = 'https://rzp.io/rzp/i0UTs7e';
-  // };
+  
   const handleProceedToPayment = () => {
 
-// toast.info('Redirecting to secure Razorpay payment...', {
-//   position: 'top-center',
-//   autoClose: 1500,
-//   hideProgressBar: false,
-//   closeOnClick: true,
-//   pauseOnHover: false,
-//   draggable: true,
-//   progress: undefined,
-//   toastStyle: {
-//     backgroundColor: '#FFE0B2',   // light orange
-//     color: '#4E342E',             // dark text
-//     fontWeight: 'bold',
-//     fontSize: '14px',
-//     padding: '12px 16px',
-//     borderRadius: '8px',
-//     width: 'auto',
-//     maxWidth: '90vw',             // prevents overflow on small screens
-//     wordBreak: 'break-word',      // wraps long text
-//     boxSizing: 'border-box',
-//   },
-// });
 toast.info('Redirecting to secure Razorpay payment...', {
   position: 'top-center',
   autoClose: 1500,
@@ -1586,6 +1562,16 @@ const handleContinueToPayment = () => {
                     </div>
                   </div>
                 </div>
+                 <button
+    onClick={handleContinueToPayment}
+    className="floating-donate-btn py-2 px-3 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full mt-2 transition-all flex items-center gap-1.5"
+    style={{
+      background: 'linear-gradient(135deg, #FF5722 0%, #FF7043 100%)'
+    }}
+  >
+    <Heart size={18} />
+    Donate Now
+  </button>
               </div>
 
               {/* Cause Selection */}
@@ -1851,7 +1837,31 @@ const handleContinueToPayment = () => {
         </div>
       </div>
     </div>
+    
   );
+  <style jsx>{`
+  .floating-donate-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    animation: pulse 2s infinite;
+    border-radius: 50px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+`}</style>
 };
 
 export default DonatePage;
