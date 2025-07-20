@@ -683,37 +683,7 @@ const AboutUs = () => {
               </div>
             </div>
             
-            {/* <div className="relative mt-8 lg:mt-0">
-              <div className="relative group bg-gradient-to-br from-orange-100 via-orange-100 to-teal-100 rounded-3xl p-6 md:p-12 h-[400px] md:h-[500px] overflow-hidden shadow-2xl">
-                <img 
-                  src="/public/images/logo/1740195950066.jpg" 
-                  alt="Deepak Doddamani - Founder"
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 rounded-3xl transition-opacity duration-500 group-hover:opacity-70"
-                />
-
-                <div className="absolute top-4 right-4 md:top-6 md:right-6 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-orange-400 to-teal-400 bg-opacity-30 rounded-full flex items-center justify-center backdrop-blur-sm shadow-lg">
-                  <Heart className="h-6 w-6 md:h-8 md:w-8 text-teal-700" />
-                </div>
-                
-                <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-teal-400 to-orange-400 bg-opacity-30 rounded-full flex items-center justify-center backdrop-blur-sm shadow-lg">
-                  <Users className="h-8 w-8 md:h-10 md:w-10 text-orange-700" />
-                </div>
-
-                <div className="relative z-10 flex items-center justify-center h-full">
-                  <div className="text-center bg-white bg-opacity-95 rounded-3xl p-6 md:p-8 backdrop-blur-lg shadow-2xl max-w-xs md:max-w-sm
-                                  opacity-0 transform translate-y-6 scale-95
-                                  transition-all duration-700
-                                  group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 border border-orange-200">
-                    <div className="bg-gradient-to-br from-orange-500 to-teal-600 rounded-full p-4 md:p-6 mb-4 md:mb-6 mx-auto w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shadow-xl">
-                      <BookOpen className="h-8 w-8 md:h-10 md:w-10 text-white" />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2 md:mb-3">Since 2013</h3>
-                    <p className="text-gray-600 font-medium text-base md:text-lg">Founded by Deepak Doddamani</p>
-                    <p className="text-xs md:text-sm text-gray-500 mt-1 md:mt-2">Dedicated to child education and development</p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+         
             <div className="relative mt-8 lg:mt-0">
   <div className="relative group md:mt-5 bg-white rounded-3xl p-4 md:p-10 h-[400px] md:h-[480px] overflow-hidden shadow-lg border border-gray-200">
     
@@ -736,21 +706,7 @@ const AboutUs = () => {
     </div>
 
     {/* Center Hover Card */}
-    {/* <div className="relative z-10 flex items-center justify-center h-full">
-      <div className="text-center bg-white/90 rounded-2xl p-5 md:p-8 backdrop-blur-md shadow-md max-w-xs md:max-w-sm
-                      opacity-0 transform translate-y-6 scale-95
-                      transition-all duration-700 ease-out
-                      group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 border border-gray-200">
-        
-        <div className="bg-teal-600 rounded-full p-3 md:p-4 mb-4 md:mb-6 mx-auto w-14 h-14 md:w-16 md:h-16 flex items-center justify-center shadow-sm">
-          <BookOpen className="h-5 w-5 md:h-6 md:w-6 text-white" />
-        </div>
-
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-1 md:mb-2">Since 2013</h3>
-        <p className="text-gray-700 text-sm md:text-base font-medium">Founded by Deepak Doddamani</p>
-        <p className="text-xs md:text-sm text-gray-500 mt-1">Dedicated to child education and development</p>
-      </div>
-    </div> */}
+  
     <div className="relative z-10 flex items-center justify-center h-full">
   <div className="text-center bg-white/85 rounded-xl p-4 md:p-6 backdrop-blur-md shadow-md max-w-[250px] md:max-w-[300px]
                   opacity-0 transform translate-y-6 scale-95
@@ -1033,45 +989,7 @@ const AboutUs = () => {
 
     {/* Team Members Grid */}
 
-{/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-  {[
-    {
-      name: "Mohammed Shakil Ansari",
-      position: "Member",
-      image: "/public/images/logo/WhatsApp Image 2025-07-19 at 11.18.26 PM.jpeg"
-    },
-    {
-      name: "Abdul Hakim Ansari",
-      position: "Life Member",
-      image: "/public/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM (1).jpeg"
-    },
-    {
-      name: "Jitendra Patel",
-      position: "Life Member",
-      image: "/public/images/logo/WhatsApp Image 2025-07-20 at 12.11.38 AM.jpeg"
-    },
-    {
-      name: "Sneha Sharma",
-      position: "President",
-      image: "/public/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM.jpeg"
-    }
-  ].map((member, index) => (
-    <div
-      key={index}
-      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 border border-gray-200 flex flex-col"
-    >
-      <img
-        src={member.image}
-        alt={member.name}
-        className="w-full h-60 object-cover"
-      />
-      <div className="p-4 text-center flex-grow flex flex-col justify-center">
-        <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-        <p className="text-sm text-gray-600 mt-1">{member.position}</p>
-      </div>
-    </div>
-  ))}
-</div> */}
+
 <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
   {[
     {
