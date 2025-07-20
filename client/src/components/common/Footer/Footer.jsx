@@ -792,11 +792,11 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-[#212121]">
+      {/* <div className="bg-[#212121]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             
-            {/* Copyright */}
+           
             <div className="text-center md:text-left order-2 md:order-1">
               <p className="text-gray-400 text-sm">
                 © {currentYear} Ashwamedh Foundation. All rights reserved.
@@ -806,7 +806,7 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Legal Links */}
+           
             <div className="flex flex-wrap justify-center md:justify-end gap-2 md:gap-3 order-1 md:order-2">
               <p className="text-gray-400 text-sm whitespace-nowrap">
                 Made with ❤️ by Abhishek.
@@ -814,23 +814,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Certifications/Trust Badges */}
-          {/* <div className="mt-4 pt-4 border-t border-gray-700">
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-1 sm:space-y-0 sm:space-x-3 text-xs text-gray-500">
-              <div className="flex items-center space-x-1">
-                <Award className="h-4 w-4 text-orange-500 flex-shrink-0" />
-                <span>GuideStar India Verified</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Globe className="h-4 w-4 text-orange-500 flex-shrink-0" />
-                <span>UN SDG Partner</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Heart className="h-4 w-4 text-orange-500 flex-shrink-0" />
-                <span>Credibility Alliance Member</span>
-              </div>
-            </div>
-          </div> */}
+        
           <div className="mt-4 pt-4 border-t border-gray-700">
   <div className="flex flex-wrap justify-center items-center gap-2 text-xs text-gray-500">
     <div className="flex items-center space-x-1">
@@ -849,7 +833,54 @@ const Footer = () => {
 </div>
 
         </div>
+      </div> */}
+    {/* Bottom Bar */}
+<div className="bg-[#212121]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+
+      {/* Copyright and Policies */}
+      <div className="text-center md:text-left order-2 md:order-1">
+        <p className="text-gray-400 text-sm">
+          © {currentYear} Ashwamedh Foundation. All rights reserved.
+        </p>
+        <p className="text-gray-500 text-xs mt-1">
+          Registered NGO | Tax Exemption under 80G | FCRA Approved
+        </p>
+        <p className="text-gray-500 text-xs mt-1">
+          Terms & Conditions | Privacy Policy | Refund Policy
+        </p>
       </div>
+
+      {/* Credits */}
+      <div className="flex flex-wrap justify-center md:justify-end gap-2 md:gap-3 order-1 md:order-2">
+        <p className="text-gray-400 text-sm whitespace-nowrap">
+          Made with ❤️ by Abhishek.
+        </p>
+      </div>
+    </div>
+
+    {/* Certifications */}
+    <div className="mt-4 pt-4 border-t border-gray-700">
+      <div className="flex flex-wrap justify-center items-center gap-2 text-xs text-gray-500">
+        <div className="flex items-center space-x-1">
+          <Award className="h-4 w-4 text-orange-500 flex-shrink-0" />
+          <span>GuideStar India Verified</span>
+        </div>
+        <div className="flex items-center space-x-1">
+          <Globe className="h-4 w-4 text-orange-500 flex-shrink-0" />
+          <span>UN SDG Partner</span>
+        </div>
+        <div className="flex items-center space-x-1">
+          <Heart className="h-4 w-4 text-orange-500 flex-shrink-0" />
+          <span>Credibility Alliance Member</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </footer>
   );
 };

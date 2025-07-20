@@ -683,7 +683,7 @@ const AboutUs = () => {
               </div>
             </div>
             
-            <div className="relative mt-8 lg:mt-0">
+            {/* <div className="relative mt-8 lg:mt-0">
               <div className="relative group bg-gradient-to-br from-orange-100 via-orange-100 to-teal-100 rounded-3xl p-6 md:p-12 h-[400px] md:h-[500px] overflow-hidden shadow-2xl">
                 <img 
                   src="/public/images/logo/1740195950066.jpg" 
@@ -713,7 +713,63 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <div className="relative mt-8 lg:mt-0">
+  <div className="relative group md:mt-5 bg-white rounded-3xl p-4 md:p-10 h-[400px] md:h-[480px] overflow-hidden shadow-lg border border-gray-200">
+    
+    {/* Background Image - Dull with dark overlay */}
+    <img 
+      src="/public/images/logo/WhatsApp Image 2025-07-19 at 11.20.20 PM.jpeg" 
+      alt="Deepak Doddamani - Founder"
+      className="absolute inset-0 w-full h-full object-cover opacity-75 rounded-3xl transition-opacity duration-500 group-hover:opacity-70"
+    />
+    {/* <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent rounded-3xl backdrop-blur-sm" /> */}
+
+    {/* Top Icon */}
+    <div className="absolute top-4 right-4 md:top-5 md:right-5 w-10 h-10 md:w-12 md:h-12 bg-white/70 rounded-full flex items-center justify-center shadow-sm border border-gray-300">
+      <Heart className="h-4 w-4 md:h-5 md:w-5 text-teal-600 opacity-70" />
+    </div>
+    
+    {/* Bottom Icon */}
+    <div className="absolute bottom-4 left-4 md:bottom-5 md:left-5 w-10 h-10 md:w-12 md:h-12 bg-white/70 rounded-full flex items-center justify-center shadow-sm border border-gray-300">
+      <Users className="h-4 w-4 md:h-5 md:w-5 text-orange-600 opacity-70" />
+    </div>
+
+    {/* Center Hover Card */}
+    {/* <div className="relative z-10 flex items-center justify-center h-full">
+      <div className="text-center bg-white/90 rounded-2xl p-5 md:p-8 backdrop-blur-md shadow-md max-w-xs md:max-w-sm
+                      opacity-0 transform translate-y-6 scale-95
+                      transition-all duration-700 ease-out
+                      group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 border border-gray-200">
+        
+        <div className="bg-teal-600 rounded-full p-3 md:p-4 mb-4 md:mb-6 mx-auto w-14 h-14 md:w-16 md:h-16 flex items-center justify-center shadow-sm">
+          <BookOpen className="h-5 w-5 md:h-6 md:w-6 text-white" />
+        </div>
+
+        <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-1 md:mb-2">Since 2013</h3>
+        <p className="text-gray-700 text-sm md:text-base font-medium">Founded by Deepak Doddamani</p>
+        <p className="text-xs md:text-sm text-gray-500 mt-1">Dedicated to child education and development</p>
+      </div>
+    </div> */}
+    <div className="relative z-10 flex items-center justify-center h-full">
+  <div className="text-center bg-white/85 rounded-xl p-4 md:p-6 backdrop-blur-md shadow-md max-w-[250px] md:max-w-[300px]
+                  opacity-0 transform translate-y-6 scale-95
+                  transition-all duration-700 ease-out
+                  group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 border border-gray-100">
+    
+    <div className="bg-teal-500 rounded-full p-2 md:p-3 mb-3 md:mb-4 mx-auto w-12 h-12 md:w-14 md:h-14 flex items-center justify-center shadow-sm">
+      <BookOpen className="h-5 w-5 md:h-6 md:w-6 text-white" />
+    </div>
+
+    <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-1">Since 2013</h3>
+    <p className="text-gray-700 text-sm md:text-base font-medium">Founded by Deepak Doddamani</p>
+    <p className="text-xs md:text-sm text-gray-500 mt-1">Dedicated to child education and development</p>
+  </div>
+</div>
+
+  </div>
+</div>
+
           </div>
         </div>
       </section>
@@ -976,66 +1032,81 @@ const AboutUs = () => {
     </div>
 
     {/* Team Members Grid */}
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+{/* <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
   {[
-    {
-      name: "Deepak Doddamani",
-      position: "Founder & Life Member",
-      image: "/images/team/deepak.jpg"
-    },
-    {
-      name: "Kiran Jitendra Patel",
-      position: "Member",
-      image: "/images/team/kiran.jpg"
-    },
     {
       name: "Mohammed Shakil Ansari",
       position: "Member",
-      image: "/images/team/shakil.jpg"
+      image: "/public/images/logo/WhatsApp Image 2025-07-19 at 11.18.26 PM.jpeg"
     },
     {
       name: "Abdul Hakim Ansari",
       position: "Life Member",
-      image: "/images/team/hakim.jpg"
+      image: "/public/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM (1).jpeg"
     },
     {
       name: "Jitendra Patel",
       position: "Life Member",
-      image: "/images/team/jitendra.jpg"
-    },
-    {
-      name: "Praful Rane",
-      position: "Life Member",
-      image: "/images/team/praful.jpg"
-    },
-    {
-      name: "Govind Dodamani",
-      position: "Life Member",
-      image: "/images/team/govind.jpg"
-    },
-    {
-      name: "Monika Singh",
-      position: "Life Member",
-      image: "/images/team/monika.jpg"
+      image: "/public/images/logo/WhatsApp Image 2025-07-20 at 12.11.38 AM.jpeg"
     },
     {
       name: "Sneha Sharma",
       position: "President",
-      image: "/images/team/sneha.jpg"
+      image: "/public/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM.jpeg"
     }
   ].map((member, index) => (
     <div
       key={index}
-      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 border border-gray-200"
+      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 border border-gray-200 flex flex-col"
     >
       <img
         src={member.image}
         alt={member.name}
-        className="w-full h-48 object-cover"
+        className="w-full h-60 object-cover"
       />
-      <div className="p-3 text-center">
+      <div className="p-4 text-center flex-grow flex flex-col justify-center">
         <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
         <p className="text-sm text-gray-600 mt-1">{member.position}</p>
+      </div>
+    </div>
+  ))}
+</div> */}
+<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  {[
+    {
+      name: "Mohammed Shakil Ansari",
+      position: "Member",
+      image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.26 PM.jpeg"
+    },
+    {
+      name: "Abdul Hakim Ansari",
+      position: "Life Member",
+      image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM (1).jpeg"
+    },
+    {
+      name: "Jitendra Patel",
+      position: "Life Member",
+      image: "/images/logo/WhatsApp Image 2025-07-20 at 12.11.38 AM.jpeg"
+    },
+    {
+      name: "Sneha Sharma",
+      position: "President",
+      image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM.jpeg"
+    }
+  ].map((member, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-200 flex flex-col"
+    >
+      <img
+        src={member.image}
+        alt={member.name}
+         className="w-full h-60 object-cover object-[center_30%]"
+      />
+      <div className="p-4 text-center">
+        <h3 className="text-base md:text-lg font-semibold text-gray-900">{member.name}</h3>
+        <p className="text-sm text-gray-600">{member.position}</p>
       </div>
     </div>
   ))}

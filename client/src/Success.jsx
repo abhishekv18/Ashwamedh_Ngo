@@ -358,8 +358,23 @@
 import { useEffect } from "react";
 import { CheckCircle, Heart, Users, Home, Mail, Calendar, BookOpen, HeartPulse, Apple } from "lucide-react";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Success = () => {
+
+
+      const navigate = useNavigate();
+  const user = useSelector((state) => state.auth.user);
+  
+  useEffect(() => {
+    if (user) {
+      navigate("/admin-dashboard");
+    }
+  }, [user]);
+
+
+
   useEffect(() => {
     toast.success("🎉 Thank you for your generous contribution!", {
       position: "top-center",
