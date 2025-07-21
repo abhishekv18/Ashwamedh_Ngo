@@ -232,7 +232,7 @@ const DonationPopup = () => {
         </div>
 
         {/* Body */}
-        <div className="p-4 sm:p-5">
+        <div className="p-5 sm:p-6">
           {/* Stats */}
           <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
             <div className="text-center p-2 bg-orange-50 rounded-lg border border-orange-100">
