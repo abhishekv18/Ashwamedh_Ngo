@@ -17,29 +17,29 @@ const Layout = ({ children }) => {
   const shouldHideLayout = hideLayoutRoutes.includes(location.pathname);
 
   
-  useEffect(() => {
-    const handlePageShow = (event) => {
-      // If the page was restored from the bfcache, reload it
-      if (event.persisted) {
-        window.location.reload();
-      }
-    };
+  // useEffect(() => {
+  //   const handlePageShow = (event) => {
+  //     // If the page was restored from the bfcache, reload it
+  //     if (event.persisted) {
+  //       window.location.reload();
+  //     }
+  //   };
 
-    window.addEventListener("pageshow", handlePageShow);
+  //   window.addEventListener("pageshow", handlePageShow);
 
-    return () => {
-      window.removeEventListener("pageshow", handlePageShow);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("pageshow", handlePageShow);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    const navType = performance.getEntriesByType("navigation")[0]?.type;
+  // useEffect(() => {
+  //   const navType = performance.getEntriesByType("navigation")[0]?.type;
 
-    if (navType === "back_forward") {
-      // Backup: also force reload if navigation type is back/forward
-      window.location.reload();
-    }
-  }, [location.pathname]);
+  //   if (navType === "back_forward") {
+  //     // Backup: also force reload if navigation type is back/forward
+  //     window.location.reload();
+  //   }
+  // }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-gray-50 font-inter">
