@@ -609,7 +609,7 @@ const ApproachMethodology = () => {
     </p>
   </div>
 
-  <div className="w-full bg-[#yourBgColor] py-8 px-4 rounded-xl shadow-md">
+  <div className="w-full bg-[#yourBgColor] py-8 px-4">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-white text-center md:text-left">
       <div className="text-sm md:text-base">
         <span className="font-semibold">📘 Personalized Learning</span>
