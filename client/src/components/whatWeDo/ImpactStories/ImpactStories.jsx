@@ -473,7 +473,7 @@ const ImpactStories = () => {
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
 
   const impactStats = [
-    { icon: Users, number: "5000+", label: "Children Impacted", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
+    { icon: Users, number: "5,000+", label: "Children Impacted", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
     { icon: BookOpen, number: "15", label: "Years of Service", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },
     { icon: GraduationCap, number: "85%", label: "Academic Improvement", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
     { icon: Award, number: "4+", label: "Programs Conducted", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },
@@ -869,7 +869,7 @@ const ImpactStories = () => {
           <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-3xl mx-auto">
             Your support can transform lives and create lasting impact in communities across Maharashtra
           </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-6">
+          {/* <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-6">
             <Link to='/get-involved/donate'>
                <button className="bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-orange-300 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
               <Heart className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
@@ -889,7 +889,30 @@ const ImpactStories = () => {
             </button>
            </Link>
            
-          </div>
+          </div> */}
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-4 lg:space-x-6">
+  <Link to="/get-involved/donate">
+    <button className="bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-orange-300 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
+      <Heart className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+      Donate Today
+    </button>
+  </Link>
+
+  <Link to="/get-involved/volunteer">
+    <button className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
+      <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+      Become a Volunteer
+    </button>
+  </Link>
+
+  <Link to="/get-involved/contact">
+    <button className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base">
+      <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+      Learn More
+    </button>
+  </Link>
+</div>
+
         </div>
       </section>
     </div>
