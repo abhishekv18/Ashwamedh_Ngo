@@ -448,7 +448,7 @@ const Sidebar = () => (
       <div className="p-6 border-b border-white/10">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-lg overflow-hidden">
-            <img src="/public/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" alt="Ashwamedh Logo" className="w-full h-full object-cover" />
+            <img src="/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" alt="Ashwamedh Logo" className="w-full h-full object-cover" />
           </div>
           <div>
             <h1 className="text-xl font-bold text-white">Ashwamedh</h1>

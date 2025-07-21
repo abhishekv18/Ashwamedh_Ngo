@@ -311,7 +311,7 @@ const ProgramsOverview = () => {
       title: 'Project Ankur',
       subtitle: 'Seeds of Education - Building Strong Foundations',
       description: 'Following the "catch them young" philosophy, Project Ankur focuses on strengthening educational foundations for students up to 7th standard. We address the critical gap where students reach 8th grade without basic reading and writing skills, ensuring every child has a solid academic foundation.',
-      image: '/images/logo/vecteezy_students-celebrating-successfully-finished-project_11615496.jpg',
+      image: '/science/photo-1574097656146-0b43b7660cb6.avif',
       icon: <BookOpen className="w-6 h-6 sm:w-8 sm:h-8" />,
       color: 'from-[#FF5722] to-[#FF7043]',
       bgColor: 'bg-gradient-to-br from-[#FFF3E0] to-[#FFF8F5]',
