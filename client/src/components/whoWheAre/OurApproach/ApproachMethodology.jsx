@@ -571,21 +571,8 @@ const ApproachMethodology = () => {
         A focused, hands-on approach to ensure every child and community flourishes.
       </p>
 
-      {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-left text-white max-w-4xl mx-auto">
-        <div className="text-sm sm:text-base">
-          <span className="font-semibold">📘 Personalized Learning</span>
-          <p className="opacity-90 mt-2 mb-2">Adapting to each child's pace and curiosity.</p>
-        </div>
-        <div className="text-sm sm:text-base">
-          <span className="font-semibold">🤝 Community First</span>
-          <p className="opacity-90 mt-2 mb-2">Empowering locals for long-term sustainability.</p>
-        </div>
-        <div className="text-sm sm:text-base">
-          <span className="font-semibold">🌱 Wellbeing Focused</span>
-          <p className="opacity-90 mt-2 mb-2">Supporting education, health & emotional growth.</p>
-        </div>
-      </div> */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left text-white max-w-5xl mx-auto px-4">
+   
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left text-white max-w-5xl mx-auto px-4">
   <div className="text-sm md:text-base">
     <span className="font-semibold">📘 Personalized Learning</span>
     <p className="opacity-90 mt-2">Adapting to each child's pace and curiosity.</p>
@@ -599,6 +586,26 @@ const ApproachMethodology = () => {
   <div className="text-sm md:text-base">
     <span className="font-semibold">🌱 Wellbeing Focused</span>
     <p className="opacity-90 mt-2">Supporting education, health & emotional growth.</p>
+  </div>
+</div> */}
+<div className="w-full bg-[#yourBgColor] py-8 px-4">
+  <div className="flex justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left text-white max-w-5xl w-full">
+      <div className="text-sm md:text-base">
+        <span className="font-semibold">📘 Personalized Learning</span>
+        <p className="opacity-90 mt-2">Adapting to each child's pace and curiosity.</p>
+      </div>
+
+      <div className="text-sm md:text-base">
+        <span className="font-semibold">🤝 Community First</span>
+        <p className="opacity-90 mt-2">Empowering locals for long-term sustainability.</p>
+      </div>
+
+      <div className="text-sm md:text-base">
+        <span className="font-semibold">🌱 Wellbeing Focused</span>
+        <p className="opacity-90 mt-2">Supporting education, health & emotional growth.</p>
+      </div>
+    </div>
   </div>
 </div>
 

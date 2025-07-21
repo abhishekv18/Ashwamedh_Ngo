@@ -384,7 +384,7 @@ const AdminLoginPage = () => {
       </header>
 
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row min-h-screen pt-16">
+      <div className="flex flex-col lg:flex-row min-h-screen pt-10 lg:pt-12">
         {/* Left Section (Image) */}
         <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-black bg-opacity-20" />
