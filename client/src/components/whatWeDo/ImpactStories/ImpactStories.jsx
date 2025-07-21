@@ -853,7 +853,7 @@ const ImpactStories = () => {
         </div>
       </section>
 
-      <section className="relative py-12 sm:py-16 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90 text-white z-10 overflow-hidden">
+      <section className="relative py-12 sm:py-14 md:16 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90 text-white z-10 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 

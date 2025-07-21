@@ -501,11 +501,11 @@ const testimonials = [
       </div>
 
       {/* CTA Section */}
-      <div className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[40vh] sm:h-[50vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(0, 105, 92, 0.95), rgba(0, 77, 64, 0.9)), url('/public/images/logo/istockphoto-2193713844-612x612.webp')`,
+            backgroundImage: `linear-gradient(to right, rgba(0, 105, 92, 0.95), rgba(0, 77, 64, 0.9)), url('/images/logo/istockphoto-2193713844-612x612.webp')`,
           }}
         ></div>
 

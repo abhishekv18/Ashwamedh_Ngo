@@ -938,7 +938,7 @@ const WhyChildren = () => {
 
           {/* Call to Action - Enhanced Responsive */}
           <div 
-            className="rounded-2xl sm:rounded-3xl mb-2 p-8 sm:p-12 md:p-16 text-center text-white shadow-2xl"
+            className="rounded-2xl sm:rounded-3xl mb-2 p-8 sm:p-12 md:p-14 lg:16 text-center text-white shadow-2xl"
             style={{
               backgroundImage: `
                  linear-gradient(135deg, rgba(251, 146, 60, 0.9), rgba(249, 115, 22, 0.9), rgba(234, 88, 12, 0.9)),

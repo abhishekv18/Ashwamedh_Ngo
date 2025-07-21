@@ -315,9 +315,9 @@ const ProgramsOverviewA = () => {
         </div>
       </div>
 
-      <div className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
+      <div className="relative py-12 sm:py-14 md:py-16 overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 opacity-55">
+        <div className="absolute inset-0 z-0 opacity-60">
           <img 
             src="/images/logo/gettyimages-535555239-612x612.jpg"
             alt="Background"

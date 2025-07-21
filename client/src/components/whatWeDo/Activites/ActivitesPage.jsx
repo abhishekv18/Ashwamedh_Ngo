@@ -711,7 +711,7 @@ const activities = [
       </div>
 
       {/* Call to Action */}
-      <div className="py-12 sm:py-16 bg-gradient-to-t from-orange-100 to-white">
+      <div className="py-12 sm:py-14 md:16 bg-gradient-to-t from-orange-100 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">Join Our Mission</h2>
