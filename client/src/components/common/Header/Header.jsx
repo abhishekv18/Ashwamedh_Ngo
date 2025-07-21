@@ -539,7 +539,7 @@ const Header = () => {
       {
         name: 'instagram',
         icon: Instagram,
-        link: ' https://www.instagram.com/ashwamedhfoundation',
+        link: 'https://www.instagram.com/ashwamedhfoundation',
         color: 'hover:bg-orange-600 hover:text-white'
       },
       {
@@ -775,13 +775,13 @@ const Header = () => {
               ))}
               
               {/* Mobile Contact Info */}
-              <div className="pt-3 sm:pt-4 border-t border-orange-200 mt-3 sm:mt-4 space-y-2 sm:space-y-3 bg-gradient-to-t from-orange-50 to-white rounded-lg p-2 sm:p-3">
+              {/* <div className="pt-3 sm:pt-4 border-t border-orange-200 mt-3 sm:mt-4 space-y-2 sm:space-y-3 bg-gradient-to-t from-orange-50 to-white rounded-lg p-2 sm:p-3">
                 <div className="flex items-center space-x-2 sm:space-x-3 text-gray-600">
                   <div className="p-1 sm:p-1.5 bg-orange-100 rounded-lg">
                     <Phone className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-orange-500" />
                   </div>
                   <div>
-                    <div className="font-medium text-gray-800 text-xs sm:text-sm">+91 9115 9115 00</div>
+                    <div className="font-medium text-gray-800 text-xs sm:text-sm">+91 8482969631</div>
                   </div>
                 </div>
                 
@@ -790,11 +790,11 @@ const Header = () => {
                     <Mail className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-orange-500" />
                   </div>
                   <div>
-                    <div className="font-medium text-gray-800 text-xs sm:text-sm break-all">info@ashwamedhfoundation.org</div>
+                    <div className="font-medium text-gray-800 text-xs sm:text-sm break-all">contact@ashwamedhfoundation.org</div>
                   </div>
                 </div>
                 
-                {/* Mobile Social Media */}
+               
                 <div className="flex items-center justify-center space-x-2 sm:space-x-3 pt-2 sm:pt-3">
                   {[
                   { name: 'facebook', icon: Facebook, color: 'hover:bg-orange-600 hover:text-white' },
@@ -814,7 +814,75 @@ const Header = () => {
                     );
                   })}
                 </div>
-              </div>
+              </div> */}
+              <div className="pt-3 sm:pt-4 border-t border-orange-200 mt-3 sm:mt-4 space-y-2 sm:space-y-3 bg-gradient-to-t from-orange-50 to-white rounded-lg p-2 sm:p-3">
+  {/* Phone */}
+  <div className="flex items-center space-x-2 sm:space-x-3 text-gray-600">
+    <div className="p-1 sm:p-1.5 bg-orange-100 rounded-lg">
+      <Phone className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-orange-500" />
+    </div>
+    <div>
+      <a href="tel:+918482969631" className="font-medium text-gray-800 text-xs sm:text-sm hover:underline">
+        +91 8482969631
+      </a>
+    </div>
+  </div>
+
+  {/* Email */}
+  <div className="flex items-center space-x-2 sm:space-x-3 text-gray-600">
+    <div className="p-1 sm:p-1.5 bg-orange-100 rounded-lg">
+      <Mail className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-orange-500" />
+    </div>
+    <div>
+      <a
+        href="mailto:contact@ashwamedhfoundation.org"
+        className="font-medium text-gray-800 text-xs sm:text-sm break-all hover:underline"
+      >
+        contact@ashwamedhfoundation.org
+      </a>
+    </div>
+  </div>
+
+  {/* Mobile Social Media */}
+  <div className="flex items-center justify-center space-x-2 sm:space-x-3 pt-2 sm:pt-3">
+    {[
+      {
+        name: 'facebook',
+        icon: Facebook,
+        url: 'https://www.facebook.com/ashwamedhfoundation'
+      },
+      {
+        name: 'twitter',
+        icon: Twitter,
+        url: 'https://x.com/AshwamedhNGO'
+      },
+      {
+        name: 'instagram',
+        icon: Instagram,
+        url: 'https://www.instagram.com/ashwamedhfoundation'
+      },
+      {
+        name: 'linkedin',
+        icon: Linkedin,
+        url: 'https://www.linkedin.com/company/ashwamedh-foundation/'
+      }
+    ].map((social) => {
+      const IconComponent = social.icon;
+      return (
+        <a
+          key={social.name}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-7 h-7 sm:w-8 sm:h-8 hover:bg-orange-600 hover:text-white rounded-full flex items-center justify-center text-orange-500 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+        >
+          <IconComponent className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+        </a>
+      );
+    })}
+  </div>
+</div>
+
             </div>
           </div>
         </div>
