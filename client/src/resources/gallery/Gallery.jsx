@@ -966,7 +966,7 @@ const GalleryPage = () => {
 
       {/* Professional Compact Modal */}
       {isModalOpen && selectedImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 backdrop-blur-sm p-4">
           <div className="relative max-w-4xl w-full max-h-[90vh]">
             {/* Header */}
             <div className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/50 to-transparent p-4">
