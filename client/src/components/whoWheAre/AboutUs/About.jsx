@@ -1033,7 +1033,7 @@ const AboutUs = () => {
   </div>
 </section>
       {/* News & PR */}
-      <section className="py-10 md:py-16 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 text-white relative overflow-hidden">
+      <section className="py-10 md:py-14 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 hidden md:block">
           <div className="absolute top-8 left-8 md:top-10 md:left-10 w-24 h-24 md:w-32 md:h-32 bg-white bg-opacity-10 rounded-full animate-pulse"></div>
           <div className="absolute bottom-16 right-16 md:bottom-20 md:right-20 w-20 h-20 md:w-24 md:h-24 bg-orange-400 bg-opacity-20 rounded-full animate-pulse delay-700"></div>
@@ -1057,7 +1057,7 @@ const AboutUs = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-10 md:py-16 relative overflow-hidden text-white">
+      <section className="py-10 md:py-14 relative overflow-hidden text-white">
         <div className="absolute inset-0 z-0 opacity-60">
           <img 
             src="/images/logo/gettyimages-535555239-612x612.jpg"

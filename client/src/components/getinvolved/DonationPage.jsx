@@ -1456,7 +1456,7 @@ const handleContinueToPayment = () => {
       <div 
         className="relative py-12 md:py-20 px-4 text-white overflow-hidden"
         style={{
-          backgroundImage: `url('/public/images/logo/istockphoto-1252924066-612x612.webp')`,
+          backgroundImage: `url('/images/logo/istockphoto-1252924066-612x612.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

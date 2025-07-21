@@ -953,7 +953,7 @@ const ProjectAnkur = () => {
       </section>
 
       {/* Mission Statement */}
-      <div className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-50 to-gray-100">
+      <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-orange-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 sm:space-y-8">
             <div className="bg-gradient-to-r from-primary to-accent-gold p-4 sm:p-5 md:p-6 rounded-full w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto flex items-center justify-center shadow-xl">
@@ -971,7 +971,7 @@ const ProjectAnkur = () => {
 
       {/* Current Projects */}
       <div className="space-y-0">
-        <div className="text-center py-12 sm:py-16 bg-white">
+        <div className="text-center py-12 sm:py-14 bg-white">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Current Projects</h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
             Active initiatives making measurable impact in students' lives and communities
@@ -985,7 +985,7 @@ const ProjectAnkur = () => {
 
       {/* Future Projects */}
       <div className="space-y-0">
-        <div className="text-center py-12 sm:py-16 bg-white">
+        <div className="text-center py-12 sm:py-14 bg-white">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Future Projects</h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
             Innovative upcoming initiatives expanding our reach and community impact
@@ -995,7 +995,7 @@ const ProjectAnkur = () => {
         <FutureProjectSection project={futureProject} />
       </div>
 
-      <div className="relative py-12 sm:py-16 md:py-20 text-white overflow-hidden">
+      <div className="relative py-12 sm:py-14 md:py-16 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img

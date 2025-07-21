@@ -212,7 +212,7 @@ const DonationPopup = () => {
         {/* Header with Background Image + Gradient */}
         <div className="relative bg-gradient-to-br from-orange-500 via-orange-600 to-red-500 text-white p-5 rounded-t-2xl overflow-hidden">
           <img
-            src="/public/images/logo/istockphoto-1252924066-612x612.webp" // Replace with actual path
+            src="/images/logo/istockphoto-1252924066-612x612.webp" // Replace with actual path
             alt="Banner"
             className="absolute inset-0 w-full h-full object-cover opacity-20"
           />

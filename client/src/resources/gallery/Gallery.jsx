@@ -780,7 +780,7 @@ const GalleryPage = () => {
       <section className="relative text-white py-3 sm:py-8 md:py-10 lg:py-14 xl:py-18 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/public/images/logo/istockphoto-475212730-612x612.webp"
+            src="/images/logo/istockphoto-475212730-612x612.webp"
             alt="Gallery Background"
             className="w-full h-full object-cover object-center opacity-50 sm:opacity-60"
           />
@@ -1105,9 +1105,9 @@ const GalleryPage = () => {
             {[
               { value: '4', label: 'Active Projects', icon: Target },
               { value: '2', label: 'Centers', icon: MapPin },
-              { value: `${allPhotos.length}+`, label: 'Photos', icon: Sparkles },
-              { value: '500+', label: 'Lives Impacted', icon: Heart },
-              { value: '10+', label: 'Team Members', icon: Users },
+              { value: `${allPhotos.length}`, label: 'Photos', icon: Sparkles },
+              { value: '5000+', label: 'Lives Impacted', icon: Heart },
+              { value: '20+', label: 'Team Members', icon: Users },
               { value: '∞', label: 'Hope Created', icon: Award }
             ].map((stat, index) => (
               <div

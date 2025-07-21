@@ -387,7 +387,7 @@ const testimonials = [
       </div>
 
       {/* Why Volunteer Section */}
-      <div className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-50 to-white">
+      <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Why Choose Us?</h2>
@@ -440,7 +440,7 @@ const testimonials = [
       </div>
 
       {/* Volunteer Opportunities */}
-      <div className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-50 to-white">
+      <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Impact Areas</h2>
@@ -469,7 +469,7 @@ const testimonials = [
       </div>
 
       {/* Testimonials */}
-      <div className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-50 to-white">
+      <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Volunteer Stories</h2>
