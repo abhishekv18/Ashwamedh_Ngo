@@ -111,11 +111,24 @@ export const login = async(req,res)=>{
             email: user.email,
         }
 
-        return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' }).json({
-            message: 'Welcome back Admin',
-            success: true,
-             user,
-        })
+        // return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' }).json({
+        //     message: 'Welcome back Admin',
+        //     success: true,
+        //      user,
+        // })
+          return res
+      .status(200)
+      .cookie("token", token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'None',
+        maxAge: 1 * 24 * 60 * 60 * 1000, // 1 day
+      })
+      .json({
+        message: 'Welcome back Admin',
+        success: true,
+        user,
+      });
     } catch (error) {
         console.log(error);
     }
@@ -124,10 +137,19 @@ export const login = async(req,res)=>{
 
 export const logout = async (req, res) => {
     try {
-        return res.status(200).cookie("token", "", { maxAge: 0 }).json({
-            message: "Logged out successfully.",
-            success: true
-        })
+        // return res.status(200).cookie("token", "", { maxAge: 0 }).json({
+        //     message: "Logged out successfully.",
+        //     success: true
+        // })
+         res.clearCookie("token", {
+      httpOnly: true,
+      secure: true,       // Must match login cookie
+      sameSite: "None",   // Must match login cookie
+    });
+        return res.status(200).json({
+      message: "Logged out successfully.",
+      success: true,
+    });
     } catch (error) {
         console.log(error);
     }
