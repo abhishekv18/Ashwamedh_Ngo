@@ -604,7 +604,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Organization Info */}
-            {/* <div className="sm:col-span-2 lg:col-span-1">
+            <div className="sm:col-span-2 lg:col-span-1">
               <div className="mb-5">
                 <img 
                   src="/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" 
@@ -653,62 +653,8 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-            </div> */}
-<div className="sm:col-span-2 lg:col-span-1">
-  <div className="mb-5">
-    {/* Flex container for logo and name */}
-    <div className="flex items-center space-x-3 mb-3">
-      <img 
-        src="/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" 
-        alt="Ashwamedh Foundation" 
-        className="h-12 w-auto"
-      />
-      <h3 className="text-lg font-bold text-white">Ashwamedh Foundation</h3>
-    </div>
+            </div>
 
-    <p className="text-gray-400 text-sm leading-relaxed">
-      Empowering children and communities through education, healthcare, and sustainable development programs. Building a brighter future, one child at a time.
-    </p>
-  </div>
-
-  {/* Contact Information */}
-  <div className="space-y-2">
-    <div className="flex items-start space-x-2">
-      <MapPin className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
-      <div className="text-sm text-gray-400">
-        <a
-          href="https://www.google.com/maps/search/?q=Gala+No.+7161/1-2,+Vasai+Rd+E,+near+Manicha+Pada,+Pelhar,+Maharashtra+401208"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-orange-500 transition-colors duration-200"
-        >
-          Gala No. 7161/1-2, Vasai Rd E, near Manicha Pada, Pelhar, Maharashtra 401208
-        </a>
-      </div>
-    </div>
-
-    <div className="flex items-start space-x-2">
-      <Phone className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
-      <div className="text-sm text-gray-400">
-        <a href="tel:+918482969631" className="hover:text-orange-500 transition-colors duration-200">
-          +91 8482969631
-        </a>
-      </div>
-    </div>
-
-    <div className="flex items-start space-x-2">
-      <Mail className="h-5 w-5 text-orange-500 mt-0.5 flex-shrink-0" />
-      <div className="text-sm text-gray-400">
-        <a 
-          href="mailto:contact@ashwamedhfoundation.org" 
-          className="break-all hover:text-orange-500 transition-colors duration-200"
-        >
-          contact@ashwamedhfoundation.org
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
 
             {/* Quick Links */}
             <div className="sm:col-span-1">
