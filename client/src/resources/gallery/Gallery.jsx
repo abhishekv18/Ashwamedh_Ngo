@@ -1093,7 +1093,7 @@ const GalleryPage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90"></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 sm:py-18 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-14 sm:py-16 text-white">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-2 drop-shadow-md">Our Impact in Numbers</h3>
             <p className="text-lg text-teal-100 drop-shadow-sm">
@@ -1106,13 +1106,13 @@ const GalleryPage = () => {
               { value: '4', label: 'Active Projects', icon: Target },
               { value: '2', label: 'Centers', icon: MapPin },
               { value: `${allPhotos.length}`, label: 'Photos', icon: Sparkles },
-              { value: '5000+', label: 'Lives Impacted', icon: Heart },
+              { value: '5,000+', label: 'Lives Impacted', icon: Heart },
               { value: '20+', label: 'Team Members', icon: Users },
               { value: '∞', label: 'Hope Created', icon: Award }
             ].map((stat, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur rounded-lg p-4 text-center hover:bg-white/20 transition-colors"
+                className="bg-white/10 backdrop-blur rounded-lg p-3 text-center hover:bg-white/20 transition-colors"
               >
                 <div className="flex justify-center mb-2">
                   <stat.icon size={24} className="text-orange-200" />
