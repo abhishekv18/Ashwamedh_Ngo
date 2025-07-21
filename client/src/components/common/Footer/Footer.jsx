@@ -463,6 +463,7 @@ import { setLoadi, setSubscribe } from '../../../redux/subscribeSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const isLoading = useSelector((state) => state.subscribe.loadi);
@@ -765,9 +766,12 @@ const Footer = () => {
               <div className="bg-gradient-to-r from-orange-600/20 to-orange-500/20 border border-orange-500/30 rounded-lg p-3 mb-4">
                 <h5 className="text-orange-400 font-semibold mb-1 text-sm">Support Our Cause</h5>
                 <p className="text-gray-400 text-sm mb-2">Your donation can change a child's life forever.</p>
+                <Link to='/get-involved/donate'>
                 <button className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm">
                   Donate Now
                 </button>
+                </Link>
+                
               </div>
 
               {/* Social Media Links */}
