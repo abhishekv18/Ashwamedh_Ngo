@@ -529,7 +529,7 @@ const Success = () => {
                   50% tax exemption under Section 80G. Retain this receipt for your tax filings.
                 </p>
                 <div className="text-orange-600 font-medium text-xs md:text-sm">
-                  Reg No: AAITA1234M | PAN: AAAAA1234A
+                  Reg No: AAETA2072LF20221 | PAN: AAETA2072L
                 </div>
               </div>
               
