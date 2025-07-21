@@ -902,7 +902,7 @@ const handleInputChange = (e) => {
                 {/* Preferred Contact Method */}
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-3">
-                    Preferred Contact Method
+                    Preferred Response Method
                   </label>
                   <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
                     <label className="flex items-center">
