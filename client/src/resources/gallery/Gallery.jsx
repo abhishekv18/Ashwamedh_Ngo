@@ -804,7 +804,7 @@ const GalleryPage = () => {
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-xs xs:max-w-lg sm:max-w-2xl mx-auto px-2 sm:px-0 mb-1">
             <div className="flex items-center justify-center gap-1.5 sm:gap-2 bg-white/10 text-orange-100 backdrop-blur rounded-lg py-2.5 sm:py-3 px-3 sm:px-4 shadow transition-transform hover:scale-105 duration-300">
               <Sparkles size={16} className="sm:w-[18px] sm:h-[18px] text-white flex-shrink-0" />
-              <span className="font-medium text-white text-sm sm:text-base whitespace-nowrap">{allPhotos.length}+ Photos</span>
+              <span className="font-medium text-white text-sm sm:text-base whitespace-nowrap">{allPhotos.length} Photos</span>
             </div>
             <div className="flex items-center justify-center gap-1.5 sm:gap-2 bg-white/10 text-orange-100 backdrop-blur rounded-lg py-2.5 sm:py-3 px-3 sm:px-4 shadow transition-transform hover:scale-105 duration-300">
               <Award size={16} className="sm:w-[18px] sm:h-[18px] text-orange-200 flex-shrink-0" />
@@ -918,7 +918,7 @@ const GalleryPage = () => {
                         src={image.url}
                         alt={image.title}
                         className={`w-full object-cover group-hover:scale-105 transition-transform duration-500 ${
-                          viewMode === 'grid' ? 'h-44' : 'h-56'
+                          viewMode === 'grid' ? 'h-48' : 'h-60'
                         }`}
                         loading="lazy"
                       />
@@ -975,12 +975,12 @@ const GalleryPage = () => {
                   <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
                     {currentImageIndex + 1} / {filteredImages.length}
                   </div>
-                  {selectedImage.featured && (
+                  {/* {selectedImage.featured && (
                     <div className="bg-orange-500 rounded-full px-2 py-1 text-white text-xs font-medium flex items-center gap-1">
                       <Star size={10} fill="currentColor" />
                       Featured
                     </div>
-                  )}
+                  )} */}
                 </div>
                 <div className="flex items-center gap-2">
                   <button
@@ -1093,15 +1093,15 @@ const GalleryPage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90"></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-14 sm:py-16 text-white">
-          <div className="text-center mb-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:py-14 text-white">
+          <div className="text-center mb-10">
             <h3 className="text-3xl font-bold mb-2 drop-shadow-md">Our Impact in Numbers</h3>
             <p className="text-lg text-teal-100 drop-shadow-sm">
               Every photograph represents lives touched and communities transformed
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
             {[
               { value: '4', label: 'Active Projects', icon: Target },
               { value: '2', label: 'Centers', icon: MapPin },
