@@ -563,7 +563,7 @@ const testimonials = [
               style={{
                 backgroundImage: `
                   linear-gradient(to right, #F97316, #DC2626),
-                  url('/public/images/stories/istockphoto-1094582626-612x612.jpg'),
+                  url('/images/stories/istockphoto-1094582626-612x612.jpg'),
                   url("data:image/svg+xml,${encodeURIComponent(`
                     <svg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'>
                       <defs>

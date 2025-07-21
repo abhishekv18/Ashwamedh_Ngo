@@ -493,31 +493,31 @@ const ActivityCard = ({ icon: Icon, title, description, activities, images }) =>
 const ActivitiesPage = () => {
   // Mock images for children activities
  const educationalTripImages = [
-  "/public/education/IMG-20250624-WA0003.jpg",
-  "/public/education/IMG-20250624-WA0008.jpg",
-  "/public/education/IMG-20250624-WA0009.jpg",
-  "/public/education/IMG-20250624-WA0016.jpg"
+  "/education/IMG-20250624-WA0003.jpg",
+  "/education/IMG-20250624-WA0008.jpg",
+  "/education/IMG-20250624-WA0009.jpg",
+  "/education/IMG-20250624-WA0016.jpg"
 ];
 
 const daanUtsavImages = [
-  "/public/daanUtsav/IMG-20250624-WA0067.jpg",
-  "/public/daanUtsav/PXL_20241002_092136850.MP.jpg",
-  "/public/daanUtsav/PXL_20241006_111420623.MP.jpg",
-  "/public/daanUtsav/Screenshot_20250617-201520.png"
+  "/daanUtsav/IMG-20250624-WA0067.jpg",
+  "/daanUtsav/PXL_20241002_092136850.MP.jpg",
+  "/daanUtsav/PXL_20241006_111420623.MP.jpg",
+  "/daanUtsav/Screenshot_20250617-201520.png"
 ];
 
 const sportsImages = [
-  "/public/sports/DSC07454.JPG",
-  "/public/sports/DSC07763.JPG",
-  "/public/sports/WhatsApp Image 2025-06-29 at 1.35.05 PM.jpeg",
-  "/public/sports/WhatsApp Image 2025-06-29 at 1.36.02 PM.jpeg"
+  "/sports/DSC07454.JPG",
+  "/sports/DSC07763.JPG",
+  "/sports/WhatsApp Image 2025-06-29 at 1.35.05 PM.jpeg",
+  "/sports/WhatsApp Image 2025-06-29 at 1.36.02 PM.jpeg"
 ];
 
 const scienceExhibitionImages = [
-  "/public/science/WhatsApp Image 2025-06-29 at 1.38.29 PM.jpeg",
-  "/public/science/WhatsApp Image 2025-06-29 at 1.40.43 PM.jpeg",
-  "/public/science/WhatsApp Image 2025-06-29 at 1.43.18 PM.jpeg",
-  "/public/science/WhatsApp Image 2025-06-29 at 1.45.52 PM.jpeg"
+  "/science/WhatsApp Image 2025-06-29 at 1.38.29 PM.jpeg",
+  "/science/WhatsApp Image 2025-06-29 at 1.40.43 PM.jpeg",
+  "/science/WhatsApp Image 2025-06-29 at 1.43.18 PM.jpeg",
+  "/science/WhatsApp Image 2025-06-29 at 1.45.52 PM.jpeg"
 ];
 
 const activities = [
@@ -585,7 +585,7 @@ const activities = [
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0 opacity-60">
           <img 
-            src="/public/images/projects/istockphoto-488209444-612x612.jpg"
+            src="/images/projects/istockphoto-488209444-612x612.jpg"
             alt="Activities Background"
             className="w-full h-full object-cover"
           />
@@ -673,7 +673,7 @@ const activities = [
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0 opacity-60">
           <img 
-            src="/public/images/logo/gettyimages-535555239-612x612.jpg"
+            src="/images/logo/gettyimages-535555239-612x612.jpg"
             alt="Impact Background"
             className="w-full h-full object-cover"
           />

@@ -186,7 +186,7 @@ const DonationPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5">
       {/* Backdrop */}
       <div
         className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${
@@ -232,9 +232,9 @@ const DonationPopup = () => {
         </div>
 
         {/* Body */}
-        <div className="p-5 sm:p-6">
+        <div className="p-4 sm:p-5">
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-5">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4">
             <div className="text-center p-2 bg-orange-50 rounded-lg border border-orange-100">
               <Users className="w-4 h-4 text-orange-600 mx-auto mb-1" />
               <div className="text-base font-bold text-gray-800">500+</div>
@@ -248,7 +248,7 @@ const DonationPopup = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center mb-5">
+          <div className="text-center mb-4">
             <p className="text-gray-700 text-xs sm:text-sm mb-3">
               Your <span className="font-semibold text-orange-600">₹100</span> can provide educational materials for a month
             </p>
@@ -273,7 +273,7 @@ const DonationPopup = () => {
           </button>
 
           {/* Trust Indicators */}
-          <div className="mt-4 pt-4 border-t border-gray-100">
+          <div className="mt-3 pt-3 border-t border-gray-100">
             <div className="flex items-center justify-center gap-3 text-[10px] sm:text-xs text-gray-600">
               <span className="flex items-center gap-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full" />

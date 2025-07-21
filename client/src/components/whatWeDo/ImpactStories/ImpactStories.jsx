@@ -492,7 +492,7 @@ const ImpactStories = () => {
       location: "Vasai, Maharashtra",
       program: "Educational Support Program",
       rating: 5,
-      image: "/public/images/stories/premium_photo-1723568666044-1b066e26b1fb.avif",
+      image: "/images/stories/premium_photo-1723568666044-1b066e26b1fb.avif",
       testimonial: "Ashwamedh Foundation changed my life completely. I was struggling with my studies due to financial constraints, but their support helped me excel in my 10th standard with 92% marks. Now I'm pursuing science stream with dreams of becoming a doctor.",
       achievement: "92% in 10th Standard"
     },
@@ -503,7 +503,7 @@ const ImpactStories = () => {
       location: "Virar, Maharashtra",
       program: "Skill Development Program",
       rating: 5,
-      image: "/public/images/stories/istockphoto-477224026-612x612.webp",
+      image: "/images/stories/istockphoto-477224026-612x612.webp",
       testimonial: "The skill development program at Ashwamedh Foundation equipped me with computer skills and soft skills. Today, I'm working as a junior developer in a tech company. The foundation didn't just educate me; they transformed my entire family's future.",
       achievement: "Secured Job as Junior Developer"
     },
@@ -514,7 +514,7 @@ const ImpactStories = () => {
       location: "Thane, Maharashtra",
       program: "Women Empowerment Initiative",
       rating: 5,
-      image: "/public/images/stories/istockphoto-1154707848-612x612.webp",
+      image: "/images/stories/istockphoto-1154707848-612x612.webp",
       testimonial: "Through Ashwamedh Foundation's women empowerment program, I learned leadership skills and gained confidence to speak in public. I'm now the head girl of my school and actively participate in community development activities.",
       achievement: "School Head Girl & Community Leader"
     },
@@ -525,7 +525,7 @@ const ImpactStories = () => {
       location: "Mumbai Suburban",
       program: "Higher Education Support",
       rating: 5,
-      image: "/public/images/stories/istockphoto-1154707848-612x612.webp",
+      image: "/images/stories/istockphoto-1154707848-612x612.webp",
       testimonial: "Without Ashwamedh Foundation's scholarship program, college education would have remained a dream. They supported me throughout my engineering course. I'm now placed in a multinational company and actively contribute back to the foundation.",
       achievement: "Engineering Graduate - MNC Placement"
     },
@@ -539,7 +539,7 @@ const ImpactStories = () => {
       location: "Vasai-Virar Region",
       duration: "2023-2024",
       beneficiaries: 250,
-      image: "/public/images/stories/istockphoto-2217164634-612x612.jpg",
+      image: "/images/stories/istockphoto-2217164634-612x612.jpg",
       challenge: "Limited access to digital education in rural communities, affecting students' competitiveness in the modern job market.",
       solution: "Established 5 digital learning centers with computers, tablets, and high-speed internet connectivity. Trained local teachers in digital pedagogy.",
       impact: "250 students gained digital literacy skills, 40 students secured jobs in IT sector, 85% improvement in academic performance.",
@@ -551,7 +551,7 @@ const ImpactStories = () => {
       location: "Mumbai & Thane Districts",
       duration: "2022-ongoing",
       beneficiaries: 1500,
-      image: "/public/images/stories/istockphoto-1130931397-612x612.webp",
+      image: "/images/stories/istockphoto-1130931397-612x612.webp",
       challenge: "Inadequate healthcare access in remote areas, leading to preventable diseases and mortality.",
       solution: "Deployed 3 mobile medical units with qualified doctors, nurses, and medical equipment. Conducted regular health camps and awareness programs.",
       impact: "1500+ patients treated, 50 critical cases referred to hospitals, 90% reduction in preventable diseases in target areas.",
@@ -563,7 +563,7 @@ const ImpactStories = () => {
       location: "Virar Industrial Belt",
       duration: "2023-2024",
       beneficiaries: 180,
-      image: "/public/images/stories/photo-1625111381887-458fce74a923.avif",
+      image: "/images/stories/photo-1625111381887-458fce74a923.avif",
       challenge: "High unemployment among youth due to lack of industry-relevant skills and job placement support.",
       solution: "Partnered with local industries to design skill training programs in manufacturing, IT, and service sectors. Included soft skills training and job placement assistance.",
       impact: "180 youth trained, 150 successfully placed in jobs, average salary increase of 200%, 95% job retention rate after 1 year.",
@@ -576,19 +576,19 @@ const ImpactStories = () => {
     {
       title: "From Street Child to Software Engineer",
       student: "Vikash Kumar",
-      image: "/public/images/stories/photo-1706088946925-55e4bfacfbdb.avif",
+      image: "/images/stories/photo-1706088946925-55e4bfacfbdb.avif",
       story: "Vikash was living on the streets when Ashwamedh Foundation found him at age 12. He joined our residential care program, completed his schooling with dedication, and discovered a passion for technology. Today, he works as a software engineer at a top tech company and mentors kids like him."
     },
     {
       title: "Breaking the Cycle of Poverty",
       student: "Meera Joshi",
-      image: "/public/images/stories/download.jpg",
+      image: "/images/stories/download.jpg",
       story: "Raised in a village where education wasn't encouraged for girls, Meera dreamed of something more. With our support, she pursued her studies and became the first graduate in her family. She now runs a community learning center impacting 100+ children."
     },
     {
       title: "Empowering Through Art",
       student: "Raj Patel",
-      image: "/public/images/stories/photo-1722239650159-1b9c2a80fb04.avif",
+      image: "/images/stories/photo-1722239650159-1b9c2a80fb04.avif",
       story: "Raj discovered his love for painting through our creative arts program. His talent quickly flourished, leading to gallery exhibitions across Mumbai. Today, he teaches art to underprivileged children, helping them express and heal through creativity."
     }
   ];
@@ -622,7 +622,7 @@ const ImpactStories = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/public/images/projects/photo-1659451336016-00d62d32f677.avif"
+            src="/images/projects/photo-1659451336016-00d62d32f677.avif"
             alt="Impact background"
             className="w-full h-full object-cover object-center opacity-75"
           />
@@ -857,7 +857,7 @@ const ImpactStories = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/public/images/logo/photo-1641538225752-2d996ea204d4.avif"
+            src="/images/logo/photo-1641538225752-2d996ea204d4.avif"
             alt="Impact background"
             className="w-full h-full object-cover opacity-10"
           />

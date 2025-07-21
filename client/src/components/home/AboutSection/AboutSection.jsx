@@ -623,7 +623,7 @@ const AboutSection = () => {
         <div className="relative mt-12 sm:mt-14 md:mt-16 overflow-hidden rounded-2xl sm:rounded-3xl">
           {/* Background Image */}
           <img
-            src="/public/images/logo/photo-1641538225752-2d996ea204d4.avif"
+            src="/images/logo/photo-1641538225752-2d996ea204d4.avif"
             alt="Impact Background"
             className="absolute inset-0 w-full h-full object-cover opacity-85 z-0"
           />

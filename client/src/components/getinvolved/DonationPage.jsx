@@ -1135,21 +1135,21 @@ const causes = [
     title: 'Education for All',
     description: 'Provide quality education and learning materials to underprivileged children.',
     impact: 'Your donation can provide school supplies for children for a month',
-    image: '/public/images/projects/photo-1569173675610-42c361a86e37.avif'
+    image: '/images/projects/photo-1569173675610-42c361a86e37.avif'
   },
   {
     id: 'healthcare',
     title: 'Child Healthcare',
     description: 'Ensure access to essential healthcare services and medical support.',
     impact: 'Your support can cover medical checkups for children',
-    image: '/public/images/projects/photo-1571847560189-8c2985584bee.avif'
+    image: '/images/projects/photo-1571847560189-8c2985584bee.avif'
   },
   {
     id: 'nutrition',
     title: 'Nutrition Program',
     description: 'Combat malnutrition by providing healthy meals and nutritional support.',
     impact: 'Your contribution can feed children nutritious meals',
-    image: '/public/images/projects/premium_photo-1682097863874-ae40dd878665.avif'
+    image: '/images/projects/premium_photo-1682097863874-ae40dd878665.avif'
   },
   // {
   //   id: 'women-empowerment',
@@ -1216,7 +1216,7 @@ const causes = [
     branch: "Kalina, Mumbai",
     ifsc: "CNRB0000116",
     upiId: "102773700004533@cnrb",
-    qrCodeImage: "/public/images/logo/WhatsApp Image 2025-07-17 at 4.15.21 PM.jpeg"
+    qrCodeImage: "/images/logo/WhatsApp Image 2025-07-17 at 4.15.21 PM.jpeg"
   };
 
   
@@ -1754,7 +1754,7 @@ const handleContinueToPayment = () => {
               <div className="relative p-4 md:p-6 text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                   <img 
-                    src="/public/images/logo/photo-1641538225752-2d996ea204d4.avif"
+                    src="/images/logo/photo-1641538225752-2d996ea204d4.avif"
                     alt="Donation background"
                     className="w-full h-full object-cover opacity-100"
                   />
@@ -1814,7 +1814,7 @@ const handleContinueToPayment = () => {
       <div className="relative py-8 md:py-12 px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/public/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"
+            src="/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"
             alt="Secure Donation Background"
             className="w-full h-full object-cover opacity-60"
           />

@@ -227,9 +227,9 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
    const imageList=[
-    "/public/images/logo/school-298680-1557380003.jpg",
-    "/public/images/logo/atul-pandey-0f3bZHXZSz8-unsplash.jpg",
-    "/public/images/logo/yannis-h-uaPaEM7MiQQ-unsplash.jpg",
+    "/images/logo/school-298680-1557380003.jpg",
+    "/images/logo/atul-pandey-0f3bZHXZSz8-unsplash.jpg",
+    "/images/logo/yannis-h-uaPaEM7MiQQ-unsplash.jpg",
     
    ]
 

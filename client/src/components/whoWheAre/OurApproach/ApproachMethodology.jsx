@@ -438,7 +438,7 @@ const ApproachMethodology = () => {
       icon: <Heart className="w-8 h-8 sm:w-10 sm:h-10" />,
       title: "Child-Centric Approach",
       description: "Every decision and program is designed with the child's best interests at heart, ensuring their safety, development, and happiness through personalized care and attention.",
-      image: "/public/images/logo/istockphoto-1318617341-612x612.jpg",
+      image: "/images/logo/istockphoto-1318617341-612x612.jpg",
     gradient: "from-amber-500 via-orange-500 to-orange-600",
       bgPattern: "bg-gradient-to-br from-amber-50 via-white to-orange-100"
     },
@@ -446,7 +446,7 @@ const ApproachMethodology = () => {
       icon: <Users className="w-8 h-8 sm:w-10 sm:h-10" />,
       title: "Community Integration",
       description: "We work closely with local communities, families, and stakeholders to create sustainable change from within, building lasting partnerships.",
-      image: "/public/images/logo/istockphoto-535896491-612x612.webp",
+      image: "/images/logo/istockphoto-535896491-612x612.webp",
       gradient: "from-teal-600 via-teal-700 to-teal-800",
       bgPattern: "bg-gradient-to-br from-teal-50 via-white to-teal-100"
     },
@@ -454,7 +454,7 @@ const ApproachMethodology = () => {
       icon: <Target className="w-8 h-8 sm:w-10 sm:h-10" />,
       title: "Evidence-Based Programs",
       description: "Our interventions are backed by extensive research and proven methodologies, ensuring maximum impact and measurable effectiveness in every initiative.",
-      image: "/public/images/logo/istockphoto-1541867674-612x612.jpg",
+      image: "/images/logo/istockphoto-1541867674-612x612.jpg",
      gradient: "from-teal-600 via-teal-700 to-teal-800",
       bgPattern: "bg-gradient-to-br from-teal-50 via-white to-teal-100"
     },
@@ -462,7 +462,7 @@ const ApproachMethodology = () => {
       icon: <BookOpen className="w-8 h-8 sm:w-10 sm:h-10" />,
       title: "Holistic Development",
       description: "We address multiple aspects of a child's growth - education, health, emotional well-being, and social skills for comprehensive development.",
-      image: "/public/images/logo/yannis-h-uaPaEM7MiQQ-unsplash.jpg",
+      image: "/images/logo/yannis-h-uaPaEM7MiQQ-unsplash.jpg",
       gradient: "from-amber-500 via-orange-500 to-orange-600",
       bgPattern: "bg-gradient-to-br from-amber-50 via-white to-orange-100"
     }
@@ -509,7 +509,7 @@ const ApproachMethodology = () => {
       title: "Education & Learning",
       description: "Quality education that opens doors to opportunities and builds foundational skills for life success",
       stats: "500+ Children Educated",
-      image: "/public/images/logo/istockphoto-1740994754-612x612.webp",
+      image: "/images/logo/istockphoto-1740994754-612x612.webp",
       bgGradient: "bg-gradient-to-br from-orange-50 via-white to-orange-100",
       iconColor: "text-white",
       iconBg: "bg-gradient-to-br from-orange-500 to-orange-600",
@@ -521,7 +521,7 @@ const ApproachMethodology = () => {
       title: "Health & Nutrition",
       description: "Comprehensive healthcare and nutrition programs ensuring healthy physical and mental development",
       stats: "300+ Health Checkups",
-      image: "/public/images/logo/istockphoto-182145531-612x612.webp",
+      image: "/images/logo/istockphoto-182145531-612x612.webp",
       bgGradient: "bg-gradient-to-br from-teal-50 via-white to-teal-100",
       iconColor: "text-white",
       iconBg: "bg-gradient-to-br from-teal-600 to-teal-700",
@@ -549,7 +549,7 @@ const ApproachMethodology = () => {
   {/* Background Image */}
   <div className="absolute inset-0 opacity-50">
     <img 
-      src="/public/images/logo/gettyimages-535555239-612x612.jpg"
+      src="/images/logo/gettyimages-535555239-612x612.jpg"
       alt="Children learning together"
       className="w-full h-full object-cover"
     />
@@ -801,7 +801,7 @@ const ApproachMethodology = () => {
     
     {/* ✅ Background Image Layer */}
     <img 
-      src="/public/images/logo/istockphoto-1555696380-612x612.webp" // 🔁 Replace with your actual image path
+      src="/images/logo/istockphoto-1555696380-612x612.webp" // 🔁 Replace with your actual image path
       alt="Helping children background"
       className="absolute inset-0 w-full h-full object-cover opacity-15 z-0"
     />

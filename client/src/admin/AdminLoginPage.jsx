@@ -673,7 +673,7 @@ const AdminLoginPage = () => {
         <Link to='/'>
           <div className="bg-gradient-to-t from-orange-50 to-white p-1 sm:p-1.5 lg:p-2 rounded-lg group-hover:shadow-lg transition-all duration-300">
             <img 
-              src="/public/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" 
+              src="/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" 
               className="w-12 h-10 xs:w-14 xs:h-12 sm:w-16 sm:h-12 md:w-20 md:h-16 lg:w-24 lg:h-20 object-contain" 
               alt="Ashwamedh Foundation Logo"
             />
@@ -871,7 +871,7 @@ const AdminLoginPage = () => {
             <div className="flex items-center space-x-2 sm:space-x-3">
               <div className="p-1 sm:p-2 rounded-lg transition-all duration-300">
                 <img 
-                  src="/public/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" 
+                  src="/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" 
                   className="w-10 h-8 xs:w-12 xs:h-10 sm:w-14 sm:h-12 md:w-16 md:h-14 lg:w-20 lg:h-16 object-contain" 
                   alt="Ashwamedh Foundation Logo"
                 />

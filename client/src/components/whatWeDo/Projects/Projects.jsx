@@ -548,10 +548,10 @@ const ProjectAnkur = () => {
       accentColor: "text-primary",
       bgGradient: "from-orange-50 to-red-50",
       images: [
-        { url: "/public/ankur/WhatsApp Image 2025-06-29 at 1.56.51 PM.jpeg" },
-        { url: "/public/ankur/WhatsApp Image 2025-06-29 at 1.57.31 PM.jpeg" },
-        { url: "/public/ankur/WhatsApp Image 2025-06-29 at 1.57.45 PM.jpeg" },
-        { url: "/public/ankur/WhatsApp Image 2025-06-29 at 1.58.07 PM.jpeg" }
+        { url: "/ankur/WhatsApp Image 2025-06-29 at 1.56.51 PM.jpeg" },
+        { url: "/ankur/WhatsApp Image 2025-06-29 at 1.57.31 PM.jpeg" },
+        { url: "/ankur/WhatsApp Image 2025-06-29 at 1.57.45 PM.jpeg" },
+        { url: "/ankur/WhatsApp Image 2025-06-29 at 1.58.07 PM.jpeg" }
       ]
     },
     {
@@ -580,10 +580,10 @@ const ProjectAnkur = () => {
       accentColor: "text-secondary",
       bgGradient: "from-teal-50 to-green-50",
       images: [
-        { url: "/public/aakar/WhatsApp Image 2025-06-29 at 6.43.56 PM (1).jpeg" },
-        { url: "/public/aakar/WhatsApp Image 2025-06-29 at 6.43.57 PM (1).jpeg" },
-        { url: "/public/aakar/WhatsApp Image 2025-06-29 at 6.43.57 PM (1).jpeg" },
-        { url: "/public/aakar/WhatsApp Image 2025-06-29 at 6.43.57 PM.jpeg" }
+        { url: "/aakar/WhatsApp Image 2025-06-29 at 6.43.56 PM (1).jpeg" },
+        { url: "/aakar/WhatsApp Image 2025-06-29 at 6.43.57 PM (1).jpeg" },
+        { url: "/aakar/WhatsApp Image 2025-06-29 at 6.43.57 PM (1).jpeg" },
+        { url: "/aakar/WhatsApp Image 2025-06-29 at 6.43.57 PM.jpeg" }
       ]
     }
   ];
@@ -614,10 +614,10 @@ const ProjectAnkur = () => {
     accentColor: "text-accent-gold",
     bgGradient: "from-orange-50 to-white",
     images: [
-      { url: "/public/images/projects/7-7 (1).jpg", alt: "Digital marketing training facility" },
-      { url: "/public/images/projects/5-5 (1).jpg", alt: "Computer hardware workshop setup" },
-      { url: "/public/images/projects/8-8 (1).jpg", alt: "Fashion design and tailoring unit" },
-      { url: "/public/images/projects/3-3.jpg", alt: "Modern skills development center" }
+      { url: "/images/projects/7-7 (1).jpg", alt: "Digital marketing training facility" },
+      { url: "/images/projects/5-5 (1).jpg", alt: "Computer hardware workshop setup" },
+      { url: "/images/projects/8-8 (1).jpg", alt: "Fashion design and tailoring unit" },
+      { url: "/images/projects/3-3.jpg", alt: "Modern skills development center" }
     ]
   };
 
@@ -915,7 +915,7 @@ const ProjectAnkur = () => {
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/public/images/logo/istockphoto-593332654-612x612.webp"
+            src="/images/logo/istockphoto-593332654-612x612.webp"
             alt="Children Education Background"
             className="w-full h-full object-cover opacity-50"
           />
@@ -999,7 +999,7 @@ const ProjectAnkur = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/public/images/logo/gettyimages-535555239-612x612.jpg"
+            src="/images/logo/gettyimages-535555239-612x612.jpg"
             alt="Join Our Mission"
             className="w-full h-full object-cover opacity-70"
           />

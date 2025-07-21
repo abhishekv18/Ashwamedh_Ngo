@@ -311,7 +311,7 @@ const ProgramsOverview = () => {
       title: 'Project Ankur',
       subtitle: 'Seeds of Education - Building Strong Foundations',
       description: 'Following the "catch them young" philosophy, Project Ankur focuses on strengthening educational foundations for students up to 7th standard. We address the critical gap where students reach 8th grade without basic reading and writing skills, ensuring every child has a solid academic foundation.',
-      image: '/public/images/logo/vecteezy_students-celebrating-successfully-finished-project_11615496.jpg',
+      image: '/images/logo/vecteezy_students-celebrating-successfully-finished-project_11615496.jpg',
       icon: <BookOpen className="w-6 h-6 sm:w-8 sm:h-8" />,
       color: 'from-[#FF5722] to-[#FF7043]',
       bgColor: 'bg-gradient-to-br from-[#FFF3E0] to-[#FFF8F5]',
@@ -337,7 +337,7 @@ const ProgramsOverview = () => {
       title: 'Project Aakaar',
       subtitle: 'Shaping Personalities - Certificate Course Program',
       description: 'A comprehensive Personality Development Certificate Course designed for students in 8th to 10th standard. Project Aakaar focuses on holistic development through value education, communication skills, and essential life skills that prepare students for future challenges.',
-      image: '/public/images/logo/vecteezy_group-of-hands-holding-together_5380829.JPG',
+      image: '/images/logo/vecteezy_group-of-hands-holding-together_5380829.JPG',
       icon: <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8" />,
       color: 'from-[#00695C] to-[#26A69A]',
       bgColor: 'bg-gradient-to-br from-[#E0F2F1] to-[#F0F8F7]',
@@ -537,7 +537,7 @@ const ProgramsOverview = () => {
 
         {/* Call to Action */}
         <div className="bg-gradient-to-br from-[#212121] to-[#424242] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 xl:p-16 text-white text-center relative overflow-hidden shadow-2xl">
-          <div className="absolute inset-0 bg-[url('/public/images/logo/church-of-the-king-j9jZSqfH5YI-unsplash.jpg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/images/logo/church-of-the-king-j9jZSqfH5YI-unsplash.jpg')] bg-cover bg-center opacity-20"></div>
           <div className="relative z-10 max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-[#FF5722]/20 rounded-full text-xs sm:text-sm font-semibold text-[#FF8A65] mb-4 sm:mb-6">
               <Heart className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />

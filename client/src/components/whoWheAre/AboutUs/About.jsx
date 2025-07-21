@@ -586,12 +586,12 @@ const AboutUs = () => {
     {
       id: 1,
       title: "Society Registration Certificate",
-      image: "/public/images/logo/certificate-2.jpg"
+      image: "/images/logo/certificate-2.jpg"
     },
     {
       id: 2,
       title: "Trust Registration Certificate",
-      image: "/public/images/logo/society-2.jpg"
+      image: "/images/logo/society-2.jpg"
     }
   ];
 
@@ -608,7 +608,7 @@ const AboutUs = () => {
         
         <div className="absolute inset-0">
           <img 
-            src="/public/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg" 
+            src="/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg" 
             alt="Children Education Background"
             className="w-full h-full object-cover opacity-50"
           />
@@ -689,7 +689,7 @@ const AboutUs = () => {
     
     {/* Background Image - Dull with dark overlay */}
     <img 
-      src="/public/images/logo/WhatsApp Image 2025-07-19 at 11.20.20 PM.jpeg" 
+      src="/images/logo/WhatsApp Image 2025-07-19 at 11.20.20 PM.jpeg" 
       alt="Deepak Doddamani - Founder"
       className="absolute inset-0 w-full h-full object-cover opacity-75 rounded-3xl transition-opacity duration-500 group-hover:opacity-70"
     />
@@ -852,7 +852,7 @@ const AboutUs = () => {
       <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-orange-50 via-cream to-teal-50 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("/public/images/logo/vecteezy_ai-generated-eight-girls-from-nepal-and-their-mothers-smiling_37279696.jpeg")`,
+            backgroundImage: `url("/images/logo/vecteezy_ai-generated-eight-girls-from-nepal-and-their-mothers-smiling_37279696.jpeg")`,
           }}></div>
         </div>
         
@@ -970,7 +970,7 @@ const AboutUs = () => {
       <div className="max-w-5xl mx-auto">
         <div className="relative rounded-3xl overflow-hidden shadow-2xl group border-4 border-orange-200">
           <img 
-            src="/public/images/logo/AF Team pic.jpg" 
+            src="/images/logo/AF Team pic.jpg" 
             alt="Ashwamedh Foundation Team Group Photo"
             className="w-full h-64 md:h-72 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
           />
@@ -1060,7 +1060,7 @@ const AboutUs = () => {
       <section className="py-10 md:py-16 relative overflow-hidden text-white">
         <div className="absolute inset-0 z-0 opacity-60">
           <img 
-            src="/public/images/logo/gettyimages-535555239-612x612.jpg"
+            src="/images/logo/gettyimages-535555239-612x612.jpg"
             alt="Background"
             className="w-full h-full object-cover"
           />

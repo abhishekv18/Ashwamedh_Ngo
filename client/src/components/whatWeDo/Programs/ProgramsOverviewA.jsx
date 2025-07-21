@@ -27,7 +27,7 @@ const ProgramsOverviewA = () => {
       subtitle: "Community-Based Learning Hubs",
       description: "Strategically located centers in Mumbai and Thane slum areas, mobilizing local underprivileged children and providing foundational educational courses. Our grassroots approach ensures direct community impact and sustainable development.",
       longDescription: "These centers serve as beacons of hope in underserved communities, offering a safe learning environment where children can access quality education, nutritious meals, and mentorship. Each center is staffed with trained educators and volunteers who understand the local context and challenges.",
-      image: "/public/images/projects/WhatsApp Image 2025-07-12 at 4.48.02 PM.jpeg", // Replace with your actual image path
+      image: "/images/projects/WhatsApp Image 2025-07-12 at 4.48.02 PM.jpeg", // Replace with your actual image path
       beneficiaries: "500+ Children",
       locations: "12 Centers",
       features: [
@@ -46,7 +46,7 @@ const ProgramsOverviewA = () => {
       subtitle: "AVESDP - Empowering Through Skills",
       description: "Comprehensive certificate courses from KG to PG levels, covering Personality Development, Computer Basics, and Life Skills. Building capabilities that transform lives and create sustainable livelihoods.",
       longDescription: "Our skill development program bridges the gap between education and employment by providing practical, industry-relevant training. We focus on developing both technical skills and soft skills that are essential for personal and professional success.",
-      image: "/public/images/projects/WhatsApp Image 2025-07-12 at 4.48.53 PM.jpeg", // Replace with your actual image path
+      image: "/images/projects/WhatsApp Image 2025-07-12 at 4.48.53 PM.jpeg", // Replace with your actual image path
       beneficiaries: "300+ Students",
       locations: "8 Training Centers",
       features: [
@@ -65,7 +65,7 @@ const ProgramsOverviewA = () => {
       subtitle: "ASSCS - Education for Every Child",
       description: "Dedicated schools for street children, ensuring no child is left behind in their educational journey. Providing comprehensive basic education with a focus on rehabilitation and integration into mainstream society.",
       longDescription: "Recognizing that street children face unique challenges, our specialized schools provide not just education but also psychological support, healthcare, and life skills training. We work towards complete rehabilitation and social integration.",
-      image: "/public/images/projects/WhatsApp Image 2025-07-12 at 4.47.42 PM.jpeg", // Replace with your actual image path
+      image: "/images/projects/WhatsApp Image 2025-07-12 at 4.47.42 PM.jpeg", // Replace with your actual image path
       beneficiaries: "200+ Street Children",
       locations: "Planning Phase",
       features: [
@@ -317,7 +317,7 @@ const ProgramsOverviewA = () => {
 
       <div className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 opacity-50">
+        <div className="absolute inset-0 z-0 opacity-55">
           <img 
             src="/images/logo/gettyimages-535555239-612x612.jpg"
             alt="Background"

@@ -10,7 +10,7 @@ const CallToAction = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="h-full w-full bg-repeat" style={{
-          backgroundImage: `url("/public/images/logo/gettyimages-535555239-612x612.jpg")`
+          backgroundImage: `url("/images/logo/gettyimages-535555239-612x612.jpg")`
         }}></div>
       </div>
 

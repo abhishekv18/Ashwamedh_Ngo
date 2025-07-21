@@ -1087,7 +1087,7 @@ const GalleryPage = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/public/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"
+            src="/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"
             alt="Background"
             className="w-full h-full object-cover object-center opacity-50"
           />

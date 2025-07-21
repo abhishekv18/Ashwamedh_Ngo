@@ -426,7 +426,7 @@ const MissionVision = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img 
-                src="/public/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg" 
+                src="/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg" 
                 alt="Children in education program"
                 className="w-full h-full object-cover opacity-95"
               />
@@ -495,7 +495,7 @@ const MissionVision = () => {
           <div className="relative mb-12 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden">
             <div className="absolute inset-0 z-0">
               <img 
-                src="/public/images/logo/istockphoto-2193713844-612x612.webp" 
+                src="/images/logo/istockphoto-2193713844-612x612.webp" 
                 alt="Mission background"
                 className="w-full h-full object-cover opacity-100"
               />
@@ -522,11 +522,11 @@ const MissionVision = () => {
                   {/* Card Image Header */}
                   <div className="relative h-36 sm:h-48 overflow-hidden">
                     <img 
-                      src={index === 0 ? "/public/images/logo/gettyimages-1344964565-612x612.jpg" : 
-                           index === 1 ? "/public/images/logo/gettyimages-1788257385-612x612.jpg" :
-                           index === 2 ? "/public/images/logo/gettyimages-2195741267-612x612.jpg" :
-                           index === 3 ? "/public/images/logo/istockphoto-537311780-612x612.webp" :
-                           "/public/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"} 
+                      src={index === 0 ? "/images/logo/gettyimages-1344964565-612x612.jpg" : 
+                           index === 1 ? "/images/logo/gettyimages-1788257385-612x612.jpg" :
+                           index === 2 ? "/images/logo/gettyimages-2195741267-612x612.jpg" :
+                           index === 3 ? "/images/logo/istockphoto-537311780-612x612.webp" :
+                           "/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"} 
                       alt={point.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -590,7 +590,7 @@ const MissionVision = () => {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/public/images/logo/istockphoto-537311780-612x612.webp" 
+              src="/images/logo/istockphoto-537311780-612x612.webp" 
               alt="Children and community"
               className="w-full h-full object-cover opacity-100"
             />

@@ -606,7 +606,7 @@ const Footer = () => {
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="mb-5">
                 <img 
-                  src="/public/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" 
+                  src="/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png" 
                   alt="Ashwamedh Foundation" 
                   className="h-12 w-auto mb-3"
                 />

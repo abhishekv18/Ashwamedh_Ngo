@@ -721,7 +721,7 @@ const handleInputChange = (e) => {
       <div className="relative bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 text-white overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-45">
           <img 
-            src="/public/images/stories/istockphoto-2198492778-612x612.jpg"
+            src="/images/stories/istockphoto-2198492778-612x612.jpg"
             alt="Contact background"
             className="w-full h-full object-cover"
           />
@@ -1065,9 +1065,9 @@ const handleInputChange = (e) => {
       <div className="relative py-8 sm:py-12 px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/public/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"
+            src="/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"
             alt="Secure Donation Background"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-45"
           />
         </div>
         <div className="absolute inset-0 z-20 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90"></div>
