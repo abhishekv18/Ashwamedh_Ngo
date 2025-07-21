@@ -992,26 +992,27 @@ const AboutUs = () => {
 
 <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
   {[
+     {
+      name: "Sneha Sharma",
+      position: "President",
+      image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM.jpeg"
+    },
+     {
+      name: "Abdul Hakim Ansari",
+      position: "Life Member",
+      image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM (1).jpeg"
+    },
     {
       name: "Mohammed Shakil Ansari",
       position: "Member",
       image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.26 PM.jpeg"
     },
     {
-      name: "Abdul Hakim Ansari",
-      position: "Life Member",
-      image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM (1).jpeg"
-    },
-    {
       name: "Jitendra Patel",
       position: "Life Member",
       image: "/images/logo/WhatsApp Image 2025-07-20 at 12.11.38 AM.jpeg"
-    },
-    {
-      name: "Sneha Sharma",
-      position: "President",
-      image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM.jpeg"
     }
+   
   ].map((member, index) => (
     <div
       key={index}
