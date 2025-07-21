@@ -293,7 +293,7 @@ export default function VolunteerPage() {
   const stats = [
     { number: '20+', label: 'Active Volunteers', icon: Users },
     { number: '4+', label: 'Active Programs', icon: Globe },
-    { number: '5000+', label: 'Lives Impacted', icon: Heart },
+    { number: '5,000+', label: 'Lives Impacted', icon: Heart },
     { number: '4+', label: 'Active Projects', icon: Award }
   ];
 
@@ -322,7 +322,7 @@ const testimonials = [
   return (
     <div className="min-h-screen bg-gradient-to-r from-orange-50 to-white">
       {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div  className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/images/stories/istockphoto-477224026-612x612.webp"
