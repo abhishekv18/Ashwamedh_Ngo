@@ -615,17 +615,17 @@ const activities = [
 
             {/* Activity Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mt-5 text-center px-4">
-              <div className="p-4">
+              <div className="p-3">
                 <div className="text-2xl sm:text-3xl mb-2">📚</div>
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">Education for All</h3>
                 <p className="opacity-90 text-sm sm:text-base">Providing quality education to underprivileged children across Maharashtra.</p>
               </div>
-              <div className="p-4">
+              <div className="p-3">
                 <div className="text-2xl sm:text-3xl mb-2">🩺</div>
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">Accessible Healthcare</h3>
                 <p className="opacity-90 text-sm sm:text-base">Organizing medical camps and health awareness programs in rural areas.</p>
               </div>
-              <div className="p-4">
+              <div className="p-3">
                 <div className="text-2xl sm:text-3xl mb-2">🌱</div>
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">Green Initiatives</h3>
                 <p className="opacity-90 text-sm sm:text-base">Promoting environmental sustainability through tree plantations and clean-ups.</p>
