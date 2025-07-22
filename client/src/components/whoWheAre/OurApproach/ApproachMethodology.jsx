@@ -545,8 +545,8 @@ const ApproachMethodology = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Orange Background Header Section */}
-  <div className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 overflow-hidden">
-  {/* Background Image */}
+  {/* <div className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 overflow-hidden">
+ 
   <div className="absolute inset-0 opacity-50">
     <img 
       src="/images/logo/gettyimages-535555239-612x612.jpg"
@@ -555,47 +555,9 @@ const ApproachMethodology = () => {
     />
   </div>
 
-  {/* Orange-Teal Transparent Overlay */}
+ 
   <div className="absolute inset-0 bg-gradient-to-br from-teal-600/80 via-orange-600/80 to-teal-700/80 opacity-90 z-10"></div>
 
-  {/* Header Content */}
-  {/* <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div className="text-center">
-      <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4 shadow-lg">
-        <Star className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-      </div>
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-        Our <span className="text-orange-100">Methodology</span>
-      </h2>
-      <p className="text-lg sm:text-xl text-orange-100 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4 sm:px-0">
-        A focused, hands-on approach to ensure every child and community flourishes.
-      </p>
-
-   
-   
-<div className="w-full bg-[#yourBgColor] py-8 px-4">
-  <div className="flex justify-center">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left text-white max-w-5xl w-full">
-      <div className="text-sm md:text-base">
-        <span className="font-semibold">📘 Personalized Learning</span>
-        <p className="opacity-90 mt-2">Adapting to each child's pace and curiosity.</p>
-      </div>
-
-      <div className="text-sm md:text-base">
-        <span className="font-semibold">🤝 Community First</span>
-        <p className="opacity-90 mt-2">Empowering locals for long-term sustainability.</p>
-      </div>
-
-      <div className="text-sm md:text-base">
-        <span className="font-semibold">🌱 Wellbeing Focused</span>
-        <p className="opacity-90 mt-2">Supporting education, health & emotional growth.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div> */}
 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
   <div className="text-center">
     <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4 shadow-lg">
@@ -629,9 +591,58 @@ const ApproachMethodology = () => {
   </div>
 </div>
 
-  {/* Bottom Fade */}
+
  
  
+</div> */}
+<div className="relative min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 overflow-hidden">
+
+  {/* Background Image */}
+  <div className="absolute inset-0 opacity-50">
+    <img 
+      src="/images/logo/gettyimages-535555239-612x612.jpg"
+      alt="Children learning together"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-br from-teal-600/80 via-orange-600/80 to-teal-700/80 opacity-90 z-10"></div>
+
+  {/* Content */}
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex flex-col justify-center">
+    <div className="text-center">
+      <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4 shadow-lg">
+        <Star className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+      </div>
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+        Our <span className="text-orange-100">Methodology</span>
+      </h2>
+      <p className="text-lg sm:text-xl text-orange-100 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+        A focused, hands-on approach to ensure every child and community flourishes.
+      </p>
+    </div>
+
+    {/* Grid Section */}
+    <div className="w-full py-8 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-white text-center md:text-left">
+        <div className="text-sm md:text-base">
+          <span className="font-semibold">📘 Personalized Learning</span>
+          <p className="opacity-90 mt-2">Adapting to each child's pace and curiosity.</p>
+        </div>
+
+        <div className="text-sm md:text-base">
+          <span className="font-semibold">🤝 Community First</span>
+          <p className="opacity-90 mt-2">Empowering locals for long-term sustainability.</p>
+        </div>
+
+        <div className="text-sm md:text-base">
+          <span className="font-semibold">🌱 Wellbeing Focused</span>
+          <p className="opacity-90 mt-2">Supporting education, health & emotional growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 

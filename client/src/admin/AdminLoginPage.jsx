@@ -352,7 +352,7 @@ const AdminLoginPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 z-50">
+      <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md border-b border-gray-200 z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3 cursor-pointer group">

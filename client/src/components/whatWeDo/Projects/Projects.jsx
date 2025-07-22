@@ -911,8 +911,8 @@ const ProjectAnkur = () => {
         .border-accent-gold { border-color: #FFC107; }
       `}</style>
 
-      <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
-        {/* Background Image Layer */}
+      {/* <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
+      
         <div className="absolute inset-0 z-0">
           <img 
             src="/images/logo/istockphoto-593332654-612x612.webp"
@@ -929,7 +929,7 @@ const ProjectAnkur = () => {
             Discover our impactful initiatives creating lasting change in communities.
           </p>
 
-          {/* Stats Section */}
+       
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold">5000+</div>
@@ -948,9 +948,50 @@ const ProjectAnkur = () => {
           </div>
         </div>
 
-        {/* Bottom Fade to White */}
-     
-      </section>
+      
+      </section> */}
+<section className="relative min-h-screen flex items-center justify-center py-16 sm:py-20 md:py-24 bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
+
+  {/* Background Image with Overlay */}
+  <div className="absolute inset-0 z-0">
+    <img 
+      src="/images/logo/istockphoto-593332654-612x612.webp"
+      alt="Children Education Background"
+      className="w-full h-full object-cover opacity-50"
+    />
+    <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-75"></div>
+  </div>
+
+  {/* Content */}
+  <div className="relative z-20 text-center space-y-6 sm:space-y-8 md:space-y-10 px-4 max-w-6xl mx-auto">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-2xl">
+      Our <span className='text-orange-200'>Projects</span>
+    </h1>
+    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed font-medium">
+      Transforming lives through education, skill development, and holistic personality growth. 
+      Discover our impactful initiatives creating lasting change in communities.
+    </p>
+
+    {/* Stats */}
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8">
+      <div className="text-center">
+        <div className="text-3xl sm:text-4xl font-bold">5000+</div>
+        <div className="text-white/90 text-sm sm:text-base">Students Impacted</div>
+      </div>
+      <div className="w-px h-10 sm:h-12 md:h-16 bg-white/30"></div>
+      <div className="text-center">
+        <div className="text-3xl sm:text-4xl font-bold">4</div>
+        <div className="text-white/90 text-sm sm:text-base">Active Projects</div>
+      </div>
+      <div className="w-px h-10 sm:h-12 md:h-16 bg-white/30"></div>
+      <div className="text-center">
+        <div className="text-3xl sm:text-4xl font-bold">2026</div>
+        <div className="text-white/90 text-sm sm:text-base">Future Goals</div>
+      </div>
+    </div>
+  </div>
+
+</section>
 
       {/* Mission Statement */}
       <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-orange-50 to-gray-100">
