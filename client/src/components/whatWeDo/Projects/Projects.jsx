@@ -929,7 +929,7 @@ const ProjectAnkur = () => {
             Discover our impactful initiatives creating lasting change in communities.
           </p>
 
-       
+{/*        
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-8 pt-6 md:pt-8">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold">5000+</div>
@@ -945,7 +945,28 @@ const ProjectAnkur = () => {
               <div className="text-3xl sm:text-4xl font-bold">2026</div>
               <div className="text-white/90 text-sm sm:text-base">Future Goals</div>
             </div>
-          </div>
+          </div> */}
+          <div className="flex flex-row items-center justify-center flex-wrap gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8">
+  <div className="text-center min-w-[100px]">
+    <div className="text-2xl sm:text-3xl md:text-4xl font-bold">5000+</div>
+    <div className="text-white/90 text-xs sm:text-sm md:text-base">Students Impacted</div>
+  </div>
+
+  <div className="w-px h-8 sm:h-10 md:h-14 bg-white/30"></div>
+
+  <div className="text-center min-w-[100px]">
+    <div className="text-2xl sm:text-3xl md:text-4xl font-bold">4</div>
+    <div className="text-white/90 text-xs sm:text-sm md:text-base">Active Projects</div>
+  </div>
+
+  <div className="w-px h-8 sm:h-10 md:h-14 bg-white/30"></div>
+
+  <div className="text-center min-w-[100px]">
+    <div className="text-2xl sm:text-3xl md:text-4xl font-bold">2026</div>
+    <div className="text-white/90 text-xs sm:text-sm md:text-base">Future Goals</div>
+  </div>
+</div>
+
         </div>
 
       

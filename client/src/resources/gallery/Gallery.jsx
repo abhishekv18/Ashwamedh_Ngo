@@ -645,9 +645,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, X, Calendar, MapPin, Users, Heart, ArrowRight, Star, Award, Target, Sparkles, ExternalLink, Grid, List, Download, Share2, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useCallback } from 'react';
+import axios from 'axios';
+import { setAllPhotos } from '../../redux/gallerySlice';
 
 const GalleryPage = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user);
   const { allPhotos = [] } = useSelector((state) => state.gallery);
@@ -678,6 +682,24 @@ const GalleryPage = () => {
     { id: 'Our Team', name: 'Our Team', icon: Users, count: allPhotos.filter(photo => photo.category === 'Our Team').length, description: 'Meet the people behind the mission', color: '#8B5CF6' },
     { id: 'Other', name: 'Other', icon: Sparkles, count: allPhotos.filter(photo => photo.category === 'Other').length, description: 'Miscellaneous photos', color: '#10B981' }
   ];
+ const fetchAllBlogs = useCallback(async () => {
+    try {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/gallery/get`, {
+        withCredentials: true,
+      });
+      if (res.data.success) {
+        dispatch(setAllPhotos(res.data.images));
+        console.log("Fetched images:", res.data.images);
+      }
+    } catch (error) {
+      console.error("Error fetching images:", error);
+      toast.error('Failed to fetch images');
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
+    fetchAllBlogs();
+  }, [fetchAllBlogs]);
 
   // Transform the API data into our gallery format
   const transformGalleryData = () => {

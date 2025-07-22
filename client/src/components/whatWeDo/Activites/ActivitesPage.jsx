@@ -581,8 +581,8 @@ const activities = [
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 text-white py-16 sm:py-20 md:py-28 overflow-hidden">
-        {/* Background Image Layer */}
+      <div className="relative bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 text-white py-14 sm:py-16 md:py-24 overflow-hidden">
+       
         <div className="absolute inset-0 z-0 opacity-60">
           <img 
             src="/images/projects/istockphoto-488209444-612x612.jpg"
@@ -591,10 +591,10 @@ const activities = [
           />
         </div>
 
-        {/* Gradient Overlay */}
+      
         <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-85 z-10"></div>
 
-        {/* Content */}
+       
         <div className="relative z-20 container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Our <span className='text-orange-200'>Activities</span></h1>
@@ -602,18 +602,6 @@ const activities = [
               Transforming lives through education, healthcare, environmental conservation, and community development
             </p>
 
-            {/* <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-base sm:text-lg mb-8 sm:mb-12">
-              <div className="flex items-center">
-                <Users className="mr-2" size={20} />
-                <span>5000+ Lives Impacted</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="mr-2" size={20} />
-                <span>4+ Programs Running</span>
-              </div>
-            </div> */}
-
-            {/* Activity Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mt-5 text-center px-4">
               <div className="p-3">
                 <div className="text-2xl sm:text-3xl mb-2">📚</div>
@@ -634,7 +622,7 @@ const activities = [
           </div>
         </div>
 
-        {/* Bottom Gradient Fade */}
+       
         
       </div>
 
