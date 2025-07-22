@@ -28,6 +28,13 @@ app.use("/api/volunteer",volunteerRoute);
 app.use("/api/contact",contactRoute);
 app.use("/api/gallery",galleryRoute);
 app.use("/api/subscribe",subscribeRoute);
+
+app.get("/api/ping", (req, res) => {
+  res.status(200).send("pong");
+});
+
+
+
 import "./controllers/monthlyReminderJob.js";
 
 const PORT=process.env.PORT || 3000;
