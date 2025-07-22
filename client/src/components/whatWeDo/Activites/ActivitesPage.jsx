@@ -581,7 +581,7 @@ const activities = [
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 text-white py-14 sm:py-16 md:py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 text-white py-12 sm:py-14 md:py-20 lg:py-24 overflow-hidden">
        
         <div className="absolute inset-0 z-0 opacity-60">
           <img 
