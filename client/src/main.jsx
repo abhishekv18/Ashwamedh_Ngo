@@ -26,7 +26,7 @@ createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
          <App />
-          <ToastContainer
+          {/* <ToastContainer
     position="top-right"
     autoClose={2500}
     hideProgressBar={true}
@@ -37,7 +37,18 @@ createRoot(document.getElementById('root')).render(
     draggable
     pauseOnHover
     theme="colored"
-     />
+     /> */}
+     <ToastContainer
+  position="top-right"
+  autoClose={2500}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+/>
       </PersistGate>
     </Provider>
   </StrictMode>,
