@@ -598,7 +598,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      {/* <section className="relative py-12 md:py-24 bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
+      <section className="relative py-12 md:py-24 bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-16 h-16 md:w-20 md:h-20 bg-white bg-opacity-10 rounded-full animate-pulse"></div>
           <div className="absolute top-40 right-20 w-12 h-12 md:w-16 md:h-16 bg-teal-400 bg-opacity-20 rounded-full animate-pulse delay-700"></div>
@@ -635,45 +635,8 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </section> */}
-<section className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[85vh] lg:min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
-  <div className="absolute inset-0">
-    <div className="absolute top-20 left-10 w-16 h-16 md:w-20 md:h-20 bg-white bg-opacity-10 rounded-full animate-pulse"></div>
-    <div className="absolute top-40 right-20 w-12 h-12 md:w-16 md:h-16 bg-teal-400 bg-opacity-20 rounded-full animate-pulse delay-700"></div>
-    <div className="absolute bottom-20 left-1/4 w-10 h-10 md:w-12 md:h-12 bg-white bg-opacity-10 rounded-full animate-pulse delay-1000"></div>
-    <div className="absolute bottom-40 right-1/3 w-6 h-6 md:w-8 md:h-8 bg-teal-400 bg-opacity-20 rounded-full animate-pulse delay-500"></div>
-  </div>
+      </section>
 
-  <div className="absolute inset-0">
-    <img 
-      src="/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg" 
-      alt="Children Education Background"
-      className="w-full h-full object-cover opacity-50"
-    />
-    <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-85"></div>
-  </div>
-
-  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div className="transform transition-all duration-1000 ease-out">
-      <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
-        About <span className="text-orange-200">Ashwamedh</span> Foundation
-      </h1>
-      <p className="text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90 mb-8 md:mb-12">
-        Empowering underprivileged children and youth through quality education, healthcare, and livelihood programs since 2013
-      </p>
-    </div>
-
-    <div className="flex justify-center">
-      <div className="bg-white bg-opacity-15 backdrop-blur-lg rounded-3xl p-6 md:p-8 flex items-center space-x-4 md:space-x-6 shadow-2xl border border-white border-opacity-20 transform hover:scale-105 transition-transform duration-300">
-        <Heart className="h-8 w-8 md:h-10 md:w-10 text-orange-200 animate-pulse" />
-        <div className="text-left">
-          <span className="text-xl md:text-2xl font-bold block">15+ Years</span>
-          <span className="text-orange-200 opacity-90">of Impact</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
       {/* History Section */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-white via-orange-50 to-teal-50 relative">
