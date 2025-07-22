@@ -694,13 +694,13 @@ const GalleryPage = () => {
 
     {/* Animated Dots */}
     <div className="flex justify-center space-x-2">
-      <span className="w-3 h-3 rounded-full bg-orange-500 animate-pulse" />
+      <span className="w-3 h-3 rounded-full bg-orange-500 animate-ping" />
       <span
-        className="w-3 h-3 rounded-full bg-teal-600 animate-pulse"
+        className="w-3 h-3 rounded-full bg-teal-600 animate-ping"
         style={{ animationDelay: "0.2s" }}
       />
       <span
-        className="w-3 h-3 rounded-full bg-orange-500 animate-pulse"
+        className="w-3 h-3 rounded-full bg-orange-500 animate-ping"
         style={{ animationDelay: "0.4s" }}
       />
     </div>
