@@ -680,32 +680,34 @@ const GalleryPage = () => {
       //     </div>
       //   </div>
       // </div>
-      <div className="min-h-screen bg-white flex items-center justify-center px-4">
-  <div className="text-center">
+  <div className="min-h-screen bg-white flex items-center justify-center px-4">
+  <div className="text-center space-y-5">
     {/* Icon */}
-    <div className="relative">
-      <Sparkles className="w-16 h-16 text-teal-600 animate-spin-slow mx-auto mb-4" />
+    <div className="flex justify-center">
+      <Sparkles className="w-16 h-16 text-teal-600 animate-spin-slow" />
     </div>
 
     {/* Message */}
-    <p className="text-gray-700 text-lg font-semibold">
+    <p className="text-gray-800 text-lg font-medium tracking-wide">
       Loading gallery images...
     </p>
 
-    {/* Dots */}
-    <div className="mt-4 flex justify-center space-x-2">
-      <span className="w-3 h-3 bg-orange-500 rounded-full animate-bounce" />
+    {/* Animated Dots */}
+    <div className="flex justify-center space-x-2">
+      <span className="w-3 h-3 rounded-full bg-orange-500 animate-pulse" />
       <span
-        className="w-3 h-3 bg-teal-600 rounded-full animate-bounce"
+        className="w-3 h-3 rounded-full bg-teal-600 animate-pulse"
         style={{ animationDelay: "0.2s" }}
       />
       <span
-        className="w-3 h-3 bg-orange-500 rounded-full animate-bounce"
+        className="w-3 h-3 rounded-full bg-orange-500 animate-pulse"
         style={{ animationDelay: "0.4s" }}
       />
     </div>
   </div>
 </div>
+
+
 
     );
   }
