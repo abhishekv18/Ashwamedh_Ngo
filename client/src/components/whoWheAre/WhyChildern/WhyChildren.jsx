@@ -650,60 +650,29 @@ const WhyChildren = () => {
   return (
     <section className="py-0" style={{ background: 'linear-gradient(to bottom, #FFFFFF, #FFF8F5, #FFFFFF)' }}>
       <div className="max-w-full mx-auto">
-        {/* Header Section with Background Image - Enhanced Responsive */}
-        {/* <div className="relative mb-12 sm:mb-16 md:mb-20 text-white bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-90 overflow-hidden shadow-2xl">
-        
-          <img 
-            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-            alt="Children studying together - hope for the future" 
-            className="absolute inset-0 w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[100vh] object-cover opacity-30 mix-blend-multiply"
-          />
-
        
-          <div className="relative z-10 flex items-center justify-center h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[100vh] px-4 sm:px-6">
-            <div className="text-center text-white max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto">
-            
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full mb-4 sm:mb-6 md:mb-8 bg-white/20 backdrop-blur-md shadow-lg">
-                <Heart className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
-              </div>
-
-            
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-                Why <span className="text-orange-200">Children</span>?
-              </h1>
-
-             
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed px-2 sm:px-4">
-                Children are not just our future – they are our present responsibility. In a world where 
-                <span className="font-bold text-orange-200"> 900 million children</span> live in poverty, 
-                every action we take today shapes tomorrow's world.
-              </p>
-            </div>
-          </div>
-       
-        </div> */}
-<div className="relative mb-12 sm:mb-16 md:mb-20 text-white bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-90 overflow-hidden shadow-2xl min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen">
-  {/* Background Image */}
+{/* <div className="relative mb-12 sm:mb-16 md:mb-20 text-white bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-90 overflow-hidden shadow-2xl min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen">
+ 
   <img 
     src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
     alt="Children studying together - hope for the future" 
     className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-multiply"
   />
 
-  {/* Overlay Text Content */}
+ 
   <div className="relative z-10 flex items-center justify-center min-h-[55vh] sm:min-h-[65vh] md:min-h-[80vh] lg:min-h-screen px-4 sm:px-6">
     <div className="text-center text-white max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto">
-      {/* Icon */}
+      
       <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full mb-4 sm:mb-6 md:mb-8 bg-white/20 backdrop-blur-md shadow-lg">
         <Heart className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
       </div>
 
-      {/* Headline */}
+     
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
         Why <span className="text-orange-200">Children</span>?
       </h1>
 
-      {/* Paragraph */}
+    
       <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed px-2 sm:px-4">
         Children are not just our future – they are our present responsibility. In a world where 
         <span className="font-bold text-orange-200"> 900 million children</span> live in poverty, 
@@ -711,8 +680,39 @@ const WhyChildren = () => {
       </p>
     </div>
   </div>
-</div>
+</div> */}
+ <div className="relative mb-12 sm:mb-16 md:mb-20 text-white bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-90 overflow-hidden shadow-2xl min-h-[65vh] sm:min-h-[75vh] md:min-h-[90vh] lg:min-h-screen">
+      
+      {/* Background Image */}
+      <img 
+        src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+        alt="Children studying together - hope for the future" 
+        className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-multiply"
+      />
 
+      {/* Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-[70vh] sm:min-h-[80vh] md:min-h-[90vh] lg:min-h-screen px-4 sm:px-6">
+        <div className="text-center text-white max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto">
+          
+          {/* Icon */}
+          <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full mb-5 sm:mb-6 md:mb-8 bg-white/20 backdrop-blur-md shadow-lg">
+            <Heart className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-white" />
+          </div>
+
+          {/* Heading */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 sm:mb-6 leading-tight tracking-tight">
+            Why <span className="text-orange-200">Children</span>?
+          </h1>
+
+          {/* Paragraph */}
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed px-2 sm:px-4">
+            Children are not just our future – they are our present responsibility.
+            In a world where <span className="font-bold text-orange-200">900 million children</span> live in poverty,
+            every action we take today shapes tomorrow's world.
+          </p>
+        </div>
+      </div>
+    </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Global Crisis Section - Enhanced Responsive */}
           <div className="mb-12 sm:mb-16 md:mb-20">
