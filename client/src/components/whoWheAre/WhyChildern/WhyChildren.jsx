@@ -691,7 +691,7 @@ const WhyChildren = () => {
   />
 
   {/* Overlay Text Content */}
-  <div className="relative z-10 flex items-center justify-center min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-screen px-4 sm:px-6">
+  <div className="relative z-10 flex items-center justify-center min-h-[55vh] sm:min-h-[65vh] md:min-h-[80vh] lg:min-h-screen px-4 sm:px-6">
     <div className="text-center text-white max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto">
       {/* Icon */}
       <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full mb-4 sm:mb-6 md:mb-8 bg-white/20 backdrop-blur-md shadow-lg">
