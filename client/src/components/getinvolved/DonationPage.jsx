@@ -1811,7 +1811,7 @@ const handleContinueToPayment = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="relative py-10 md:py-14 px-4 overflow-hidden">
+      <div className="relative py-9 md:py-12 px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"
