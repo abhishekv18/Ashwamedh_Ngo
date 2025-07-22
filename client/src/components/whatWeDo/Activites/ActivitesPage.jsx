@@ -602,7 +602,7 @@ const activities = [
               Transforming lives through education, healthcare, environmental conservation, and community development
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-base sm:text-lg mb-8 sm:mb-12">
+            {/* <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-base sm:text-lg mb-8 sm:mb-12">
               <div className="flex items-center">
                 <Users className="mr-2" size={20} />
                 <span>5000+ Lives Impacted</span>
@@ -611,7 +611,7 @@ const activities = [
                 <Award className="mr-2" size={20} />
                 <span>4+ Programs Running</span>
               </div>
-            </div>
+            </div> */}
 
             {/* Activity Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mt-5 text-center px-4">
