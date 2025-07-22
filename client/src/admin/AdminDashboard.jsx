@@ -11,12 +11,26 @@ import {  setAllUsers, setLoading, setUser } from '../redux/authSlice';
 import { toast } from 'react-toastify';
 import AdminGallerySection from './AdminGallerySection';
 const AdminPanel = () => {
+
+
+
+
+
+
 const isLoading = useSelector((state) => state.auth.loading);
 
 
 // Add these state variables at the top of your component
 const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate=useNavigate();
+
+const user = useSelector((state) => state.auth.user);
+useEffect(() => {
+  if (!user) {
+    navigate("/"); // or "/admin-login"
+  }
+}, [user]);
+
     const dispatch=useDispatch();
       const [formData, setFormData] = useState({
         email: '',
