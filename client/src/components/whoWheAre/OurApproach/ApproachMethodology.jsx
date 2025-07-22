@@ -473,7 +473,7 @@ const ApproachMethodology = () => {
       icon: <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Innovation",
       description: "Continuously evolving our methods to meet changing needs and embrace new technologies",
-      bgColor: "bg-gradient-to-br from-orange-200 to-orange-300",
+      bgColor: "bg-gradient-to-br from-orange-100 to-orange-200",
       iconBg: "bg-gradient-to-br from-orange-500 to-orange-600",
       borderColor: "border-orange-300"
     },
@@ -481,7 +481,7 @@ const ApproachMethodology = () => {
       icon: <HandHeart className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Compassion",
       description: "Leading with empathy and understanding in every interaction with children and families",
-      bgColor: "bg-gradient-to-br from-teal-200 to-teal-300",
+      bgColor: "bg-gradient-to-br from-teal-100 to-teal-200",
       iconBg: "bg-gradient-to-br from-teal-600 to-teal-700",
       borderColor: "border-teal-300"
     },
@@ -489,7 +489,7 @@ const ApproachMethodology = () => {
       icon: <Award className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Excellence",
       description: "Maintaining high standards in all our programs and services to achieve outstanding results",
-       bgColor: "bg-gradient-to-br from-teal-200 to-teal-300",
+       bgColor: "bg-gradient-to-br from-teal-100 to-teal-200",
       iconBg: "bg-gradient-to-br from-teal-600 to-teal-700",
       borderColor: "border-teal-300"
     },
@@ -497,7 +497,7 @@ const ApproachMethodology = () => {
       icon: <Users className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "Collaboration",
       description: "Building strong partnerships for greater collective impact and sustainable community change",
-    bgColor: "bg-gradient-to-br from-orange-200 to-orange-300",
+    bgColor: "bg-gradient-to-br from-orange-100 to-orange-200",
       iconBg: "bg-gradient-to-br from-orange-500 to-orange-600",
       borderColor: "border-orange-300"
     }
@@ -747,7 +747,7 @@ const ApproachMethodology = () => {
                   desc: "Understanding community needs and challenges through comprehensive research", 
                   icon: <Target className="w-5 h-5 sm:w-6 sm:h-6" />,
                   color: "from-orange-500 to-orange-600",
-                  bgColor: "from-orange-200 to-orange-300"
+                  bgColor: "from-orange-100 to-orange-200"
                 },
                 { 
                   step: "02", 
@@ -755,7 +755,7 @@ const ApproachMethodology = () => {
                   desc: "Developing targeted intervention strategies with stakeholder input", 
                   icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />,
                   color: "from-teal-600 to-teal-700",
-                  bgColor: "from-teal-200 to-teal-300"
+                  bgColor: "from-teal-100 to-teal-200"
                 },
                 { 
                   step: "03", 
@@ -763,7 +763,7 @@ const ApproachMethodology = () => {
                   desc: "Executing programs with community involvement and continuous support", 
                   icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
                 color: "from-teal-600 to-teal-700",
-                  bgColor: "from-teal-200 to-teal-300"
+                  bgColor: "from-teal-100 to-teal-200"
                 },
                 { 
                   step: "04", 
@@ -771,7 +771,7 @@ const ApproachMethodology = () => {
                   desc: "Measuring impact and continuous improvement for sustained results", 
                   icon: <Award className="w-5 h-5 sm:w-6 sm:h-6" />,
                   color: "from-orange-500 to-orange-600",
-                  bgColor: "from-orange-200 to-orange-300"
+                  bgColor: "from-orange-100 to-orange-200"
                 }
               ].map((item, index) => (
                 <div key={index} className="text-center relative">
