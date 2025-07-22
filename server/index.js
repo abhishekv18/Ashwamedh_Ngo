@@ -3,6 +3,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
+import cron from "node-cron";
+import axios from "axios";
 import userRoutes from "./routes/user.route.js";
 import volunteerRoute from "./routes/volunteer.route.js";
 import contactRoute from "./routes/contact.route.js";
@@ -44,3 +46,13 @@ app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`);
 });
 
+if (process.env.NODE_ENV === "production") {
+  cron.schedule('*/2 * * * *', async () => {
+    try {
+      const res = await axios.get('https://ashwamedh-ngo.onrender.com/api/ping');
+      console.log('Self-ping successful:', res.status);
+    } catch (error) {
+      console.error('Self-ping failed:', error.message);
+    }
+  });
+}
