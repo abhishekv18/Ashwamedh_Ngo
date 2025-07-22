@@ -682,7 +682,26 @@ const GalleryPage = () => {
     { id: 'Our Team', name: 'Our Team', icon: Users, count: allPhotos.filter(photo => photo.category === 'Our Team').length, description: 'Meet the people behind the mission', color: '#8B5CF6' },
     { id: 'Other', name: 'Other', icon: Sparkles, count: allPhotos.filter(photo => photo.category === 'Other').length, description: 'Miscellaneous photos', color: '#10B981' }
   ];
- const fetchAllBlogs = useCallback(async () => {
+//  const fetchAllBlogs = useCallback(async () => {
+//     try {
+//       const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/gallery/get`, {
+//         withCredentials: true,
+//       });
+//       if (res.data.success) {
+//         dispatch(setAllPhotos(res.data.images));
+//         console.log("Fetched images:", res.data.images);
+//       }
+//     } catch (error) {
+//       console.error("Error fetching images:", error);
+//       toast.error('Failed to fetch images');
+//     }
+//   }, [dispatch]);
+
+//   useEffect(() => {
+//     fetchAllBlogs();
+//   }, [fetchAllBlogs]);
+useEffect(() => {
+  const fetchAllBlogs = async () => {
     try {
       const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/gallery/get`, {
         withCredentials: true,
@@ -695,11 +714,10 @@ const GalleryPage = () => {
       console.error("Error fetching images:", error);
       toast.error('Failed to fetch images');
     }
-  }, [dispatch]);
+  };
 
-  useEffect(() => {
-    fetchAllBlogs();
-  }, [fetchAllBlogs]);
+  fetchAllBlogs();
+}, [dispatch]);
 
   // Transform the API data into our gallery format
   const transformGalleryData = () => {
