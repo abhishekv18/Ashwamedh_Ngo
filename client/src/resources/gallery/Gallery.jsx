@@ -940,7 +940,8 @@ const GalleryPage = () => {
                         src={image.url}
                         alt={image.title}
                         className={`w-full object-cover group-hover:scale-105 transition-transform duration-500 ${
-                          viewMode === 'grid' ? 'h-52' : 'h-64'
+                        viewMode === 'grid' ? 'h-56 md:h-64' : 'h-72 md:h-80'
+
                         }`}
                         loading="lazy"
                       />
