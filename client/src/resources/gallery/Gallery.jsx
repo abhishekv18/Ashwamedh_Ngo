@@ -616,6 +616,35 @@ const GalleryPage = () => {
         });
         if (res.data.success && isMounted) {
           dispatch(setAllPhotos(res.data.images));
+               if (res.data.images.length !== allPhotos.length) {
+toast.info('Image added 📸', {
+  position: 'top-center',
+  autoClose: 1500,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: false,
+  draggable: true,
+  progress: undefined,
+  style: {
+    backgroundColor: '#FFE0B2',
+    color: '#4E342E',
+    fontWeight: 'bold',
+    fontSize: 'clamp(12px, 3vw, 14px)',
+    padding: 'clamp(8px, 2vw, 12px) clamp(10px, 3vw, 16px)',
+    borderRadius: '8px',
+    width: 'fit-content',
+    maxWidth: 'min(90vw, 400px)',
+    wordBreak: 'break-word',
+    boxSizing: 'border-box',
+    margin: 'clamp(8px, 2vw, 16px)',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    textAlign: 'center',
+  },
+  bodyStyle: { margin: 0 }
+});
+
+
+          }
         }
       } catch (error) {
         console.error("Error fetching images:", error);
