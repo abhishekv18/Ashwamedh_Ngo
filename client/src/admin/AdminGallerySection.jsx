@@ -1416,10 +1416,10 @@ const AdminGallerySection = () => {
                   </p>
                   <div className="bg-gray-50 p-4 rounded-lg mb-4">
                     <p className="text-sm text-gray-900 font-medium line-clamp-2">
-                      {selectedImage?.title}
+                      {imageToDelete?.title}
                     </p>
                     <p className="text-xs text-gray-600 mt-1">
-                      Category: {selectedImage?.category}
+                      Category: {imageToDelete?.category}
                     </p>
                   </div>
                   <p className="text-xs text-red-600">

@@ -136,7 +136,10 @@ const adminMail = {
     await transporter.sendMail(adminMail);  //
 
     // Send email
-    await transporter.sendMail(imageMail);
+   if (emailList.length > 0) {
+  await transporter.sendMail(imageMail);
+}
+
 
     return res.status(201).json({
       message: "Image posted and subscribers notified",
