@@ -17,7 +17,9 @@ const app=express();
 
 const corsOptions = {
     origin:['http://localhost:5173','https://ashwamedh-ngo.vercel.app',],
-    credentials:true
+    credentials:true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }
 
 app.use(cors(corsOptions));
