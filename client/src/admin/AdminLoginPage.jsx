@@ -324,54 +324,27 @@ const AdminLoginPage = () => {
   };
 
 
-// const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       dispatch(setLoading(true));
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      dispatch(setLoading(true));
 
     
-//   const res = await api.post('/api/admin/login', formData);
+  const res = await api.post('/api/admin/login', formData);
 
-//       if (res.data.success) {
-//         dispatch(setUser(res.data.user));
-//         toast.success("Login Successfully");
-//         setFormData({ email: '', password: '' });
-//         navigate('/admin-dashboard');
-//       }
-//     } catch (error) {
-//       console.log(error);
-//       toast.error(error.response?.data?.message || 'Failed To Login');
-//     }
-//     dispatch(setLoading(false));
-//   };
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    dispatch(setLoading(true));
-    const res = await api.post('/api/admin/login', formData);
-
-    if (res.data.success) {
-      dispatch(setUser(res.data.user));
-      toast.success("Login Successfully");
-      setFormData({ email: '', password: '' });
-      navigate('/admin-dashboard');
-      // Consider reloading to ensure all auth state is properly initialized
-      window.location.reload();
-    }
-  } catch (error) {
-    console.log(error);
-    let errorMessage = 'Failed To Login';
-    if (error.response) {
-      if (error.response.status === 401) {
-        errorMessage = 'Invalid credentials';
-      } else if (error.response.data?.message) {
-        errorMessage = error.response.data.message;
+      if (res.data.success) {
+        dispatch(setUser(res.data.user));
+        toast.success("Login Successfully");
+        setFormData({ email: '', password: '' });
+        navigate('/admin-dashboard');
       }
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response?.data?.message || 'Failed To Login');
     }
-    toast.error(errorMessage);
     dispatch(setLoading(false));
-  }
-};
+  };
+
   useEffect(() => {
     if (user) {
       navigate('/admin-dashboard');

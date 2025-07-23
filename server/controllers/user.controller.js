@@ -116,34 +116,20 @@ export const login = async(req,res)=>{
         //     success: true,
         //      user,
         // })
-    //       return res
-    //   .status(200)
-    //   .cookie("token", token, {
-    //     httpOnly: true,
-    //     secure: true,
-    //     sameSite: 'None',
-    //     maxAge: 1 * 24 * 60 * 60 * 1000, // 1 day
-    //   })
-    //   .json({
-    //     message: 'Welcome back Admin',
-    //     success: true,
-    //     user,
-    //   });
-      return res
+          return res
       .status(200)
       .cookie("token", token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production', // Only secure in production
-        sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
-        maxAge: 86400000, // 1 day
-        path: '/', // Important for cross-route access
-     //   domain: process.env.NODE_ENV === 'production' ? '.yourdomain.com' : undefined
+        secure: true,
+        sameSite: 'None',
+        maxAge: 1 * 24 * 60 * 60 * 1000, // 1 day
       })
       .json({
         message: 'Welcome back Admin',
         success: true,
         user,
       });
+     
     } catch (error) {
         console.log(error);
     }

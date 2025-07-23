@@ -257,16 +257,7 @@ export default function VolunteerPage() {
   
       if (res.data.success) {
         dispatch(setVolunteer(res.data.volunteer));
-        toast.success("Details send successfully", {
-          icon: '✅',
-          style: {
-            border: '1px solid #28a745',
-            padding: '16px',
-            color: '#fff',
-            background: 'linear-gradient(135deg, #28a745, #218838)',
-            fontWeight: '600',
-          },
-        });
+        toast.success("Details send successfully");
         setFormData({
           name: '',
           dateOfBirth: '',
