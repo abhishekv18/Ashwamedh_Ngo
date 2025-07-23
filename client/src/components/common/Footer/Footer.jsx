@@ -584,14 +584,14 @@ const Footer = () => {
   return (
     <footer id='footer' className="bg-[#212121] text-white">
       {/* Impact Stats Section */}
-      <div className="bg-gradient-to-t from-orange-600 via-orange-500 to-orange-600 py-5 sm:py-7">
+      <div className="bg-gradient-to-t from-orange-600 via-orange-500 to-orange-600 py-4 sm:py-6 md:py-7 lg:py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4">
             {impactStats.map((stat, index) => (
               <div key={index} className="text-center">
-                <stat.icon className="h-6 w-6 mx-auto mb-2 text-white" />
-                <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-orange-100 text-sm font-medium px-2">{stat.label}</div>
+                <stat.icon className="h-5 w-5 md:h-6 md:w-6 mx-auto mb-2 text-white" />
+                <div className="text-xl md:text-2xl font-bold text-white mb-1">{stat.number}</div>
+                <div className="text-orange-100 text-xs md:text-sm font-medium px-2">{stat.label}</div>
               </div>
             ))}
           </div>
