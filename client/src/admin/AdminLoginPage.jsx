@@ -347,10 +347,7 @@ const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       dispatch(setLoading(true));
-      // const res = await axios.post(`/api/user/login`, formData, {
-      //   headers: { 'Content-Type': 'application/json' },
-      //   withCredentials: true,
-      // });
+
     
   const res = await api.post('/api/admin/login', formData);
 
@@ -556,7 +553,7 @@ const handleSubmit = async (e) => {
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Need help? Contact{' '}
-                <a href="mailto:support@ashwamedhfoundation.org" className="font-medium text-orange-600 hover:text-orange-500 break-all">
+                <a href="mailto:contact@ashwamedhfoundation.org" className="font-medium text-orange-600 hover:text-orange-500 break-all">
                   contact@ashwamedhfoundation.org
                 </a>
               </p>
