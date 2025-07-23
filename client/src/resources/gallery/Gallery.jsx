@@ -640,7 +640,7 @@ const GalleryPage = () => {
       isMounted = false;
       clearInterval(intervalId);
     };
-  }, [dispatch]);
+  }, [dispatch,allPhotos.length]);
 
   const transformGalleryData = () => {
     return allPhotos.map((photo, index) => ({
