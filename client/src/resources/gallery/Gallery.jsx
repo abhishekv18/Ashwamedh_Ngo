@@ -1009,7 +1009,7 @@ const GalleryPage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90"></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:py-14 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-11 sm:py-14 text-white">
           <div className="text-center mb-10">
             <h3 className="text-3xl font-bold mb-2 drop-shadow-md">Our Impact in Numbers</h3>
             <p className="text-lg text-teal-100 drop-shadow-sm">
@@ -1017,7 +1017,7 @@ const GalleryPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
             {[
               { value: '4', label: 'Active Projects', icon: Target },
               { value: '2', label: 'Centers', icon: MapPin },
@@ -1028,7 +1028,7 @@ const GalleryPage = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur rounded-lg p-3 text-center hover:bg-white/20 transition-colors"
+                className="bg-white/10 backdrop-blur rounded-lg p-2 md:p-3 text-center hover:bg-white/20 transition-colors"
               >
                 <div className="flex justify-center mb-2">
                   <stat.icon size={24} className="text-orange-200" />
