@@ -524,7 +524,16 @@ const Footer = () => {
 
       if (res.data.success) {
         dispatch(setSubscribe(res.data.subscribe));
-        toast.success('Subscribed successfully');
+        toast.success('Subscribed successfully', {
+          icon: '✅',
+          style: {
+            border: '1px solid #28a745',
+            padding: '16px',
+            color: '#fff',
+            background: 'linear-gradient(135deg, #28a745, #218838)',
+            fontWeight: '600',
+          },
+        });
         setFormData({
           name: "",
           email: ""

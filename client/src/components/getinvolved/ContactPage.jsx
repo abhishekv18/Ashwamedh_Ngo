@@ -639,7 +639,16 @@ const handleInputChange = (e) => {
 
       if (res.data.success) {
         dispatch(setContact(res.data.contact));
-        toast.success('Details sent successfully');
+        toast.success('Details sent successfully', {
+          icon: '✅',
+          style: {
+            border: '1px solid #28a745',
+            padding: '16px',
+            color: '#fff',
+            background: 'linear-gradient(135deg, #28a745, #218838)',
+            fontWeight: '600',
+          },
+        });
         setFormData({
           firstName: '',
           lastName: '',
