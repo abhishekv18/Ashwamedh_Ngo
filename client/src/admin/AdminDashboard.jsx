@@ -920,7 +920,7 @@ const ChartCard = ({ title, children, className = "" }) => (
 
            <Table
   data={allContacts}
-  columns={['First Name', 'Last Name', 'Email', 'Phone', 'Message', 'Preferred Contact']}
+  columns={['First Name', 'Last Name', 'Email', 'Phone', 'Message', 'Preferred Response']}
   fieldKeys={['firstName', 'lastName', 'email', 'phone', 'message', 'preferredContact']}
   onRemove={removeContact}
 />
