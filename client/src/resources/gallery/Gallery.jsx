@@ -607,7 +607,7 @@ const GalleryPage = () => {
   // Fetch photos with polling
   useEffect(() => {
     let isMounted = true;
-    const POLLING_INTERVAL = 10000; // 30 seconds
+    const POLLING_INTERVAL = 15000; // 30 seconds
 
     const fetchPhotos = async () => {
       try {
