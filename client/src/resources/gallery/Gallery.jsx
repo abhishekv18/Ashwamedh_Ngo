@@ -513,6 +513,66 @@
 
 
 
+// import React, { useState, useEffect, useRef } from 'react';
+// import { ChevronLeft, ChevronRight, X, Calendar, MapPin, Users, Heart, ArrowRight, Star, Award, Target, Sparkles, ExternalLink, Grid, List, Download, Share2, Info } from 'lucide-react';
+// import { useNavigate } from 'react-router-dom';
+// import { useDispatch, useSelector } from 'react-redux';
+// import axios from 'axios';
+// import { setAllPhotos } from '../../redux/gallerySlice';
+// import { toast } from 'react-toastify';
+
+// const GalleryPage = () => {
+//   const dispatch = useDispatch();
+//   const navigate = useNavigate();
+//   const user = useSelector((state) => state.auth.user);
+//   const { allPhotos = [] } = useSelector((state) => state.gallery);
+
+//   // State variables
+//   const [selectedCategory, setSelectedCategory] = useState('all');
+//   const [selectedImage, setSelectedImage] = useState(null);
+//   const [isModalOpen, setIsModalOpen] = useState(false);
+//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+//   const [viewMode, setViewMode] = useState('grid');
+//   const [isLoading, setIsLoading] = useState(false);
+//   const [isFetching, setIsFetching] = useState(true);
+//   const galleryRef = useRef(null);
+
+//   // Redirect if user is logged in
+//   useEffect(() => {
+//     if (user) {
+//       navigate("/admin-dashboard");
+//     }
+//   }, [user, navigate]);
+
+//   // Fetch photos on component mount
+//   useEffect(() => {
+//     const fetchPhotos = async () => {
+//       setIsFetching(true);
+//       try {
+//         const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/gallery/get`, {
+//           withCredentials: true,
+//         });
+//         if (res.data.success) {
+//           dispatch(setAllPhotos(res.data.images));
+//         }
+//       } catch (error) {
+//         console.error("Error fetching images:", error);
+//         toast.error('Failed to fetch images');
+//       } finally {
+//         setIsFetching(false);
+//       }
+//     };
+
+    // Only fetch if we don't already have photos
+  //   if (allPhotos.length === 0) {
+  //     fetchPhotos();
+  //   } else {
+  //     setIsFetching(false);
+  //   }
+  // }, [dispatch, allPhotos.length]);
+
+  // Transform the API data into our gallery format
+
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, X, Calendar, MapPin, Users, Heart, ArrowRight, Star, Award, Target, Sparkles, ExternalLink, Grid, List, Download, Share2, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -544,34 +604,44 @@ const GalleryPage = () => {
     }
   }, [user, navigate]);
 
-  // Fetch photos on component mount
+  // Fetch photos with polling
   useEffect(() => {
+    let isMounted = true;
+    const POLLING_INTERVAL = 10000; // 30 seconds
+
     const fetchPhotos = async () => {
-      setIsFetching(true);
       try {
         const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/gallery/get`, {
           withCredentials: true,
         });
-        if (res.data.success) {
+        if (res.data.success && isMounted) {
           dispatch(setAllPhotos(res.data.images));
         }
       } catch (error) {
         console.error("Error fetching images:", error);
-        toast.error('Failed to fetch images');
+        if (isMounted) {
+          toast.error('Failed to fetch images');
+        }
       } finally {
-        setIsFetching(false);
+        if (isMounted) {
+          setIsFetching(false);
+        }
       }
     };
 
-    // Only fetch if we don't already have photos
-    if (allPhotos.length === 0) {
-      fetchPhotos();
-    } else {
-      setIsFetching(false);
-    }
-  }, [dispatch, allPhotos.length]);
+    // Initial fetch
+    fetchPhotos();
+    
+    // Set up polling interval
+    const intervalId = setInterval(fetchPhotos, POLLING_INTERVAL);
 
-  // Transform the API data into our gallery format
+    // Clean up on unmount
+    return () => {
+      isMounted = false;
+      clearInterval(intervalId);
+    };
+  }, [dispatch]);
+
   const transformGalleryData = () => {
     return allPhotos.map((photo, index) => ({
       id: photo._id,
@@ -667,19 +737,7 @@ const GalleryPage = () => {
   // Loading state
   if (isFetching) {
     return (
-      // <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      //   <div className="text-center">
-      //     <div className="relative">
-      //       <Sparkles className="w-16 h-16 text-orange-500 animate-pulse mx-auto mb-4" />
-      //     </div>
-      //     <p className="text-gray-600 text-lg font-medium">Loading gallery images...</p>
-      //     <div className="mt-4 flex justify-center space-x-1">
-      //       <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-      //       <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-      //       <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-      //     </div>
-      //   </div>
-      // </div>
+ 
   <div className="min-h-screen bg-white flex items-center justify-center px-4">
   <div className="text-center space-y-4 ">
     {/* Icon */}
@@ -886,118 +944,7 @@ const GalleryPage = () => {
         </div>
       </div>
 
-      {/* Professional Compact Modal */}
-      {/* {isModalOpen && selectedImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 backdrop-blur-sm p-4">
-          <div className="relative max-w-4xl w-full max-h-[90vh]">
-          
-            <div className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/50 to-transparent p-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
-                    {currentImageIndex + 1} / {filteredImages.length}
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={closeModal}
-                    className="p-2 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-all"
-                  >
-                    <X size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-           
-            {filteredImages.length > 1 && (
-              <>
-                <button
-                  onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all"
-                  disabled={isLoading}
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all"
-                  disabled={isLoading}
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </>
-            )}
-            
-           
-            <div className="bg-white rounded-xl overflow-hidden shadow-2xl max-h-full flex flex-col">
-            
-              <div className="relative flex-1">
-                <img
-                  src={selectedImage.url}
-                  alt={selectedImage.title}
-                  className={`w-full h-full max-h-[50vh] object-cover transition-opacity duration-300 ${isLoading ? 'opacity-50' : 'opacity-100'}`}
-                />
-                {isLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-8 h-8 border-2 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
-                  </div>
-                )}
-              </div>
-              
-           
-              <div className="p-4 border-t border-gray-100">
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-gray-900 text-lg mb-1 truncate">{selectedImage.title}</h3>
-                    <p className="text-gray-600 text-sm line-clamp-2 mb-2">{selectedImage.description}</p>
-                    <div className="flex items-center gap-4 text-xs text-gray-500">
-                      <span className="flex items-center gap-1">
-                        <Calendar size={12} />
-                        {selectedImage.date}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="ml-4 flex-shrink-0">
-                    <span 
-                      className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium text-white"
-                      style={{ backgroundColor: selectedCategoryData?.color || '#FF5722' }}
-                    >
-                      <selectedCategoryData.icon size={12} />
-                      {selectedCategoryData?.name}
-                    </span>
-                  </div>
-                </div>
-                
-              
-                {filteredImages.length > 1 && (
-                  <div className="flex gap-1 overflow-x-auto pb-1">
-                    {filteredImages.slice(Math.max(0, currentImageIndex - 5), currentImageIndex + 6).map((img, index) => {
-                      const actualIndex = Math.max(0, currentImageIndex - 5) + index;
-                      return (
-                        <button
-                          key={img.id}
-                          onClick={() => goToImage(actualIndex)}
-                          className={`flex-shrink-0 w-12 h-8 rounded border-2 overflow-hidden transition-all ${
-                            actualIndex === currentImageIndex ? 'border-orange-500 scale-105' : 'border-gray-200 hover:border-gray-300'
-                          }`}
-                        >
-                          <img
-                            src={img.url}
-                            alt={img.title}
-                            className="w-full h-full object-cover"
-                          />
-                        </button>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )} */}
+ 
 {isModalOpen && selectedImage && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 backdrop-blur-sm p-4">
     <div className="relative w-full max-w-4xl max-h-[90vh] flex flex-col">
