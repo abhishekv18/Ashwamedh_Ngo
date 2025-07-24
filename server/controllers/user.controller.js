@@ -123,6 +123,7 @@ export const login = async(req,res)=>{
         secure: true,
         sameSite: 'None',
         maxAge: 1 * 24 * 60 * 60 * 1000, // 1 day
+        path: '/', // Ensure the cookie is accessible on all routes
       })
       .json({
         message: 'Welcome back Admin',
