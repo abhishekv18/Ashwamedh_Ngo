@@ -1000,19 +1000,20 @@ const AboutUs = () => {
     },
      {
       name: "Abdul Hakim Ansari",
-      position: "Life Member",
+      position: "Treasurer",
       image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM (1).jpeg"
+    },
+     {
+      name: "Jitendra Patel",
+      position: "Secretary",
+      image: "/images/logo/WhatsApp Image 2025-07-20 at 12.11.38 AM.jpeg"
     },
     {
       name: "Mohammed Shakil Ansari",
-      position: "Member",
+      position: "Life Member",
       image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.26 PM.jpeg"
     },
-    {
-      name: "Jitendra Patel",
-      position: "Life Member",
-      image: "/images/logo/WhatsApp Image 2025-07-20 at 12.11.38 AM.jpeg"
-    }
+   
    
   ].map((member, index) => (
     <div
