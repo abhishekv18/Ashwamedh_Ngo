@@ -38,7 +38,7 @@ const mail = {
         <p style="font-size: 15px; color: #333;">If you’d like to contribute this month, click below:</p>
 
         <p style="margin: 20px 0;">
-          <a href=" www.ashwamedhfoundation.org/get-involved/donate" 
+          <a href="https://ashwamedhfoundation.org/get-involved/donate" 
              style="background-color: #28a745; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px;">
             Donate Now
           </a>
@@ -65,10 +65,10 @@ const mail = {
         <p style="font-weight: bold; color: #34495e;">Stay connected with us:</p>
 
         <div style="margin-top: 15px;">
-          <a href="https://facebook.com/ashwamedhfoundation" target="_blank" style="text-decoration: none; margin-right: 12px;">
+          <a href="https://m.facebook.com/AshwamedhFoundationTrust/" target="_blank" style="text-decoration: none; margin-right: 12px;">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32" style="display: inline-block;" />
           </a>
-          <a href="https://instagram.com/ashwamedhfoundation" target="_blank" style="text-decoration: none; margin-right: 12px;">
+          <a href="https://www.instagram.com/ashwamedhfoundation/" target="_blank" style="text-decoration: none; margin-right: 12px;">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="32" height="32" style="display: inline-block;" />
           </a>
           <a href="https://linkedin.com/company/ashwamedhfoundation" target="_blank" style="text-decoration: none;">

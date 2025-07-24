@@ -527,19 +527,19 @@ const Header = () => {
       {
         name: 'facebook',
         icon: Facebook,
-        link: 'https://www.facebook.com/ashwamedhfoundation',
+        link: 'https://m.facebook.com/AshwamedhFoundationTrust/',
         color: 'hover:bg-orange-600 hover:text-white'
       },
       {
         name: 'twitter',
-        icon: Twitter,
+        icon: X,
         link: 'https://x.com/AshwamedhNGO', // or "X" link if rebranded
         color: 'hover:bg-orange-600 hover:text-white'
       },
       {
         name: 'instagram',
         icon: Instagram,
-        link: 'https://www.instagram.com/ashwamedhfoundation',
+        link: 'https://www.instagram.com/ashwamedhfoundation/',
         color: 'hover:bg-orange-600 hover:text-white'
       },
       {
@@ -849,17 +849,17 @@ const Header = () => {
       {
         name: 'facebook',
         icon: Facebook,
-        url: 'https://www.facebook.com/ashwamedhfoundation'
+        url: 'https://m.facebook.com/AshwamedhFoundationTrust/'
       },
       {
         name: 'twitter',
-        icon: Twitter,
+        icon: X,
         url: 'https://x.com/AshwamedhNGO'
       },
       {
         name: 'instagram',
         icon: Instagram,
-        url: 'https://www.instagram.com/ashwamedhfoundation'
+        url: 'https://www.instagram.com/ashwamedhfoundation/'
       },
       {
         name: 'linkedin',

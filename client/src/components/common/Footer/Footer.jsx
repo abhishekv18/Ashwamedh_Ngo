@@ -457,7 +457,7 @@
 // export default Footer;
 
 import React from 'react';
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Youtube, Heart, Users, Award, Globe } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Youtube, Heart, Users, Award, Globe, X } from 'lucide-react';
 import { useState } from 'react';
 import { setLoadi, setSubscribe } from '../../../redux/subscribeSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -567,9 +567,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://www.facebook.com/AshwamedhFoundationTrust', name: 'Facebook' },
-    { icon: Twitter, href: 'https://x.com/AshwamedhNGO', name: 'Twitter' },
-    { icon: Instagram, href: 'https://www.instagram.com/ashwamedhfoundation', name: 'Instagram' },
+    { icon: Facebook, href: 'https://m.facebook.com/AshwamedhFoundationTrust/', name: 'Facebook' },
+    { icon: X, href: 'https://x.com/AshwamedhNGO', name: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/ashwamedhfoundation/', name: 'Instagram' },
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ashwamedh-foundation/', name: 'LinkedIn' },
     { icon: Youtube, href: 'https://youtube.com/@ashwamedhfoundation', name: 'YouTube' }
   ];

@@ -29,7 +29,7 @@ const ProgramsOverviewA = () => {
       longDescription: "These centers serve as beacons of hope in underserved communities, offering a safe learning environment where children can access quality education, nutritious meals, and mentorship. Each center is staffed with trained educators and volunteers who understand the local context and challenges.",
       image: "/images/projects/WhatsApp Image 2025-07-12 at 4.48.02 PM.jpeg", // Replace with your actual image path
       beneficiaries: "500+ Children",
-      locations: "12 Centers",
+      locations: "1 Center",
       features: [
         "Daily educational activities",
         "Nutritional support programs",
@@ -48,7 +48,7 @@ const ProgramsOverviewA = () => {
       longDescription: "Our skill development program bridges the gap between education and employment by providing practical, industry-relevant training. We focus on developing both technical skills and soft skills that are essential for personal and professional success.",
       image: "/images/projects/WhatsApp Image 2025-07-12 at 4.48.53 PM.jpeg", // Replace with your actual image path
       beneficiaries: "300+ Students",
-      locations: "8 Training Centers",
+      locations: "1 Training Center",
       features: [
         "Industry-aligned curriculum",
         "Hands-on practical training",

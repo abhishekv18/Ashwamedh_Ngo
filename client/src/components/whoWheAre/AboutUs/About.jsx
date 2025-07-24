@@ -655,7 +655,7 @@ const AboutUs = () => {
                 <div className="bg-gradient-to-r from-orange-50 via-cream to-teal-50 p-4 md:p-6 rounded-2xl border-l-4 border-orange-500 shadow-sm">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                     Ashwamedh Foundation is an NGO registered as Society and Trust established in Virar, Maharashtra. 
-                    Being associated with Education field from the year 2003, our Founder Mr. Deepak Doddamani has 
+                    Being associated with Education field from the year 2013, our Founder Mr. Deepak Doddamani has 
                     closely witnessed the difficulties through which a student from economically backward conditions passes through.
                   </p>
                 </div>

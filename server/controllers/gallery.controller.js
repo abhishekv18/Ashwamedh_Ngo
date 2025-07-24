@@ -80,10 +80,10 @@ const imageMail = {
         <p style="font-size: 13px; color: #777;">You're receiving this because you subscribed to Ashwamedh Foundation updates.</p>
 
         <div style="margin-top: 15px;">
-          <a href="https://facebook.com/ashwamedhfoundation" target="_blank" style="margin-right: 10px;">
+          <a href="https://m.facebook.com/AshwamedhFoundationTrust/" target="_blank" style="margin-right: 10px;">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="28" alt="Facebook" />
           </a>
-          <a href="https://instagram.com/ashwamedhfoundation" target="_blank" style="margin-right: 10px;">
+          <a href="https://www.instagram.com/ashwamedhfoundation/" target="_blank" style="margin-right: 10px;">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="28" alt="Instagram" />
           </a>
           <a href="https://linkedin.com/company/ashwamedhfoundation" target="_blank">
