@@ -544,7 +544,7 @@ const handleSubmit = async (e) => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-[#212121] text-white">
+      {/* <footer className="bg-[#212121] text-white">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex flex-col items-center text-center space-y-4 md:flex-row md:justify-between md:space-y-0 md:text-left">
             <div className="flex items-center space-x-3">
@@ -565,7 +565,32 @@ const handleSubmit = async (e) => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
+      <footer className="bg-[#212121] text-white">
+  <div className="max-w-7xl mx-auto px-4 py-4">
+    <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      
+      {/* Logo and Text */}
+      <div className="flex flex-col items-center text-center md:flex-row md:text-left md:items-center gap-3">
+        <img
+          src="/images/logo/9c2ddc63-1fba-41bf-a057-3857806468e2-removebg-preview.png"
+          alt="Ashwamedh Foundation Logo"
+          className="w-16 h-14 object-contain"
+        />
+        <div>
+          <h3 className="text-lg font-bold">Ashwamedh Foundation</h3>
+          <p className="text-sm text-gray-300">Empowering Communities</p>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="text-sm text-gray-400 text-center md:text-right">
+        © 2025 Ashwamedh Foundation. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 };
