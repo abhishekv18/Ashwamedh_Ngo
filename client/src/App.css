@@ -41,29 +41,52 @@
   color: #888;
 }
 /* 
- .Toastify__toast--success {
+.Toastify__toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px 12px; 
+  font-size: 14px;
+  width: 320px;
+  max-width: 90%;
+  margin: 12px auto 0 auto;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+
+.Toastify__toast-body {
+  flex: 1 1 auto;
+  white-space: normal;
+  word-break: break-word;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+
+.Toastify__close-button {
+  align-self: flex-start;
+  margin-left: 4px;
+}
+
+
+.Toastify__toast--success {
   background-color: #0f5132;
   color: white;
-  border-left: 6px solid #198754;
+  border-left: 5px solid #198754;
   font-weight: 600;
 }
+
 
 .Toastify__toast--error {
   background-color: #842029;
   color: white;
-  border-left: 6px solid #dc3545;
+  border-left: 5px solid #dc3545;
   font-weight: 600;
-}
-
-.Toastify__toast {
-  border-radius: 10px;
-  padding: 16px;
-  font-size: 14px;
-  width: 320px;
-  max-width: 90%;
-  margin: 16px auto 0 auto; 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
 }
 
 
@@ -72,14 +95,16 @@
     width: 90%;
     max-width: 280px;
     font-size: 13px;
-    margin-top: 12px; 
+    margin-top: 10px;
+    padding: 8px 10px;
   }
-} */
+}
 
-/* Success Toast Styles */
-/* Success Toast Styles */
-/* Base toast container with less padding */
-/* General toast style */
+
+// CSS for custom animations (add to your CSS file) */
+
+
+
 .Toastify__toast {
   display: flex;
   align-items: center;
@@ -128,16 +153,23 @@
   font-weight: 600;
 }
 
-/* Responsive tweak */
+/* Responsive tweak - made slightly smaller than before */
 @media (max-width: 640px) {
   .Toastify__toast {
     width: 90%;
-    max-width: 280px;
-    font-size: 13px;
-    margin-top: 10px;
-    padding: 8px 10px;
+    max-width: 260px; /* reduced from 280px */
+    font-size: 11px; /* reduced from 13px */
+    margin-top: 8px; /* reduced from 10px */
+    padding: 6px 8px; /* reduced from 8px 10px */
+    border-radius: 8px; /* slightly smaller radius */
+  }
+  
+  .Toastify__toast--success,
+  .Toastify__toast--error {
+    border-left-width: 4px; /* reduced from 5px */
+  }
+  
+  .Toastify__close-button {
+    font-size: 12px; /* make close button smaller to match */
   }
 }
-
-
-// CSS for custom animations (add to your CSS file)
