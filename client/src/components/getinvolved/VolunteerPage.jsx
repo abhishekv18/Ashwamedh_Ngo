@@ -920,7 +920,7 @@ const testimonials = [
         <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
           {/* Facebook */}
           <a
-            href="https://facebook.com/yourpage"
+            href="https://m.facebook.com/AshwamedhFoundationTrust/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center justify-center p-3 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg hover:shadow-md transition transform hover:scale-105 text-white"
@@ -933,7 +933,7 @@ const testimonials = [
 
           {/* Instagram */}
         <a
-  href="https://instagram.com/yourpage"
+  href="https://www.instagram.com/ashwamedhfoundation/"
   target="_blank"
   rel="noopener noreferrer"
   className="group flex items-center justify-center p-3 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg hover:shadow-md transition transform hover:scale-105 text-white"
