@@ -868,13 +868,13 @@ const WhyChildren = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16 md:mb-20">
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group">
               <img 
-                src="/images/logo/images.jpeg" 
+                src="/images/logo/istockphoto-904833040-612x612.jpg" 
                 alt="Child studying with books" 
                 className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div 
                 className="absolute inset-0 flex items-end"
-                style={{ background: 'linear-gradient(to top, rgba(255, 87, 34, 0.6), transparent)' }}
+                style={{ background: 'linear-gradient(to top, rgba(255, 87, 34, 0.4), transparent)' }}
               >
                 <div className="text-white p-3 sm:p-4">
                   <h4 className="font-semibold text-sm sm:text-base">Education Access</h4>
@@ -885,7 +885,7 @@ const WhyChildren = () => {
             
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group">
               <img 
-                src="/images/logo/download.jpeg" 
+                src="/images/logo/istockphoto-2203321058-612x612.jpg" 
                 alt="Children playing together" 
                 className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -902,13 +902,13 @@ const WhyChildren = () => {
             
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group">
               <img 
-                src="/images/logo/download (1).jpeg" 
+                src="/images/logo/istockphoto-2191449286-612x612.jpg" 
                 alt="Healthcare for children" 
                 className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div 
                 className="absolute inset-0 flex items-end"
-                style={{ background: 'linear-gradient(to top, rgba(255, 87, 34, 0.6), transparent)' }}
+                style={{ background: 'linear-gradient(to top, rgba(255, 87, 34, 0.3), transparent)' }}
               >
                 <div className="text-white p-3 sm:p-4">
                   <h4 className="font-semibold text-sm sm:text-base">Healthcare Access</h4>
@@ -919,13 +919,13 @@ const WhyChildren = () => {
 
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group">
               <img 
-                src="/images/logo/download (2).jpeg" 
+                src="/images/logo/istockphoto-940197524-612x612.jpg" 
                 alt="Children reading together" 
                 className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div 
                 className="absolute inset-0 flex items-end"
-                style={{ background: 'linear-gradient(to top, rgba(38, 166, 154, 0.7), transparent)' }}
+                style={{ background: 'linear-gradient(to top, rgba(38, 166, 154, 0.6), transparent)' }}
               >
                 <div className="text-white p-3 sm:p-4">
                   <h4 className="font-semibold text-sm sm:text-base">Community Support</h4>
