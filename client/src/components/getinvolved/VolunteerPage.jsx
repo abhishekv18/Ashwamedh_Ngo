@@ -361,7 +361,7 @@ const testimonials = [
                     </div>
                   ))}
                 </div>
-                <span className="opacity-90">Join 50,000+ volunteers</span>
+                <span className="opacity-90">Join 500+ volunteers</span>
               </div>
             </div>
           </div>
