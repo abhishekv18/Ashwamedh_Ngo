@@ -567,7 +567,7 @@ const handleSubmit = async (e) => {
         </div>
       </footer> */}
       <footer className="bg-[#212121] text-white">
-  <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4">
+  <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2 md:p-3 lg:py-4">
     <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
       
       {/* Logo and Text */}
