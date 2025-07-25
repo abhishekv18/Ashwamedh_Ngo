@@ -322,7 +322,7 @@ const testimonials = [
   return (
     <div className="min-h-screen bg-gradient-to-r from-orange-50 to-white">
       {/* Hero Section */}
-      <div  className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] xl:min-h-screen flex items-center justify-center overflow-hidden">
+      <div  className="relative min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[85vh] xl:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/images/stories/istockphoto-477224026-612x612.webp"
