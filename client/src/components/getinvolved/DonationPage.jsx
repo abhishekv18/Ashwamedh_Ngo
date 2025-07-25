@@ -1330,15 +1330,18 @@ const handleContinueToPayment = () => {
                     )}
                   </button>
                 </div> */}
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 w-full">
-  <div>
-    <p className="text-[11px] sm:text-xs md:text-sm text-gray-600">UPI ID</p>
-    <p className="text-base sm:text-lg md:text-xl font-bold text-orange-700 break-all">
+<div className="flex items-center justify-between flex-wrap gap-2 sm:gap-4 w-full">
+  {/* Left: UPI ID Section */}
+  <div className="flex-1 min-w-[180px]">
+    <p className="text-xs sm:text-sm text-gray-600">UPI ID</p>
+    <p className="text-sm sm:text-lg md:text-xl font-bold text-orange-700 break-all">
       {bankDetails.upiId}
     </p>
   </div>
+
+  {/* Right: Copy Button */}
   <button
-    className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-600 text-white rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 whitespace-nowrap"
+    className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-600 text-white rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 whitespace-nowrap"
     onClick={handleCopy}
   >
     {copied ? (
@@ -1362,6 +1365,7 @@ const handleContinueToPayment = () => {
     )}
   </button>
 </div>
+
 
               </div>
               
