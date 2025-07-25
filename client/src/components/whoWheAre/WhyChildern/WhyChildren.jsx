@@ -874,7 +874,7 @@ const WhyChildren = () => {
               />
               <div 
                 className="absolute inset-0 flex items-end"
-                style={{ background: 'linear-gradient(to top, rgba(255, 87, 34, 0.4), transparent)' }}
+                style={{ background: 'linear-gradient(to top, rgba(255, 87, 34, 0.3), transparent)' }}
               >
                 <div className="text-white p-3 sm:p-4">
                   <h4 className="font-semibold text-sm sm:text-base">Education Access</h4>
