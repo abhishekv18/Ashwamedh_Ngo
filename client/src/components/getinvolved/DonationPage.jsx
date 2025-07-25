@@ -1311,7 +1311,7 @@ const handleContinueToPayment = () => {
               <p className="mb-4 text-sm md:text-base">You can transfer your donation directly to our UPI ID:</p>
               
               <div className="bg-orange-50 p-3 md:p-4 rounded-lg mb-6">
-                <div className="flex items-center justify-between">
+                {/* <div className="flex items-center justify-between">
                   <div>
                     <p className="text-xs md:text-sm text-gray-600">UPI ID</p>
                     <p className="text-lg md:text-xl font-bold text-orange-700">{bankDetails.upiId}</p>
@@ -1329,7 +1329,40 @@ const handleContinueToPayment = () => {
                       'Copy'
                     )}
                   </button>
-                </div>
+                </div> */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 w-full">
+  <div>
+    <p className="text-[11px] sm:text-xs md:text-sm text-gray-600">UPI ID</p>
+    <p className="text-base sm:text-lg md:text-xl font-bold text-orange-700 break-all">
+      {bankDetails.upiId}
+    </p>
+  </div>
+  <button
+    className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-600 text-white rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 whitespace-nowrap"
+    onClick={handleCopy}
+  >
+    {copied ? (
+      <>
+        <Check className="w-4 h-4 sm:w-5 sm:h-5" />
+        Copied
+      </>
+    ) : (
+      <>
+        <svg
+          className="w-4 h-4 sm:w-5 sm:h-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          viewBox="0 0 24 24"
+        >
+          <path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2M16 8h2a2 2 0 012 2v8a2 2 0 01-2 2h-8a2 2 0 01-2-2v-2" />
+        </svg>
+        Copy
+      </>
+    )}
+  </button>
+</div>
+
               </div>
               
               <div className="space-y-4 text-sm md:text-base">
