@@ -326,7 +326,7 @@ const ProgramsOverview = () => {
         'Part of Flagship Program',
         'Focuses on Education and Literacy',
         'Age Group: 6 to 15 Years',
-        'School & NGO Partnerships',
+        // 'School & NGO Partnerships',
         // 'Early Intervention Focus',
         // 'Dropout Prevention'
       ],
@@ -352,7 +352,7 @@ const ProgramsOverview = () => {
         'Focuses on overall Personality Development',
         'Communication Skills Development',
         'Age Group: 10 to 17 Years',
-        'Stress Management Techniques',
+        // 'Stress Management Techniques',
         // 'Yoga & Wellness',
         // 'Certificate Course Completion'
       ],
