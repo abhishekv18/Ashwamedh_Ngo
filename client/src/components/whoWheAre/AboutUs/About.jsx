@@ -621,7 +621,7 @@ const AboutUs = () => {
               About <span className="text-orange-200">Ashwamedh</span> Foundation
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90 mb-8 md:mb-12">
-              Empowering underprivileged children and youth through quality education, healthcare, and livelihood programs since 2013
+              Empowering underprivileged children and youth through quality education, healthcare, and livelihood programs since 2012
             </p>
           </div>
           
@@ -629,7 +629,7 @@ const AboutUs = () => {
             <div className="bg-white bg-opacity-15 backdrop-blur-lg rounded-3xl p-6 md:p-8 flex items-center space-x-4 md:space-x-6 shadow-2xl border border-white border-opacity-20 transform hover:scale-105 transition-transform duration-300">
               <Heart className="h-8 w-8 md:h-10 md:w-10 text-orange-200 animate-pulse" />
               <div className="text-left">
-                <span className="text-xl md:text-2xl font-bold block">15+ Years</span>
+                <span className="text-xl md:text-2xl font-bold block">13+ Years</span>
                 <span className="text-orange-200 opacity-90">of Impact</span>
               </div>
             </div>
@@ -655,14 +655,14 @@ const AboutUs = () => {
                 <div className="bg-gradient-to-r from-orange-50 via-cream to-teal-50 p-4 md:p-6 rounded-2xl border-l-4 border-orange-500 shadow-sm">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                     Ashwamedh Foundation is an NGO registered as Society and Trust established in Virar, Maharashtra. 
-                    Being associated with Education field from the year 2013, our Founder Mr. Deepak Doddamani has 
+                    Being associated with Education field from the year 2012, our Founder Mr. Deepak Doddamani has 
                     closely witnessed the difficulties through which a student from economically backward conditions passes through.
                   </p>
                 </div>
                 
                 <div className="bg-gradient-to-r from-teal-50 via-cream to-orange-50 p-4 md:p-6 rounded-2xl border-l-4 border-teal-500 shadow-sm">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    So in the year 2013, he founded Ashwamedh Foundation with some of his like-minded friends. 
+                    So in the year 2012, he founded Ashwamedh Foundation with some of his like-minded friends. 
                     From the inception of Ashwamedh Foundation, it has worked in the Child Development and Children 
                     Education for underprivileged sector of Society.
                   </p>

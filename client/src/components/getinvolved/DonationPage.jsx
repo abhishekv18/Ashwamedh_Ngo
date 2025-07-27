@@ -1554,7 +1554,7 @@ const handleContinueToPayment = () => {
                   Our Mission & Impact
                 </h2>
                 <p style={{ color: '#616161' }} className="text-sm md:text-lg">
-                  For over 15 years, we've been transforming lives through education, healthcare, and nutrition programs. 
+                  Since 2012, we've been transforming lives through education, healthcare, and nutrition programs. 
                   Your support helps us reach more children in need.
                 </p>
               </div>

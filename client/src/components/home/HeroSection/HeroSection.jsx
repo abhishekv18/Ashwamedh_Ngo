@@ -321,7 +321,7 @@ const HeroSection = () => {
 
             {/* Description */}
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0">
-              At Ashwamedh Foundation, we believe that every child deserves access to quality education, healthcare, and opportunities. Join us in building a brighter tomorrow through compassionate action and sustainable development.
+              At Ashwamedh Foundation, we believe that every child deserves access to quality education, healthcare, and livelihood opportunities. Join us in building a brighter tomorrow through compassionate action and sustainable development.
             </p>
 
             {/* CTA Buttons */}

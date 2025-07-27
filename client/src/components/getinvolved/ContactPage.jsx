@@ -1045,7 +1045,7 @@ const handleInputChange = (e) => {
       allowFullScreen
       referrerPolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1956793172967!2d72.91120747496377!3d19.437560542184733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b017295fc08d%3A0xd6d3a07ad70ab4e8!2sPelhar%2C%20Vasai%20East%2C%20Vasai-Virar%2C%20Maharashtra%20401208!5e0!3m2!1sen!2sin!4v1721204462332!5m2!1sen!2sin"
-    ></iframe>
+     ></iframe>
   </div>
 </div>
 

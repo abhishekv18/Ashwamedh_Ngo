@@ -478,8 +478,8 @@ const AboutSection = () => {
             </span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed px-4">
-            For over 15 years, Ashwamedh Foundation has been dedicated to empowering underprivileged children 
-            through quality education, healthcare, and community development programs.
+            Since 2012, Ashwamedh Foundation has been dedicated to empowering underprivileged children 
+            through quality education, healthcare, and community livelihood programs.
           </p>
         </div>
 
