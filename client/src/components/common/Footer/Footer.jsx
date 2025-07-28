@@ -866,7 +866,7 @@ const Footer = () => {
           Registered NGO | Tax Exemption under 80G 
         </p>
         <p className="text-gray-500 text-xs mt-1">
-          Terms & Conditions | Privacy Policy | Refund Policy
+          Terms & Conditions | Privacy Policy 
         </p>
       </div>
 
