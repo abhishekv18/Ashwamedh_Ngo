@@ -863,7 +863,7 @@ const Footer = () => {
           © {currentYear} Ashwamedh Foundation. All rights reserved.
         </p>
         <p className="text-gray-500 text-xs mt-1">
-          Registered NGO | Tax Exemption under 80G | FCRA Approved
+          Registered NGO | Tax Exemption under 80G 
         </p>
         <p className="text-gray-500 text-xs mt-1">
           Terms & Conditions | Privacy Policy | Refund Policy
@@ -879,7 +879,7 @@ const Footer = () => {
     </div>
 
     {/* Certifications */}
-    <div className="mt-4 pt-4 border-t border-gray-700">
+    {/* <div className="mt-4 pt-4 border-t border-gray-700">
       <div className="flex flex-wrap justify-center items-center gap-2 text-xs text-gray-500">
         <div className="flex items-center space-x-1">
           <Award className="h-4 w-4 text-orange-500 flex-shrink-0" />
@@ -894,7 +894,7 @@ const Footer = () => {
           <span>Credibility Alliance Member</span>
         </div>
       </div>
-    </div>
+    </div> */}
   </div>
 </div>
 
