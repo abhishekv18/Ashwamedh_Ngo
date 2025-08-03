@@ -1014,7 +1014,12 @@ const GalleryPage = () => {
           withCredentials: true,
         });
         if (res.data.success && isMounted) {
-          dispatch(setAllPhotos(res.data.images));
+          // dispatch(setAllPhotos(res.data.images));
+           const sortedImages = res.data.images.sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      );
+
+      dispatch(setAllPhotos(sortedImages));
                if (res.data.images.length !== allPhotos.length) {
 toast.info('Image added!', {
   position: 'top-center',
