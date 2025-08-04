@@ -973,7 +973,7 @@
 //         </div>
 //       </div>
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, X, Calendar, MapPin, Users, Heart, ArrowRight, Star, Award, Target, Sparkles, ExternalLink, Grid, List, Download, Share2, Info } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Calendar, MapPin, Users, Heart, ArrowRight, Star, Award, Target, Sparkles, ExternalLink, Grid, List, Download, Share2, Info, Music, Stethoscope, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
@@ -1098,14 +1098,114 @@ toast.info('Image added!', {
   // Categories with dynamic counts
   const categories = [
     { id: 'all', name: 'All Gallery', icon: Sparkles, count: allPhotos.length, color: '#F97316' },
-    { id: 'Project Aakaar', name: 'Project Aakaar', icon: Target, count: allPhotos.filter(photo => photo.category === 'Project Aakaar').length, description: 'Focus on overall development of Children', color: '#14B8A6' },
-    { id: 'Project Ankur', name: 'Project Ankur', icon: Heart, count: allPhotos.filter(photo => photo.category === 'Project Ankur').length, description: 'Focus on Education and Literacy of Underprivileged children', color: '#FACC15' },
-    { id: 'Project Anubhav', name: 'Project Anubhav', icon: Star, count: allPhotos.filter(photo => photo.category === 'Project Anubhav').length, description: 'Focus on overall development of Children', color: '#6366F1' },
-    { id: 'Project Aagaaz', name: 'Project Aagaaz', icon: Award, count: allPhotos.filter(photo => photo.category === 'Project Aagaaz').length, description: 'Focus on Skills Development of Children', color: '#0EA5E9' },
-    { id: 'Mudbad Center', name: 'Mudbad Center', icon: MapPin, count: allPhotos.filter(photo => photo.category === 'Mudbad Center').length, description: 'Community programs and outreach', color: '#F43F5E' },
-    { id: 'Activities & Events', name: 'Activities & Events', icon: Calendar, count: allPhotos.filter(photo => photo.category === 'Activities & Events').length, description: 'Special events and community gatherings', color: '#F59E0B' },
-    { id: 'Our Team', name: 'Our Team', icon: Users, count: allPhotos.filter(photo => photo.category === 'Our Team').length, description: 'Meet the people behind the mission', color: '#8B5CF6' },
-    { id: 'Other', name: 'Other', icon: Sparkles, count: allPhotos.filter(photo => photo.category === 'Other').length, description: 'Miscellaneous photos', color: '#10B981' }
+    // { id: 'Project Aakaar', name: 'Project Aakaar', icon: Target, count: allPhotos.filter(photo => photo.category === 'Project Aakaar').length, description: 'Focus on overall development of Children', color: '#14B8A6' },
+    // { id: 'Project Ankur', name: 'Project Ankur', icon: Heart, count: allPhotos.filter(photo => photo.category === 'Project Ankur').length, description: 'Focus on Education and Literacy of Underprivileged children', color: '#FACC15' },
+    // { id: 'Project Anubhav', name: 'Project Anubhav', icon: Star, count: allPhotos.filter(photo => photo.category === 'Project Anubhav').length, description: 'Focus on overall development of Children', color: '#6366F1' },
+    // { id: 'Project Aagaaz', name: 'Project Aagaaz', icon: Award, count: allPhotos.filter(photo => photo.category === 'Project Aagaaz').length, description: 'Focus on Skills Development of Children', color: '#0EA5E9' },
+     {
+    id: 'Project Ankur',
+    name: 'Project Ankur',
+    icon: Heart,
+    count: allPhotos.filter(photo => photo.category === 'Project Ankur').length,
+    description: 'Flagship program focusing on early childhood education and foundational learning for underprivileged children.',
+    color: '#FACC15',
+  },
+
+  {
+    id: 'Project Aakalan',
+    name: 'Project Aakalan',
+    icon: BookOpen,
+    count: allPhotos.filter(photo => photo.category === 'Project Aakalan').length,
+    description: 'Bridging educational gaps through tutoring, digital learning tools, and study material distribution.',
+    color: '#22C55E',
+  },
+
+  // Skills Development Projects
+  {
+    id: 'Project Aagaaz',
+    name: 'Project Aagaaz',
+    icon: Award,
+    count: allPhotos.filter(photo => photo.category === 'Project Aagaaz').length,
+    description: 'Supporting school-age children with academic help, mentorship, and co-curricular exposure.',
+    color: '#0EA5E9',
+  },
+
+  // Personality & HRD Projects
+  {
+    id: 'Project Aakaar',
+    name: 'Project Aakaar',
+    icon: Target,
+    count: allPhotos.filter(photo => photo.category === 'Project Aakaar').length,
+    description: 'Developing leadership, communication, and soft skills among youth for personal and career growth.',
+    color: '#14B8A6',
+  },
+
+  {
+    id: 'Project Anubhav',
+    name: 'Project Anubhav',
+    icon: Star,
+    count: allPhotos.filter(photo => photo.category === 'Project Anubhav').length,
+    description: 'Providing real-world exposure through workshops, internships, and career guidance for employability.',
+    color: '#6366F1',
+  },
+
+  // Healthcare Projects
+  {
+    id: 'Project Aarogya',
+    name: 'Project Aarogya',
+    icon: Stethoscope,
+    count: allPhotos.filter(photo => photo.category === 'Project Aarogya').length,
+    description: 'Delivering healthcare support via health camps, hygiene drives, and medical assistance.',
+    color: '#EF4444',
+  },
+
+  // Arts & Culture Projects
+  {
+    id: 'Project Aalaap',
+    name: 'Project Aalaap',
+    icon: Music,
+    count: allPhotos.filter(photo => photo.category === 'Project Aalaap').length,
+    description: 'Celebrating Indian arts and culture through events, workshops, and talent showcases.',
+    color: '#A855F7',
+  },
+
+  // Other / Miscellaneous
+  {
+    id: 'Mudbad Center',
+    name: 'Mudbad Center',
+    icon: MapPin,
+    count: allPhotos.filter(photo => photo.category === 'Mudbad Center').length,
+    description: 'Community programs and outreach efforts at the Mudbad Center.',
+    color: '#F43F5E',
+  },
+
+  {
+    id: 'Activities & Events',
+    name: 'Activities & Events',
+    icon: Calendar,
+    count: allPhotos.filter(photo => photo.category === 'Activities & Events').length,
+    description: 'Special events, celebrations, and community engagement highlights.',
+    color: '#F59E0B',
+  },
+
+  {
+    id: 'Our Team',
+    name: 'Our Team',
+    icon: Users,
+    count: allPhotos.filter(photo => photo.category === 'Our Team').length,
+    description: 'Meet the passionate individuals driving each initiative forward.',
+    color: '#8B5CF6',
+  },
+
+  {
+    id: 'Other',
+    name: 'Other',
+    icon: Sparkles,
+    count: allPhotos.filter(photo => photo.category === 'Other').length,
+    description: 'Photos that don’t fit into a specific project category.',
+    color: '#10B981',
+  },
+   
   ];
 
   // Modal functions

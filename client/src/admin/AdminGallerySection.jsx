@@ -726,16 +726,31 @@ const AdminGallerySection = () => {
   console.log("All Photos:", allPhotos);
 
   const categories = [
-    { value: 'all', label: 'All Categories' },
-    { value: 'Project Aakaar', label: 'Project Aakaar' },
-    { value: 'Project Ankur', label: 'Project Ankur' },
-    { value: 'Project Anubhav', label: 'Project Anubhav' },
-    { value: 'Project Aagaaz', label: 'Project Aagaaz' },
-    { value: 'Mudbad Center', label: 'Mudbad Center' },
-    { value: 'Activities & Events', label: 'Activities & Events' },
-    { value: 'Our Team', label: 'Our Team' },
-    { value: 'Other', label: 'Other' }
-  ];
+  { value: 'all', label: 'All Categories' },
+
+  // Educational Projects
+  { value: 'Project Ankur', label: 'Project Ankur' },
+  { value: 'Project Aakalan', label: 'Project Aakalan' },
+
+  // Skills Development
+  { value: 'Project Aagaaz', label: 'Project Aagaaz' },
+
+  // Personality & HRD
+  { value: 'Project Aakaar', label: 'Project Aakaar' },
+  { value: 'Project Anubhav', label: 'Project Anubhav' },
+
+  // Healthcare
+  { value: 'Project Aarogya', label: 'Project Aarogya' },
+
+  // Arts & Culture
+  { value: 'Project Aalaap', label: 'Project Aalaap' },
+
+  // Other Galleries
+  { value: 'Mudbad Center', label: 'Mudbad Center' },
+  { value: 'Activities & Events', label: 'Activities & Events' },
+  { value: 'Our Team', label: 'Our Team' },
+  { value: 'Other', label: 'Other' },
+];
 
   const inputFileChange = useCallback((e) => {
     const file = e.target.files[0];
