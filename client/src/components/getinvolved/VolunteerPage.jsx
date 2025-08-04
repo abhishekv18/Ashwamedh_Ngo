@@ -355,7 +355,7 @@ const testimonials = [
       </div>
 
 {/* Career Opportunities */}
-<div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
+{/* <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
       <div className="p-6 sm:p-8 md:p-10 lg:p-12 text-white">
@@ -401,7 +401,64 @@ const testimonials = [
       </div>
     </div>
   </div>
+</div> */}
+<div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
+      <div className="p-6 sm:p-8 md:p-10 lg:p-12 text-white">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-8">
+          
+          {/* Left Section */}
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+              Career Opportunities
+            </h2>
+            <p className="text-sm sm:text-base opacity-90 mb-4 sm:mb-6">
+              Interested in long-term volunteering or employment opportunities with Ashwamedh Foundation?
+            </p>
+
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-start justify-center md:justify-start text-left">
+                <CheckCircle className="h-5 w-5 mt-0.5 mr-2 text-teal-300 flex-shrink-0" />
+                <span className="text-sm sm:text-base">
+                  For ongoing volunteering positions and current job vacancies
+                </span>
+              </div>
+
+              <div className="flex items-center justify-center md:justify-start">
+                <Mail className="h-5 w-5 mr-2 text-teal-300" />
+                <a
+                  href="mailto:hr@ashwamedhfoundation.org"
+                  className="text-sm sm:text-base font-medium hover:underline"
+                >
+                  hr@ashwamedhfoundation.org
+                </a>
+              </div>
+
+              <div className="flex items-center justify-center md:justify-start">
+                <Mail className="h-5 w-5 mr-2 text-teal-300" />
+                <a
+                  href="mailto:contact@ashwamedhfoundation.org"
+                  className="text-sm sm:text-base font-medium hover:underline"
+                >
+                  contact@ashwamedhfoundation.org
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section: Icon */}
+          <div className="w-full md:w-1/3 flex justify-center">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+              <Briefcase className="h-8 w-8 sm:h-12 sm:w-12 md:h-14 md:w-14 text-white" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
       {/* Testimonials */}
       <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

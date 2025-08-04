@@ -845,6 +845,25 @@ const WorkingAreas = () => {
                   <div className="text-xs text-gray-500">Active Programs</div>
                 </div>
               </div>
+              {/* Call to Action */}
+<div className="mt-12">
+  <div className="bg-white border border-orange-100 rounded-xl p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+    <div>
+      <h3 className="text-lg font-semibold text-gray-800">Explore Our Projects in Detail</h3>
+      <p className="text-sm text-gray-500">Discover how each initiative is making a lasting impact in Vasai and beyond.</p>
+    </div>
+    <a
+      href="/what-we-do/projects"
+      className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-lg text-sm font-medium shadow-md transition-all duration-300"
+    >
+      Explore Projects
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
+    </a>
+  </div>
+</div>
+
             </div>
           </div>
         </div>

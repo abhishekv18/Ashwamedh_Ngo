@@ -502,9 +502,9 @@ const MissionVision = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90"></div>
             </div>
             
-            <div className="relative z-10 text-center py-12 sm:py-16 lg:py-20 px-4 sm:px-8">
+            <div className="relative z-10 text-center py-10 sm:py-14 lg:py-16 px-3 sm:px-7">
               <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 shadow-lg">
-                <Target className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                <Target className="w-8 h-8 sm:w-10 sm:h-10 text-yellow-400" />
               </div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
                 Our Mission
