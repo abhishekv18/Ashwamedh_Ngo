@@ -259,13 +259,13 @@ const HeroSection = () => {
     { icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "5,000+", label: "Children Reached", gradient: "from-[#FF8A65] to-[#FF7043]", iconColor: "text-white" },
     { icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "50+", label: "Schools Supported", gradient: "from-[#26A69A] to-[#00695C]", iconColor: "text-white" },
     { icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "10+", label: "Communities Served", gradient: "from-[#26A69A] to-[#00695C]", iconColor: "text-white" },
-    { icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "4+", label: "Active Programs", gradient: "from-[#FF8A65] to-[#FF7043]", iconColor: "text-white" }
+    { icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "3+", label: "Active Programs", gradient: "from-[#FF8A65] to-[#FF7043]", iconColor: "text-white" }
   ];
 
   const achievements = [
     { icon: <Award className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />, text: "Registered NGO" },
     { icon: <Star className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />, text: "80G Tax Exemption" },
-    { icon: <Globe className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />, text: "Pan-India Presence" }
+    { icon: <Globe className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />, text: "Local to Mumbai" }
   ];
 
   return (

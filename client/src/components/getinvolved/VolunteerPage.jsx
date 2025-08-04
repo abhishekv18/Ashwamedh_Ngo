@@ -1,118 +1,4 @@
 
-// import { useEffect, useState } from 'react';
-// import { Heart, Users, Globe, Award, UserPlus, Shield, Mail, Phone, MapPin, User, Calendar, Briefcase, GraduationCap, Target, Handshake, CheckCircle, Star, ArrowRight, Instagram } from 'lucide-react';
-// import { Link, useNavigate } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { setLoadin, setVolunteer } from '../../redux/volunteerSlice';
-// import axios from 'axios';
-// import { toast } from 'react-toastify';
-
-// export default function VolunteerPage() {
-//   const isLoading = useSelector((state) => state.volunteer.loadin);
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   const user = useSelector((state) => state.auth.user);
-  
-//   useEffect(() => {
-//     if (user) {
-//       navigate("/admin-dashboard");
-//     }
-//   }, [user]);
-
-//   const [showSocialMediaPopup, setShowSocialMediaPopup] = useState(false);
-  
-//   useEffect(() => {
-//     const timer = setTimeout(() => {
-//       setShowSocialMediaPopup(true);
-//     }, 2000);
-
-//     return () => clearTimeout(timer);
-//   }, []);
-
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     dateOfBirth: '',
-//     age: '',
-//     gender: '',
-//     email: '',
-//     phone: '',
-//     pinCode: '',
-//     occupation: '',
-//     customOccupation: ''
-//   });
-
-//   const [showVolunteerForm, setShowVolunteerForm] = useState(false);
-//   const [showAdminLogin, setShowAdminLogin] = useState(false);
-
-//   const handleInputChange = (e) => {
-//     const { name, value } = e.target;
-    
-//     if (name === 'dateOfBirth') {
-//       const today = new Date();
-//       const birthDate = new Date(value);
-//       let age = today.getFullYear() - birthDate.getFullYear();
-//       const monthDiff = today.getMonth() - birthDate.getMonth();
-      
-//       if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-//         age--;
-//       }
-      
-//       setFormData({ 
-//         ...formData, 
-//         [name]: value,
-//         age: age.toString()
-//       });
-//     } else {
-//       setFormData({ ...formData, [name]: value });
-//     }
-//   };
-  
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       dispatch(setLoadin(true));
-
-//       const submitData = {
-//         ...formData,
-//         occupation: formData.occupation === 'Other' ? formData.customOccupation : formData.occupation
-//       };
-
-//       const res = await axios.post('http://localhost:5000/api/volunteer/add', submitData, {
-//         headers: { 'Content-Type': 'application/json' },
-//         withCredentials: true,
-//       });
-  
-//       if (res.data.success) {
-//         dispatch(setVolunteer(res.data.volunteer));
-//         toast.success("Details send successfully", {
-//           icon: '✅',
-//           style: {
-//             border: '1px solid #28a745',
-//             padding: '16px',
-//             color: '#fff',
-//             background: 'linear-gradient(135deg, #28a745, #218838)',
-//             fontWeight: '600',
-//           },
-//         });
-//         setFormData({
-//           name: '',
-//           age: '',
-//           gender: '',
-//           email: '',
-//           phone: '',
-//           city: '',
-//           occupation: '',
-//           customOccupation:''  
-//         });
-//       }
-//     } catch (error) {
-//       console.error(error);
-//       toast.error(error.response?.data?.message || 'Failed to send the details');
-//     } finally {
-//       dispatch(setLoadin(false));
-//     }
-//   };
-
 import { useEffect, useState } from 'react';
 import { Heart, Users, Globe, Award, UserPlus, Shield, Mail, Phone, MapPin, User, Calendar, Briefcase, GraduationCap, Target, Handshake, CheckCircle, Star, ArrowRight, Instagram } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -468,6 +354,54 @@ const testimonials = [
         </div>
       </div>
 
+{/* Career Opportunities */}
+<div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
+      <div className="p-6 sm:p-8 md:p-10 lg:p-12 text-white">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Career Opportunities</h2>
+            <p className="text-sm sm:text-base opacity-90 mb-4 sm:mb-6">
+              Interested in long-term volunteering or employment opportunities with Ashwamedh Foundation?
+            </p>
+            <div className="space-y-2 sm:space-y-3">
+              <div className="flex items-start">
+                <CheckCircle className="h-5 w-5 flex-shrink-0 mt-0.5 mr-2 text-teal-300" />
+                <span className="text-sm sm:text-base">
+                  For ongoing volunteering positions and current job vacancies
+                </span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-5 w-5 mr-2 text-teal-300" />
+                <a 
+                  href="mailto:hr@ashwamedhfoundation.org" 
+                  className="text-sm sm:text-base font-medium hover:underline"
+                >
+                  hr@ashwamedhfoundation.org
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-5 w-5 mr-2 text-teal-300" />
+                <a 
+                  href="mailto:contact@ashwamedhfoundation.org" 
+                  className="text-sm sm:text-base font-medium hover:underline"
+                >
+                  contact@ashwamedhfoundation.org
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/3 flex justify-center">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+              <Briefcase className="h-12 w-12 sm:h-16 sm:w-16 text-white" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       {/* Testimonials */}
       <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -683,37 +617,7 @@ const testimonials = [
                     <div className="grid gap-4 sm:gap-6">
                       {/* Email and Phone */}
                       <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
-                        {/* <div>
-                          <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
-                            Email Address *
-                          </label>
-                          <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            required
-                            className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
-                            placeholder="your.email@example.com"
-                          />
-                        </div> */}
-
-                        {/* <div>
-                          <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
-                            <Phone className="inline-block h-3 w-3 sm:h-4 sm:w-4 mr-1" />
-                            Phone Number *
-                          </label>
-                          <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleInputChange}
-                            required
-                            className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
-                            placeholder="9876543210"
-                          />
-                        </div> */}
-
+    
                          <div>
     <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
       Email Address *

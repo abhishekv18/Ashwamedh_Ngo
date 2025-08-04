@@ -226,7 +226,7 @@ const DonationPopup = () => {
               <h2 className="text-lg sm:text-xl font-semibold">A better tomorrow starts with education</h2>
             </div>
             <p className="text-orange-100 text-xs sm:text-sm">
-              Help children stay in school and thrive with your generous contribution
+              Help children stay in school and thrive with your generous contribution.
             </p>
           </div>
         </div>
@@ -250,7 +250,7 @@ const DonationPopup = () => {
           {/* CTA */}
           <div className="text-center mb-4">
             <p className="text-gray-700 text-xs sm:text-sm mb-3">
-              Your <span className="font-semibold text-orange-600">₹100</span> can provide educational materials for a month
+              Your small contribution can make a difference!
             </p>
             <div className="flex gap-2 justify-center mb-3">
               {['₹100', '₹500', '₹1000'].map((amount) => (

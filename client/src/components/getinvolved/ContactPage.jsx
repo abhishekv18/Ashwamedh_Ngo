@@ -681,7 +681,7 @@ const handleInputChange = (e) => {
       icon: Phone,
       title: 'Call Us',
       details: '+91 8482969631',
-      subtext: 'Mon-Fri 9AM-6PM EST'
+      subtext: 'Mon-Fri 9AM-6PM'
     },
     {
       icon: MapPin,
@@ -692,8 +692,8 @@ const handleInputChange = (e) => {
     {
       icon: Clock,
       title: 'Business Hours',
-      details: 'Monday - Friday',
-      subtext: '9:00 AM - 6:00 PM EST'
+      details: 'Saturday - Sunday',
+      subtext: '11:00 AM - 6:00 PM'
     }
   ];
 

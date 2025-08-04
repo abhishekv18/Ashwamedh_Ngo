@@ -394,7 +394,7 @@ const MissionVision = () => {
   ];
 
   const achievements = [
-    { number: "15+", label: "Years of Impact", color: "text-[#FF5722]" },
+    { number: "13+", label: "Years of Impact", color: "text-[#FF5722]" },
     { number: "5K+", label: "Children Supported", color: "text-[#00695C]" },
     { number: "10+", label: "Communities Reached", color: "text-[#26A69A]" },
     { number: "20+", label: "Volunteers Engaged", color: "text-[#FFC107]" }
@@ -441,10 +441,10 @@ const MissionVision = () => {
                     <Eye className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </div>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
-                    Our Vision
+                   Our Vision
                   </h3>
                   <p className="text-lg sm:text-xl text-white/95 leading-relaxed font-medium mb-6 sm:mb-8">
-                    To empower the underprivileged children and youth through quality education, healthcare and livelihood programs.
+                    To empower the underprivileged children & youth through quality education, healthcare and livelihood programs.
                   </p>
                 </div>
 

@@ -376,7 +376,7 @@ const AboutSection = () => {
     },
     {
       icon: <Award className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />,
-      number: "15+",
+      number: "13+",
       label: "Years of Service",
       description: "Dedicated to children's welfare",
       gradient: "from-teal-300 to-teal-400",
@@ -490,7 +490,7 @@ const AboutSection = () => {
               Our Philosophy
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-              Social Justice, Equality and empowerment can be achieved through educating, agitating and mobilizing the underprivileged
+              Social Justice, Equality and empowerment can be achieved through educating, inspiring and mobilizing the underprivileged
             </p>
           </div>
 
@@ -576,7 +576,7 @@ const AboutSection = () => {
               {/* Overlay Stats */}
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg sm:rounded-xl">
-                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-700">15+</div>
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-700">13+</div>
                   <div className="text-xs sm:text-sm text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-teal-100 to-teal-200 rounded-lg sm:rounded-xl">

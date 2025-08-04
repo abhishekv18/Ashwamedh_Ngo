@@ -1425,10 +1425,10 @@ toast.info('Image added!', {
         </div>
       </div>
  
-{isModalOpen && selectedImage && (
+{/* {isModalOpen && selectedImage && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 backdrop-blur-sm p-4">
     <div className="relative w-full max-w-4xl max-h-[90vh] flex flex-col">
-      {/* Header */}
+  
       <div className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/50 to-transparent p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -1445,7 +1445,7 @@ toast.info('Image added!', {
         </div>
       </div>
       
-      {/* Navigation */}
+     
       {filteredImages.length > 1 && (
         <>
           <button
@@ -1466,14 +1466,14 @@ toast.info('Image added!', {
         </>
       )}
       
-      {/* Main Content */}
+     
       <div className="bg-white rounded-xl overflow-hidden shadow-2xl flex flex-col h-full">
-        {/* Image */}
+      
         <div className="relative flex-shrink-0 h-[50vh] max-h-[50vh]">
           <img
             src={selectedImage.url}
             alt={selectedImage.title}
-            className={`w-full h-full object-cover transition-opacity duration-300 ${
+            className={`w-full h-full object-contain transition-opacity duration-300 ${
               isLoading ? 'opacity-50' : 'opacity-100'
             }`}
           />
@@ -1484,7 +1484,7 @@ toast.info('Image added!', {
           )}
         </div>
         
-        {/* Info Section - Now scrollable if content is too long */}
+       
         <div className="flex-1 overflow-y-auto p-4 border-t border-gray-100">
           <div className="flex flex-col sm:flex-row items-start justify-between mb-3 gap-4">
             <div className="flex-1 min-w-0">
@@ -1512,7 +1512,7 @@ toast.info('Image added!', {
             </div>
           </div>
           
-          {/* Compact Thumbnail Navigation */}
+         
           {filteredImages.length > 1 && (
             <div className="flex gap-1 overflow-x-auto pt-2 pb-1">
               {filteredImages.slice(Math.max(0, currentImageIndex - 5), currentImageIndex + 6).map((img, index) => {
@@ -1541,7 +1541,134 @@ toast.info('Image added!', {
       </div>
     </div>
   </div>
+)} */}
+{isModalOpen && selectedImage && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/65 backdrop-blur-sm p-4 overflow-auto">
+    <div className="relative max-w-2xl w-full flex flex-col items-center">
+      {/* Header */}
+      <div className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/50 to-transparent p-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
+              {currentImageIndex + 1} / {filteredImages.length}
+            </div>
+          </div>
+          <button
+            onClick={closeModal}
+            className="p-2 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-all"
+          >
+            <X size={16} />
+          </button>
+        </div>
+      </div>
+
+      {/* Navigation */}
+      {filteredImages.length > 1 && (
+        <>
+          <button
+            onClick={prevImage}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all"
+            disabled={isLoading}
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          <button
+            onClick={nextImage}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all"
+            disabled={isLoading}
+          >
+            <ChevronRight size={20} />
+          </button>
+        </>
+      )}
+
+      {/* Modal Content */}
+      <div className="bg-white rounded-xl shadow-2xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+        {/* Image Container */}
+        <div className="relative w-full flex items-center justify-center bg-white p-4 max-h-[60vh]">
+          <img
+            src={selectedImage.url}
+            alt={selectedImage.title}
+            className={`max-h-[55vh] w-auto object-contain transition-opacity duration-300 ${
+              isLoading ? 'opacity-50' : 'opacity-100'
+            }`}
+          />
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-8 h-8 border-2 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
+        </div>
+
+        {/* Info Section */}
+        <div className="flex-1 overflow-y-auto p-4 border-t border-gray-100">
+          <div className="flex flex-col sm:flex-row items-start justify-between mb-3 gap-4">
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-gray-900 text-lg mb-2 break-words">
+                {selectedImage.title}
+              </h3>
+              <p className="text-gray-600 text-sm whitespace-pre-line mb-3">
+                {selectedImage.description}
+              </p>
+              <div className="flex items-center gap-4 text-xs text-gray-500">
+                <span className="flex items-center gap-1">
+                  <Calendar size={12} />
+                  {selectedImage.date}
+                </span>
+              </div>
+            </div>
+            <div className="sm:ml-4 flex-shrink-0">
+              <span
+                className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium text-white"
+                style={{
+                  backgroundColor: selectedCategoryData?.color || '#FF5722',
+                }}
+              >
+                <selectedCategoryData.icon size={12} />
+                {selectedCategoryData?.name}
+              </span>
+            </div>
+          </div>
+
+          {/* Thumbnail Navigation */}
+          {filteredImages.length > 1 && (
+            <div className="flex gap-1 overflow-x-auto pt-2 pb-1">
+              {filteredImages
+                .slice(
+                  Math.max(0, currentImageIndex - 5),
+                  currentImageIndex + 6
+                )
+                .map((img, index) => {
+                  const actualIndex =
+                    Math.max(0, currentImageIndex - 5) + index;
+                  return (
+                    <button
+                      key={img.id}
+                      onClick={() => goToImage(actualIndex)}
+                      className={`flex-shrink-0 w-12 h-8 rounded border-2 overflow-hidden transition-all ${
+                        actualIndex === currentImageIndex
+                          ? 'border-orange-500 scale-105'
+                          : 'border-gray-200 hover:border-gray-300'
+                      }`}
+                    >
+                      <img
+                        src={img.url}
+                        alt={img.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  );
+                })}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
 )}
+
+
       {/* Impact Section */}
       {/* <div className="relative overflow-hidden">
         <div className="absolute inset-0">

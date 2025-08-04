@@ -25,10 +25,10 @@ const ProgramsOverviewA = () => {
       id: 1,
       title: "Ashwamedh's NGO Centers",
       subtitle: "Community-Based Learning Hubs",
-      description: "Strategically located centers in Mumbai and Thane slum areas, mobilizing local underprivileged children and providing foundational educational courses. Our grassroots approach ensures direct community impact and sustainable development.",
+      description: "Strategically located centers in Mumbai and Palghar slum areas, mobilizing local underprivileged children and providing foundational educational courses. Our grassroots approach ensures direct community impact and sustainable development.",
       longDescription: "These centers serve as beacons of hope in underserved communities, offering a safe learning environment where children can access quality education, nutritious meals, and mentorship. Each center is staffed with trained educators and volunteers who understand the local context and challenges.",
       image: "/images/projects/WhatsApp Image 2025-07-12 at 4.48.02 PM.jpeg", // Replace with your actual image path
-      beneficiaries: "500+ Children",
+      beneficiaries: "135+ Children",
       locations: "1 Center",
       features: [
         "Daily educational activities",
@@ -119,13 +119,13 @@ const ProgramsOverviewA = () => {
       color: "text-orange-600"
     },
     {
-      number: "20+",
+      number: "3+",
       label: "Active Programs",
       icon: <BookOpen className="w-6 h-6 sm:w-8 sm:h-8" />,
       color: "text-teal-600"
     },
     {
-      number: "15+",
+      number: "1+",
       label: "Community Centers",
       icon: <MapPin className="w-6 h-6 sm:w-8 sm:h-8" />,
       color: "text-orange-600"

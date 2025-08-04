@@ -690,9 +690,9 @@ const AboutUs = () => {
     
     {/* Background Image - Dull with dark overlay */}
     <img 
-      src="/images/logo/WhatsApp Image 2025-07-19 at 11.20.20 PM.jpeg" 
+      src="/images/logo/1740195950066.jpg" 
       alt="Deepak Doddamani - Founder"
-      className="absolute inset-0 w-full h-full object-cover opacity-75 rounded-3xl transition-opacity duration-500 group-hover:opacity-70"
+      className="absolute inset-0 w-full h-full object-cover opacity-80 rounded-3xl transition-opacity duration-500 group-hover:opacity-70"
     />
     {/* <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent rounded-3xl backdrop-blur-sm" /> */}
 
@@ -1000,12 +1000,12 @@ const AboutUs = () => {
     },
      {
       name: "Abdul Hakim Ansari",
-      position: "Treasurer",
+      position: "Co-Founder and Treasurer",
       image: "/images/logo/WhatsApp Image 2025-07-19 at 11.18.12 PM (1).jpeg"
     },
      {
       name: "Jitendra Patel",
-      position: "Secretary",
+      position: "Co-Founder and Secretary",
       image: "/images/logo/WhatsApp Image 2025-07-20 at 12.11.38 AM.jpeg"
     },
     {
