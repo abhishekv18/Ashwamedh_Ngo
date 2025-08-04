@@ -413,7 +413,7 @@ const testimonials = [
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Career Opportunities
             </h2>
-            <p className="text-sm sm:text-base opacity-90 mb-4 sm:mb-6">
+            <p className="text-sm sm:text-base opacity-90 mb-5 sm:mb-6">
               Interested in long-term volunteering or employment opportunities with Ashwamedh Foundation?
             </p>
 

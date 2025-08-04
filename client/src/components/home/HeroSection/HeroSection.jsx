@@ -406,8 +406,8 @@ const HeroSection = () => {
 
               <div className="absolute -top-3 sm:-top-6 -right-2 sm:-right-6 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-5 border border-gray-100">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-200 to-teal-300 rounded-lg sm:rounded-xl flex items-center justify-center">
-                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-teal-700" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-100 to-teal-200 rounded-lg sm:rounded-xl flex items-center justify-center">
+                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-teal-600" />
                   </div>
                   <div>
                     <div className="font-bold text-sm sm:text-base lg:text-lg text-gray-900">10+</div>
@@ -453,15 +453,16 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
+      
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="flex flex-col items-center space-y-1 sm:space-y-2 text-gray-400">
-          <span className="text-xs font-medium hidden sm:block">Scroll to explore</span>
+          <span className="text-xs  font-medium hidden sm:block">Scroll to explore</span>
           <div className="w-4 h-6 sm:w-6 sm:h-10 border-2 border-gray-300 rounded-full flex justify-center">
             <div className="w-0.5 h-2 sm:w-1 sm:h-3 bg-orange-400 rounded-full mt-1 sm:mt-2 animate-bounce"></div>
           </div>
         </div>
       </div>
-   
+
     </section>
   );
 };
