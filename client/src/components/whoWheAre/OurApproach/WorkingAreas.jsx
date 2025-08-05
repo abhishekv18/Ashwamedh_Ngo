@@ -711,7 +711,7 @@ const WorkingAreas = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold text-white mb-2">Our Projects</h1>
+          <h1 className="text-4xl font-bold text-white mb-3">Our Projects</h1>
           <p className="text-orange-50 text-lg max-w-2xl mx-auto">
             Transforming lives through comprehensive initiatives in Vasai
           </p>

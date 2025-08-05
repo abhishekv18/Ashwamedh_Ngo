@@ -355,8 +355,8 @@ const testimonials = [
       </div>
 
 
-<div className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-r from-orange-50 to-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="py-12 sm:py-14 md:py-16 lg:py-20 bg-gradient-to-r from-orange-50 to-white">
+  <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-7">
     <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-xl lg:rounded-3xl overflow-hidden shadow-xl">
       <div className="p-6 sm:p-10 md:p-12 lg:p-16 text-white">
         <div className="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10 lg:gap-12">
