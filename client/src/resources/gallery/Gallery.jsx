@@ -1021,7 +1021,7 @@ const GalleryPage = () => {
 
       dispatch(setAllPhotos(sortedImages));
                if (res.data.images.length !== allPhotos.length) {
-toast.info('Image added!', {
+toast.info('Fetched latest photos.', {
   position: 'top-center',
   autoClose: 1500,
   hideProgressBar: false,
