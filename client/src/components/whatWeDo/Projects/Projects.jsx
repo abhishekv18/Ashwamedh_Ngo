@@ -529,6 +529,7 @@
 // };
 
 // export default ProjectAnkur;
+
 import React, { useState, useEffect } from 'react';
 import { BookOpen, Users, Target, Award, Lightbulb, Briefcase, Heart, Star, ChevronRight, Calendar, MapPin, TrendingUp, ChevronLeft, Activity, Music, Smile, HeartPulse } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -706,10 +707,10 @@ const ProjectsPage = () => {
       accentColor: "text-amber-600",
       bgGradient: "from-amber-50 to-yellow-50",
       images: [
-        { url: "/projects/anubhav1.jpg" },
-        { url: "/projects/anubhav2.jpg" },
-        { url: "/projects/anubhav3.jpg" },
-        { url: "/projects/anubhav4.jpg" }
+        { url: "/461199582_27663761526556299_5099480767436467893_n.jpg" },
+        { url: "/PXL_20231217_122734770.NIGHT.jpg" },
+        { url: "/505785264_1133530795469242_3528162867965802800_n.jpg" },
+        { url: "/Screenshot_20250617-202601.png" }
       ]
     }
   ];
@@ -741,10 +742,10 @@ const ProjectsPage = () => {
       accentColor: "text-red-600",
       bgGradient: "from-red-50 to-pink-50",
       images: [
-        { url: "/projects/aarogya1.jpg" },
-        { url: "/projects/aarogya2.jpg" },
-        { url: "/projects/aarogya3.jpg" },
-        { url: "/projects/aarogya4.jpg" }
+        { url: "/IMG-20240818-WA0005 (1).jpg" },
+        { url: "/IMG-20240818-WA0004.jpg" },
+        { url: "/IMG-20240818-WA0003.jpg" }
+       
       ]
     }
   ];
@@ -776,16 +777,356 @@ const ProjectsPage = () => {
       accentColor: "text-indigo-600",
       bgGradient: "from-indigo-50 to-blue-50",
       images: [
-        { url: "/projects/aalaap1.jpg" },
-        { url: "/projects/aalaap2.jpg" },
-        { url: "/projects/aalaap3.jpg" },
-        { url: "/projects/aalaap4.jpg" }
+        { url: "/IMG-20240623-WA0006.jpg" },
+        { url: "/IMG-20240623-WA0007.jpg" },
+        { url: "/IMG-20240818-WA0008.jpg" },
+        { url: "/IMG-20240818-WA0009.jpg" }
       ]
     }
   ];
 
   // Initialize slide states
-  useEffect(() => {
+//   useEffect(() => {
+//     const initialSlides = {};
+//     [
+//       ...educationalProjects,
+//       ...skillsDevelopmentProjects,
+//       ...personalityDevelopmentProjects,
+//       ...healthcareProjects,
+//       ...artsCultureProjects
+//     ].forEach(project => {
+//       initialSlides[project.id] = 0;
+//     });
+//     setCurrentSlides(initialSlides);
+//   }, []);
+
+//   // Auto-advance slides
+//   useEffect(() => {
+//     const intervals = {};
+//     [
+//       ...educationalProjects,
+//       ...skillsDevelopmentProjects,
+//       ...personalityDevelopmentProjects,
+//       ...healthcareProjects,
+//       ...artsCultureProjects
+//     ].forEach(project => {
+//       intervals[project.id] = setInterval(() => {
+//         setCurrentSlides(prev => ({
+//           ...prev,
+//           [project.id]: (prev[project.id] + 1) % project.images.length
+//         }));
+//       }, 3000);
+//     });
+
+//     return () => {
+//       Object.values(intervals).forEach(interval => clearInterval(interval));
+//     };
+//   }, [educationalProjects, skillsDevelopmentProjects, personalityDevelopmentProjects, healthcareProjects, artsCultureProjects]);
+
+//   const goToSlide = (projectId, slideIndex) => {
+//     setCurrentSlides(prev => ({
+//       ...prev,
+//       [projectId]: slideIndex
+//     }));
+//   };
+
+//   const ImageCarousel = ({ project }) => {
+//     const currentSlide = currentSlides[project.id] || 0;
+    
+//     return (
+//       <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+//         <div 
+//           className="flex transition-transform duration-700 ease-in-out h-64 sm:h-80 md:h-96"
+//           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+//         >
+//           {project.images.map((image, index) => (
+//             <div key={index} className="w-full h-full flex-shrink-0 relative bg-gray-200 overflow-hidden">
+//               <img 
+//                 src={image.url} 
+//                 alt={`${project.title} - ${index + 1}`}
+//                 className="w-full h-full object-cover"
+//               />
+//               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Dots Indicator */}
+//         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
+//           {project.images.map((_, index) => (
+//             <button
+//               key={index}
+//               onClick={() => goToSlide(project.id, index)}
+//               className={`w-3 h-3 rounded-full transition-all duration-300 ${
+//                 index === currentSlide 
+//                   ? 'bg-white scale-125 shadow-lg' 
+//                   : 'bg-white/60 hover:bg-white/80 hover:scale-110'
+//               }`}
+//             />
+//           ))}
+//         </div>
+//       </div>
+//     );
+//   };
+
+//   const ProjectSection = ({ project, index }) => {
+//     const IconComponent = project.icon;
+//     const isEven = index % 2 === 0;
+    
+//     return (
+//       <section className={`py-12 bg-gradient-to-br ${project.bgGradient}`}>
+//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//           <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
+            
+//             {/* Content Section */}
+//             <div className={`space-y-6 md:space-y-8 ${!isEven ? 'lg:col-start-2' : ''}`}>
+//               <div className="space-y-4 md:space-y-6">
+//                 <div className="flex items-center space-x-3 sm:space-x-4">
+//                   <div className={`bg-gradient-to-r ${project.color} p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg`}>
+//                     <IconComponent className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
+//                   </div>
+//                   <div>
+//                     <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">{project.title}</h2>
+//                     <p className="text-lg sm:text-xl text-gray-600 font-medium">{project.subtitle}</p>
+//                   </div>
+//                 </div>
+                
+//                 <div className={`border-l-4 ${project.accentColor} pl-4 sm:pl-6`}>
+//                   <p className={`text-2xl sm:text-2xl font-bold ${project.accentColor} mb-1 sm:mb-2`}>{project.tagline}</p>
+//                   <p className="text-lg sm:text-lg text-gray-700 leading-relaxed">{project.description}</p>
+//                 </div>
+//               </div>
+
+//               <div className="prose prose-sm sm:prose-lg max-w-none">
+//                 <p className="text-gray-600 leading-relaxed">{project.fullDescription}</p>
+//               </div>
+
+//               {/* Key Features */}
+//               <div className="space-y-3 sm:space-y-4">
+//                 <h3 className="text-xl sm:text-2xl font-bold text-gray-800 flex items-center">
+//                   <Star className={`w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3 ${project.accentColor}`} />
+//                   Key Features
+//                 </h3>
+//                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+//                   {project.keyFeatures.map((feature, idx) => (
+//                     <div key={idx} className="flex items-start bg-white/70 backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-white/50">
+//                       <ChevronRight className={`w-4 sm:w-5 h-4 sm:h-5 mr-2 sm:mr-3 ${project.accentColor} mt-0.5 flex-shrink-0`} />
+//                       <span className="text-sm sm:text-base text-gray-700 font-medium">{feature}</span>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+
+//               {/* Project Highlights */}
+//               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+//                 {project.highlights.map((highlight, idx) => {
+//                   const HighlightIcon = highlight.icon;
+//                   return (
+//                     <div key={idx} className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg border border-white/50">
+//                       <div className="flex items-center mb-2 sm:mb-3">
+//                         <HighlightIcon className={`w-4 sm:w-5 h-4 sm:h-5 mr-2 sm:mr-3 ${project.accentColor}`} />
+//                         <span className="text-xs sm:text-sm font-bold text-gray-700">{highlight.label}</span>
+//                       </div>
+//                       <p className="text-xs sm:text-sm text-gray-600 font-semibold">{highlight.value}</p>
+//                     </div>
+//                   );
+//                 })}
+//               </div>
+
+//               {/* CTA Button */}
+//               <Link to='/get-involved/contact'>
+//                 <button className={`bg-gradient-to-r ${project.color} mt-6 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
+//                   Learn More & Get Involved
+//                 </button>
+//               </Link>
+//             </div>
+
+//             {/* Image Carousel Section */}
+//             <div className={`mt-8 lg:mt-0 ${!isEven ? 'lg:col-start-1' : ''}`}>
+//               <ImageCarousel project={project} />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     );
+//   };
+
+//   const ProjectCategorySection = ({ title, description, projects }) => {
+//     return (
+//       <div className="space-y-0">
+//         <div className="text-center py-12 sm:py-14 bg-white">
+//           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">{title}</h2>
+//           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
+//             {description}
+//           </p>
+//         </div>
+        
+//         {projects.map((project, index) => (
+//           <ProjectSection key={project.id} project={project} index={index} />
+//         ))}
+//       </div>
+//     );
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-white">
+//       {/* Custom CSS */}
+//       <style jsx>{`
+//         .from-primary { background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%); }
+//         .from-primary-dark { background: linear-gradient(135deg, #E64A19 0%, #BF360C 100%); }
+//         .from-secondary { background: linear-gradient(135deg, #00695C 0%, #004D40 100%); }
+//         .from-secondary-dark { background: linear-gradient(135deg, #004D40 0%, #00251A 100%); }
+//         .from-blue-600 { background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); }
+//         .from-blue-800 { background: linear-gradient(135deg, #1D4ED8 0%, #1E3A8A 100%); }
+//         .from-purple-600 { background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%); }
+//         .from-purple-800 { background: linear-gradient(135deg, #7E22CE 0%, #6B21A8 100%); }
+//         .from-amber-600 { background: linear-gradient(135deg, #D97706 0%, #B45309 100%); }
+//         .from-amber-800 { background: linear-gradient(135deg, #B45309 0%, #92400E 100%); }
+//         .from-red-600 { background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%); }
+//         .from-red-800 { background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%); }
+//         .from-indigo-600 { background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%); }
+//         .from-indigo-800 { background: linear-gradient(135deg, #4338CA 0%, #3730A3 100%); }
+//         .text-primary { color: #FF5722; }
+//         .text-secondary { color: #00695C; }
+//         .text-blue-600 { color: #2563EB; }
+//         .text-purple-600 { color: #9333EA; }
+//         .text-amber-600 { color: #D97706; }
+//         .text-red-600 { color: #DC2626; }
+//         .text-indigo-600 { color: #4F46E5; }
+//       `}</style>
+
+//       <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
+//         <div className="absolute inset-0 z-0">
+//           <img 
+//             src="/images/logo/istockphoto-593332654-612x612.webp"
+//             alt="Children Education Background"
+//             className="w-full h-full object-cover opacity-50"
+//           />
+//           <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-75"></div>
+//         </div>
+
+//         <div className="relative z-20 text-center space-y-6 sm:space-y-8 md:space-y-10 px-4">
+//           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-2xl">Our <span className='text-orange-200'>Impactful Projects</span></h1>
+//           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed font-medium">
+//             Transforming lives through comprehensive interventions in education, skill development, healthcare, and cultural preservation. 
+//             Discover our initiatives creating sustainable change across communities.
+//           </p>
+
+//           <div className="flex flex-row items-center justify-center flex-wrap gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8">
+//             <div className="text-center min-w-[100px]">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold">5,000+</div>
+//               <div className="text-white/90 text-xs sm:text-sm md:text-base">Lives Impacted</div>
+//             </div>
+
+//             <div className="w-px h-8 sm:h-10 md:h-14 bg-white/30"></div>
+
+//             <div className="text-center min-w-[100px]">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold">7</div>
+//               <div className="text-white/90 text-xs sm:text-sm md:text-base">Flagship Projects</div>
+//             </div>
+
+//             <div className="w-px h-8 sm:h-10 md:h-14 bg-white/30"></div>
+
+//             <div className="text-center min-w-[100px]">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold">10+</div>
+//               <div className="text-white/90 text-xs sm:text-sm md:text-base">Communities Served</div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Mission Statement */}
+//       <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-orange-50 to-gray-100">
+//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//           <div className="text-center space-y-6 sm:space-y-8">
+//             <div className="bg-gradient-to-r from-primary to-accent-gold p-4 sm:p-5 md:p-6 rounded-full w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto flex items-center justify-center shadow-xl">
+//               <Target className="w-8 sm:w-10 md:w-12 text-white" />
+//             </div>
+//             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">Our Holistic Approach</h2>
+//             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl sm:max-w-5xl mx-auto leading-relaxed">
+//               Ashwamedh Foundation adopts a 360-degree approach to community development, addressing education, skills, health, 
+//               and cultural needs. Our projects are designed to complement each other, creating a comprehensive ecosystem for 
+//               sustainable empowerment and social transformation.
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Educational Projects */}
+//       <ProjectCategorySection
+//         title="Educational Initiatives"
+//         description="Building strong academic foundations and creating equitable learning opportunities"
+//         projects={educationalProjects}
+//       />
+
+//       {/* Skills Development Projects */}
+//       <ProjectCategorySection
+//         title="Skills Development Programs"
+//         description="Equipping youth with essential skills for academic and professional success"
+//         projects={skillsDevelopmentProjects}
+//       />
+
+//       {/* Personality Development Projects */}
+//       <ProjectCategorySection
+//         title="Personality & HRD Initiatives"
+//         description="Developing confident individuals ready to face personal and professional challenges"
+//         projects={personalityDevelopmentProjects}
+//       />
+
+//       {/* Healthcare Projects */}
+//       <ProjectCategorySection
+//         title="Healthcare Programs"
+//         description="Ensuring community wellbeing through preventive and curative healthcare"
+//         projects={healthcareProjects}
+//       />
+
+//       {/* Arts & Culture Projects */}
+//       <ProjectCategorySection
+//         title="Arts & Cultural Initiatives"
+//         description="Preserving heritage while fostering creative expression and talent"
+//         projects={artsCultureProjects}
+//       />
+
+//       {/* Call to Action */}
+//       <div className="relative py-12 sm:py-14 md:py-16 text-white overflow-hidden">
+//         <div className="absolute inset-0 z-0">
+//           <img
+//             src="/images/logo/gettyimages-535555239-612x612.jpg"
+//             alt="Join Our Mission"
+//             className="w-full h-full object-cover opacity-70"
+//           />
+//           <div className="absolute inset-0 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90"></div>
+//         </div>
+
+//         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-6">
+//           <h2 className="text-3xl sm:text-4xl font-bold drop-shadow-lg">Be Part of Our Journey</h2>
+//           <p className="text-lg sm:text-xl text-white/95 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed font-medium">
+//             Your support can help us expand our reach and create more impact. Whether through volunteering, 
+//             partnerships, or donations, you can contribute to transforming lives and communities.
+//           </p>
+
+//           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-6 sm:pt-8">
+//             <Link to='/get-involved/volunteer'>
+//               <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl">
+//                 Volunteer With Us
+//               </button>
+//             </Link>
+            
+//             <Link to='/get-involved/donate'>
+//               <button className="bg-transparent border-2 border-white text-white hover:bg-orange-500 hover:text-secondary px-8 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl">
+//                 Support Our Cause
+//               </button>
+//             </Link>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProjectsPage;
+
+ useEffect(() => {
     const initialSlides = {};
     [
       ...educationalProjects,
@@ -814,7 +1155,7 @@ const ProjectsPage = () => {
           ...prev,
           [project.id]: (prev[project.id] + 1) % project.images.length
         }));
-      }, 3000);
+      }, 5000); // Increased interval for better mobile experience
     });
 
     return () => {
@@ -833,9 +1174,9 @@ const ProjectsPage = () => {
     const currentSlide = currentSlides[project.id] || 0;
     
     return (
-      <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+      <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl group">
         <div 
-          className="flex transition-transform duration-700 ease-in-out h-64 sm:h-80 md:h-96"
+          className="flex transition-transform duration-500 ease-in-out h-48 sm:h-64 md:h-80 lg:h-96"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {project.images.map((image, index) => (
@@ -844,23 +1185,25 @@ const ProjectsPage = () => {
                 src={image.url} 
                 alt={`${project.title} - ${index + 1}`}
                 className="w-full h-full object-cover"
+                loading="lazy" // Added lazy loading for better performance
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>
           ))}
         </div>
 
-        {/* Dots Indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
+        {/* Dots Indicator - Made larger for mobile */}
+        <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3">
           {project.images.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(project.id, index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide 
-                  ? 'bg-white scale-125 shadow-lg' 
+                  ? 'bg-white scale-125 shadow-md sm:shadow-lg' 
                   : 'bg-white/60 hover:bg-white/80 hover:scale-110'
               }`}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
@@ -873,57 +1216,57 @@ const ProjectsPage = () => {
     const isEven = index % 2 === 0;
     
     return (
-      <section className={`py-12 bg-gradient-to-br ${project.bgGradient}`}>
+      <section className={`py-8 sm:py-12 bg-gradient-to-br ${project.bgGradient}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
+          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-14 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
             
-            {/* Content Section */}
-            <div className={`space-y-6 md:space-y-8 ${!isEven ? 'lg:col-start-2' : ''}`}>
-              <div className="space-y-4 md:space-y-6">
-                <div className="flex items-center space-x-3 sm:space-x-4">
-                  <div className={`bg-gradient-to-r ${project.color} p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg`}>
-                    <IconComponent className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
+            {/* Content Section - Reordered for mobile */}
+            <div className={`space-y-4 sm:space-y-6 md:space-y-8 ${!isEven ? 'lg:col-start-2' : ''}`}>
+              <div className="space-y-3 sm:space-y-4 md:space-y-6">
+                <div className="flex items-center space-x-2 sm:space-x-4">
+                  <div className={`bg-gradient-to-r ${project.color} p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl md:rounded-2xl shadow-md sm:shadow-lg`}>
+                    <IconComponent className="w-5 sm:w-6 md:w-8 h-5 sm:h-6 md:h-8 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">{project.title}</h2>
-                    <p className="text-lg sm:text-xl text-gray-600 font-medium">{project.subtitle}</p>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 leading-tight">{project.title}</h2>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600 font-medium">{project.subtitle}</p>
                   </div>
                 </div>
                 
-                <div className={`border-l-4 ${project.accentColor} pl-4 sm:pl-6`}>
-                  <p className={`text-2xl sm:text-2xl font-bold ${project.accentColor} mb-1 sm:mb-2`}>{project.tagline}</p>
-                  <p className="text-lg sm:text-lg text-gray-700 leading-relaxed">{project.description}</p>
+                <div className={`border-l-4 ${project.accentColor} pl-3 sm:pl-4 md:pl-6`}>
+                  <p className={`text-xl sm:text-2xl font-bold ${project.accentColor} mb-1 sm:mb-2`}>{project.tagline}</p>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">{project.description}</p>
                 </div>
               </div>
 
-              <div className="prose prose-sm sm:prose-lg max-w-none">
-                <p className="text-gray-600 leading-relaxed">{project.fullDescription}</p>
+              <div className="prose prose-sm sm:prose max-w-none">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{project.fullDescription}</p>
               </div>
 
-              {/* Key Features */}
-              <div className="space-y-3 sm:space-y-4">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 flex items-center">
-                  <Star className={`w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3 ${project.accentColor}`} />
+              {/* Key Features - Adjusted for mobile */}
+              <div className="space-y-2 sm:space-y-3 md:space-y-4">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 flex items-center">
+                  <Star className={`w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 mr-2 ${project.accentColor}`} />
                   Key Features
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                   {project.keyFeatures.map((feature, idx) => (
-                    <div key={idx} className="flex items-start bg-white/70 backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-white/50">
-                      <ChevronRight className={`w-4 sm:w-5 h-4 sm:h-5 mr-2 sm:mr-3 ${project.accentColor} mt-0.5 flex-shrink-0`} />
-                      <span className="text-sm sm:text-base text-gray-700 font-medium">{feature}</span>
+                    <div key={idx} className="flex items-start bg-white/70 backdrop-blur-sm p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl shadow-sm border border-white/50">
+                      <ChevronRight className={`w-3 sm:w-4 md:w-5 h-3 sm:h-4 md:h-5 mr-2 ${project.accentColor} mt-0.5 flex-shrink-0`} />
+                      <span className="text-xs sm:text-sm md:text-base text-gray-700 font-medium">{feature}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Project Highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              {/* Project Highlights - Adjusted spacing for mobile */}
+              <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
                 {project.highlights.map((highlight, idx) => {
                   const HighlightIcon = highlight.icon;
                   return (
-                    <div key={idx} className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg border border-white/50">
-                      <div className="flex items-center mb-2 sm:mb-3">
-                        <HighlightIcon className={`w-4 sm:w-5 h-4 sm:h-5 mr-2 sm:mr-3 ${project.accentColor}`} />
+                    <div key={idx} className="bg-white/80 backdrop-blur-sm p-2 sm:p-3 md:p-4 md:p-6 rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-white/50">
+                      <div className="flex items-center mb-1 sm:mb-2 md:mb-3">
+                        <HighlightIcon className={`w-3 sm:w-4 md:w-5 h-3 sm:h-4 md:h-5 mr-1 sm:mr-2 md:mr-3 ${project.accentColor}`} />
                         <span className="text-xs sm:text-sm font-bold text-gray-700">{highlight.label}</span>
                       </div>
                       <p className="text-xs sm:text-sm text-gray-600 font-semibold">{highlight.value}</p>
@@ -932,16 +1275,16 @@ const ProjectsPage = () => {
                 })}
               </div>
 
-              {/* CTA Button */}
-              <Link to='/get-involved/contact'>
-                <button className={`bg-gradient-to-r ${project.color} mt-6 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
+              {/* CTA Button - Adjusted size for mobile */}
+              <Link to='/get-involved/contact' className="block mt-4 sm:mt-6">
+                <button className={`bg-gradient-to-r ${project.color} w-full sm:w-auto text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold text-sm sm:text-base md:text-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 sm:hover:-translate-y-1`}>
                   Learn More & Get Involved
                 </button>
               </Link>
             </div>
 
-            {/* Image Carousel Section */}
-            <div className={`mt-8 lg:mt-0 ${!isEven ? 'lg:col-start-1' : ''}`}>
+            {/* Image Carousel Section - Always appears after content on mobile */}
+            <div className={`mt-4 sm:mt-6 lg:mt-0 ${!isEven ? 'lg:col-start-1' : ''}`}>
               <ImageCarousel project={project} />
             </div>
           </div>
@@ -953,9 +1296,9 @@ const ProjectsPage = () => {
   const ProjectCategorySection = ({ title, description, projects }) => {
     return (
       <div className="space-y-0">
-        <div className="text-center py-12 sm:py-14 bg-white">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">{title}</h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed">
+        <div className="text-center py-8 sm:py-10 md:py-12 bg-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 md:mb-6">{title}</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-4">
             {description}
           </p>
         </div>
@@ -994,55 +1337,59 @@ const ProjectsPage = () => {
         .text-indigo-600 { color: #4F46E5; }
       `}</style>
 
-      <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
+      {/* Hero Section - Adjusted for mobile */}
+      <section className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-600 via-orange-500 to-red-600 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="/images/logo/istockphoto-593332654-612x612.webp"
             alt="Children Education Background"
             className="w-full h-full object-cover opacity-50"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-orange-600 to-teal-700 opacity-75"></div>
         </div>
 
-        <div className="relative z-20 text-center space-y-6 sm:space-y-8 md:space-y-10 px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-2xl">Our <span className='text-orange-200'>Impactful Projects</span></h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed font-medium">
+        <div className="relative z-20 text-center space-y-4 sm:space-y-6 md:space-y-8 px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-md">
+            Our <span className='text-orange-200'>Impactful Projects</span>
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed font-medium">
             Transforming lives through comprehensive interventions in education, skill development, healthcare, and cultural preservation. 
             Discover our initiatives creating sustainable change across communities.
           </p>
 
-          <div className="flex flex-row items-center justify-center flex-wrap gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8">
-            <div className="text-center min-w-[100px]">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold">5,000+</div>
-              <div className="text-white/90 text-xs sm:text-sm md:text-base">Lives Impacted</div>
+          <div className="flex flex-row items-center justify-center flex-wrap gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-6">
+            <div className="text-center min-w-[80px] sm:min-w-[100px]">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold">5,000+</div>
+              <div className="text-white/90 text-xs sm:text-sm">Lives Impacted</div>
             </div>
 
-            <div className="w-px h-8 sm:h-10 md:h-14 bg-white/30"></div>
+            <div className="w-px h-6 sm:h-8 md:h-10 bg-white/30"></div>
 
-            <div className="text-center min-w-[100px]">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold">7</div>
-              <div className="text-white/90 text-xs sm:text-sm md:text-base">Flagship Projects</div>
+            <div className="text-center min-w-[80px] sm:min-w-[100px]">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold">7</div>
+              <div className="text-white/90 text-xs sm:text-sm">Flagship Projects</div>
             </div>
 
-            <div className="w-px h-8 sm:h-10 md:h-14 bg-white/30"></div>
+            <div className="w-px h-6 sm:h-8 md:h-10 bg-white/30"></div>
 
-            <div className="text-center min-w-[100px]">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold">10+</div>
-              <div className="text-white/90 text-xs sm:text-sm md:text-base">Communities Served</div>
+            <div className="text-center min-w-[80px] sm:min-w-[100px]">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold">10+</div>
+              <div className="text-white/90 text-xs sm:text-sm">Communities Served</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-orange-50 to-gray-100">
+      {/* Mission Statement - Adjusted for mobile */}
+      <div className="py-8 sm:py-10 md:py-12 bg-gradient-to-br from-orange-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-6 sm:space-y-8">
-            <div className="bg-gradient-to-r from-primary to-accent-gold p-4 sm:p-5 md:p-6 rounded-full w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 mx-auto flex items-center justify-center shadow-xl">
-              <Target className="w-8 sm:w-10 md:w-12 text-white" />
+          <div className="text-center space-y-4 sm:space-y-6">
+            <div className="bg-gradient-to-r from-primary to-accent-gold p-3 sm:p-4 md:p-5 rounded-full w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 mx-auto flex items-center justify-center shadow-lg">
+              <Target className="w-6 sm:w-8 md:w-10 text-white" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">Our Holistic Approach</h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl sm:max-w-5xl mx-auto leading-relaxed">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">Our Holistic Approach</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-4xl sm:max-w-5xl mx-auto leading-relaxed px-2">
               Ashwamedh Foundation adopts a 360-degree approach to community development, addressing education, skills, health, 
               and cultural needs. Our projects are designed to complement each other, creating a comprehensive ecosystem for 
               sustainable empowerment and social transformation.
@@ -1086,33 +1433,34 @@ const ProjectsPage = () => {
         projects={artsCultureProjects}
       />
 
-      {/* Call to Action */}
-      <div className="relative py-12 sm:py-14 md:py-16 text-white overflow-hidden">
+      {/* Call to Action - Adjusted for mobile */}
+      <div className="relative py-10 sm:py-12 md:py-14 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/logo/gettyimages-535555239-612x612.jpg"
             alt="Join Our Mission"
             className="w-full h-full object-cover opacity-70"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#00695C]/95 to-[#004D40]/90"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-bold drop-shadow-lg">Be Part of Our Journey</h2>
-          <p className="text-lg sm:text-xl text-white/95 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed font-medium">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 sm:space-y-4 md:space-y-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">Be Part of Our Journey</h2>
+          <p className="text-sm sm:text-base md:text-lg text-white/95 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed font-medium">
             Your support can help us expand our reach and create more impact. Whether through volunteering, 
             partnerships, or donations, you can contribute to transforming lives and communities.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-6 sm:pt-8">
-            <Link to='/get-involved/volunteer'>
-              <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center pt-4 sm:pt-6">
+            <Link to='/get-involved/volunteer' className="w-full sm:w-auto">
+              <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-bold text-sm sm:text-base md:text-lg transition-all duration-300 hover:shadow-lg">
                 Volunteer With Us
               </button>
             </Link>
             
-            <Link to='/get-involved/donate'>
-              <button className="bg-transparent border-2 border-white text-white hover:bg-orange-500 hover:text-secondary px-8 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-xl sm:hover:shadow-2xl">
+            <Link to='/get-involved/donate' className="w-full sm:w-auto">
+              <button className="w-full bg-transparent border-2 border-white text-white hover:bg-orange-500 hover:text-secondary px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-bold text-sm sm:text-base md:text-lg transition-all duration-300 hover:shadow-lg">
                 Support Our Cause
               </button>
             </Link>
