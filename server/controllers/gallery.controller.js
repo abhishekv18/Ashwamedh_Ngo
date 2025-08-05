@@ -117,7 +117,7 @@ const adminMail = {
         <p>${description.slice(0, 250)}...</p>
 
         <div style="margin: 25px 0;">
-          <a href="https://ashwamedhfoundation.org/" 
+          <a href="https://ashwamedhfoundation.org/resources/gallery" 
              style="background-color: #e67e22; color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600;">
             View on Website
           </a>
