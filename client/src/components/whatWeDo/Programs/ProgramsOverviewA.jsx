@@ -113,7 +113,7 @@ const ProgramsOverviewA = () => {
 
   const stats = [
     {
-      number: "5000+",
+      number: "5,000+",
       label: "Children Impacted",
       icon: <Users className="w-6 h-6 sm:w-8 sm:h-8" />,
       color: "text-orange-600"

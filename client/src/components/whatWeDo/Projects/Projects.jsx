@@ -1367,7 +1367,7 @@ const ProjectsPage = () => {
             <div className="w-px h-6 sm:h-8 md:h-10 bg-white/30"></div>
 
             <div className="text-center min-w-[80px] sm:min-w-[100px]">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold">7</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold">7+</div>
               <div className="text-white/90 text-xs sm:text-sm">Flagship Projects</div>
             </div>
 
