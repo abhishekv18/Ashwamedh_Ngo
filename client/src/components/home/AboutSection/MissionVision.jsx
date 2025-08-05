@@ -436,11 +436,11 @@ const MissionVision = () => {
             <div className="flex flex-col lg:flex-row relative z-10">
               {/* Left side - Content */}
               <div className="lg:w-2/3 p-6 sm:p-8 lg:p-12 xl:p-16 text-white">
-                <div className="mb-6 sm:mb-8">
+                <div className="mb-6 sm:mb-8 text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-2xl sm:rounded-3xl mb-4 sm:mb-6">
-                    <Eye className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    <Eye className="w-8 h-8 sm:w-10 sm:h-10 text-white " />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+                  <h3 className="text-2xl text-center sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
                    Our Vision
                   </h3>
                   <p className="text-lg sm:text-xl text-white/95 leading-relaxed font-medium mb-6 sm:mb-8">
@@ -504,7 +504,7 @@ const MissionVision = () => {
             
             <div className="relative z-10 text-center py-10 sm:py-14 lg:py-16 px-3 sm:px-7">
               <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-2xl sm:rounded-3xl mb-4 sm:mb-6 shadow-lg">
-                <Target className="w-8 h-8 sm:w-10 sm:h-10 text-yellow-500" />
+                <Target className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
               </div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
                 Our Mission

@@ -354,92 +354,45 @@ const testimonials = [
         </div>
       </div>
 
-{/* Career Opportunities */}
-{/* <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
+
+<div className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-r from-orange-50 to-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
-      <div className="p-6 sm:p-8 md:p-10 lg:p-12 text-white">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Career Opportunities</h2>
-            <p className="text-sm sm:text-base opacity-90 mb-4 sm:mb-6">
-              Interested in long-term volunteering or employment opportunities with Ashwamedh Foundation?
-            </p>
-            <div className="space-y-2 sm:space-y-3">
-              <div className="flex items-start">
-                <CheckCircle className="h-5 w-5 flex-shrink-0 mt-0.5 mr-2 text-teal-300" />
-                <span className="text-sm sm:text-base">
-                  For ongoing volunteering positions and current job vacancies
-                </span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="h-5 w-5 mr-2 text-teal-300" />
-                <a 
-                  href="mailto:hr@ashwamedhfoundation.org" 
-                  className="text-sm sm:text-base font-medium hover:underline"
-                >
-                  hr@ashwamedhfoundation.org
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Mail className="h-5 w-5 mr-2 text-teal-300" />
-                <a 
-                  href="mailto:contact@ashwamedhfoundation.org" 
-                  className="text-sm sm:text-base font-medium hover:underline"
-                >
-                  contact@ashwamedhfoundation.org
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/3 flex justify-center">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <Briefcase className="h-12 w-12 sm:h-16 sm:w-16 text-white" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> */}
-<div className="py-12 sm:py-14 md:py-16 bg-gradient-to-r from-orange-50 to-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
-      <div className="p-6 sm:p-8 md:p-10 lg:p-12 text-white">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-8">
+    <div className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-xl lg:rounded-3xl overflow-hidden shadow-xl">
+      <div className="p-6 sm:p-10 md:p-12 lg:p-16 text-white">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10 lg:gap-12">
           
           {/* Left Section */}
           <div className="w-full md:w-2/3 text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 leading-tight">
               Career Opportunities
             </h2>
-            <p className="text-sm sm:text-base opacity-90 mb-5 sm:mb-6">
+            <p className="text-sm sm:text-base md:text-lg opacity-90 mb-6 sm:mb-7 md:mb-8 max-w-2xl mx-auto md:mx-0">
               Interested in long-term volunteering or employment opportunities with Ashwamedh Foundation?
             </p>
 
-            <div className="space-y-3 sm:space-y-4">
+            <div className="space-y-4 sm:space-y-5">
               <div className="flex items-start justify-center md:justify-start text-left">
-                <CheckCircle className="h-5 w-5 mt-0.5 mr-2 text-teal-300 flex-shrink-0" />
-                <span className="text-sm sm:text-base">
+                <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 mt-0.5 mr-3 flex-shrink-0 text-teal-300" />
+                <span className="text-sm sm:text-base md:text-lg">
                   For ongoing volunteering positions and current job vacancies
                 </span>
               </div>
 
               <div className="flex items-center justify-center md:justify-start">
-                <Mail className="h-5 w-5 mr-2 text-teal-300" />
+                <Mail className="h-5 w-5 sm:h-6 sm:w-6 mr-3 text-teal-300" />
                 <a
                   href="mailto:hr@ashwamedhfoundation.org"
-                  className="text-sm sm:text-base font-medium hover:underline"
+                  className="text-sm sm:text-base md:text-lg font-medium hover:underline transition-all"
                 >
                   hr@ashwamedhfoundation.org
                 </a>
               </div>
 
               <div className="flex items-center justify-center md:justify-start">
-                <Mail className="h-5 w-5 mr-2 text-teal-300" />
+                <Mail className="h-5 w-5 sm:h-6 sm:w-6 mr-3 text-teal-300" />
                 <a
                   href="mailto:contact@ashwamedhfoundation.org"
-                  className="text-sm sm:text-base font-medium hover:underline"
+                  className="text-sm sm:text-base md:text-lg font-medium hover:underline transition-all"
                 >
                   contact@ashwamedhfoundation.org
                 </a>
@@ -448,9 +401,9 @@ const testimonials = [
           </div>
 
           {/* Right Section: Icon */}
-          <div className="w-full md:w-1/3 flex justify-center">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <Briefcase className="h-8 w-8 sm:h-12 sm:w-12 md:h-14 md:w-14 text-white" />
+          <div className="w-full md:w-1/3 flex justify-center mb-6 md:mb-0">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
+              <Briefcase className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 text-white" />
             </div>
           </div>
         </div>

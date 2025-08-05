@@ -503,67 +503,128 @@ const ProjectsOverview = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-orange-50 to-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Our <span className="text-[#FF5722]">Transformative Projects</span>
-          </h2>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Comprehensive interventions across multiple domains to create sustainable impact and empower communities.
-          </p>
-        </div>
+    // <section className="py-16 bg-gradient-to-br from-orange-50 to-white">
+    //   <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    //     {/* Section Header */}
+    //     <div className="text-center mb-16">
+    //       <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+    //         Our <span className="text-[#FF5722]">Transformative Projects</span>
+    //       </h2>
+    //       <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+    //         Comprehensive interventions across multiple domains to create sustainable impact and empower communities.
+    //       </p>
+    //     </div>
 
-        {/* Project Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {projectCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="p-8 rounded-2xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              <div className={`inline-flex items-center justify-center w-12 h-12 ${category.bgColor} rounded-xl mb-6`}>
-                <div className={category.color}>
-                  {category.icon}
+    //     {/* Project Categories */}
+    //     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+    //       {projectCategories.map((category, index) => (
+    //         <div 
+    //           key={index} 
+    //           className="p-8 rounded-2xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition-all duration-300"
+    //         >
+    //           <div className={`inline-flex items-center justify-center w-12 h-12 ${category.bgColor} rounded-xl mb-6`}>
+    //             <div className={category.color}>
+    //               {category.icon}
+    //             </div>
+    //           </div>
+    //           <h3 className="text-2xl font-bold text-gray-900 mb-4">{category.title}</h3>
+    //           <p className="text-lg text-gray-700 mb-6 leading-relaxed">{category.description}</p>
+              
+    //           <div className="space-y-4 mb-8">
+    //             {category.projects.map((project, idx) => (
+    //               <div key={idx} className="flex items-start">
+    //                 <div className={`w-3 h-3 rounded-full mt-2 mr-3 flex-shrink-0 ${category.bgColor}`}></div>
+    //                 <div>
+    //                   <h4 className="text-xl font-semibold text-gray-900 mb-1">{project.name}</h4>
+    //                   <p className="text-base text-gray-700 leading-relaxed">{project.description}</p>
+    //                 </div>
+    //               </div>
+    //             ))}
+    //           </div>
+              
+    //           <Link 
+    //             to="/what-we-do/projects" 
+    //             className={`inline-flex items-center text-lg font-semibold ${category.color} hover:opacity-80 group transition-all`}
+    //           >
+    //             Explore {category.title.split(' ')[0]}
+    //             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+    //           </Link>
+    //         </div>
+    //       ))}
+    //     </div>
+
+    //     {/* CTA */}
+    //     <div className="text-center">
+    //       <Link to="/what-we-do/projects">
+    //         <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#FF5722] to-[#FF7043] text-white font-semibold text-xl rounded-xl hover:shadow-xl transition-all group">
+    //           Discover All Our Initiatives
+    //           <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
+    //         </button>
+    //       </Link>
+    //     </div>
+    //   </div>
+    // </section>
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-orange-50 to-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Section Header */}
+    <div className="text-center mb-12 md:mb-16 lg:mb-20">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
+        Our <span className="text-[#FF5722]">Transformative Projects</span>
+      </h2>
+      <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-3xl md:max-w-4xl mx-auto leading-normal sm:leading-relaxed">
+        Comprehensive interventions across multiple domains to create sustainable impact and empower communities.
+      </p>
+    </div>
+
+    {/* Project Categories */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 md:mb-16 lg:mb-20">
+      {projectCategories.map((category, index) => (
+        <div 
+          key={index} 
+          className="p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-300"
+        >
+          <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 ${category.bgColor} rounded-lg sm:rounded-xl mb-4 sm:mb-6`}>
+            <div className={`${category.color} text-lg sm:text-xl`}>
+              {category.icon}
+            </div>
+          </div>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{category.title}</h3>
+          <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">{category.description}</p>
+          
+          <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+            {category.projects.map((project, idx) => (
+              <div key={idx} className="flex items-start">
+                <div className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full mt-2 sm:mt-3 mr-2 sm:mr-3 flex-shrink-0 ${category.bgColor}`}></div>
+                <div>
+                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">{project.name}</h4>
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{project.description}</p>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{category.title}</h3>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">{category.description}</p>
-              
-              <div className="space-y-4 mb-8">
-                {category.projects.map((project, idx) => (
-                  <div key={idx} className="flex items-start">
-                    <div className={`w-3 h-3 rounded-full mt-2 mr-3 flex-shrink-0 ${category.bgColor}`}></div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-gray-900 mb-1">{project.name}</h4>
-                      <p className="text-base text-gray-700 leading-relaxed">{project.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <Link 
-                to="/what-we-do/projects" 
-                className={`inline-flex items-center text-lg font-semibold ${category.color} hover:opacity-80 group transition-all`}
-              >
-                Explore {category.title.split(' ')[0]}
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          <Link to="/what-we-do/projects">
-            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#FF5722] to-[#FF7043] text-white font-semibold text-xl rounded-xl hover:shadow-xl transition-all group">
-              Discover All Our Initiatives
-              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
-            </button>
+            ))}
+          </div>
+          
+          <Link 
+            to="/what-we-do/projects" 
+            className={`inline-flex items-center text-base sm:text-lg font-semibold ${category.color} hover:opacity-80 group transition-all`}
+          >
+            Explore {category.title.split(' ')[0]}
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="text-center">
+      <Link to="/what-we-do/projects">
+        <button className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#FF5722] to-[#FF7043] text-white font-semibold text-lg sm:text-xl rounded-lg sm:rounded-xl hover:shadow-lg transition-all group">
+          Discover All Our Initiatives
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
+        </button>
+      </Link>
+    </div>
+  </div>
+</section>
   );
 };
 
