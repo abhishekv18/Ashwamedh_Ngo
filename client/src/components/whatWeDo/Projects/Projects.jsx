@@ -639,10 +639,10 @@ const ProjectsPage = () => {
       accentColor: "text-blue-600",
       bgGradient: "from-blue-50 to-indigo-50",
       images: [
-        { url: "/projects/aakalan1.jpg" },
-        { url: "/projects/aakalan2.jpg" },
-        { url: "/projects/aakalan3.jpg" },
-        { url: "/projects/aakalan4.jpg" }
+        { url: "/IMG-20240818-WA0005.jpg" },
+        { url: "/IMG-20250804-WA0086.jpg" },
+        { url: "/IMG-20240923-WA0002.jpg" },
+        { url: "/IMG-20240923-WA0001 (1).jpg" }
       ]
     }
   ];
