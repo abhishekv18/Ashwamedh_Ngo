@@ -607,10 +607,10 @@ const ProjectsPage = () => {
       accentColor: "text-secondary",
       bgGradient: "from-teal-50 to-green-50",
       images: [
-        { url: "/projects/aagaaz1.jpg" },
-        { url: "/projects/aagaaz2.jpg" },
-        { url: "/projects/aagaaz3.jpg" },
-        { url: "/projects/aagaaz4.jpg" }
+        { url: "/Screenshot_20250617-201559 (1).png" },
+        { url: "/Screenshot_20250617-201209 (1).png" },
+        { url: "/IMG-20250624-WA0064.jpg" },
+        { url: "/IMG-20240819-WA0003.jpg" }
       ]
     },
     {
