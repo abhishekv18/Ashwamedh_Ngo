@@ -1382,9 +1382,9 @@ const handleContinueToPayment = () => {
                   </ol>
                 </div>
                 
-                <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
+                {/* <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
                   <p className="text-orange-800 text-xs md:text-sm">
-                    {/* <span className="font-bold">Important:</span> After making the payment, please email the transaction details to contact@ashwamedhfoundation.org for receipt. */}
+                   
                     <span className="font-bold">Important:</span> After making the payment, please email the transaction details to{" "}
 <a
   href="mailto:contact@ashwamedhfoundation.org"
@@ -1395,7 +1395,23 @@ const handleContinueToPayment = () => {
 with your PAN for 80G receipt.
 
                   </p>
-                </div>
+                </div> */}
+                <div className="bg-orange-50/90 p-3 sm:p-4 rounded-lg border border-orange-200">
+  <p className="text-orange-800 text-xs sm:text-sm leading-relaxed break-words">
+    <span className="font-bold">Important:</span> After making the payment, please email the transaction details to{" "}
+    <span className="block sm:inline text-center sm:text-left">
+      <a
+        href="mailto:contact@ashwamedhfoundation.org"
+        className="font-bold hover:underline break-all"
+      >
+        contact@ashwamedhfoundation.org
+      </a>
+    </span>
+    <br className="sm:hidden" />
+    with your PAN for 80G receipt.
+  </p>
+</div>
+
               </div>
             </div>
           </div>
@@ -1429,7 +1445,7 @@ with your PAN for 80G receipt.
                   </ol>
                 </div>
                 
-                <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
+                {/* <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
                   <p className="text-orange-800 text-xs md:text-sm">
                     <span className="font-bold">Note:</span> The QR code is valid for all UPI apps. After payment, please email the transaction details to{" "}
 <a
@@ -1440,7 +1456,23 @@ with your PAN for 80G receipt.
 </a>{" "}
 with your PAN for 80G receipt.
                   </p>
-                </div>
+                </div> */}
+                <div className="bg-orange-50/90 p-3 sm:p-4 rounded-lg border border-orange-200">
+  <p className="text-orange-800 text-xs sm:text-sm leading-relaxed break-words">
+    <span className="font-bold">Note:</span> The QR code is valid for all UPI apps. After payment, please email the transaction details to{" "}
+    <span className="block sm:inline text-center sm:text-left">
+      <a
+        href="mailto:contact@ashwamedhfoundation.org"
+        className="font-bold hover:underline break-all"
+      >
+        contact@ashwamedhfoundation.org
+      </a>
+    </span>
+    <br className="sm:hidden" />
+    with your PAN for 80G receipt.
+  </p>
+</div>
+
               </div>
             </div>
           </div>
@@ -1489,7 +1521,7 @@ with your PAN for 80G receipt.
                   </ol>
                 </div>
                 
-                <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
+                {/* <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
                   <p className="text-orange-800 text-xs md:text-sm">
                     <span className="font-bold">Important:</span> After making the transfer, please email the transaction details to{" "}
 <a
@@ -1500,7 +1532,23 @@ with your PAN for 80G receipt.
 </a>{" "}
 with your PAN for 80G receipt.
                   </p>
-                </div>
+                </div> */}
+                <div className="bg-orange-50/90 p-3 sm:p-4 rounded-lg border border-orange-200">
+  <p className="text-orange-800 text-xs sm:text-sm leading-relaxed break-words">
+    <span className="font-bold">Important:</span> After making the transfer, please email the transaction details to{" "}
+    <span className="block sm:inline text-center sm:text-left">
+      <a
+        href="mailto:contact@ashwamedhfoundation.org"
+        className="font-bold hover:underline break-all"
+      >
+        contact@ashwamedhfoundation.org
+      </a>
+    </span>
+    <br className="sm:hidden" />
+    with your PAN for 80G receipt.
+  </p>
+</div>
+
               </div>
             </div>
           </div>
@@ -1686,7 +1734,7 @@ with your PAN for 80G receipt.
               {/* Continue Button */}
               <button
                 onClick={handleContinueToPayment}
-                className={`w-full py-3 md:py-5 px-4 md:px-8 rounded-xl text-lg md:text-xl font-bold transition-all flex items-center justify-center gap-2 md:gap-3 hover:shadow-xl hover:scale-105 active:scale-95`}
+                className={`w-full py-3 md:py-5 px-4 md:px-8 rounded-xl text-lg md:text-xl font-bold transition-all flex items-center justify-center gap-2 md:gap-3 hover:shadow-xl hover:scale-105 active:scale-95 `}
                 style={{ 
                   background: 'linear-gradient(135deg, #FF5722 0%, #FF7043 100%)',
                   color: 'white'
@@ -1796,7 +1844,7 @@ with your PAN for 80G receipt.
               </button>
               <div 
                 className="px-3 md:px-4 py-1 md:py-2 rounded-lg font-bold text-sm md:text-base"
-                style={{ backgroundColor: '#00897B', color: 'white' }}
+                style={{ backgroundColor: '#00796B', color: 'white' }}
               >
                 Supporting {causes.find(c => c.id === selectedCause)?.title}
               </div>
