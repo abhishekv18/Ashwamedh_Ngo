@@ -1399,14 +1399,12 @@ with your PAN for 80G receipt.
                 <div className="bg-orange-50/90 p-3 sm:p-4 rounded-lg border border-orange-200">
   <p className="text-orange-800 text-xs sm:text-sm leading-relaxed break-words">
     <span className="font-bold">Important:</span> After making the payment, please email the transaction details to{" "}
-    <span className="block sm:inline text-center sm:text-left">
       <a
         href="mailto:contact@ashwamedhfoundation.org"
         className="font-bold hover:underline break-all"
       >
         contact@ashwamedhfoundation.org
-      </a>
-    </span> with your PAN for 80G receipt.
+      </a> with your PAN for 80G receipt.
     
   </p>
 </div>
@@ -1459,14 +1457,12 @@ with your PAN for 80G receipt.
                 <div className="bg-orange-50/90 p-3 sm:p-4 rounded-lg border border-orange-200">
   <p className="text-orange-800 text-xs sm:text-sm leading-relaxed break-words">
     <span className="font-bold">Note:</span> The QR code is valid for all UPI apps. After payment, please email the transaction details to{" "}
-    <span className="block sm:inline text-center sm:text-left">
       <a
         href="mailto:contact@ashwamedhfoundation.org"
         className="font-bold hover:underline break-all"
       >
         contact@ashwamedhfoundation.org 
-      </a>
-    </span> with your PAN for 80G receipt.
+      </a> with your PAN for 80G receipt.
      
   </p>
 </div>
@@ -1534,14 +1530,12 @@ with your PAN for 80G receipt.
                 <div className="bg-orange-50/90 p-3 sm:p-4 rounded-lg border border-orange-200">
   <p className="text-orange-800 text-xs sm:text-sm leading-relaxed break-words">
     <span className="font-bold">Important:</span> After making the transfer, please email the transaction details to{" "}
-    <span className="block sm:inline text-center sm:text-left">
       <a
         href="mailto:contact@ashwamedhfoundation.org"
         className="font-bold hover:underline break-all"
       >
         contact@ashwamedhfoundation.org 
-      </a>
-    </span> with your PAN for 80G receipt.
+      </a> with your PAN for 80G receipt.
      
   </p>
 </div>
