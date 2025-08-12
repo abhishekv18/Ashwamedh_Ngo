@@ -1406,9 +1406,8 @@ with your PAN for 80G receipt.
       >
         contact@ashwamedhfoundation.org
       </a>
-    </span>
-    <br className="sm:hidden" />
-    with your PAN for 80G receipt.
+    </span> with your PAN for 80G receipt.
+    
   </p>
 </div>
 
@@ -1465,11 +1464,10 @@ with your PAN for 80G receipt.
         href="mailto:contact@ashwamedhfoundation.org"
         className="font-bold hover:underline break-all"
       >
-        contact@ashwamedhfoundation.org
+        contact@ashwamedhfoundation.org 
       </a>
-    </span>
-    <br className="sm:hidden" />
-    with your PAN for 80G receipt.
+    </span> with your PAN for 80G receipt.
+     
   </p>
 </div>
 
@@ -1541,11 +1539,10 @@ with your PAN for 80G receipt.
         href="mailto:contact@ashwamedhfoundation.org"
         className="font-bold hover:underline break-all"
       >
-        contact@ashwamedhfoundation.org
+        contact@ashwamedhfoundation.org 
       </a>
-    </span>
-    <br className="sm:hidden" />
-    with your PAN for 80G receipt.
+    </span> with your PAN for 80G receipt.
+     
   </p>
 </div>
 
