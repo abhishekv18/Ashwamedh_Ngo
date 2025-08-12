@@ -1384,7 +1384,16 @@ const handleContinueToPayment = () => {
                 
                 <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
                   <p className="text-orange-800 text-xs md:text-sm">
-                    <span className="font-bold">Important:</span> After making the payment, please email the transaction details to donations@helpinghands.org for receipt.
+                    {/* <span className="font-bold">Important:</span> After making the payment, please email the transaction details to contact@ashwamedhfoundation.org for receipt. */}
+                    <span className="font-bold">Important:</span> After making the payment, please email the transaction details to{" "}
+<a
+  href="mailto:contact@ashwamedhfoundation.org"
+  className="font-bold hover:underline"
+>
+  contact@ashwamedhfoundation.org
+</a>{" "}
+with your PAN for 80G receipt.
+
                   </p>
                 </div>
               </div>
@@ -1422,7 +1431,14 @@ const handleContinueToPayment = () => {
                 
                 <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
                   <p className="text-orange-800 text-xs md:text-sm">
-                    <span className="font-bold">Note:</span> The QR code is valid for all UPI apps. After payment, you'll receive an automatic receipt.
+                    <span className="font-bold">Note:</span> The QR code is valid for all UPI apps. After payment, please email the transaction details to{" "}
+<a
+  href="mailto:contact@ashwamedhfoundation.org"
+  className="font-bold hover:underline"
+>
+  contact@ashwamedhfoundation.org
+</a>{" "}
+with your PAN for 80G receipt.
                   </p>
                 </div>
               </div>
@@ -1475,7 +1491,14 @@ const handleContinueToPayment = () => {
                 
                 <div className="bg-orange-50/90 p-3 md:p-4 rounded-lg border border-orange-200">
                   <p className="text-orange-800 text-xs md:text-sm">
-                    <span className="font-bold">Important:</span> After making the transfer, please email the transaction details to donations@helpinghands.org with your PAN for 80G receipt.
+                    <span className="font-bold">Important:</span> After making the transfer, please email the transaction details to{" "}
+<a
+  href="mailto:contact@ashwamedhfoundation.org"
+  className="font-bold hover:underline"
+>
+  contact@ashwamedhfoundation.org
+</a>{" "}
+with your PAN for 80G receipt.
                   </p>
                 </div>
               </div>
