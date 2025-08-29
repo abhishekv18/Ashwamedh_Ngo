@@ -330,7 +330,7 @@ const handleSubmit = async (e) => {
       dispatch(setLoading(true));
 
     
-  const res = await api.post('/api/admin/login', formData);
+  const res = await api.post(`${import.meta.env.VITE_API_URL}/api/admin/login`, formData);
 
       if (res.data.success) {
         dispatch(setUser(res.data.user));
