@@ -1056,7 +1056,7 @@ const ChartCard = ({ title, children, className = "" }) => (
       case 'admins':
 
 return (
-  <div className="space-y-6 p-4 sm:p-6">
+  <div className="space-y-6">
     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
       <div>
         <h3 className="text-lg sm:text-xl font-semibold text-gray-800">Admin Management ({allUsers.length})</h3>
