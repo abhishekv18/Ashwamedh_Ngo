@@ -179,29 +179,30 @@ export default function VolunteerPage() {
   const stats = [
     { number: '20+', label: 'Active Volunteers', icon: Users },
     { number: '4+', label: 'Active Programs', icon: Globe },
-    { number: '5,000+', label: 'Lives Impacted', icon: Heart },
+    { number: '10000+', label: 'Lives Impacted', icon: Heart },
     { number: '4+', label: 'Active Projects', icon: Award }
   ];
 
 const testimonials = [
   {
-    name: "Anita Verma",
+    name: "Ahmed",
+    role: "Admin and Marketing Volunteer",
+    text: "I am grateful to Ashwamedh Foundation for its inspiring work in education, empowerment, and community development. Their dedication and passion for change motivate me, and I am proud to support their impactful journey.",
+    rating: 5
+  },
+
+  {
+    name: "शुभांगी विरकर एडके",
     role: "Education Volunteer",
-    text: "Volunteering here has truly touched my heart. Teaching children and watching them learn with such excitement is something I will always cherish.",
+    text: "अश्वमेध फाउंडेशन मध्ये स्वयंसेवक असल्याचा माझा अनुभव खूप चांगला होता ..खूप काही शिकायला मिळालं, स्वतःला घडवण्यासाठी जी कौशल्ये लागतात ती शिकायला मिळाली .समाजाकडे बघण्याचा माझा दृष्टिकोन बदलला . अशा प्रामाणिक पणे काम करणाऱ्या निमशासकीय संस्थांची समाजाला खूप गरज आहे.",
     rating: 5
   },
-  {
-    name: "Ravi Mehra",
-    role: "Healthcare Assistant",
-    text: "Every day, I feel grateful to be part of a team that is bringing real change. The joy of helping someone in need is unmatched.",
+    {
+    name: "Lucky Rai",
+    role: "Education Volunteer",
+    text: "The best part of Ashwamedh Foundation is Project Aagaaz, where underprivileged children gain computer skills. Being part of this organization for 4 years has taught me academics, life skills, and values. I wish Ashwamedh continued success in achieving its vision.",
     rating: 5
   },
-  {
-    name: "Neha Kapoor",
-    role: "Community Developer",
-    text: "Being a part of this NGO has been a life-changing journey. I've learned so much while helping build stronger, happier communities.",
-    rating: 5
-  }
 ];
 
 

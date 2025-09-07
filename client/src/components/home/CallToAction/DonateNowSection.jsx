@@ -192,7 +192,7 @@ const CallToAction = () => {
         >
           <div className="flex justify-center items-center flex-wrap gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3" style={{ color: '#FF5722' }}>5,000+</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3" style={{ color: '#FF5722' }}>10000+</div>
               <div className="font-semibold text-sm sm:text-base lg:text-lg" style={{ color: '#757575' }}>Children Helped</div>
             </div>
             <div className="w-px h-12 sm:h-14 lg:h-16 bg-gray-300 hidden sm:block"></div>

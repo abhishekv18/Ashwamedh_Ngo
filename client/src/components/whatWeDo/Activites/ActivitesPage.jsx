@@ -679,7 +679,7 @@ const activities = [
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-orange-300 mb-2">5000+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-orange-300 mb-2">10000+</div>
               <div className="text-sm sm:text-lg">Children Educated</div>
             </div>
             <div className="text-center">

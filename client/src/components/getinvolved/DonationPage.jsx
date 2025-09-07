@@ -1160,7 +1160,7 @@ const causes = [
   // }
 ];
   const stats = [
-    { number: '5,000+', label: 'Children Helped', icon: Users },
+    { number: '10000+', label: 'Children Helped', icon: Users },
     { number: '95%', label: 'Funds to Programs', icon: Target },
     { number: '4+', label: 'Active Programs', icon: Heart },
   ];

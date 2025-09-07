@@ -327,13 +327,13 @@ const MissionVision = () => {
     {
       icon: <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Quality Education Access",
-      description: "Ensure children from underprivileged backgrounds receive excellent quality education through innovative programs and dedicated support.",
+      description: "Ensure children from underprivileged backgrounds receive excellent quality education through innovative programs, dedicated support, and equal opportunities.",
       gradient: "from-[#FF5722] to-[#E64A19]"
     },
     {
       icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Knowledge & Values",
-      description: "Impart comprehensive knowledge and strong moral values through well-designed curriculum and specialized programs for holistic development.",
+      description: "Impart comprehensive learning and strong moral values through a child centric curriculum and targeted programs that support the holistic development of every child.",
       gradient: "from-[#00695C] to-[#004D40]"
     },
     
@@ -395,7 +395,7 @@ const MissionVision = () => {
 
   const achievements = [
     { number: "13+", label: "Years of Impact", color: "text-[#FF5722]" },
-    { number: "5K+", label: "Children Supported", color: "text-[#00695C]" },
+    { number: "10K+", label: "Children Supported", color: "text-[#00695C]" },
     { number: "10+", label: "Communities Reached", color: "text-[#26A69A]" },
     { number: "20+", label: "Volunteers Engaged", color: "text-[#FFC107]" }
   ];

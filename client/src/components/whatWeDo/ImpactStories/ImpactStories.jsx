@@ -473,7 +473,7 @@ const ImpactStories = () => {
   const [activeCaseStudy, setActiveCaseStudy] = useState(0);
 
   const impactStats = [
-    { icon: Users, number: "5,000+", label: "Children Impacted", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
+    { icon: Users, number: "10000+", label: "Children Impacted", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
     { icon: BookOpen, number: "15", label: "Years of Service", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },
     { icon: GraduationCap, number: "85%", label: "Academic Improvement", color: "text-orange-600", bgColor: "from-orange-50 to-orange-100" },
     { icon: Award, number: "4+", label: "Programs Conducted", color: "text-teal-600", bgColor: "from-teal-50 to-teal-100" },

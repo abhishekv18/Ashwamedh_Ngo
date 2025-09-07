@@ -575,7 +575,7 @@ const Footer = () => {
   ];
 
   const impactStats = [
-    { icon: Users, number: '5,000+', label: 'Children Impacted' },
+    { icon: Users, number: '10000+', label: 'Children Impacted' },
     { icon: Heart, number: '20+', label: 'Volunteers' },
     { icon: Award, number: '7+', label: 'Projects Completed' },
     { icon: Globe, number: '10+', label: 'Communities Served' }

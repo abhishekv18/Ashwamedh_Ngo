@@ -587,8 +587,8 @@ const ProjectsPage = () => {
       title: "Project Aagaaz",
       subtitle: "Holistic Development Initiative",
       tagline: "Nurturing Potential Beyond the Classroom",
-      description: "Supporting school-age children through academic assistance, mentorship, and co-curricular exposure for comprehensive growth.",
-      fullDescription: "Project Aagaaz addresses the critical need for holistic development in school-age children (6-14 years) from underprivileged communities. We provide structured after-school support through our learning centers that combine academic tutoring with life skills development. Our trained mentors work closely with children to improve academic performance while also exposing them to sports, arts, and digital literacy. The program includes regular parent-teacher meetings, career awareness sessions, and community engagement activities to create a supportive ecosystem for each child's development.",
+     description: "Empowering children through academic support, mentorship, and life skills training to foster all-round growth and digital readiness.",
+     fullDescription: "Project Aagaaz addresses the critical need for holistic development among school-age children (6–14 years) from underprivileged communities. Through our structured after-school learning centers, we provide a balanced blend of academic tutoring and life skills development to empower children beyond the classroom. Trained mentors work closely with students to strengthen academic foundations while nurturing essential skills through sports, arts, and computer literacy. Our digital literacy component helps bridge the digital divide, preparing children for a tech-driven future. To ensure a strong support system, the program also includes parent-teacher meetings, career awareness sessions, and community engagement activities, fostering a collaborative environment for each child’s sustained growth and development.",
       keyFeatures: [
         "After-school academic support and tutoring",
         "Digital literacy and STEM workshops",
@@ -1360,7 +1360,7 @@ const ProjectsPage = () => {
 
           <div className="flex flex-row items-center justify-center flex-wrap gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-6">
             <div className="text-center min-w-[80px] sm:min-w-[100px]">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold">5,000+</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold">10000+</div>
               <div className="text-white/90 text-xs sm:text-sm">Lives Impacted</div>
             </div>
 

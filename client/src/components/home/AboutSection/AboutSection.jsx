@@ -368,7 +368,7 @@ const AboutSection = () => {
   const achievements = [
     {
       icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />,
-      number: "5,000+",
+      number: "10000+",
       label: "Children Impacted",
       description: "Across 10+ communities",
       gradient: "from-orange-200 to-orange-300",

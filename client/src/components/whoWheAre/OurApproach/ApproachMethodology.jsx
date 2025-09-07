@@ -528,18 +528,18 @@ const ApproachMethodology = () => {
       statsBg: "bg-teal-200",
       statsText: "text-teal-800"
     },
-    // {
-    //   icon: <TreePine className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />,
-    //   title: "Environmental Awareness",
-    //   description: "Building eco-conscious future leaders through environmental education and sustainable practices",
-    //   stats: "50+ Green Projects",
-    //   image: "/public/images/logo/istockphoto-1555696380-612x612.webp",
-    //   bgGradient: "bg-gradient-to-br from-amber-50 via-white to-amber-100",
-    //   iconColor: "text-white",
-    //   iconBg: "bg-gradient-to-br from-amber-500 to-amber-600",
-    //   statsBg: "bg-amber-200",
-    //   statsText: "text-amber-800"
-    // }
+    {
+      icon: <TreePine className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />,
+      title: "Environmental Awareness",
+      description: "Building eco-conscious future leaders through environmental education and sustainable practices",
+      stats: "50+ Green Projects",
+      image: "/images/logo/istockphoto-1555696380-612x612.webp",
+      bgGradient: "bg-gradient-to-br from-amber-50 via-white to-amber-100",
+      iconColor: "text-white",
+      iconBg: "bg-gradient-to-br from-amber-500 to-amber-600",
+      statsBg: "bg-amber-200",
+      statsText: "text-amber-800"
+    }
   ];
 
   return (

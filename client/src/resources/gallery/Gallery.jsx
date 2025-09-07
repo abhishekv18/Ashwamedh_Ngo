@@ -1506,7 +1506,7 @@ toast.info('Fetched latest photos.', {
               { value: '4', label: 'Active Projects', icon: Target },
               { value: '2', label: 'Centers', icon: MapPin },
               { value: isFetching ? '--' : allPhotos.length, label: 'Photos', icon: Sparkles },
-              { value: '5,000+', label: 'Lives Impacted', icon: Heart },
+              { value: '10000+', label: 'Lives Impacted', icon: Heart },
               { value: '20+', label: 'Team Members', icon: Users },
               { value: '∞', label: 'Hope Created', icon: Award }
             ].map((stat, index) => (

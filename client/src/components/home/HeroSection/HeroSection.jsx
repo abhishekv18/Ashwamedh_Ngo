@@ -256,7 +256,7 @@ const HeroSection = () => {
   }, []);
 
   const impactStats = [
-    { icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "5,000+", label: "Children Reached", gradient: "from-[#FF8A65] to-[#FF7043]", iconColor: "text-white" },
+    { icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "10000+", label: "Children Reached", gradient: "from-[#FF8A65] to-[#FF7043]", iconColor: "text-white" },
     { icon: <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "50+", label: "Schools Supported", gradient: "from-[#26A69A] to-[#00695C]", iconColor: "text-white" },
     { icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "10+", label: "Communities Served", gradient: "from-[#26A69A] to-[#00695C]", iconColor: "text-white" },
     { icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, number: "3+", label: "Active Programs", gradient: "from-[#FF8A65] to-[#FF7043]", iconColor: "text-white" }
