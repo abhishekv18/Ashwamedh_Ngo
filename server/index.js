@@ -47,14 +47,14 @@ app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`);
 });
 
-// if (process.env.NODE_ENV === "production") {
-//   cron.schedule('*/2 * * * *', async () => {
-//     try {
-//       const res = await axios.get('https://ashwamedh-ngo-hkmm.onrender.com/api/ping');
-//       console.log('Self-ping successful:', res.status);
-//     } catch (error) {
-//       console.error('Self-ping failed:', error.message);
-//     }
-//   });
-// }
+if (process.env.NODE_ENV === "production") {
+  cron.schedule('*/2 * * * *', async () => {
+    try {
+      const res = await axios.get('https://ashwamedh-ngo-hkmm.onrender.com/api/ping');
+      console.log('Self-ping successful:', res.status);
+    } catch (error) {
+      console.error('Self-ping failed:', error.message);
+    }
+  });
+}
 
