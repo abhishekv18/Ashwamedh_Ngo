@@ -58,13 +58,3 @@ app.listen(PORT,()=>{
 //   });
 // }
 
-cron.schedule('*/2 * * * *', () => {
-  setTimeout(async () => {
-    try {
-      const res = await axios.get('https://ashwamedh-ngo-hkmm.onrender.com/api/ping');
-      console.log('Self-ping successful:', res.status);
-    } catch (error) {
-      console.error('Self-ping failed:', error.message);
-    }
-  }, 5000); // wait 5 seconds
-});
