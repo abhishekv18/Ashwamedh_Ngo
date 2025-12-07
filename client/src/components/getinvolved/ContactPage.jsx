@@ -636,6 +636,7 @@ const handleInputChange = (e) => {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });
+console.log("Server response:", res.data);
 
       if (res.data.success) {
         dispatch(setContact(res.data.contact));

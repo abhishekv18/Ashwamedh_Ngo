@@ -38,7 +38,7 @@ app.get("/api/ping", (req, res) => {
 
 
 
-import "./controllers/monthlyReminderJob.js";
+// import "./controllers/monthlyReminderJob.js";
 
 const PORT=process.env.PORT || 3000;
 

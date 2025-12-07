@@ -1,5 +1,5 @@
 import { Subscribed } from "../models/subscribed.model.js";
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 export const addSubscribed = async (req, res) => {
     try {
         const {    name, email } = req.body;
@@ -36,15 +36,15 @@ await subscribe.save();
 
 
         // Setup transporter (Zoho)
-        const transporter = nodemailer.createTransport({
-            host: 'smtp.zoho.com',
-            port: 465,
-            secure: true,
-            auth: {
-                user: 'admin@ashwamedhfoundation.org',
-                pass: '6Eye3vpq4rti',
-            },
-        });
+        // const transporter = nodemailer.createTransport({
+        //     host: 'smtp.zoho.com',
+        //     port: 465,
+        //     secure: true,
+        //     auth: {
+        //         user: 'admin@ashwamedhfoundation.org',
+        //         pass: '6Eye3vpq4rti',
+        //     },
+        // });
 
         // Send confirmation to subscriber
         // const userMail = {
@@ -59,6 +59,8 @@ await subscribe.save();
         //         <p>Warm regards,<br/>Team Ashwamedh Foundation</p>
         //     `,
         // };
+
+
 // const userMail = {
 //   from: 'admin@ashwamedhfoundation.org',
 //   to: email,
@@ -74,15 +76,17 @@ await subscribe.save();
 //           You've successfully subscribed with: <strong>${email}</strong>
 //         </div>
 
-//         <p style="font-size: 15px;">We’re grateful to have you with us. You’ll now start receiving updates about our initiatives, volunteer opportunities, and inspiring impact stories straight to your inbox.</p>
+//         <p style="font-size: 15px;">
+//           We’re grateful to have you with us. You’ll now start receiving updates about our initiatives, volunteer opportunities, and inspiring impact stories straight to your inbox.
+//         </p>
 
 //         <p style="margin-top: 25px; font-weight: bold;">Stay connected:</p>
 
 //         <div style="margin-top: 15px;">
-//           <a href="https://facebook.com/ashwamedhfoundation" target="_blank" style="text-decoration: none; margin-right: 15px;">
+//           <a href="https://m.facebook.com/AshwamedhFoundationTrust/" target="_blank" style="text-decoration: none; margin-right: 12px;">
 //             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32" style="display: inline-block;" />
 //           </a>
-//           <a href="https://instagram.com/ashwamedhfoundation" target="_blank" style="text-decoration: none; margin-right: 15px;">
+//           <a href="https://www.instagram.com/ashwamedhfoundation/" target="_blank" style="text-decoration: none; margin-right: 12px;">
 //             <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="32" height="32" style="display: inline-block;" />
 //           </a>
 //           <a href="https://linkedin.com/company/ashwamedhfoundation" target="_blank" style="text-decoration: none;">
@@ -94,6 +98,13 @@ await subscribe.save();
 //           We promise not to spam. You’ll only hear from us when there’s something meaningful to share.
 //         </p>
 
+//         <p style="font-size: 14px; margin-top: 20px; color: #555;">
+//           📧 If you have any questions, feel free to reach us at 
+//           <a href="mailto:contact@ashwamedhfoundation.org" style="color: #e67e22; text-decoration: none;">
+//             contact@ashwamedhfoundation.org
+//           </a>.
+//         </p>
+
 //         <p style="margin-top: 30px; font-size: 14px; color: #555;">
 //           Warm regards,<br/>
 //           <strong>Team Ashwamedh Foundation</strong>
@@ -103,76 +114,23 @@ await subscribe.save();
 //   `
 // };
 
-const userMail = {
-  from: 'admin@ashwamedhfoundation.org',
-  to: email,
-  subject: 'Thank You for Subscribing!',
-  html: `
-    <div style="background-color: #f4f4f4; padding: 30px; font-family: Arial, sans-serif; color: #333;">
-      <div style="max-width: 600px; margin: auto; background: #fff; padding: 25px 30px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.05);">
-        <h2 style="color: #2c3e50; margin-bottom: 10px;">Hello ${name},</h2>
 
-        <p style="font-size: 15px;">Thank you for subscribing to <strong style="color: #e67e22;">Ashwamedh Foundation</strong>!</p>
+//         await transporter.sendMail(userMail);
 
-        <div style="background-color: #f0f9f5; border-left: 4px solid #27ae60; padding: 12px 16px; margin: 18px 0; border-radius: 6px; font-size: 14px;">
-          You've successfully subscribed with: <strong>${email}</strong>
-        </div>
+//         // Send alert to admin
+//         const adminMail = {
+//             from: 'admin@ashwamedhfoundation.org',
+//             to: 'contact@ashwamedhfoundation.org', // Admin email address
+//             subject: 'New Subscriber Alert',
+//             html: `
+//                 <h3>New Subscriber!</h3>
+//                 <p><strong>Name:</strong> ${name}</p>
+//                 <p><strong>Email:</strong> ${email}</p>
+//                  <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
+//             `,
+//         };
 
-        <p style="font-size: 15px;">
-          We’re grateful to have you with us. You’ll now start receiving updates about our initiatives, volunteer opportunities, and inspiring impact stories straight to your inbox.
-        </p>
-
-        <p style="margin-top: 25px; font-weight: bold;">Stay connected:</p>
-
-        <div style="margin-top: 15px;">
-          <a href="https://m.facebook.com/AshwamedhFoundationTrust/" target="_blank" style="text-decoration: none; margin-right: 12px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32" style="display: inline-block;" />
-          </a>
-          <a href="https://www.instagram.com/ashwamedhfoundation/" target="_blank" style="text-decoration: none; margin-right: 12px;">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" width="32" height="32" style="display: inline-block;" />
-          </a>
-          <a href="https://linkedin.com/company/ashwamedhfoundation" target="_blank" style="text-decoration: none;">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" width="32" height="32" style="display: inline-block;" />
-          </a>
-        </div>
-
-        <p style="font-size: 13px; color: #777; margin-top: 20px;">
-          We promise not to spam. You’ll only hear from us when there’s something meaningful to share.
-        </p>
-
-        <p style="font-size: 14px; margin-top: 20px; color: #555;">
-          📧 If you have any questions, feel free to reach us at 
-          <a href="mailto:contact@ashwamedhfoundation.org" style="color: #e67e22; text-decoration: none;">
-            contact@ashwamedhfoundation.org
-          </a>.
-        </p>
-
-        <p style="margin-top: 30px; font-size: 14px; color: #555;">
-          Warm regards,<br/>
-          <strong>Team Ashwamedh Foundation</strong>
-        </p>
-      </div>
-    </div>
-  `
-};
-
-
-        await transporter.sendMail(userMail);
-
-        // Send alert to admin
-        const adminMail = {
-            from: 'admin@ashwamedhfoundation.org',
-            to: 'contact@ashwamedhfoundation.org', // Admin email address
-            subject: 'New Subscriber Alert',
-            html: `
-                <h3>New Subscriber!</h3>
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                 <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
-            `,
-        };
-
-        await transporter.sendMail(adminMail);
+//         await transporter.sendMail(adminMail);
 
         // Here you would typically save the volunteer to a database
         // For demonstration, we will just return the volunteer object
