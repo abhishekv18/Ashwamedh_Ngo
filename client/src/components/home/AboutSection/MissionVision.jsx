@@ -333,7 +333,7 @@ const MissionVision = () => {
     {
       icon: <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Knowledge & Values",
-      description: "Impart comprehensive learning and strong moral values through a child centric curriculum and targeted programs that support the holistic development of every child.",
+      description: "Impart comprehensive learning and strong moral values through a child-centric curriculum and targeted programs that support the holistic development of every child.",
       gradient: "from-[#00695C] to-[#004D40]"
     },
     
@@ -397,7 +397,7 @@ const MissionVision = () => {
     { number: "13+", label: "Years of Impact", color: "text-[#FF5722]" },
     { number: "10K+", label: "Children Supported", color: "text-[#00695C]" },
     { number: "10+", label: "Communities Reached", color: "text-[#26A69A]" },
-    { number: "20+", label: "Volunteers Engaged", color: "text-[#FFC107]" }
+    { number: "50+", label: "Volunteers Engaged", color: "text-[#FFC107]" }
   ];
 
   return (
@@ -522,8 +522,8 @@ const MissionVision = () => {
                   {/* Card Image Header */}
                   <div className="relative h-36 sm:h-48 overflow-hidden">
                     <img 
-                      src={index === 0 ? "/images/logo/gettyimages-1344964565-612x612.jpg" : 
-                           index === 1 ? "/images/logo/gettyimages-1788257385-612x612.jpg" :
+                      src={index === 1 ? "/images/logo/Picture5.jpg" : 
+                           index === 0 ? "/images/logo/Picture6.png" :
                            index === 2 ? "/images/logo/gettyimages-2195741267-612x612.jpg" :
                            index === 3 ? "/images/logo/istockphoto-537311780-612x612.webp" :
                            "/images/logo/school-children-dressed-uniform-have-fun-play-schoolyard.jpg"} 

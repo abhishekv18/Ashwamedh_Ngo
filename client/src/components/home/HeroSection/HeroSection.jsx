@@ -227,10 +227,12 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
    const imageList=[
-    "/images/logo/school-298680-1557380003.jpg",
-    "/images/logo/atul-pandey-0f3bZHXZSz8-unsplash.jpg",
-    "/images/logo/yannis-h-uaPaEM7MiQQ-unsplash.jpg",
-    
+     "/images/logo/Picture11.jpg",
+     "/images/logo/Picture10.png",
+    "/images/logo/Picture1.png",
+    "/images/logo/Picture2.png",
+    "/images/logo/Picture3.png",
+   
    ]
 
   const [currentIndex, setCurrentIndex] = useState(0);

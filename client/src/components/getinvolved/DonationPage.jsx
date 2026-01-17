@@ -1135,7 +1135,7 @@ const causes = [
     title: 'Education for All',
     description: 'Provide quality education and learning materials to underprivileged children.',
     impact: 'Your donation can provide school supplies for children for a month',
-    image: '/images/projects/photo-1569173675610-42c361a86e37.avif'
+    image: '/images/logo/Picture7.png'
   },
   {
     id: 'healthcare',

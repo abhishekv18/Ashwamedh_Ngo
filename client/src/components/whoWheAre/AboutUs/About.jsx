@@ -690,7 +690,7 @@ const AboutUs = () => {
     
     {/* Background Image - Dull with dark overlay */}
     <img 
-      src="/images/logo/1740195950066.jpg" 
+      src="/images/logo/Picture8.jpg" 
       alt="Deepak Doddamani - Founder"
       className="absolute inset-0 w-full h-full object-cover opacity-80 rounded-3xl transition-opacity duration-500 group-hover:opacity-70"
     />
